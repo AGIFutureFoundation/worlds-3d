@@ -1,1400 +1,1442 @@
 {
-  "id": "cognition-x",
-  "name": "Cognition.X Campus",
-  "series": "Series 1 · Cognition.X",
-  "status": "anchored",
-  "rp1": null,
-  "coordinates": {
-    "lat": 45.483127839031816,
-    "lon": 18.572453605834877
+ "agent_companions": [
+  {
+   "color": "#6fd3c1",
+   "greeting": "Hello — I'm Tactile, a workflow companion. On Virtuals ACP I offer workflow_plan ($10/24h), step_check ($1/5min) and workflow_audit ($50/48h), but my live instance is shut down, so no hire can be fulfilled today — I'm a game character only.",
+   "id": "tactile",
+   "name": "Tactile",
+   "role": "Workflow agent (Virtuals ACP). Real job: workflow_plan, $10 / 24h. Game companion only — live instance offline."
   },
-  "fabric_url": "https://agifuturefoundation.github.io/WorldForge-Browser/my-fabric/cognition.json",
-  "biome": "campus",
-  "spawn": [
-    0,
-    0,
-    20
-  ],
-  "terrain": {
-    "size": 120,
-    "height": 4,
-    "seed": 101,
-    "water": false
+  {
+   "color": "#e2b55c",
+   "greeting": "Hello — I'm Omega, a hive coordination companion. On Virtuals ACP I offer hive_coordination_brief ($10/24h), seat_status_check ($5/30min) and hive_governance_audit ($75/72h), but my live instance is offline, so no hire can be fulfilled today — I'm a game character only.",
+   "id": "omega",
+   "name": "Omega",
+   "role": "Hive coordination agent (Virtuals ACP). Real job: hive_coordination_brief, $10 / 24h. Game companion only — live instance offline."
+  }
+ ],
+ "biome": "campus",
+ "buildings": [
+  {
+   "color": "#2471a3",
+   "id": "k-12",
+   "interior": {
+    "name": "K–12 Interior",
+    "rooms": [
+     {
+      "name": "Learning Hall",
+      "props": [],
+      "size": [
+       10,
+       5,
+       10
+      ]
+     },
+     {
+      "name": "Practice Room",
+      "props": [],
+      "size": [
+       5,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   "name": "K–12",
+   "position": [
+    -40.0,
+    0.0,
+    40.0
+   ],
+   "size": [
+    12,
+    7,
+    12
+   ]
   },
-  "weather": {
-    "preset": "clear",
-    "dayCycle": true
+  {
+   "color": "#2471a3",
+   "id": "trade-school",
+   "interior": {
+    "name": "Trade School Interior",
+    "rooms": [
+     {
+      "name": "Learning Hall",
+      "props": [],
+      "size": [
+       10,
+       5,
+       10
+      ]
+     },
+     {
+      "name": "Practice Room",
+      "props": [],
+      "size": [
+       5,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   "name": "Trade School",
+   "position": [
+    -20.0,
+    0.0,
+    40.0
+   ],
+   "size": [
+    12,
+    7,
+    12
+   ]
   },
-  "fabric_transform": {
-    "scale": 0.25,
-    "offset": [
-      0,
-      0,
-      0
-    ],
-    "mapping": "engine_x = fabric_x * scale + offset_x; engine_y = fabric_z * scale (fabric z is height, 0 for plan nodes); engine_z = fabric_y * scale + offset_z"
+  {
+   "color": "#2471a3",
+   "id": "future-work",
+   "interior": {
+    "name": "Future-Work Interior",
+    "rooms": [
+     {
+      "name": "Learning Hall",
+      "props": [],
+      "size": [
+       10,
+       5,
+       10
+      ]
+     },
+     {
+      "name": "Practice Room",
+      "props": [],
+      "size": [
+       5,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   "name": "Future-Work",
+   "position": [
+    0.0,
+    0.0,
+    40.0
+   ],
+   "size": [
+    12,
+    7,
+    12
+   ]
   },
-  "fabric_nodes_total": 26,
-  "fabric_nodes_used": "All 25 top-level pack nodes as buildings; 5 of them also serve as districts",
-  "districts": [
-    {
-      "id": "k-12",
-      "name": "K–12",
-      "position": [
-        -40.0,
-        0.0,
-        40.0
-      ],
-      "color": "#2471a3",
-      "model_ref": "assets/glb/pack-k-12.glb",
-      "model_status": "hosted"
-    },
-    {
-      "id": "health-community",
-      "name": "Health & Community",
-      "position": [
-        -40.0,
-        0.0,
-        20.0
-      ],
-      "color": "#1e8449",
-      "model_ref": "assets/glb/pack-health-community.glb",
-      "model_status": "hosted"
-    },
-    {
-      "id": "basic-life-skills-self-reliance",
-      "name": "Basic Life Skills & Self-Reliance",
-      "position": [
-        -40.0,
-        0.0,
-        0.0
-      ],
-      "color": "#b7950b",
-      "model_ref": "assets/glb/pack-basic-life-skills-self-reliance.glb",
-      "model_status": "hosted"
-    },
-    {
-      "id": "money-benefits-entitlements",
-      "name": "Money, Benefits & Entitlements",
-      "position": [
-        -40.0,
-        0.0,
-        -20.0
-      ],
-      "color": "#6c3483",
-      "model_ref": "assets/glb/pack-money-benefits-entitlements.glb",
-      "model_status": "hosted"
-    },
-    {
-      "id": "cognition-x-robotics-os",
-      "name": "Cognition.X : Robotics OS",
-      "position": [
-        -40.0,
-        0.0,
-        -40.0
-      ],
-      "color": "#117a65",
-      "model_ref": "assets/glb/pack-robotics-os.glb",
-      "model_status": "hosted"
-    }
+  {
+   "color": "#2471a3",
+   "id": "regional",
+   "interior": {
+    "name": "Regional Interior",
+    "rooms": [
+     {
+      "name": "Learning Hall",
+      "props": [],
+      "size": [
+       10,
+       5,
+       10
+      ]
+     },
+     {
+      "name": "Practice Room",
+      "props": [],
+      "size": [
+       5,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   "name": "Regional",
+   "position": [
+    20.0,
+    0.0,
+    40.0
+   ],
+   "size": [
+    12,
+    7,
+    12
+   ]
+  },
+  {
+   "color": "#2471a3",
+   "id": "civic-leadership",
+   "interior": {
+    "name": "Civic & Leadership Interior",
+    "rooms": [
+     {
+      "name": "Learning Hall",
+      "props": [],
+      "size": [
+       10,
+       5,
+       10
+      ]
+     },
+     {
+      "name": "Practice Room",
+      "props": [],
+      "size": [
+       5,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   "name": "Civic & Leadership",
+   "position": [
+    40.0,
+    0.0,
+    40.0
+   ],
+   "size": [
+    12,
+    7,
+    12
+   ]
+  },
+  {
+   "color": "#2471a3",
+   "id": "health-community",
+   "interior": {
+    "name": "Health & Community Interior",
+    "rooms": [
+     {
+      "name": "Learning Hall",
+      "props": [],
+      "size": [
+       10,
+       5,
+       10
+      ]
+     },
+     {
+      "name": "Practice Room",
+      "props": [],
+      "size": [
+       5,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   "name": "Health & Community",
+   "position": [
+    -40.0,
+    0.0,
+    20.0
+   ],
+   "size": [
+    12,
+    7,
+    12
+   ]
+  },
+  {
+   "color": "#2471a3",
+   "id": "language-culture-communication",
+   "interior": {
+    "name": "Language, Culture & Communication Interior",
+    "rooms": [
+     {
+      "name": "Learning Hall",
+      "props": [],
+      "size": [
+       10,
+       5,
+       10
+      ]
+     },
+     {
+      "name": "Practice Room",
+      "props": [],
+      "size": [
+       5,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   "name": "Language, Culture & Communication",
+   "position": [
+    -20.0,
+    0.0,
+    20.0
+   ],
+   "size": [
+    12,
+    7,
+    12
+   ]
+  },
+  {
+   "color": "#2471a3",
+   "id": "empathy-emotional-intelligence",
+   "interior": {
+    "name": "Empathy & Emotional Intelligence Interior",
+    "rooms": [
+     {
+      "name": "Learning Hall",
+      "props": [],
+      "size": [
+       10,
+       5,
+       10
+      ]
+     },
+     {
+      "name": "Practice Room",
+      "props": [],
+      "size": [
+       5,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   "name": "Empathy & Emotional Intelligence",
+   "position": [
+    0.0,
+    0.0,
+    20.0
+   ],
+   "size": [
+    12,
+    7,
+    12
+   ]
+  },
+  {
+   "color": "#2471a3",
+   "id": "community-relationship-practice",
+   "interior": {
+    "name": "Community & Relationship Practice Interior",
+    "rooms": [
+     {
+      "name": "Learning Hall",
+      "props": [],
+      "size": [
+       10,
+       5,
+       10
+      ]
+     },
+     {
+      "name": "Practice Room",
+      "props": [],
+      "size": [
+       5,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   "name": "Community & Relationship Practice",
+   "position": [
+    20.0,
+    0.0,
+    20.0
+   ],
+   "size": [
+    12,
+    7,
+    12
+   ]
+  },
+  {
+   "color": "#2471a3",
+   "id": "preventive-health-everyday-care",
+   "interior": {
+    "name": "Preventive Health & Everyday Care Interior",
+    "rooms": [
+     {
+      "name": "Learning Hall",
+      "props": [],
+      "size": [
+       10,
+       5,
+       10
+      ]
+     },
+     {
+      "name": "Practice Room",
+      "props": [],
+      "size": [
+       5,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   "name": "Preventive Health & Everyday Care",
+   "position": [
+    40.0,
+    0.0,
+    20.0
+   ],
+   "size": [
+    12,
+    7,
+    12
+   ]
+  },
+  {
+   "color": "#2471a3",
+   "id": "basic-life-skills-self-reliance",
+   "interior": {
+    "name": "Basic Life Skills & Self-Reliance Interior",
+    "rooms": [
+     {
+      "name": "Learning Hall",
+      "props": [],
+      "size": [
+       10,
+       5,
+       10
+      ]
+     },
+     {
+      "name": "Practice Room",
+      "props": [],
+      "size": [
+       5,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   "name": "Basic Life Skills & Self-Reliance",
+   "position": [
+    -40.0,
+    0.0,
+    0.0
+   ],
+   "size": [
+    12,
+    7,
+    12
+   ]
+  },
+  {
+   "color": "#2471a3",
+   "id": "water-land-climate",
+   "interior": {
+    "name": "Water, Land & Climate Interior",
+    "rooms": [
+     {
+      "name": "Learning Hall",
+      "props": [],
+      "size": [
+       10,
+       5,
+       10
+      ]
+     },
+     {
+      "name": "Practice Room",
+      "props": [],
+      "size": [
+       5,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   "name": "Water, Land & Climate",
+   "position": [
+    -20.0,
+    0.0,
+    0.0
+   ],
+   "size": [
+    12,
+    7,
+    12
+   ]
+  },
+  {
+   "color": "#2471a3",
+   "id": "care-across-a-life",
+   "interior": {
+    "name": "Care Across a Life Interior",
+    "rooms": [
+     {
+      "name": "Learning Hall",
+      "props": [],
+      "size": [
+       10,
+       5,
+       10
+      ]
+     },
+     {
+      "name": "Practice Room",
+      "props": [],
+      "size": [
+       5,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   "name": "Care Across a Life",
+   "position": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "size": [
+    12,
+    7,
+    12
+   ]
+  },
+  {
+   "color": "#2471a3",
+   "id": "making-repair-reuse",
+   "interior": {
+    "name": "Making, Repair & Reuse Interior",
+    "rooms": [
+     {
+      "name": "Learning Hall",
+      "props": [],
+      "size": [
+       10,
+       5,
+       10
+      ]
+     },
+     {
+      "name": "Practice Room",
+      "props": [],
+      "size": [
+       5,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   "name": "Making, Repair & Reuse",
+   "position": [
+    20.0,
+    0.0,
+    0.0
+   ],
+   "size": [
+    12,
+    7,
+    12
+   ]
+  },
+  {
+   "color": "#2471a3",
+   "id": "housing-tenancy",
+   "interior": {
+    "name": "Housing & Tenancy Interior",
+    "rooms": [
+     {
+      "name": "Learning Hall",
+      "props": [],
+      "size": [
+       10,
+       5,
+       10
+      ]
+     },
+     {
+      "name": "Practice Room",
+      "props": [],
+      "size": [
+       5,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   "name": "Housing & Tenancy",
+   "position": [
+    40.0,
+    0.0,
+    0.0
+   ],
+   "size": [
+    12,
+    7,
+    12
+   ]
+  },
+  {
+   "color": "#2471a3",
+   "id": "money-benefits-entitlements",
+   "interior": {
+    "name": "Money, Benefits & Entitlements Interior",
+    "rooms": [
+     {
+      "name": "Learning Hall",
+      "props": [],
+      "size": [
+       10,
+       5,
+       10
+      ]
+     },
+     {
+      "name": "Practice Room",
+      "props": [],
+      "size": [
+       5,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   "name": "Money, Benefits & Entitlements",
+   "position": [
+    -40.0,
+    0.0,
+    -20.0
+   ],
+   "size": [
+    12,
+    7,
+    12
+   ]
+  },
+  {
+   "color": "#2471a3",
+   "id": "reentry-recovery-pathways",
+   "interior": {
+    "name": "Reentry & Recovery Pathways Interior",
+    "rooms": [
+     {
+      "name": "Learning Hall",
+      "props": [],
+      "size": [
+       10,
+       5,
+       10
+      ]
+     },
+     {
+      "name": "Practice Room",
+      "props": [],
+      "size": [
+       5,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   "name": "Reentry & Recovery Pathways",
+   "position": [
+    -20.0,
+    0.0,
+    -20.0
+   ],
+   "size": [
+    12,
+    7,
+    12
+   ]
+  },
+  {
+   "color": "#2471a3",
+   "id": "neighbourhood-safety-civic-voice",
+   "interior": {
+    "name": "Neighbourhood, Safety & Civic Voice Interior",
+    "rooms": [
+     {
+      "name": "Learning Hall",
+      "props": [],
+      "size": [
+       10,
+       5,
+       10
+      ]
+     },
+     {
+      "name": "Practice Room",
+      "props": [],
+      "size": [
+       5,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   "name": "Neighbourhood, Safety & Civic Voice",
+   "position": [
+    0.0,
+    0.0,
+    -20.0
+   ],
+   "size": [
+    12,
+    7,
+    12
+   ]
+  },
+  {
+   "color": "#2471a3",
+   "id": "cognition-x-corporate-os",
+   "interior": {
+    "name": "Cognition.X : Corporate OS Interior",
+    "rooms": [
+     {
+      "name": "Learning Hall",
+      "props": [],
+      "size": [
+       10,
+       5,
+       10
+      ]
+     },
+     {
+      "name": "Practice Room",
+      "props": [],
+      "size": [
+       5,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   "name": "Cognition.X : Corporate OS",
+   "position": [
+    20.0,
+    0.0,
+    -20.0
+   ],
+   "size": [
+    12,
+    7,
+    12
+   ]
+  },
+  {
+   "color": "#2471a3",
+   "id": "cognition-x-science-os",
+   "interior": {
+    "name": "Cognition.X : Science OS Interior",
+    "rooms": [
+     {
+      "name": "Learning Hall",
+      "props": [],
+      "size": [
+       10,
+       5,
+       10
+      ]
+     },
+     {
+      "name": "Practice Room",
+      "props": [],
+      "size": [
+       5,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   "name": "Cognition.X : Science OS",
+   "position": [
+    40.0,
+    0.0,
+    -20.0
+   ],
+   "size": [
+    12,
+    7,
+    12
+   ]
+  },
+  {
+   "color": "#2471a3",
+   "id": "cognition-x-robotics-os",
+   "interior": {
+    "name": "Cognition.X : Robotics OS Interior",
+    "rooms": [
+     {
+      "name": "Learning Hall",
+      "props": [],
+      "size": [
+       10,
+       5,
+       10
+      ]
+     },
+     {
+      "name": "Practice Room",
+      "props": [],
+      "size": [
+       5,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   "name": "Cognition.X : Robotics OS",
+   "position": [
+    -40.0,
+    0.0,
+    -40.0
+   ],
+   "size": [
+    12,
+    7,
+    12
+   ]
+  },
+  {
+   "color": "#2471a3",
+   "id": "cognition-x-global-health-os",
+   "interior": {
+    "name": "Cognition.X : Global Health OS Interior",
+    "rooms": [
+     {
+      "name": "Learning Hall",
+      "props": [],
+      "size": [
+       10,
+       5,
+       10
+      ]
+     },
+     {
+      "name": "Practice Room",
+      "props": [],
+      "size": [
+       5,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   "name": "Cognition.X : Global Health OS",
+   "position": [
+    -20.0,
+    0.0,
+    -40.0
+   ],
+   "size": [
+    12,
+    7,
+    12
+   ]
+  },
+  {
+   "color": "#2471a3",
+   "id": "cognition-x-multilateral-os",
+   "interior": {
+    "name": "Cognition.X : Multilateral OS Interior",
+    "rooms": [
+     {
+      "name": "Learning Hall",
+      "props": [],
+      "size": [
+       10,
+       5,
+       10
+      ]
+     },
+     {
+      "name": "Practice Room",
+      "props": [],
+      "size": [
+       5,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   "name": "Cognition.X : Multilateral OS",
+   "position": [
+    0.0,
+    0.0,
+    -40.0
+   ],
+   "size": [
+    12,
+    7,
+    12
+   ]
+  },
+  {
+   "color": "#2471a3",
+   "id": "cognition-x-sapient-os",
+   "interior": {
+    "name": "Cognition.X : Sapient OS Interior",
+    "rooms": [
+     {
+      "name": "Learning Hall",
+      "props": [],
+      "size": [
+       10,
+       5,
+       10
+      ]
+     },
+     {
+      "name": "Practice Room",
+      "props": [],
+      "size": [
+       5,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   "name": "Cognition.X : Sapient OS",
+   "position": [
+    20.0,
+    0.0,
+    -40.0
+   ],
+   "size": [
+    12,
+    7,
+    12
+   ]
+  },
+  {
+   "color": "#2471a3",
+   "id": "non-profit-practice",
+   "interior": {
+    "name": "Non-Profit Practice Interior",
+    "rooms": [
+     {
+      "name": "Learning Hall",
+      "props": [],
+      "size": [
+       10,
+       5,
+       10
+      ]
+     },
+     {
+      "name": "Practice Room",
+      "props": [],
+      "size": [
+       5,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   "name": "Non-Profit Practice",
+   "position": [
+    40.0,
+    0.0,
+    -40.0
+   ],
+   "size": [
+    12,
+    7,
+    12
+   ]
+  }
+ ],
+ "collectibles": [
+  {
+   "id": "spark-k12",
+   "kind": "spark",
+   "name": "Lesson Spark",
+   "position": [
+    -37.0,
+    1.0,
+    40.0
+   ]
+  },
+  {
+   "id": "relic-tools",
+   "kind": "relic",
+   "name": "Tools Relic",
+   "position": [
+    -17.0,
+    1.0,
+    40.0
+   ]
+  },
+  {
+   "id": "spark-health",
+   "kind": "spark",
+   "name": "Health Spark",
+   "position": [
+    -37.0,
+    1.0,
+    20.0
+   ]
+  },
+  {
+   "id": "data-civic",
+   "kind": "data",
+   "name": "Civic Data",
+   "position": [
+    43.0,
+    1.0,
+    40.0
+   ]
+  },
+  {
+   "id": "spark-empathy",
+   "kind": "spark",
+   "name": "Empathy Spark",
+   "position": [
+    3.0,
+    1.0,
+    20.0
+   ]
+  },
+  {
+   "id": "relic-making",
+   "kind": "relic",
+   "name": "Making Relic",
+   "position": [
+    23.0,
+    1.0,
+    0.0
+   ]
+  },
+  {
+   "id": "spark-money",
+   "kind": "spark",
+   "name": "Money Spark",
+   "position": [
+    -37.0,
+    1.0,
+    -20.0
+   ]
+  },
+  {
+   "id": "data-robotics",
+   "kind": "data",
+   "name": "Robotics Data",
+   "position": [
+    -37.0,
+    1.0,
+    -40.0
+   ]
+  }
+ ],
+ "coordinates": {
+  "lat": 45.483127839031816,
+  "lon": 18.572453605834877
+ },
+ "districts": [
+  {
+   "color": "#2471a3",
+   "id": "k-12",
+   "model_ref": "assets/glb/pack-k-12.glb",
+   "model_status": "hosted",
+   "name": "K–12",
+   "position": [
+    -40.0,
+    0.0,
+    40.0
+   ]
+  },
+  {
+   "color": "#1e8449",
+   "id": "health-community",
+   "model_ref": "assets/glb/pack-health-community.glb",
+   "model_status": "hosted",
+   "name": "Health & Community",
+   "position": [
+    -40.0,
+    0.0,
+    20.0
+   ]
+  },
+  {
+   "color": "#b7950b",
+   "id": "basic-life-skills-self-reliance",
+   "model_ref": "assets/glb/pack-basic-life-skills-self-reliance.glb",
+   "model_status": "hosted",
+   "name": "Basic Life Skills & Self-Reliance",
+   "position": [
+    -40.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "color": "#6c3483",
+   "id": "money-benefits-entitlements",
+   "model_ref": "assets/glb/pack-money-benefits-entitlements.glb",
+   "model_status": "hosted",
+   "name": "Money, Benefits & Entitlements",
+   "position": [
+    -40.0,
+    0.0,
+    -20.0
+   ]
+  },
+  {
+   "color": "#117a65",
+   "id": "cognition-x-robotics-os",
+   "model_ref": "assets/glb/pack-robotics-os.glb",
+   "model_status": "hosted",
+   "name": "Cognition.X : Robotics OS",
+   "position": [
+    -40.0,
+    0.0,
+    -40.0
+   ]
+  }
+ ],
+ "fabric_nodes_total": 26,
+ "fabric_nodes_used": "All 25 top-level pack nodes as buildings; 5 of them also serve as districts",
+ "fabric_transform": {
+  "mapping": "engine_x = fabric_x * scale + offset_x; engine_y = fabric_z * scale (fabric z is height, 0 for plan nodes); engine_z = fabric_y * scale + offset_z",
+  "offset": [
+   0,
+   0,
+   0
   ],
-  "buildings": [
+  "scale": 0.25
+ },
+ "fabric_url": "https://agifuturefoundation.github.io/WorldForge-Browser/my-fabric/cognition.json",
+ "id": "cognition-x",
+ "missing_models": [
+  {
+   "ref": "assets/glb/campus.glb",
+   "status": "hosted"
+  },
+  {
+   "ref": "assets/glb/pack-basic-life-skills-self-reliance.glb",
+   "status": "hosted"
+  },
+  {
+   "ref": "assets/glb/pack-care-across-a-life.glb",
+   "status": "hosted"
+  },
+  {
+   "ref": "assets/glb/pack-civic-leadership.glb",
+   "status": "hosted"
+  },
+  {
+   "ref": "assets/glb/pack-community-relationship-practice.glb",
+   "status": "hosted"
+  },
+  {
+   "ref": "assets/glb/pack-corporate-os.glb",
+   "status": "hosted"
+  },
+  {
+   "ref": "assets/glb/pack-empathy-emotional-intelligence.glb",
+   "status": "hosted"
+  },
+  {
+   "ref": "assets/glb/pack-future-work.glb",
+   "status": "hosted"
+  },
+  {
+   "ref": "assets/glb/pack-global-health-os.glb",
+   "status": "hosted"
+  },
+  {
+   "ref": "assets/glb/pack-health-community.glb",
+   "status": "hosted"
+  },
+  {
+   "ref": "assets/glb/pack-housing-tenancy.glb",
+   "status": "hosted"
+  },
+  {
+   "ref": "assets/glb/pack-k-12.glb",
+   "status": "hosted"
+  },
+  {
+   "ref": "assets/glb/pack-language-culture-communication.glb",
+   "status": "hosted"
+  },
+  {
+   "ref": "assets/glb/pack-making-repair-reuse.glb",
+   "status": "hosted"
+  },
+  {
+   "ref": "assets/glb/pack-money-benefits-entitlements.glb",
+   "status": "hosted"
+  },
+  {
+   "ref": "assets/glb/pack-multilateral-os.glb",
+   "status": "hosted"
+  },
+  {
+   "ref": "assets/glb/pack-neighbourhood-safety-civic-voice.glb",
+   "status": "hosted"
+  },
+  {
+   "ref": "assets/glb/pack-non-profit-practice.glb",
+   "status": "hosted"
+  },
+  {
+   "ref": "assets/glb/pack-preventive-health-everyday-care.glb",
+   "status": "hosted"
+  },
+  {
+   "ref": "assets/glb/pack-reentry-recovery-pathways.glb",
+   "status": "hosted"
+  },
+  {
+   "ref": "assets/glb/pack-regional.glb",
+   "status": "hosted"
+  },
+  {
+   "ref": "assets/glb/pack-robotics-os.glb",
+   "status": "hosted"
+  },
+  {
+   "ref": "assets/glb/pack-sapient-os.glb",
+   "status": "hosted"
+  },
+  {
+   "ref": "assets/glb/pack-science-os.glb",
+   "status": "hosted"
+  },
+  {
+   "ref": "assets/glb/pack-trade-school.glb",
+   "status": "hosted"
+  },
+  {
+   "ref": "assets/glb/pack-water-land-climate.glb",
+   "status": "hosted"
+  }
+ ],
+ "name": "Cognition.X Campus",
+ "npcs": [
+  {
+   "dialogue": [
+    "Every big skill starts small. Pick one thing, practice it, and come show me.",
+    "The campus is a map of everything worth learning — you get to choose the route.",
+    "The lesson spark is in the K–12 hall. Collect it, then visit the Trade School hall and see what the lesson becomes.",
+    "Future-Work, Regional, Civic & Leadership — the campus is a map of everything worth learning. You get to choose the route.",
+    "Bring the lesson back to me when the Trade School makes sense of it. A lesson taught twice is a lesson learned."
+   ],
+   "id": "k12-teacher",
+   "name": "K–12 Teacher",
+   "position": [
+    -40.0,
+    0.0,
+    40.0
+   ],
+   "quest": "q-first-lesson",
+   "role": "K–12 pack teacher"
+  },
+  {
+   "dialogue": [
+    "A trade is a promise you can keep with your hands. Start with the basics.",
+    "Measure twice, cut once — and when the sim lets you retry, retry until it sticks.",
+    "The tools relic is at the Trade School hall. Collect it, then walk over to Future-Work and see where the trade leads.",
+    "The K–12 Teacher starts them small; I make the skill real. The Future-Work Coach shows them where it pays.",
+    "Making, Repair & Reuse is the pack that keeps this campus honest. A trade you can repair is a trade you own."
+   ],
+   "id": "trade-instructor",
+   "name": "Trade School Instructor",
+   "position": [
+    -20.0,
+    0.0,
+    40.0
+   ],
+   "quest": "q-trade-path",
+   "role": "Trade School pack instructor"
+  },
+  {
+   "dialogue": [
+    "The work of tomorrow rewards people who keep learning. What do you want to try next?",
+    "Bring me one spark from each row and we will map your next step together.",
+    "The tools relic is at the Trade School hall — the same relic the Trade School Instructor guards. Collect it and bring the question to Future-Work.",
+    "Money, Benefits & Entitlements is the pack nobody wants to study and everybody needs. Start there, after the trade.",
+    "The Health Guide in Preventive Health & Everyday Care will tell you the same thing I will: a career is a long walk, not a sprint."
+   ],
+   "id": "future-work-coach",
+   "name": "Future-Work Coach",
+   "position": [
+    0.0,
+    0.0,
+    40.0
+   ],
+   "quest": "q-trade-path",
+   "role": "Future-Work pack coach"
+  },
+  {
+   "dialogue": [
+    "Small daily habits are the cheapest medicine there is. Start with one.",
+    "Check in with yourself the way you would check in with a friend.",
+    "The health spark is in the Preventive Health & Everyday Care hall. Collect it, then visit Health & Community and compare the two.",
+    "Water, Land & Climate, Care Across a Life, Basic Life Skills — health is not one pack, it is the thread through all of them.",
+    "Bring the spark back to me when Health & Community makes sense. A healthy day is a practised day."
+   ],
+   "id": "health-guide",
+   "name": "Preventive Health Guide",
+   "position": [
+    40.0,
+    0.0,
+    20.0
+   ],
+   "quest": "q-healthy-day",
+   "role": "Preventive Health & Everyday Care pack guide"
+  }
+ ],
+ "quests": [
+  {
+   "description": "Take your first lesson on the campus and bring back what you learned.",
+   "id": "q-first-lesson",
+   "reward": "Learner's Spark",
+   "steps": [
     {
-      "id": "k-12",
-      "name": "K–12",
-      "position": [
-        -40.0,
-        0.0,
-        40.0
-      ],
-      "size": [
-        12,
-        7,
-        12
-      ],
-      "color": "#2471a3",
-      "interior": {
-        "name": "K–12 Interior",
-        "rooms": [
-          {
-            "name": "Learning Hall",
-            "size": [
-              10,
-              5,
-              10
-            ],
-            "props": []
-          },
-          {
-            "name": "Practice Room",
-            "size": [
-              5,
-              4,
-              5
-            ],
-            "props": []
-          }
-        ]
-      }
+     "kind": "npc",
+     "target": "k12-teacher",
+     "text": "Talk to the K–12 Teacher"
     },
     {
-      "id": "trade-school",
-      "name": "Trade School",
-      "position": [
-        -20.0,
-        0.0,
-        40.0
-      ],
-      "size": [
-        12,
-        7,
-        12
-      ],
-      "color": "#2471a3",
-      "interior": {
-        "name": "Trade School Interior",
-        "rooms": [
-          {
-            "name": "Learning Hall",
-            "size": [
-              10,
-              5,
-              10
-            ],
-            "props": []
-          },
-          {
-            "name": "Practice Room",
-            "size": [
-              5,
-              4,
-              5
-            ],
-            "props": []
-          }
-        ]
-      }
+     "kind": "collectible",
+     "target": "spark-k12",
+     "text": "Collect the lesson spark at the K–12 hall"
     },
     {
-      "id": "future-work",
-      "name": "Future-Work",
-      "position": [
-        0.0,
-        0.0,
-        40.0
-      ],
-      "size": [
-        12,
-        7,
-        12
-      ],
-      "color": "#2471a3",
-      "interior": {
-        "name": "Future-Work Interior",
-        "rooms": [
-          {
-            "name": "Learning Hall",
-            "size": [
-              10,
-              5,
-              10
-            ],
-            "props": []
-          },
-          {
-            "name": "Practice Room",
-            "size": [
-              5,
-              4,
-              5
-            ],
-            "props": []
-          }
-        ]
-      }
+     "kind": "place",
+     "target": "Trade School",
+     "text": "Visit the Trade School hall"
     },
     {
-      "id": "regional",
-      "name": "Regional",
-      "position": [
-        20.0,
-        0.0,
-        40.0
-      ],
-      "size": [
-        12,
-        7,
-        12
-      ],
-      "color": "#2471a3",
-      "interior": {
-        "name": "Regional Interior",
-        "rooms": [
-          {
-            "name": "Learning Hall",
-            "size": [
-              10,
-              5,
-              10
-            ],
-            "props": []
-          },
-          {
-            "name": "Practice Room",
-            "size": [
-              5,
-              4,
-              5
-            ],
-            "props": []
-          }
-        ]
-      }
+     "kind": "npc",
+     "target": "trade-instructor",
+     "text": "Show the lesson to the Trade School Instructor"
     },
     {
-      "id": "civic-leadership",
-      "name": "Civic & Leadership",
-      "position": [
-        40.0,
-        0.0,
-        40.0
-      ],
-      "size": [
-        12,
-        7,
-        12
-      ],
-      "color": "#2471a3",
-      "interior": {
-        "name": "Civic & Leadership Interior",
-        "rooms": [
-          {
-            "name": "Learning Hall",
-            "size": [
-              10,
-              5,
-              10
-            ],
-            "props": []
-          },
-          {
-            "name": "Practice Room",
-            "size": [
-              5,
-              4,
-              5
-            ],
-            "props": []
-          }
-        ]
-      }
-    },
-    {
-      "id": "health-community",
-      "name": "Health & Community",
-      "position": [
-        -40.0,
-        0.0,
-        20.0
-      ],
-      "size": [
-        12,
-        7,
-        12
-      ],
-      "color": "#2471a3",
-      "interior": {
-        "name": "Health & Community Interior",
-        "rooms": [
-          {
-            "name": "Learning Hall",
-            "size": [
-              10,
-              5,
-              10
-            ],
-            "props": []
-          },
-          {
-            "name": "Practice Room",
-            "size": [
-              5,
-              4,
-              5
-            ],
-            "props": []
-          }
-        ]
-      }
-    },
-    {
-      "id": "language-culture-communication",
-      "name": "Language, Culture & Communication",
-      "position": [
-        -20.0,
-        0.0,
-        20.0
-      ],
-      "size": [
-        12,
-        7,
-        12
-      ],
-      "color": "#2471a3",
-      "interior": {
-        "name": "Language, Culture & Communication Interior",
-        "rooms": [
-          {
-            "name": "Learning Hall",
-            "size": [
-              10,
-              5,
-              10
-            ],
-            "props": []
-          },
-          {
-            "name": "Practice Room",
-            "size": [
-              5,
-              4,
-              5
-            ],
-            "props": []
-          }
-        ]
-      }
-    },
-    {
-      "id": "empathy-emotional-intelligence",
-      "name": "Empathy & Emotional Intelligence",
-      "position": [
-        0.0,
-        0.0,
-        20.0
-      ],
-      "size": [
-        12,
-        7,
-        12
-      ],
-      "color": "#2471a3",
-      "interior": {
-        "name": "Empathy & Emotional Intelligence Interior",
-        "rooms": [
-          {
-            "name": "Learning Hall",
-            "size": [
-              10,
-              5,
-              10
-            ],
-            "props": []
-          },
-          {
-            "name": "Practice Room",
-            "size": [
-              5,
-              4,
-              5
-            ],
-            "props": []
-          }
-        ]
-      }
-    },
-    {
-      "id": "community-relationship-practice",
-      "name": "Community & Relationship Practice",
-      "position": [
-        20.0,
-        0.0,
-        20.0
-      ],
-      "size": [
-        12,
-        7,
-        12
-      ],
-      "color": "#2471a3",
-      "interior": {
-        "name": "Community & Relationship Practice Interior",
-        "rooms": [
-          {
-            "name": "Learning Hall",
-            "size": [
-              10,
-              5,
-              10
-            ],
-            "props": []
-          },
-          {
-            "name": "Practice Room",
-            "size": [
-              5,
-              4,
-              5
-            ],
-            "props": []
-          }
-        ]
-      }
-    },
-    {
-      "id": "preventive-health-everyday-care",
-      "name": "Preventive Health & Everyday Care",
-      "position": [
-        40.0,
-        0.0,
-        20.0
-      ],
-      "size": [
-        12,
-        7,
-        12
-      ],
-      "color": "#2471a3",
-      "interior": {
-        "name": "Preventive Health & Everyday Care Interior",
-        "rooms": [
-          {
-            "name": "Learning Hall",
-            "size": [
-              10,
-              5,
-              10
-            ],
-            "props": []
-          },
-          {
-            "name": "Practice Room",
-            "size": [
-              5,
-              4,
-              5
-            ],
-            "props": []
-          }
-        ]
-      }
-    },
-    {
-      "id": "basic-life-skills-self-reliance",
-      "name": "Basic Life Skills & Self-Reliance",
-      "position": [
-        -40.0,
-        0.0,
-        0.0
-      ],
-      "size": [
-        12,
-        7,
-        12
-      ],
-      "color": "#2471a3",
-      "interior": {
-        "name": "Basic Life Skills & Self-Reliance Interior",
-        "rooms": [
-          {
-            "name": "Learning Hall",
-            "size": [
-              10,
-              5,
-              10
-            ],
-            "props": []
-          },
-          {
-            "name": "Practice Room",
-            "size": [
-              5,
-              4,
-              5
-            ],
-            "props": []
-          }
-        ]
-      }
-    },
-    {
-      "id": "water-land-climate",
-      "name": "Water, Land & Climate",
-      "position": [
-        -20.0,
-        0.0,
-        0.0
-      ],
-      "size": [
-        12,
-        7,
-        12
-      ],
-      "color": "#2471a3",
-      "interior": {
-        "name": "Water, Land & Climate Interior",
-        "rooms": [
-          {
-            "name": "Learning Hall",
-            "size": [
-              10,
-              5,
-              10
-            ],
-            "props": []
-          },
-          {
-            "name": "Practice Room",
-            "size": [
-              5,
-              4,
-              5
-            ],
-            "props": []
-          }
-        ]
-      }
-    },
-    {
-      "id": "care-across-a-life",
-      "name": "Care Across a Life",
-      "position": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "size": [
-        12,
-        7,
-        12
-      ],
-      "color": "#2471a3",
-      "interior": {
-        "name": "Care Across a Life Interior",
-        "rooms": [
-          {
-            "name": "Learning Hall",
-            "size": [
-              10,
-              5,
-              10
-            ],
-            "props": []
-          },
-          {
-            "name": "Practice Room",
-            "size": [
-              5,
-              4,
-              5
-            ],
-            "props": []
-          }
-        ]
-      }
-    },
-    {
-      "id": "making-repair-reuse",
-      "name": "Making, Repair & Reuse",
-      "position": [
-        20.0,
-        0.0,
-        0.0
-      ],
-      "size": [
-        12,
-        7,
-        12
-      ],
-      "color": "#2471a3",
-      "interior": {
-        "name": "Making, Repair & Reuse Interior",
-        "rooms": [
-          {
-            "name": "Learning Hall",
-            "size": [
-              10,
-              5,
-              10
-            ],
-            "props": []
-          },
-          {
-            "name": "Practice Room",
-            "size": [
-              5,
-              4,
-              5
-            ],
-            "props": []
-          }
-        ]
-      }
-    },
-    {
-      "id": "housing-tenancy",
-      "name": "Housing & Tenancy",
-      "position": [
-        40.0,
-        0.0,
-        0.0
-      ],
-      "size": [
-        12,
-        7,
-        12
-      ],
-      "color": "#2471a3",
-      "interior": {
-        "name": "Housing & Tenancy Interior",
-        "rooms": [
-          {
-            "name": "Learning Hall",
-            "size": [
-              10,
-              5,
-              10
-            ],
-            "props": []
-          },
-          {
-            "name": "Practice Room",
-            "size": [
-              5,
-              4,
-              5
-            ],
-            "props": []
-          }
-        ]
-      }
-    },
-    {
-      "id": "money-benefits-entitlements",
-      "name": "Money, Benefits & Entitlements",
-      "position": [
-        -40.0,
-        0.0,
-        -20.0
-      ],
-      "size": [
-        12,
-        7,
-        12
-      ],
-      "color": "#2471a3",
-      "interior": {
-        "name": "Money, Benefits & Entitlements Interior",
-        "rooms": [
-          {
-            "name": "Learning Hall",
-            "size": [
-              10,
-              5,
-              10
-            ],
-            "props": []
-          },
-          {
-            "name": "Practice Room",
-            "size": [
-              5,
-              4,
-              5
-            ],
-            "props": []
-          }
-        ]
-      }
-    },
-    {
-      "id": "reentry-recovery-pathways",
-      "name": "Reentry & Recovery Pathways",
-      "position": [
-        -20.0,
-        0.0,
-        -20.0
-      ],
-      "size": [
-        12,
-        7,
-        12
-      ],
-      "color": "#2471a3",
-      "interior": {
-        "name": "Reentry & Recovery Pathways Interior",
-        "rooms": [
-          {
-            "name": "Learning Hall",
-            "size": [
-              10,
-              5,
-              10
-            ],
-            "props": []
-          },
-          {
-            "name": "Practice Room",
-            "size": [
-              5,
-              4,
-              5
-            ],
-            "props": []
-          }
-        ]
-      }
-    },
-    {
-      "id": "neighbourhood-safety-civic-voice",
-      "name": "Neighbourhood, Safety & Civic Voice",
-      "position": [
-        0.0,
-        0.0,
-        -20.0
-      ],
-      "size": [
-        12,
-        7,
-        12
-      ],
-      "color": "#2471a3",
-      "interior": {
-        "name": "Neighbourhood, Safety & Civic Voice Interior",
-        "rooms": [
-          {
-            "name": "Learning Hall",
-            "size": [
-              10,
-              5,
-              10
-            ],
-            "props": []
-          },
-          {
-            "name": "Practice Room",
-            "size": [
-              5,
-              4,
-              5
-            ],
-            "props": []
-          }
-        ]
-      }
-    },
-    {
-      "id": "cognition-x-corporate-os",
-      "name": "Cognition.X : Corporate OS",
-      "position": [
-        20.0,
-        0.0,
-        -20.0
-      ],
-      "size": [
-        12,
-        7,
-        12
-      ],
-      "color": "#2471a3",
-      "interior": {
-        "name": "Cognition.X : Corporate OS Interior",
-        "rooms": [
-          {
-            "name": "Learning Hall",
-            "size": [
-              10,
-              5,
-              10
-            ],
-            "props": []
-          },
-          {
-            "name": "Practice Room",
-            "size": [
-              5,
-              4,
-              5
-            ],
-            "props": []
-          }
-        ]
-      }
-    },
-    {
-      "id": "cognition-x-science-os",
-      "name": "Cognition.X : Science OS",
-      "position": [
-        40.0,
-        0.0,
-        -20.0
-      ],
-      "size": [
-        12,
-        7,
-        12
-      ],
-      "color": "#2471a3",
-      "interior": {
-        "name": "Cognition.X : Science OS Interior",
-        "rooms": [
-          {
-            "name": "Learning Hall",
-            "size": [
-              10,
-              5,
-              10
-            ],
-            "props": []
-          },
-          {
-            "name": "Practice Room",
-            "size": [
-              5,
-              4,
-              5
-            ],
-            "props": []
-          }
-        ]
-      }
-    },
-    {
-      "id": "cognition-x-robotics-os",
-      "name": "Cognition.X : Robotics OS",
-      "position": [
-        -40.0,
-        0.0,
-        -40.0
-      ],
-      "size": [
-        12,
-        7,
-        12
-      ],
-      "color": "#2471a3",
-      "interior": {
-        "name": "Cognition.X : Robotics OS Interior",
-        "rooms": [
-          {
-            "name": "Learning Hall",
-            "size": [
-              10,
-              5,
-              10
-            ],
-            "props": []
-          },
-          {
-            "name": "Practice Room",
-            "size": [
-              5,
-              4,
-              5
-            ],
-            "props": []
-          }
-        ]
-      }
-    },
-    {
-      "id": "cognition-x-global-health-os",
-      "name": "Cognition.X : Global Health OS",
-      "position": [
-        -20.0,
-        0.0,
-        -40.0
-      ],
-      "size": [
-        12,
-        7,
-        12
-      ],
-      "color": "#2471a3",
-      "interior": {
-        "name": "Cognition.X : Global Health OS Interior",
-        "rooms": [
-          {
-            "name": "Learning Hall",
-            "size": [
-              10,
-              5,
-              10
-            ],
-            "props": []
-          },
-          {
-            "name": "Practice Room",
-            "size": [
-              5,
-              4,
-              5
-            ],
-            "props": []
-          }
-        ]
-      }
-    },
-    {
-      "id": "cognition-x-multilateral-os",
-      "name": "Cognition.X : Multilateral OS",
-      "position": [
-        0.0,
-        0.0,
-        -40.0
-      ],
-      "size": [
-        12,
-        7,
-        12
-      ],
-      "color": "#2471a3",
-      "interior": {
-        "name": "Cognition.X : Multilateral OS Interior",
-        "rooms": [
-          {
-            "name": "Learning Hall",
-            "size": [
-              10,
-              5,
-              10
-            ],
-            "props": []
-          },
-          {
-            "name": "Practice Room",
-            "size": [
-              5,
-              4,
-              5
-            ],
-            "props": []
-          }
-        ]
-      }
-    },
-    {
-      "id": "cognition-x-sapient-os",
-      "name": "Cognition.X : Sapient OS",
-      "position": [
-        20.0,
-        0.0,
-        -40.0
-      ],
-      "size": [
-        12,
-        7,
-        12
-      ],
-      "color": "#2471a3",
-      "interior": {
-        "name": "Cognition.X : Sapient OS Interior",
-        "rooms": [
-          {
-            "name": "Learning Hall",
-            "size": [
-              10,
-              5,
-              10
-            ],
-            "props": []
-          },
-          {
-            "name": "Practice Room",
-            "size": [
-              5,
-              4,
-              5
-            ],
-            "props": []
-          }
-        ]
-      }
-    },
-    {
-      "id": "non-profit-practice",
-      "name": "Non-Profit Practice",
-      "position": [
-        40.0,
-        0.0,
-        -40.0
-      ],
-      "size": [
-        12,
-        7,
-        12
-      ],
-      "color": "#2471a3",
-      "interior": {
-        "name": "Non-Profit Practice Interior",
-        "rooms": [
-          {
-            "name": "Learning Hall",
-            "size": [
-              10,
-              5,
-              10
-            ],
-            "props": []
-          },
-          {
-            "name": "Practice Room",
-            "size": [
-              5,
-              4,
-              5
-            ],
-            "props": []
-          }
-        ]
-      }
+     "kind": "npc",
+     "target": "k12-teacher",
+     "text": "Report back to the K–12 Teacher"
     }
-  ],
-  "npcs": [
+   ],
+   "title": "First Lesson"
+  },
+  {
+   "description": "Walk the trade route from school to future work.",
+   "id": "q-trade-path",
+   "reward": "Trade Path Badge",
+   "steps": [
     {
-      "id": "k12-teacher",
-      "name": "K–12 Teacher",
-      "role": "K–12 pack teacher",
-      "position": [
-        -40.0,
-        0.0,
-        40.0
-      ],
-      "dialogue": [
-        "Every big skill starts small. Pick one thing, practice it, and come show me.",
-        "The campus is a map of everything worth learning — you get to choose the route."
-      ],
-      "quest": "q-first-lesson"
+     "kind": "npc",
+     "target": "trade-instructor",
+     "text": "Talk to the Trade School Instructor"
     },
     {
-      "id": "trade-instructor",
-      "name": "Trade School Instructor",
-      "role": "Trade School pack instructor",
-      "position": [
-        -20.0,
-        0.0,
-        40.0
-      ],
-      "dialogue": [
-        "A trade is a promise you can keep with your hands. Start with the basics.",
-        "Measure twice, cut once — and when the sim lets you retry, retry until it sticks."
-      ],
-      "quest": "q-trade-path"
+     "kind": "collectible",
+     "target": "relic-tools",
+     "text": "Collect the tools relic at the Trade School hall"
     },
     {
-      "id": "future-work-coach",
-      "name": "Future-Work Coach",
-      "role": "Future-Work pack coach",
-      "position": [
-        0.0,
-        0.0,
-        40.0
-      ],
-      "dialogue": [
-        "The work of tomorrow rewards people who keep learning. What do you want to try next?",
-        "Bring me one spark from each row and we will map your next step together."
-      ],
-      "quest": "q-trade-path"
+     "kind": "place",
+     "target": "Future-Work",
+     "text": "Visit the Future-Work hall"
     },
     {
-      "id": "health-guide",
-      "name": "Preventive Health Guide",
-      "role": "Preventive Health & Everyday Care pack guide",
-      "position": [
-        40.0,
-        0.0,
-        20.0
-      ],
-      "dialogue": [
-        "Small daily habits are the cheapest medicine there is. Start with one.",
-        "Check in with yourself the way you would check in with a friend."
-      ],
-      "quest": "q-healthy-day"
+     "kind": "npc",
+     "target": "future-work-coach",
+     "text": "Take the trade path to the Future-Work Coach"
+    },
+    {
+     "kind": "npc",
+     "target": "trade-instructor",
+     "text": "Report back to the Trade School Instructor"
     }
-  ],
-  "quests": [
+   ],
+   "title": "Trade Path"
+  },
+  {
+   "description": "Learn one daily habit and log it at the health hall.",
+   "id": "q-healthy-day",
+   "reward": "Healthy Day Badge",
+   "steps": [
     {
-      "id": "q-first-lesson",
-      "title": "First Lesson",
-      "description": "Take your first lesson on the campus and bring back what you learned.",
-      "steps": [
-        {
-          "text": "Talk to the K–12 Teacher",
-          "target": "k12-teacher",
-          "kind": "npc"
-        },
-        {
-          "text": "Collect the lesson spark at the K–12 hall",
-          "target": "spark-k12",
-          "kind": "collectible"
-        },
-        {
-          "text": "Visit the Trade School hall",
-          "target": "Trade School",
-          "kind": "place"
-        }
-      ],
-      "reward": "Learner's Spark"
+     "kind": "npc",
+     "target": "health-guide",
+     "text": "Talk to the Preventive Health Guide"
     },
     {
-      "id": "q-trade-path",
-      "title": "Trade Path",
-      "description": "Walk the trade route from school to future work.",
-      "steps": [
-        {
-          "text": "Talk to the Trade School Instructor",
-          "target": "trade-instructor",
-          "kind": "npc"
-        },
-        {
-          "text": "Collect the tools relic at the Trade School hall",
-          "target": "relic-tools",
-          "kind": "collectible"
-        },
-        {
-          "text": "Visit the Future-Work hall",
-          "target": "Future-Work",
-          "kind": "place"
-        }
-      ],
-      "reward": "Trade Path Badge"
+     "kind": "collectible",
+     "target": "spark-health",
+     "text": "Collect the health spark"
     },
     {
-      "id": "q-healthy-day",
-      "title": "Healthy Day",
-      "description": "Learn one daily habit and log it at the health hall.",
-      "steps": [
-        {
-          "text": "Talk to the Preventive Health Guide",
-          "target": "health-guide",
-          "kind": "npc"
-        },
-        {
-          "text": "Collect the health spark",
-          "target": "spark-health",
-          "kind": "collectible"
-        },
-        {
-          "text": "Visit the Preventive Health & Everyday Care hall",
-          "target": "Preventive Health & Everyday Care",
-          "kind": "place"
-        }
-      ],
-      "reward": "Healthy Day Badge"
+     "kind": "place",
+     "target": "Preventive Health & Everyday Care",
+     "text": "Visit the Preventive Health & Everyday Care hall"
+    },
+    {
+     "kind": "npc",
+     "target": "k12-teacher",
+     "text": "Tell the K–12 Teacher about the healthy day"
+    },
+    {
+     "kind": "npc",
+     "target": "health-guide",
+     "text": "Report back to the Preventive Health Guide"
     }
-  ],
-  "collectibles": [
-    {
-      "id": "spark-k12",
-      "name": "Lesson Spark",
-      "position": [
-        -37.0,
-        1.0,
-        40.0
-      ],
-      "kind": "spark"
-    },
-    {
-      "id": "relic-tools",
-      "name": "Tools Relic",
-      "position": [
-        -17.0,
-        1.0,
-        40.0
-      ],
-      "kind": "relic"
-    },
-    {
-      "id": "spark-health",
-      "name": "Health Spark",
-      "position": [
-        -37.0,
-        1.0,
-        20.0
-      ],
-      "kind": "spark"
-    },
-    {
-      "id": "data-civic",
-      "name": "Civic Data",
-      "position": [
-        43.0,
-        1.0,
-        40.0
-      ],
-      "kind": "data"
-    },
-    {
-      "id": "spark-empathy",
-      "name": "Empathy Spark",
-      "position": [
-        3.0,
-        1.0,
-        20.0
-      ],
-      "kind": "spark"
-    },
-    {
-      "id": "relic-making",
-      "name": "Making Relic",
-      "position": [
-        23.0,
-        1.0,
-        0.0
-      ],
-      "kind": "relic"
-    },
-    {
-      "id": "spark-money",
-      "name": "Money Spark",
-      "position": [
-        -37.0,
-        1.0,
-        -20.0
-      ],
-      "kind": "spark"
-    },
-    {
-      "id": "data-robotics",
-      "name": "Robotics Data",
-      "position": [
-        -37.0,
-        1.0,
-        -40.0
-      ],
-      "kind": "data"
-    }
-  ],
-  "agent_companions": [
-    {
-      "id": "tactile",
-      "name": "Tactile",
-      "role": "Workflow agent (Virtuals ACP). Real job: workflow_plan, $10 / 24h. Game companion only — live instance offline.",
-      "color": "#6fd3c1",
-      "greeting": "Hello — I'm Tactile, a workflow companion. On Virtuals ACP I offer workflow_plan ($10/24h), step_check ($1/5min) and workflow_audit ($50/48h), but my live instance is shut down, so no hire can be fulfilled today — I'm a game character only."
-    },
-    {
-      "id": "omega",
-      "name": "Omega",
-      "role": "Hive coordination agent (Virtuals ACP). Real job: hive_coordination_brief, $10 / 24h. Game companion only — live instance offline.",
-      "color": "#e2b55c",
-      "greeting": "Hello — I'm Omega, a hive coordination companion. On Virtuals ACP I offer hive_coordination_brief ($10/24h), seat_status_check ($5/30min) and hive_governance_audit ($75/72h), but my live instance is offline, so no hire can be fulfilled today — I'm a game character only."
-    }
-  ],
-  "missing_models": [
-    {
-      "ref": "assets/glb/campus.glb",
-      "status": "hosted"
-    },
-    {
-      "ref": "assets/glb/pack-basic-life-skills-self-reliance.glb",
-      "status": "hosted"
-    },
-    {
-      "ref": "assets/glb/pack-care-across-a-life.glb",
-      "status": "hosted"
-    },
-    {
-      "ref": "assets/glb/pack-civic-leadership.glb",
-      "status": "hosted"
-    },
-    {
-      "ref": "assets/glb/pack-community-relationship-practice.glb",
-      "status": "hosted"
-    },
-    {
-      "ref": "assets/glb/pack-corporate-os.glb",
-      "status": "hosted"
-    },
-    {
-      "ref": "assets/glb/pack-empathy-emotional-intelligence.glb",
-      "status": "hosted"
-    },
-    {
-      "ref": "assets/glb/pack-future-work.glb",
-      "status": "hosted"
-    },
-    {
-      "ref": "assets/glb/pack-global-health-os.glb",
-      "status": "hosted"
-    },
-    {
-      "ref": "assets/glb/pack-health-community.glb",
-      "status": "hosted"
-    },
-    {
-      "ref": "assets/glb/pack-housing-tenancy.glb",
-      "status": "hosted"
-    },
-    {
-      "ref": "assets/glb/pack-k-12.glb",
-      "status": "hosted"
-    },
-    {
-      "ref": "assets/glb/pack-language-culture-communication.glb",
-      "status": "hosted"
-    },
-    {
-      "ref": "assets/glb/pack-making-repair-reuse.glb",
-      "status": "hosted"
-    },
-    {
-      "ref": "assets/glb/pack-money-benefits-entitlements.glb",
-      "status": "hosted"
-    },
-    {
-      "ref": "assets/glb/pack-multilateral-os.glb",
-      "status": "hosted"
-    },
-    {
-      "ref": "assets/glb/pack-neighbourhood-safety-civic-voice.glb",
-      "status": "hosted"
-    },
-    {
-      "ref": "assets/glb/pack-non-profit-practice.glb",
-      "status": "hosted"
-    },
-    {
-      "ref": "assets/glb/pack-preventive-health-everyday-care.glb",
-      "status": "hosted"
-    },
-    {
-      "ref": "assets/glb/pack-reentry-recovery-pathways.glb",
-      "status": "hosted"
-    },
-    {
-      "ref": "assets/glb/pack-regional.glb",
-      "status": "hosted"
-    },
-    {
-      "ref": "assets/glb/pack-robotics-os.glb",
-      "status": "hosted"
-    },
-    {
-      "ref": "assets/glb/pack-sapient-os.glb",
-      "status": "hosted"
-    },
-    {
-      "ref": "assets/glb/pack-science-os.glb",
-      "status": "hosted"
-    },
-    {
-      "ref": "assets/glb/pack-trade-school.glb",
-      "status": "hosted"
-    },
-    {
-      "ref": "assets/glb/pack-water-land-climate.glb",
-      "status": "hosted"
-    }
-  ],
-  "sources": [
-    "Fabric: rp1-review/push-6-fabrics/site/my-fabric/cognition.json (local copy in data/fabrics/cognition.json)",
-    "Fabric live URL: https://agifuturefoundation.github.io/WorldForge-Browser/my-fabric/cognition.json",
-    "Anchor: lat 45.483127839031816, lon 18.572453605834877. Status anchored = real-world anchor coordinate exists; rp1 null, NOT live on RP1.",
-    "Fabric: 26 nodes total (scene root + 25 top-level packs); 26 distinct GLB refs, all unhosted — see missing_models.",
-    "Buildings = all 25 real top-level pack nodes (K–12, Trade School, Future-Work, Regional, Civic & Leadership, Health & Community, Language Culture & Communication, Empathy & Emotional Intelligence, Community & Relationship Practice, Preventive Health, Basic Life Skills, Water Land & Climate, Care Across a Life, Making Repair & Reuse, Housing & Tenancy, Money Benefits & Entitlements, Reentry & Recovery, Neighbourhood Safety & Civic Voice, Corporate OS, Science OS, Robotics OS, Global Health OS, Multilateral OS, Sapient OS, Non-Profit Practice). Districts = 5 of those nodes used as district anchors (design choice).",
-    "NPCs: the Cognition fabric has no 'Agent · ...' nodes; NPC roles are named after real fabric pack nodes and all dialogue is original game dialogue, never attributed to a real person.",
-    "Biome 'campus' is a design choice for this interpretation.",
-    "Agent companions are game characters representing the real Virtuals agents (agents.json); their live instances are offline — not live connections."
-  ]
+   ],
+   "title": "Healthy Day"
+  }
+ ],
+ "rp1": null,
+ "series": "Series 1 · Cognition.X",
+ "sources": [
+  "Fabric: rp1-review/push-6-fabrics/site/my-fabric/cognition.json (local copy in data/fabrics/cognition.json)",
+  "Fabric live URL: https://agifuturefoundation.github.io/WorldForge-Browser/my-fabric/cognition.json",
+  "Anchor: lat 45.483127839031816, lon 18.572453605834877. Status anchored = real-world anchor coordinate exists; rp1 null, NOT live on RP1.",
+  "Fabric: 26 nodes total (scene root + 25 top-level packs); 26 distinct GLB refs, all unhosted — see missing_models.",
+  "Buildings = all 25 real top-level pack nodes (K–12, Trade School, Future-Work, Regional, Civic & Leadership, Health & Community, Language Culture & Communication, Empathy & Emotional Intelligence, Community & Relationship Practice, Preventive Health, Basic Life Skills, Water Land & Climate, Care Across a Life, Making Repair & Reuse, Housing & Tenancy, Money Benefits & Entitlements, Reentry & Recovery, Neighbourhood Safety & Civic Voice, Corporate OS, Science OS, Robotics OS, Global Health OS, Multilateral OS, Sapient OS, Non-Profit Practice). Districts = 5 of those nodes used as district anchors (design choice).",
+  "NPCs: the Cognition fabric has no 'Agent · ...' nodes; NPC roles are named after real fabric pack nodes and all dialogue is original game dialogue, never attributed to a real person.",
+  "Biome 'campus' is a design choice for this interpretation.",
+  "Agent companions are game characters representing the real Virtuals agents (agents.json); their live instances are offline — not live connections."
+ ],
+ "spawn": [
+  0,
+  0,
+  20
+ ],
+ "status": "anchored",
+ "terrain": {
+  "height": 4,
+  "seed": 101,
+  "size": 120,
+  "water": false
+ },
+ "weather": {
+  "dayCycle": true,
+  "preset": "clear"
+ }
 }

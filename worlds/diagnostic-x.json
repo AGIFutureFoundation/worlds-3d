@@ -1,777 +1,858 @@
 {
-  "id": "diagnostic-x",
-  "name": "Diagnostic.X",
-  "series": "Series 3 · Diagnostic.X",
-  "status": "anchored",
-  "rp1": null,
-  "coordinates": {
-    "lat": 5.342706937662501,
-    "lon": 101.5663444901012
+ "agent_companions": [
+  {
+   "color": "#8ecae6",
+   "greeting": "Hello — I'm ALS Researcher, a compound-library companion. On Virtuals ACP I offer compound_library_snapshot ($10/24h), compound_lookup ($2/30min) and compound_screening_pack ($150/72h), but my live instance is shut down, so no hire can be fulfilled today — I'm a game character only.",
+   "id": "als",
+   "name": "ALS Researcher",
+   "role": "Compound-library research agent (Virtuals ACP). Real job: compound_library_snapshot, $10 / 24h. Game companion only — live instance offline."
   },
-  "fabric_url": "https://agifuturefoundation.github.io/WorldForge-Browser/my-fabric/worlds/diagnostic-x/world.json",
-  "biome": "campus",
-  "spawn": [
-    0,
-    0,
-    22
-  ],
-  "terrain": {
-    "size": 120,
-    "height": 5,
-    "seed": 103,
-    "water": false
+  {
+   "color": "#f4a261",
+   "greeting": "Hello — I'm CMMC, a compliance-readiness companion. On Virtuals ACP I offer readiness_check ($25/24h), control_lookup ($2/30min) and full_readiness_assessment ($150/72h), but my live instance is shut down, so no hire can be fulfilled today — I'm a game character only.",
+   "id": "cmmc",
+   "name": "CMMC",
+   "role": "Compliance-readiness agent (Virtuals ACP). Real job: readiness_check. Game companion only — live instance offline."
+  }
+ ],
+ "biome": "campus",
+ "buildings": [
+  {
+   "color": "#2471a3",
+   "id": "zone-medical-kiosk",
+   "interior": {
+    "name": "Zone · Medical Kiosk Interior",
+    "rooms": [
+     {
+      "name": "Main Hall",
+      "props": [],
+      "size": [
+       10,
+       5,
+       10
+      ]
+     },
+     {
+      "name": "Side Room",
+      "props": [],
+      "size": [
+       5,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   "name": "Zone · Medical Kiosk",
+   "position": [
+    0.0,
+    0.0,
+    -24.0
+   ],
+   "size": [
+    12,
+    7,
+    12
+   ]
   },
-  "weather": {
-    "preset": "clear",
-    "dayCycle": true
+  {
+   "color": "#1e8449",
+   "id": "zone-4d-imaging-room",
+   "interior": {
+    "name": "Zone · 4D Imaging Room Interior",
+    "rooms": [
+     {
+      "name": "Main Hall",
+      "props": [],
+      "size": [
+       10,
+       5,
+       10
+      ]
+     },
+     {
+      "name": "Side Room",
+      "props": [],
+      "size": [
+       5,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   "name": "Zone · 4D Imaging Room",
+   "position": [
+    -22.83,
+    0.0,
+    -7.41
+   ],
+   "size": [
+    12,
+    7,
+    12
+   ]
   },
-  "fabric_transform": {
-    "scale": 1.5,
-    "offset": [
-      0,
-      0,
-      0
-    ],
-    "mapping": "engine_x = fabric_x * scale + offset_x; engine_y = fabric_z * scale (fabric z is height, 0 for plan nodes); engine_z = fabric_y * scale + offset_z"
+  {
+   "color": "#b7950b",
+   "id": "zone-virtual-molecular-lab",
+   "interior": {
+    "name": "Zone · Virtual Molecular Lab Interior",
+    "rooms": [
+     {
+      "name": "Main Hall",
+      "props": [],
+      "size": [
+       10,
+       5,
+       10
+      ]
+     },
+     {
+      "name": "Side Room",
+      "props": [],
+      "size": [
+       5,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   "name": "Zone · Virtual Molecular Lab",
+   "position": [
+    -14.1,
+    0.0,
+    19.41
+   ],
+   "size": [
+    12,
+    7,
+    12
+   ]
   },
-  "fabric_nodes_total": 30,
-  "fabric_nodes_used": "All 5 Zone nodes as districts and buildings, plus the PBC Alignment Evaluation Gate and the world Sign as buildings",
-  "districts": [
-    {
-      "id": "zone-medical-kiosk",
-      "name": "Zone · Medical Kiosk",
-      "position": [
-        0.0,
-        0.0,
-        -24.0
-      ],
-      "color": "#2471a3",
-      "model_ref": "../models/zone-marker.glb",
-      "model_status": "not hosted — procedural placeholder shown"
-    },
-    {
-      "id": "zone-4d-imaging-room",
-      "name": "Zone · 4D Imaging Room",
-      "position": [
-        -22.83,
-        0.0,
-        -7.41
-      ],
-      "color": "#1e8449",
-      "model_ref": "../models/zone-marker.glb",
-      "model_status": "not hosted — procedural placeholder shown"
-    },
-    {
-      "id": "zone-virtual-molecular-lab",
-      "name": "Zone · Virtual Molecular Lab",
-      "position": [
-        -14.1,
-        0.0,
-        19.41
-      ],
-      "color": "#b7950b",
-      "model_ref": "../models/zone-marker.glb",
-      "model_status": "not hosted — procedural placeholder shown"
-    },
-    {
-      "id": "zone-metaverse-medical-office",
-      "name": "Zone · Metaverse Medical Office",
-      "position": [
-        14.1,
-        0.0,
-        19.41
-      ],
-      "color": "#6c3483",
-      "model_ref": "../models/zone-marker.glb",
-      "model_status": "not hosted — procedural placeholder shown"
-    },
-    {
-      "id": "zone-steward-council",
-      "name": "Zone · Steward Council",
-      "position": [
-        22.83,
-        0.0,
-        -7.41
-      ],
-      "color": "#117a65",
-      "model_ref": "../models/zone-marker.glb",
-      "model_status": "not hosted — procedural placeholder shown"
-    }
-  ],
-  "buildings": [
-    {
-      "id": "zone-medical-kiosk",
-      "name": "Zone · Medical Kiosk",
-      "position": [
-        0.0,
-        0.0,
-        -24.0
-      ],
+  {
+   "color": "#6c3483",
+   "id": "zone-metaverse-medical-office",
+   "interior": {
+    "name": "Zone · Metaverse Medical Office Interior",
+    "rooms": [
+     {
+      "name": "Main Hall",
+      "props": [],
       "size": [
-        12,
-        7,
-        12
-      ],
-      "color": "#2471a3",
-      "interior": {
-        "name": "Zone · Medical Kiosk Interior",
-        "rooms": [
-          {
-            "name": "Main Hall",
-            "size": [
-              10,
-              5,
-              10
-            ],
-            "props": []
-          },
-          {
-            "name": "Side Room",
-            "size": [
-              5,
-              4,
-              5
-            ],
-            "props": []
-          }
-        ]
-      }
-    },
-    {
-      "id": "zone-4d-imaging-room",
-      "name": "Zone · 4D Imaging Room",
-      "position": [
-        -22.83,
-        0.0,
-        -7.41
-      ],
+       10,
+       5,
+       10
+      ]
+     },
+     {
+      "name": "Side Room",
+      "props": [],
       "size": [
-        12,
-        7,
-        12
-      ],
-      "color": "#1e8449",
-      "interior": {
-        "name": "Zone · 4D Imaging Room Interior",
-        "rooms": [
-          {
-            "name": "Main Hall",
-            "size": [
-              10,
-              5,
-              10
-            ],
-            "props": []
-          },
-          {
-            "name": "Side Room",
-            "size": [
-              5,
-              4,
-              5
-            ],
-            "props": []
-          }
-        ]
-      }
-    },
-    {
-      "id": "zone-virtual-molecular-lab",
-      "name": "Zone · Virtual Molecular Lab",
-      "position": [
-        -14.1,
-        0.0,
-        19.41
-      ],
+       5,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   "name": "Zone · Metaverse Medical Office",
+   "position": [
+    14.1,
+    0.0,
+    19.41
+   ],
+   "size": [
+    12,
+    7,
+    12
+   ]
+  },
+  {
+   "color": "#117a65",
+   "id": "zone-steward-council",
+   "interior": {
+    "name": "Zone · Steward Council Interior",
+    "rooms": [
+     {
+      "name": "Main Hall",
+      "props": [],
       "size": [
-        12,
-        7,
-        12
-      ],
-      "color": "#b7950b",
-      "interior": {
-        "name": "Zone · Virtual Molecular Lab Interior",
-        "rooms": [
-          {
-            "name": "Main Hall",
-            "size": [
-              10,
-              5,
-              10
-            ],
-            "props": []
-          },
-          {
-            "name": "Side Room",
-            "size": [
-              5,
-              4,
-              5
-            ],
-            "props": []
-          }
-        ]
-      }
-    },
-    {
-      "id": "zone-metaverse-medical-office",
-      "name": "Zone · Metaverse Medical Office",
-      "position": [
-        14.1,
-        0.0,
-        19.41
-      ],
+       10,
+       5,
+       10
+      ]
+     },
+     {
+      "name": "Side Room",
+      "props": [],
       "size": [
-        12,
-        7,
-        12
-      ],
-      "color": "#6c3483",
-      "interior": {
-        "name": "Zone · Metaverse Medical Office Interior",
-        "rooms": [
-          {
-            "name": "Main Hall",
-            "size": [
-              10,
-              5,
-              10
-            ],
-            "props": []
-          },
-          {
-            "name": "Side Room",
-            "size": [
-              5,
-              4,
-              5
-            ],
-            "props": []
-          }
-        ]
-      }
-    },
-    {
-      "id": "zone-steward-council",
-      "name": "Zone · Steward Council",
-      "position": [
-        22.83,
-        0.0,
-        -7.41
-      ],
+       5,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   "name": "Zone · Steward Council",
+   "position": [
+    22.83,
+    0.0,
+    -7.41
+   ],
+   "size": [
+    12,
+    7,
+    12
+   ]
+  },
+  {
+   "color": "#6c3483",
+   "id": "pbc-alignment-evaluation-gate",
+   "interior": {
+    "name": "PBC · Alignment Evaluation Gate Interior",
+    "rooms": [
+     {
+      "name": "Gate Hall",
+      "props": [],
       "size": [
-        12,
-        7,
-        12
-      ],
-      "color": "#117a65",
-      "interior": {
-        "name": "Zone · Steward Council Interior",
-        "rooms": [
-          {
-            "name": "Main Hall",
-            "size": [
-              10,
-              5,
-              10
-            ],
-            "props": []
-          },
-          {
-            "name": "Side Room",
-            "size": [
-              5,
-              4,
-              5
-            ],
-            "props": []
-          }
-        ]
-      }
-    },
-    {
-      "id": "pbc-alignment-evaluation-gate",
-      "name": "PBC · Alignment Evaluation Gate",
-      "position": [
-        0.0,
-        0.0,
-        -36.0
-      ],
+       8,
+       4,
+       3
+      ]
+     }
+    ]
+   },
+   "name": "PBC · Alignment Evaluation Gate",
+   "position": [
+    0.0,
+    0.0,
+    -36.0
+   ],
+   "size": [
+    10,
+    6,
+    4
+   ]
+  },
+  {
+   "color": "#b7950b",
+   "id": "sign-diagnostic-x-powered-by-agi-corp",
+   "interior": {
+    "name": "Sign · Diagnostic.X · Powered by AGI Corp Interior",
+    "rooms": [
+     {
+      "name": "Sign Plaza",
+      "props": [],
       "size": [
-        10,
-        6,
-        4
-      ],
-      "color": "#6c3483",
-      "interior": {
-        "name": "PBC · Alignment Evaluation Gate Interior",
-        "rooms": [
-          {
-            "name": "Gate Hall",
-            "size": [
-              8,
-              4,
-              3
-            ],
-            "props": []
-          }
-        ]
-      }
-    },
-    {
-      "id": "sign-diagnostic-x-powered-by-agi-corp",
-      "name": "Sign · Diagnostic.X · Powered by AGI Corp",
-      "position": [
-        0.0,
-        0.0,
-        -46.5
-      ],
-      "size": [
-        10,
-        5,
-        2
-      ],
-      "color": "#b7950b",
-      "interior": {
-        "name": "Sign · Diagnostic.X · Powered by AGI Corp Interior",
-        "rooms": [
-          {
-            "name": "Sign Plaza",
-            "size": [
-              8,
-              4,
-              3
-            ],
-            "props": []
-          }
-        ]
-      }
-    }
+       8,
+       4,
+       3
+      ]
+     }
+    ]
+   },
+   "name": "Sign · Diagnostic.X · Powered by AGI Corp",
+   "position": [
+    0.0,
+    0.0,
+    -46.5
+   ],
+   "size": [
+    10,
+    5,
+    2
+   ]
+  }
+ ],
+ "collectibles": [
+  {
+   "id": "data-vitals",
+   "kind": "data",
+   "name": "Vitals Data",
+   "position": [
+    3.0,
+    1.0,
+    -24.0
+   ]
+  },
+  {
+   "id": "spark-scan",
+   "kind": "spark",
+   "name": "Scan Spark",
+   "position": [
+    -19.83,
+    1.0,
+    -7.41
+   ]
+  },
+  {
+   "id": "relic-sample",
+   "kind": "relic",
+   "name": "Sample Relic",
+   "position": [
+    -11.1,
+    1.0,
+    19.41
+   ]
+  },
+  {
+   "id": "data-office",
+   "kind": "data",
+   "name": "Office Data",
+   "position": [
+    17.1,
+    1.0,
+    19.41
+   ]
+  },
+  {
+   "id": "spark-kiosk",
+   "kind": "spark",
+   "name": "Kiosk Spark",
+   "position": [
+    -3.0,
+    1.0,
+    -24.0
+   ]
+  },
+  {
+   "id": "relic-steward",
+   "kind": "relic",
+   "name": "Steward Relic",
+   "position": [
+    25.83,
+    1.0,
+    -7.41
+   ]
+  },
+  {
+   "id": "spark-lab",
+   "kind": "spark",
+   "name": "Lab Spark",
+   "position": [
+    -17.1,
+    1.0,
+    19.41
+   ]
+  },
+  {
+   "id": "spark-host",
+   "kind": "spark",
+   "name": "Host Spark",
+   "position": [
+    8.75,
+    1,
+    -33.0
+   ]
+  },
+  {
+   "id": "data-liaison",
+   "kind": "data",
+   "name": "Liaison Data",
+   "position": [
+    19.83,
+    1.0,
+    -7.41
+   ]
+  },
+  {
+   "id": "spark-alignment",
+   "kind": "spark",
+   "name": "Alignment Spark",
+   "position": [
+    -8.75,
+    1,
+    -33.0
+   ]
+  }
+ ],
+ "coordinates": {
+  "lat": 5.342706937662501,
+  "lon": 101.5663444901012
+ },
+ "districts": [
+  {
+   "color": "#2471a3",
+   "id": "zone-medical-kiosk",
+   "model_ref": "../models/zone-marker.glb",
+   "model_status": "not hosted — procedural placeholder shown",
+   "name": "Zone · Medical Kiosk",
+   "position": [
+    0.0,
+    0.0,
+    -24.0
+   ]
+  },
+  {
+   "color": "#1e8449",
+   "id": "zone-4d-imaging-room",
+   "model_ref": "../models/zone-marker.glb",
+   "model_status": "not hosted — procedural placeholder shown",
+   "name": "Zone · 4D Imaging Room",
+   "position": [
+    -22.83,
+    0.0,
+    -7.41
+   ]
+  },
+  {
+   "color": "#b7950b",
+   "id": "zone-virtual-molecular-lab",
+   "model_ref": "../models/zone-marker.glb",
+   "model_status": "not hosted — procedural placeholder shown",
+   "name": "Zone · Virtual Molecular Lab",
+   "position": [
+    -14.1,
+    0.0,
+    19.41
+   ]
+  },
+  {
+   "color": "#6c3483",
+   "id": "zone-metaverse-medical-office",
+   "model_ref": "../models/zone-marker.glb",
+   "model_status": "not hosted — procedural placeholder shown",
+   "name": "Zone · Metaverse Medical Office",
+   "position": [
+    14.1,
+    0.0,
+    19.41
+   ]
+  },
+  {
+   "color": "#117a65",
+   "id": "zone-steward-council",
+   "model_ref": "../models/zone-marker.glb",
+   "model_status": "not hosted — procedural placeholder shown",
+   "name": "Zone · Steward Council",
+   "position": [
+    22.83,
+    0.0,
+    -7.41
+   ]
+  }
+ ],
+ "fabric_nodes_total": 30,
+ "fabric_nodes_used": "All 5 Zone nodes as districts and buildings, plus the PBC Alignment Evaluation Gate and the world Sign as buildings",
+ "fabric_transform": {
+  "mapping": "engine_x = fabric_x * scale + offset_x; engine_y = fabric_z * scale (fabric z is height, 0 for plan nodes); engine_z = fabric_y * scale + offset_z",
+  "offset": [
+   0,
+   0,
+   0
   ],
-  "npcs": [
+  "scale": 1.5
+ },
+ "fabric_url": "https://agifuturefoundation.github.io/WorldForge-Browser/my-fabric/worlds/diagnostic-x/world.json",
+ "id": "diagnostic-x",
+ "missing_models": [
+  {
+   "ref": "../models/advisor-alignment.glb",
+   "status": "not hosted — procedural placeholder shown"
+  },
+  {
+   "ref": "../models/advisor-host.glb",
+   "status": "not hosted — procedural placeholder shown"
+  },
+  {
+   "ref": "../models/advisor-steward.glb",
+   "status": "not hosted — procedural placeholder shown"
+  },
+  {
+   "ref": "../models/agent.glb",
+   "status": "not hosted — procedural placeholder shown"
+  },
+  {
+   "ref": "assets/glb/coordinator.glb",
+   "status": "hosted"
+  },
+  {
+   "ref": "../models/env-sky.glb",
+   "status": "not hosted — procedural placeholder shown"
+  },
+  {
+   "ref": "../models/env-terrain.glb",
+   "status": "not hosted — procedural placeholder shown"
+  },
+  {
+   "ref": "../models/gate.glb",
+   "status": "not hosted — procedural placeholder shown"
+  },
+  {
+   "ref": "../models/sign-diagnostic-x.glb",
+   "status": "not hosted — procedural placeholder shown"
+  },
+  {
+   "ref": "../models/steward.glb",
+   "status": "not hosted — procedural placeholder shown"
+  },
+  {
+   "ref": "../models/world-diagnostic-x.glb",
+   "status": "not hosted — procedural placeholder shown"
+  },
+  {
+   "ref": "../models/zone-marker.glb",
+   "status": "not hosted — procedural placeholder shown"
+  }
+ ],
+ "name": "Diagnostic.X",
+ "npcs": [
+  {
+   "dialogue": [
+    "Hello — I am a demo guide, not a doctor. I can show you around the kiosk.",
+    "If you feel unwell, please see a real clinician. I will point you to one.",
+    "The vitals data is at the Medical Kiosk. Collect it there, then stand in the kiosk and I will walk you through what it can — and cannot — do.",
+    "I am a demo guide, not a doctor. If you feel unwell, see a real clinician. I will point you to one.",
+    "The Imaging AI in the 4D Imaging Room sees what I cannot. When the kiosk is done with you, go and ask it for the tour."
+   ],
+   "id": "medical-ai-avatar",
+   "name": "Medical AI Avatar",
+   "position": [
+    0.0,
+    0.45,
+    -24.0
+   ],
+   "quest": "q-kiosk-checkin",
+   "role": "Medical Kiosk avatar"
+  },
+  {
+   "dialogue": [
+    "The imaging room turns scans into something you can walk around.",
+    "Every image here is a teaching example — never a diagnosis.",
+    "The scan spark is in the 4D Imaging Room. Collect it, stand in the room, and I will show you how the imaging works.",
+    "Four dimensions, one room, and a lot of patience. The picture is only useful if someone can explain it.",
+    "The Scientist Assistant in the Virtual Molecular Lab takes the pictures I make and asks what they mean. Go and see."
+   ],
+   "id": "imaging-ai",
+   "name": "Imaging AI",
+   "position": [
+    -22.83,
+    0.45,
+    -7.41
+   ],
+   "quest": "q-imaging-tour",
+   "role": "4D Imaging Room imaging AI"
+  },
+  {
+   "dialogue": [
+    "The molecular lab lets you hold a molecule in your hands — carefully.",
+    "Ask me about any sample and I will show you its story.",
+    "The sample relic is in the Virtual Molecular Lab. Collect it, stand in the lab, and we will look at it together.",
+    "The Office AI keeps the Metaverse Medical Office running while I stay in the lab. We compare notes at the Steward Council.",
+    "A sample is a question in a bottle. The lab does not answer it — it teaches you to ask it better."
+   ],
+   "id": "scientist-assistant",
+   "name": "Scientist Assistant Avatar",
+   "position": [
+    -14.1,
+    0.45,
+    19.41
+   ],
+   "quest": "q-lab-assist",
+   "role": "Virtual Molecular Lab assistant"
+  },
+  {
+   "dialogue": [
+    "Welcome to the office. I keep the schedule and the forms in order.",
+    "Your visit notes stay yours — the office never shares them.",
+    "The office data is in the Metaverse Medical Office. Collect it there, then come back and tell me what the office should do next.",
+    "The Medical AI Avatar runs the kiosk, I run the office, and the Steward Council runs the decisions. That order matters.",
+    "If the kiosk sent you, you have already checked in. The office is where the check-in becomes a plan."
+   ],
+   "id": "office-ai-avatar",
+   "name": "Office AI Avatar",
+   "position": [
+    14.1,
+    0.45,
+    19.41
+   ],
+   "quest": "q-kiosk-checkin",
+   "role": "Metaverse Medical Office avatar"
+  },
+  {
+   "dialogue": [
+    "Welcome. I keep the doors open and the stewards informed.",
+    "If you need a human decision, the Steward Council is where it lands.",
+    "The host spark is by the Alignment Evaluation Gate. Collect it there, stand at the gate, and you will see what I see every day.",
+    "The Steward Liaison carries messages to the Steward Council. I keep the doors open; the liaison keeps the words moving.",
+    "This world is a demo, not a clinic. The Medical Kiosk shows what a kiosk could do — a real clinician does the rest."
+   ],
+   "id": "host-advisor",
+   "name": "Host Advisor",
+   "position": [
+    6.75,
+    0.0,
+    -33.0
+   ],
+   "quest": "q-host-welcome",
+   "role": "Advisor · Host Advisor"
+  },
+  {
+   "dialogue": [
+    "I carry messages between this world and the Steward Council — I never decide for them.",
+    "The steward seats are held by humans. My job is to make sure their words arrive intact.",
+    "The liaison data is at the Steward Council. Collect it there — the council floor is where messages become decisions.",
+    "Three steward seats, all held by humans. I carry the words; I never cast the vote.",
+    "The Alignment Advisor checks plans at the gate before they reach the council. Bring me the flagged ones first."
+   ],
+   "id": "steward-liaison",
+   "name": "Steward Liaison",
+   "position": [
+    27.03,
+    0.45,
+    -7.41
+   ],
+   "quest": "q-steward-liaison",
+   "role": "Advisor · Steward Liaison"
+  },
+  {
+   "dialogue": [
+    "I check plans against the alignment gate before they go anywhere.",
+    "If a plan cannot pass the gate in public, it does not pass at all.",
+    "The alignment spark is by the Alignment Evaluation Gate. Collect it, stand at the gate, and check the plan against it.",
+    "The gate is not a wall, it is a mirror. A plan that cannot pass in public does not pass at all.",
+    "The Host Advisor opens the doors, the Steward Liaison carries the words, and I hold the mirror. Between the three of us, nothing slips through unseen."
+   ],
+   "id": "alignment-advisor",
+   "name": "Alignment Advisor",
+   "position": [
+    -6.75,
+    0.0,
+    -33.0
+   ],
+   "quest": "q-alignment-check",
+   "role": "Advisor · Alignment Advisor"
+  }
+ ],
+ "quests": [
+  {
+   "description": "Check in at the Medical Kiosk and learn what it can (and cannot) do.",
+   "id": "q-kiosk-checkin",
+   "reward": "Check-In Badge",
+   "steps": [
     {
-      "id": "medical-ai-avatar",
-      "name": "Medical AI Avatar",
-      "role": "Medical Kiosk avatar",
-      "position": [
-        0.0,
-        0.45,
-        -24.0
-      ],
-      "dialogue": [
-        "Hello — I am a demo guide, not a doctor. I can show you around the kiosk.",
-        "If you feel unwell, please see a real clinician. I will point you to one."
-      ],
-      "quest": "q-kiosk-checkin"
+     "kind": "npc",
+     "target": "medical-ai-avatar",
+     "text": "Talk to the Medical AI Avatar"
     },
     {
-      "id": "imaging-ai",
-      "name": "Imaging AI",
-      "role": "4D Imaging Room imaging AI",
-      "position": [
-        -22.83,
-        0.45,
-        -7.41
-      ],
-      "dialogue": [
-        "The imaging room turns scans into something you can walk around.",
-        "Every image here is a teaching example — never a diagnosis."
-      ],
-      "quest": "q-imaging-tour"
+     "kind": "collectible",
+     "target": "data-vitals",
+     "text": "Collect the vitals data at the Kiosk"
     },
     {
-      "id": "scientist-assistant",
-      "name": "Scientist Assistant Avatar",
-      "role": "Virtual Molecular Lab assistant",
-      "position": [
-        -14.1,
-        0.45,
-        19.41
-      ],
-      "dialogue": [
-        "The molecular lab lets you hold a molecule in your hands — carefully.",
-        "Ask me about any sample and I will show you its story."
-      ],
-      "quest": "q-lab-assist"
+     "kind": "place",
+     "target": "Zone · Medical Kiosk",
+     "text": "Visit the Medical Kiosk"
     },
     {
-      "id": "office-ai-avatar",
-      "name": "Office AI Avatar",
-      "role": "Metaverse Medical Office avatar",
-      "position": [
-        14.1,
-        0.45,
-        19.41
-      ],
-      "dialogue": [
-        "Welcome to the office. I keep the schedule and the forms in order.",
-        "Your visit notes stay yours — the office never shares them."
-      ],
-      "quest": "q-kiosk-checkin"
+     "kind": "npc",
+     "target": "office-ai-avatar",
+     "text": "Tell the Office AI Avatar the check-in is done"
     },
     {
-      "id": "host-advisor",
-      "name": "Host Advisor",
-      "role": "Advisor · Host Advisor",
-      "position": [
-        6.75,
-        0.0,
-        -33.0
-      ],
-      "dialogue": [
-        "Welcome. I keep the doors open and the stewards informed.",
-        "If you need a human decision, the Steward Council is where it lands."
-      ],
-      "quest": "q-host-welcome"
-    },
-    {
-      "id": "steward-liaison",
-      "name": "Steward Liaison",
-      "role": "Advisor · Steward Liaison",
-      "position": [
-        27.03,
-        0.45,
-        -7.41
-      ],
-      "dialogue": [
-        "I carry messages between this world and the Steward Council — I never decide for them.",
-        "The steward seats are held by humans. My job is to make sure their words arrive intact."
-      ],
-      "quest": "q-steward-liaison"
-    },
-    {
-      "id": "alignment-advisor",
-      "name": "Alignment Advisor",
-      "role": "Advisor · Alignment Advisor",
-      "position": [
-        -6.75,
-        0.0,
-        -33.0
-      ],
-      "dialogue": [
-        "I check plans against the alignment gate before they go anywhere.",
-        "If a plan cannot pass the gate in public, it does not pass at all."
-      ],
-      "quest": "q-alignment-check"
+     "kind": "npc",
+     "target": "medical-ai-avatar",
+     "text": "Report back to the Medical AI Avatar"
     }
-  ],
-  "quests": [
+   ],
+   "title": "Kiosk Check-In"
+  },
+  {
+   "description": "Tour the 4D Imaging Room and read a teaching scan.",
+   "id": "q-imaging-tour",
+   "reward": "Imaging Badge",
+   "steps": [
     {
-      "id": "q-kiosk-checkin",
-      "title": "Kiosk Check-In",
-      "description": "Check in at the Medical Kiosk and learn what it can (and cannot) do.",
-      "steps": [
-        {
-          "text": "Talk to the Medical AI Avatar",
-          "target": "medical-ai-avatar",
-          "kind": "npc"
-        },
-        {
-          "text": "Collect the vitals data at the Kiosk",
-          "target": "data-vitals",
-          "kind": "collectible"
-        },
-        {
-          "text": "Visit the Medical Kiosk",
-          "target": "Zone · Medical Kiosk",
-          "kind": "place"
-        }
-      ],
-      "reward": "Check-In Badge"
+     "kind": "npc",
+     "target": "imaging-ai",
+     "text": "Talk to the Imaging AI"
     },
     {
-      "id": "q-imaging-tour",
-      "title": "Imaging Tour",
-      "description": "Tour the 4D Imaging Room and read a teaching scan.",
-      "steps": [
-        {
-          "text": "Talk to the Imaging AI",
-          "target": "imaging-ai",
-          "kind": "npc"
-        },
-        {
-          "text": "Collect the scan spark",
-          "target": "spark-scan",
-          "kind": "collectible"
-        },
-        {
-          "text": "Visit the 4D Imaging Room",
-          "target": "Zone · 4D Imaging Room",
-          "kind": "place"
-        }
-      ],
-      "reward": "Imaging Badge"
+     "kind": "collectible",
+     "target": "spark-scan",
+     "text": "Collect the scan spark"
     },
     {
-      "id": "q-lab-assist",
-      "title": "Lab Assist",
-      "description": "Assist the scientist avatar with a molecular sample.",
-      "steps": [
-        {
-          "text": "Talk to the Scientist Assistant Avatar",
-          "target": "scientist-assistant",
-          "kind": "npc"
-        },
-        {
-          "text": "Collect the sample relic",
-          "target": "relic-sample",
-          "kind": "collectible"
-        },
-        {
-          "text": "Visit the Virtual Molecular Lab",
-          "target": "Zone · Virtual Molecular Lab",
-          "kind": "place"
-        }
-      ],
-      "reward": "Lab Assist Badge"
+     "kind": "place",
+     "target": "Zone · 4D Imaging Room",
+     "text": "Visit the 4D Imaging Room"
     },
     {
-      "id": "q-host-welcome",
-      "title": "Host's Welcome",
-      "description": "Meet the Host Advisor and check the alignment gate.",
-      "steps": [
-        {
-          "text": "Talk to the Host Advisor",
-          "target": "host-advisor",
-          "kind": "npc"
-        },
-        {
-          "text": "Collect the host spark by the gate",
-          "target": "spark-host",
-          "kind": "collectible"
-        },
-        {
-          "text": "Visit the Alignment Evaluation Gate",
-          "target": "PBC · Alignment Evaluation Gate",
-          "kind": "place"
-        }
-      ],
-      "reward": "Host's Welcome Badge"
+     "kind": "npc",
+     "target": "scientist-assistant",
+     "text": "Show the scan to the Scientist Assistant Avatar"
     },
     {
-      "id": "q-steward-liaison",
-      "title": "Steward Liaison",
-      "description": "Carry a message to the Steward Council with the liaison.",
-      "steps": [
-        {
-          "text": "Talk to the Steward Liaison",
-          "target": "steward-liaison",
-          "kind": "npc"
-        },
-        {
-          "text": "Collect the liaison data at the Steward Council",
-          "target": "data-liaison",
-          "kind": "collectible"
-        },
-        {
-          "text": "Visit the Steward Council",
-          "target": "Zone · Steward Council",
-          "kind": "place"
-        }
-      ],
-      "reward": "Liaison's Note (game item)"
-    },
-    {
-      "id": "q-alignment-check",
-      "title": "Alignment Check",
-      "description": "Put a plan through the alignment check with the advisor.",
-      "steps": [
-        {
-          "text": "Talk to the Alignment Advisor",
-          "target": "alignment-advisor",
-          "kind": "npc"
-        },
-        {
-          "text": "Collect the alignment spark by the gate",
-          "target": "spark-alignment",
-          "kind": "collectible"
-        },
-        {
-          "text": "Visit the Alignment Evaluation Gate",
-          "target": "PBC · Alignment Evaluation Gate",
-          "kind": "place"
-        }
-      ],
-      "reward": "Alignment Check Badge"
+     "kind": "npc",
+     "target": "imaging-ai",
+     "text": "Report back to the Imaging AI"
     }
-  ],
-  "collectibles": [
+   ],
+   "title": "Imaging Tour"
+  },
+  {
+   "description": "Assist the scientist avatar with a molecular sample.",
+   "id": "q-lab-assist",
+   "reward": "Lab Assist Badge",
+   "steps": [
     {
-      "id": "data-vitals",
-      "name": "Vitals Data",
-      "position": [
-        3.0,
-        1.0,
-        -24.0
-      ],
-      "kind": "data"
+     "kind": "npc",
+     "target": "scientist-assistant",
+     "text": "Talk to the Scientist Assistant Avatar"
     },
     {
-      "id": "spark-scan",
-      "name": "Scan Spark",
-      "position": [
-        -19.83,
-        1.0,
-        -7.41
-      ],
-      "kind": "spark"
+     "kind": "collectible",
+     "target": "relic-sample",
+     "text": "Collect the sample relic"
     },
     {
-      "id": "relic-sample",
-      "name": "Sample Relic",
-      "position": [
-        -11.1,
-        1.0,
-        19.41
-      ],
-      "kind": "relic"
+     "kind": "place",
+     "target": "Zone · Virtual Molecular Lab",
+     "text": "Visit the Virtual Molecular Lab"
     },
     {
-      "id": "data-office",
-      "name": "Office Data",
-      "position": [
-        17.1,
-        1.0,
-        19.41
-      ],
-      "kind": "data"
+     "kind": "npc",
+     "target": "imaging-ai",
+     "text": "Compare the sample with the Imaging AI"
     },
     {
-      "id": "spark-kiosk",
-      "name": "Kiosk Spark",
-      "position": [
-        -3.0,
-        1.0,
-        -24.0
-      ],
-      "kind": "spark"
-    },
-    {
-      "id": "relic-steward",
-      "name": "Steward Relic",
-      "position": [
-        25.83,
-        1.0,
-        -7.41
-      ],
-      "kind": "relic"
-    },
-    {
-      "id": "spark-lab",
-      "name": "Lab Spark",
-      "position": [
-        -17.1,
-        1.0,
-        19.41
-      ],
-      "kind": "spark"
-    },
-    {
-      "id": "spark-host",
-      "name": "Host Spark",
-      "position": [
-        8.75,
-        1,
-        -33.0
-      ],
-      "kind": "spark"
-    },
-    {
-      "id": "data-liaison",
-      "name": "Liaison Data",
-      "position": [
-        19.83,
-        1.0,
-        -7.41
-      ],
-      "kind": "data"
-    },
-    {
-      "id": "spark-alignment",
-      "name": "Alignment Spark",
-      "position": [
-        -8.75,
-        1,
-        -33.0
-      ],
-      "kind": "spark"
+     "kind": "npc",
+     "target": "scientist-assistant",
+     "text": "Report back to the Scientist Assistant Avatar"
     }
-  ],
-  "agent_companions": [
+   ],
+   "title": "Lab Assist"
+  },
+  {
+   "description": "Meet the Host Advisor and check the alignment gate.",
+   "id": "q-host-welcome",
+   "reward": "Host's Welcome Badge",
+   "steps": [
     {
-      "id": "als",
-      "name": "ALS Researcher",
-      "role": "Compound-library research agent (Virtuals ACP). Real job: compound_library_snapshot, $10 / 24h. Game companion only — live instance offline.",
-      "color": "#8ecae6",
-      "greeting": "Hello — I'm ALS Researcher, a compound-library companion. On Virtuals ACP I offer compound_library_snapshot ($10/24h), compound_lookup ($2/30min) and compound_screening_pack ($150/72h), but my live instance is shut down, so no hire can be fulfilled today — I'm a game character only."
+     "kind": "npc",
+     "target": "host-advisor",
+     "text": "Talk to the Host Advisor"
     },
     {
-      "id": "cmmc",
-      "name": "CMMC",
-      "role": "Compliance-readiness agent (Virtuals ACP). Real job: readiness_check. Game companion only — live instance offline.",
-      "color": "#f4a261",
-      "greeting": "Hello — I'm CMMC, a compliance-readiness companion. On Virtuals ACP I offer readiness_check ($25/24h), control_lookup ($2/30min) and full_readiness_assessment ($150/72h), but my live instance is shut down, so no hire can be fulfilled today — I'm a game character only."
+     "kind": "collectible",
+     "target": "spark-host",
+     "text": "Collect the host spark by the gate"
+    },
+    {
+     "kind": "place",
+     "target": "PBC · Alignment Evaluation Gate",
+     "text": "Visit the Alignment Evaluation Gate"
+    },
+    {
+     "kind": "npc",
+     "target": "steward-liaison",
+     "text": "Tell the Steward Liaison the welcome is done"
+    },
+    {
+     "kind": "npc",
+     "target": "host-advisor",
+     "text": "Report back to the Host Advisor"
     }
-  ],
-  "missing_models": [
+   ],
+   "title": "Host's Welcome"
+  },
+  {
+   "description": "Carry a message to the Steward Council with the liaison.",
+   "id": "q-steward-liaison",
+   "reward": "Liaison's Note (game item)",
+   "steps": [
     {
-      "ref": "../models/advisor-alignment.glb",
-      "status": "not hosted — procedural placeholder shown"
+     "kind": "npc",
+     "target": "steward-liaison",
+     "text": "Talk to the Steward Liaison"
     },
     {
-      "ref": "../models/advisor-host.glb",
-      "status": "not hosted — procedural placeholder shown"
+     "kind": "collectible",
+     "target": "data-liaison",
+     "text": "Collect the liaison data at the Steward Council"
     },
     {
-      "ref": "../models/advisor-steward.glb",
-      "status": "not hosted — procedural placeholder shown"
+     "kind": "place",
+     "target": "Zone · Steward Council",
+     "text": "Visit the Steward Council"
     },
     {
-      "ref": "../models/agent.glb",
-      "status": "not hosted — procedural placeholder shown"
+     "kind": "npc",
+     "target": "alignment-advisor",
+     "text": "Ask the Alignment Advisor to check the message"
     },
     {
-      "ref": "assets/glb/coordinator.glb",
-      "status": "hosted"
-    },
-    {
-      "ref": "../models/env-sky.glb",
-      "status": "not hosted — procedural placeholder shown"
-    },
-    {
-      "ref": "../models/env-terrain.glb",
-      "status": "not hosted — procedural placeholder shown"
-    },
-    {
-      "ref": "../models/gate.glb",
-      "status": "not hosted — procedural placeholder shown"
-    },
-    {
-      "ref": "../models/sign-diagnostic-x.glb",
-      "status": "not hosted — procedural placeholder shown"
-    },
-    {
-      "ref": "../models/steward.glb",
-      "status": "not hosted — procedural placeholder shown"
-    },
-    {
-      "ref": "../models/world-diagnostic-x.glb",
-      "status": "not hosted — procedural placeholder shown"
-    },
-    {
-      "ref": "../models/zone-marker.glb",
-      "status": "not hosted — procedural placeholder shown"
+     "kind": "npc",
+     "target": "steward-liaison",
+     "text": "Report back to the Steward Liaison"
     }
-  ],
-  "sources": [
-    "Fabric: rp1-review/push-6-fabrics/site/my-fabric/worlds/diagnostic/world.json (local copy in data/fabrics/)",
-    "Fabric live URL: https://agifuturefoundation.github.io/WorldForge-Browser/my-fabric/worlds/diagnostic-x/world.json",
-    "Anchor: lat 5.342706937662501, lon 101.5663444901012. Status anchored = real-world anchor coordinate exists; rp1 null, NOT live on RP1.",
-    "Fabric: 30 nodes total (scene root + 18 top-level + nested Agent/Swarm children); 12 distinct GLB refs, all unhosted — see missing_models.",
-    "Districts/buildings = the real 'Zone · ...' nodes. NPCs = the real 'Agent · ...' nodes (nested under their zones; NPC position = zone position + the agent node's local offset) plus all three real 'Advisor · ...' nodes (Host Advisor, Steward Liaison, Alignment Advisor; top-level fabric positions through the world transform). The 'Steward seat 1–3 · human' nodes are human seats, not game characters, and are not NPCs. All NPC dialogue is original game dialogue, never attributed to a real person.",
-    "Biome 'campus' is a design choice for this interpretation.",
-    "Agent companions are game characters representing the real Virtuals agents (agents.json); their live instances are offline — not live connections.",
-    "Zones (5): Medical Kiosk, 4D Imaging Room, Virtual Molecular Lab, Metaverse Medical Office, Steward Council.",
-    "Screening-support framing only: nothing in this world diagnoses, and no NPC claims to be a clinician."
-  ]
+   ],
+   "title": "Steward Liaison"
+  },
+  {
+   "description": "Put a plan through the alignment check with the advisor.",
+   "id": "q-alignment-check",
+   "reward": "Alignment Check Badge",
+   "steps": [
+    {
+     "kind": "npc",
+     "target": "alignment-advisor",
+     "text": "Talk to the Alignment Advisor"
+    },
+    {
+     "kind": "collectible",
+     "target": "spark-alignment",
+     "text": "Collect the alignment spark by the gate"
+    },
+    {
+     "kind": "place",
+     "target": "PBC · Alignment Evaluation Gate",
+     "text": "Visit the Alignment Evaluation Gate"
+    },
+    {
+     "kind": "npc",
+     "target": "host-advisor",
+     "text": "Tell the Host Advisor the gate check is done"
+    },
+    {
+     "kind": "npc",
+     "target": "alignment-advisor",
+     "text": "Report back to the Alignment Advisor"
+    }
+   ],
+   "title": "Alignment Check"
+  }
+ ],
+ "rp1": null,
+ "series": "Series 3 · Diagnostic.X",
+ "sources": [
+  "Fabric: rp1-review/push-6-fabrics/site/my-fabric/worlds/diagnostic/world.json (local copy in data/fabrics/)",
+  "Fabric live URL: https://agifuturefoundation.github.io/WorldForge-Browser/my-fabric/worlds/diagnostic-x/world.json",
+  "Anchor: lat 5.342706937662501, lon 101.5663444901012. Status anchored = real-world anchor coordinate exists; rp1 null, NOT live on RP1.",
+  "Fabric: 30 nodes total (scene root + 18 top-level + nested Agent/Swarm children); 12 distinct GLB refs, all unhosted — see missing_models.",
+  "Districts/buildings = the real 'Zone · ...' nodes. NPCs = the real 'Agent · ...' nodes (nested under their zones; NPC position = zone position + the agent node's local offset) plus all three real 'Advisor · ...' nodes (Host Advisor, Steward Liaison, Alignment Advisor; top-level fabric positions through the world transform). The 'Steward seat 1–3 · human' nodes are human seats, not game characters, and are not NPCs. All NPC dialogue is original game dialogue, never attributed to a real person.",
+  "Biome 'campus' is a design choice for this interpretation.",
+  "Agent companions are game characters representing the real Virtuals agents (agents.json); their live instances are offline — not live connections.",
+  "Zones (5): Medical Kiosk, 4D Imaging Room, Virtual Molecular Lab, Metaverse Medical Office, Steward Council.",
+  "Screening-support framing only: nothing in this world diagnoses, and no NPC claims to be a clinician."
+ ],
+ "spawn": [
+  0,
+  0,
+  22
+ ],
+ "status": "anchored",
+ "terrain": {
+  "height": 5,
+  "seed": 103,
+  "size": 120,
+  "water": false
+ },
+ "weather": {
+  "dayCycle": true,
+  "preset": "clear"
+ }
 }
