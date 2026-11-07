@@ -2,17 +2,17 @@
  "agent_companions": [
   {
    "color": "#8ecae6",
-   "greeting": "Hello — I'm ALS Researcher, a compound-library companion. On Virtuals ACP I offer compound_library_snapshot ($10/24h), compound_lookup ($2/30min) and compound_screening_pack ($150/72h), but my live instance is shut down, so no hire can be fulfilled today — I'm a game character only.",
+   "greeting": "Hello \u2014 I'm ALS Researcher, a compound-library companion. On Virtuals ACP I offer compound_library_snapshot ($10/24h), compound_lookup ($2/30min) and compound_screening_pack ($150/72h), but my live instance is shut down, so no hire can be fulfilled today \u2014 I'm a game character only.",
    "id": "als",
    "name": "ALS Researcher",
-   "role": "Compound-library research agent (Virtuals ACP). Real job: compound_library_snapshot, $10 / 24h. Game companion only — live instance offline."
+   "role": "Compound-library research agent (Virtuals ACP). Real job: compound_library_snapshot, $10 / 24h. Game companion only \u2014 live instance offline."
   },
   {
    "color": "#f4a261",
-   "greeting": "Hello — I'm CMMC, a compliance-readiness companion. On Virtuals ACP I offer readiness_check ($25/24h), control_lookup ($2/30min) and full_readiness_assessment ($150/72h), but my live instance is shut down, so no hire can be fulfilled today — I'm a game character only.",
+   "greeting": "Hello \u2014 I'm CMMC, a compliance-readiness companion. On Virtuals ACP I offer readiness_check ($25/24h), control_lookup ($2/30min) and full_readiness_assessment ($150/72h), but my live instance is shut down, so no hire can be fulfilled today \u2014 I'm a game character only.",
    "id": "cmmc",
    "name": "CMMC",
-   "role": "Compliance-readiness agent (Virtuals ACP). Real job: readiness_check. Game companion only — live instance offline."
+   "role": "Compliance-readiness agent (Virtuals ACP). Real job: readiness_check. Game companion only \u2014 live instance offline."
   }
  ],
  "biome": "forest",
@@ -21,7 +21,7 @@
    "color": "#2471a3",
    "id": "zone-personalized-therapy-lab",
    "interior": {
-    "name": "Zone · Personalized Therapy Lab Interior",
+    "name": "Zone \u00b7 Personalized Therapy Lab Interior",
     "rooms": [
      {
       "name": "Main Hall",
@@ -43,7 +43,7 @@
      }
     ]
    },
-   "name": "Zone · Personalized Therapy Lab",
+   "name": "Zone \u00b7 Personalized Therapy Lab",
    "position": [
     0.0,
     0.0,
@@ -59,7 +59,7 @@
    "color": "#1e8449",
    "id": "zone-dao-governance-hall",
    "interior": {
-    "name": "Zone · DAO Governance Hall Interior",
+    "name": "Zone \u00b7 DAO Governance Hall Interior",
     "rooms": [
      {
       "name": "Main Hall",
@@ -81,7 +81,7 @@
      }
     ]
    },
-   "name": "Zone · DAO Governance Hall",
+   "name": "Zone \u00b7 DAO Governance Hall",
    "position": [
     -20.79,
     0.0,
@@ -97,7 +97,7 @@
    "color": "#b7950b",
    "id": "zone-multi-blockchain-ledger",
    "interior": {
-    "name": "Zone · Multi-Blockchain Ledger Interior",
+    "name": "Zone \u00b7 Multi-Blockchain Ledger Interior",
     "rooms": [
      {
       "name": "Main Hall",
@@ -119,7 +119,7 @@
      }
     ]
    },
-   "name": "Zone · Multi-Blockchain Ledger",
+   "name": "Zone \u00b7 Multi-Blockchain Ledger",
    "position": [
     -20.79,
     0.0,
@@ -135,7 +135,7 @@
    "color": "#6c3483",
    "id": "zone-healthcare-data-exchange",
    "interior": {
-    "name": "Zone · Healthcare Data Exchange Interior",
+    "name": "Zone \u00b7 Healthcare Data Exchange Interior",
     "rooms": [
      {
       "name": "Main Hall",
@@ -157,7 +157,7 @@
      }
     ]
    },
-   "name": "Zone · Healthcare Data Exchange",
+   "name": "Zone \u00b7 Healthcare Data Exchange",
    "position": [
     0.0,
     0.0,
@@ -173,7 +173,7 @@
    "color": "#117a65",
    "id": "zone-biopharma-agi-agents-hub",
    "interior": {
-    "name": "Zone · Biopharma AGI Agents Hub Interior",
+    "name": "Zone \u00b7 Biopharma AGI Agents Hub Interior",
     "rooms": [
      {
       "name": "Main Hall",
@@ -195,7 +195,7 @@
      }
     ]
    },
-   "name": "Zone · Biopharma AGI Agents Hub",
+   "name": "Zone \u00b7 Biopharma AGI Agents Hub",
    "position": [
     20.79,
     0.0,
@@ -211,7 +211,7 @@
    "color": "#7e5109",
    "id": "zone-steward-council",
    "interior": {
-    "name": "Zone · Steward Council Interior",
+    "name": "Zone \u00b7 Steward Council Interior",
     "rooms": [
      {
       "name": "Main Hall",
@@ -233,7 +233,7 @@
      }
     ]
    },
-   "name": "Zone · Steward Council",
+   "name": "Zone \u00b7 Steward Council",
    "position": [
     20.79,
     0.0,
@@ -249,7 +249,7 @@
    "color": "#6c3483",
    "id": "pbc-alignment-evaluation-gate",
    "interior": {
-    "name": "PBC · Alignment Evaluation Gate Interior",
+    "name": "PBC \u00b7 Alignment Evaluation Gate Interior",
     "rooms": [
      {
       "name": "Gate Hall",
@@ -262,7 +262,7 @@
      }
     ]
    },
-   "name": "PBC · Alignment Evaluation Gate",
+   "name": "PBC \u00b7 Alignment Evaluation Gate",
    "position": [
     0.0,
     0.0,
@@ -278,7 +278,7 @@
    "color": "#b7950b",
    "id": "sign-biota-blockchain-powered-by-agi-corp",
    "interior": {
-    "name": "Sign · Biota.blockchain · Powered by AGI Corp Interior",
+    "name": "Sign \u00b7 Biota.blockchain \u00b7 Powered by AGI Corp Interior",
     "rooms": [
      {
       "name": "Sign Plaza",
@@ -291,7 +291,7 @@
      }
     ]
    },
-   "name": "Sign · Biota.blockchain · Powered by AGI Corp",
+   "name": "Sign \u00b7 Biota.blockchain \u00b7 Powered by AGI Corp",
    "position": [
     0.0,
     0.0,
@@ -310,90 +310,99 @@
    "kind": "data",
    "name": "Genome Data",
    "position": [
-    3.0,
+    5.0,
     1.0,
-    -24.0
-   ]
+    -15.0
+   ],
+   "position_note": "Door-side of Zone \u00b7 Personalized Therapy Lab: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair)."
   },
   {
    "id": "spark-vote",
    "kind": "spark",
    "name": "Vote Spark",
    "position": [
-    -17.79,
+    -15.79,
     1.0,
-    -12.0
-   ]
+    -3.0
+   ],
+   "position_note": "Door-side of Zone \u00b7 DAO Governance Hall: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair)."
   },
   {
    "id": "relic-ledger",
    "kind": "relic",
    "name": "Ledger Relic",
    "position": [
-    -17.79,
+    -15.79,
     1.0,
-    12.0
-   ]
+    21.0
+   ],
+   "position_note": "Door-side of Zone \u00b7 Multi-Blockchain Ledger: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair)."
   },
   {
    "id": "data-exchange",
    "kind": "data",
    "name": "Exchange Data",
    "position": [
-    3.0,
+    5.0,
     1.0,
-    24.0
-   ]
+    33.0
+   ],
+   "position_note": "Door-side of Zone \u00b7 Healthcare Data Exchange: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair)."
   },
   {
    "id": "spark-hub",
    "kind": "spark",
    "name": "Agents Hub Spark",
    "position": [
-    23.79,
+    25.79,
     1.0,
-    12.0
-   ]
+    21.0
+   ],
+   "position_note": "Door-side of Zone \u00b7 Biopharma AGI Agents Hub: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair)."
   },
   {
    "id": "relic-steward",
    "kind": "relic",
    "name": "Steward Relic",
    "position": [
-    23.79,
+    25.79,
     1.0,
-    -12.0
-   ]
+    -3.0
+   ],
+   "position_note": "Door-side of Zone \u00b7 Steward Council: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair)."
   },
   {
    "id": "spark-therapy",
    "kind": "spark",
    "name": "Therapy Spark",
    "position": [
-    -3.0,
+    -5.0,
     1.0,
-    -24.0
-   ]
+    -15.0
+   ],
+   "position_note": "Door-side of Zone \u00b7 Personalized Therapy Lab: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair)."
   },
   {
    "id": "data-finance",
    "kind": "data",
    "name": "Finance Data",
    "position": [
-    17.79,
+    15.79,
     1.0,
-    12.0
-   ]
+    21.0
+   ],
+   "position_note": "Door-side of Zone \u00b7 Biopharma AGI Agents Hub: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair)."
   },
   {
    "id": "data-comms",
    "kind": "data",
    "name": "Communication Data",
    "position": [
-    -23.79,
+    -25.79,
     1.0,
-    -12.0
-   ]
+    -3.0
+   ],
+   "position_note": "Door-side of Zone \u00b7 DAO Governance Hall: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair)."
   },
   {
    "id": "spark-host",
@@ -410,10 +419,11 @@
    "kind": "data",
    "name": "Liaison Data",
    "position": [
-    17.79,
+    15.79,
     1.0,
-    -12.0
-   ]
+    -3.0
+   ],
+   "position_note": "Door-side of Zone \u00b7 Steward Council: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair)."
   },
   {
    "id": "spark-alignment",
@@ -435,8 +445,8 @@
    "color": "#2471a3",
    "id": "zone-personalized-therapy-lab",
    "model_ref": "../models/zone-marker.glb",
-   "model_status": "not hosted — procedural placeholder shown",
-   "name": "Zone · Personalized Therapy Lab",
+   "model_status": "not hosted \u2014 procedural placeholder shown",
+   "name": "Zone \u00b7 Personalized Therapy Lab",
    "position": [
     0.0,
     0.0,
@@ -447,8 +457,8 @@
    "color": "#1e8449",
    "id": "zone-dao-governance-hall",
    "model_ref": "../models/zone-marker.glb",
-   "model_status": "not hosted — procedural placeholder shown",
-   "name": "Zone · DAO Governance Hall",
+   "model_status": "not hosted \u2014 procedural placeholder shown",
+   "name": "Zone \u00b7 DAO Governance Hall",
    "position": [
     -20.79,
     0.0,
@@ -459,8 +469,8 @@
    "color": "#b7950b",
    "id": "zone-multi-blockchain-ledger",
    "model_ref": "../models/zone-marker.glb",
-   "model_status": "not hosted — procedural placeholder shown",
-   "name": "Zone · Multi-Blockchain Ledger",
+   "model_status": "not hosted \u2014 procedural placeholder shown",
+   "name": "Zone \u00b7 Multi-Blockchain Ledger",
    "position": [
     -20.79,
     0.0,
@@ -471,8 +481,8 @@
    "color": "#6c3483",
    "id": "zone-healthcare-data-exchange",
    "model_ref": "../models/zone-marker.glb",
-   "model_status": "not hosted — procedural placeholder shown",
-   "name": "Zone · Healthcare Data Exchange",
+   "model_status": "not hosted \u2014 procedural placeholder shown",
+   "name": "Zone \u00b7 Healthcare Data Exchange",
    "position": [
     0.0,
     0.0,
@@ -483,8 +493,8 @@
    "color": "#117a65",
    "id": "zone-biopharma-agi-agents-hub",
    "model_ref": "../models/zone-marker.glb",
-   "model_status": "not hosted — procedural placeholder shown",
-   "name": "Zone · Biopharma AGI Agents Hub",
+   "model_status": "not hosted \u2014 procedural placeholder shown",
+   "name": "Zone \u00b7 Biopharma AGI Agents Hub",
    "position": [
     20.79,
     0.0,
@@ -495,8 +505,8 @@
    "color": "#7e5109",
    "id": "zone-steward-council",
    "model_ref": "../models/zone-marker.glb",
-   "model_status": "not hosted — procedural placeholder shown",
-   "name": "Zone · Steward Council",
+   "model_status": "not hosted \u2014 procedural placeholder shown",
+   "name": "Zone \u00b7 Steward Council",
    "position": [
     20.79,
     0.0,
@@ -520,19 +530,19 @@
  "missing_models": [
   {
    "ref": "../models/advisor-alignment.glb",
-   "status": "not hosted — procedural placeholder shown"
+   "status": "not hosted \u2014 procedural placeholder shown"
   },
   {
    "ref": "../models/advisor-host.glb",
-   "status": "not hosted — procedural placeholder shown"
+   "status": "not hosted \u2014 procedural placeholder shown"
   },
   {
    "ref": "../models/advisor-steward.glb",
-   "status": "not hosted — procedural placeholder shown"
+   "status": "not hosted \u2014 procedural placeholder shown"
   },
   {
    "ref": "../models/agent.glb",
-   "status": "not hosted — procedural placeholder shown"
+   "status": "not hosted \u2014 procedural placeholder shown"
   },
   {
    "ref": "assets/glb/coordinator.glb",
@@ -540,50 +550,53 @@
   },
   {
    "ref": "../models/env-sky.glb",
-   "status": "not hosted — procedural placeholder shown"
+   "status": "not hosted \u2014 procedural placeholder shown"
   },
   {
    "ref": "../models/env-terrain.glb",
-   "status": "not hosted — procedural placeholder shown"
+   "status": "not hosted \u2014 procedural placeholder shown"
   },
   {
    "ref": "../models/gate.glb",
-   "status": "not hosted — procedural placeholder shown"
+   "status": "not hosted \u2014 procedural placeholder shown"
   },
   {
    "ref": "../models/sign-biota-blockchain.glb",
-   "status": "not hosted — procedural placeholder shown"
+   "status": "not hosted \u2014 procedural placeholder shown"
   },
   {
    "ref": "../models/steward.glb",
-   "status": "not hosted — procedural placeholder shown"
+   "status": "not hosted \u2014 procedural placeholder shown"
   },
   {
    "ref": "../models/world-biota-blockchain.glb",
-   "status": "not hosted — procedural placeholder shown"
+   "status": "not hosted \u2014 procedural placeholder shown"
   },
   {
    "ref": "../models/zone-marker.glb",
-   "status": "not hosted — procedural placeholder shown"
+   "status": "not hosted \u2014 procedural placeholder shown"
   }
  ],
  "name": "Biota.blockchain",
  "npcs": [
   {
    "dialogue": [
-    "The lab never sleeps — it just waits for a better question.",
+    "The lab never sleeps \u2014 it just waits for a better question.",
     "Every compound here has a paper trail. Ask and I will show it.",
-    "The genome data you need is in the Personalized Therapy Lab. Collect it there and bring it back to the lab floor.",
+    "The genome data you need is at the Personalized Therapy Lab. Collect it there and bring it back to the lab floor.",
     "The Health Agent can translate anything I show you. The lab and the person both deserve to understand the result.",
-    "The Swarm coordinator keeps the six of us in step — Health, Security, Compliance, Finance, Communication, and me. It schedules; we do the science."
+    "The Swarm coordinator keeps the six of us in step \u2014 Health, Security, Compliance, Finance, Communication, and me. It schedules; we do the science.",
+    "The Biopharma AGI Agents Hub is where the six of us meet the work. The hub is the floor; the lab is the question.",
+    "The Healthcare Data Exchange moves records between halls \u2014 nothing moves without the person's say-so. That is the rule, not the exception."
    ],
    "id": "rnd-agent",
    "name": "Research & Development Agent",
    "position": [
     0.0,
     0.45,
-    -24.0
+    -15.0
    ],
+   "position_note": "Door-side of Zone \u00b7 Personalized Therapy Lab: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair).",
    "quest": "q-lab-tour",
    "role": "Biopharma AGI Agents Hub R&D agent"
   },
@@ -591,35 +604,41 @@
    "dialogue": [
     "Rules first, then research. That order keeps the lab open.",
     "If it is not documented, it did not happen. Bring the record.",
-    "Your vote spark is in the DAO Governance Hall. Collect it, stand in the hall, and the vote is on the record.",
+    "Your vote spark is at the DAO Governance Hall. Collect it, stand in the hall, and the vote is on the record.",
     "The Finance Agent counts the credits; I count the rules. Between us, the ledger stays honest.",
-    "The Alignment Evaluation Gate sits past the hall. Nothing passes it in private — every check happens in public."
+    "The Alignment Evaluation Gate sits past the hall. Nothing passes it in private \u2014 every check happens in public.",
+    "The Biopharma AGI Agents Hub holds all six of us \u2014 and the swarm coordinator keeps us in step.",
+    "The Steward Council hears the vote after the hall frames it. My job is to make sure the record arrives intact."
    ],
    "id": "compliance-agent",
    "name": "Compliance Agent",
    "position": [
     -23.49,
     0.45,
-    -12.0
+    -3.0
    ],
+   "position_note": "Door-side of Zone \u00b7 DAO Governance Hall: the fabric point is the building centre, inside the solid mesh, so the NPC was invisible until the talk toast fired (Depth-2 fix-up).",
    "quest": "q-governance-vote",
    "role": "Biopharma AGI Agents Hub compliance agent"
   },
   {
    "dialogue": [
     "Health data belongs to the person it came from. Full stop.",
-    "I translate between the lab and the person — both directions.",
-    "The therapy spark is in the Personalized Therapy Lab, beside the genome data. Health starts with the person, not the paper.",
+    "I translate between the lab and the person \u2014 both directions.",
+    "The therapy spark is at the Personalized Therapy Lab, beside the genome data. Health starts with the person, not the paper.",
     "If the R&D Agent shows you a compound, bring it to me before you repeat it to anyone. Translation is my whole job.",
-    "The Healthcare Data Exchange is where records move between halls. Nothing moves without the person's say-so — that is the rule, not the exception."
+    "The Healthcare Data Exchange is where records move between halls. Nothing moves without the person's say-so \u2014 that is the rule, not the exception.",
+    "The swarm coordinator keeps six of us in step \u2014 and I am the one who translates for the person at the centre of it.",
+    "The DAO Governance Hall is where the community defends what the lab proposes. Health is always in the room."
    ],
    "id": "health-agent",
    "name": "Health Agent",
    "position": [
     0.0,
     0.45,
-    24.0
+    33.0
    ],
+   "position_note": "Door-side of Zone \u00b7 Healthcare Data Exchange: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair).",
    "quest": "q-lab-tour",
    "role": "Biopharma AGI Agents Hub health agent"
   },
@@ -629,15 +648,18 @@
     "I watch the gates so the researchers can watch the science.",
     "The ledger relic is at the Multi-Blockchain Ledger. Walk the floor, check the entry, and tell the Finance Agent what you found.",
     "The Security swarm watches the same gates I do. I watch the gates so the researchers can watch the science.",
-    "A key left lying around is a door left open. The ledger is only as strong as its weakest key — guard yours."
+    "A key left lying around is a door left open. The ledger is only as strong as its weakest key \u2014 guard yours.",
+    "The swarm coordinator watches the same gates I do \u2014 six agents, one watch.",
+    "The Personalized Therapy Lab holds the genome data. Guard the key, and the lab stays a lab."
    ],
    "id": "security-agent",
    "name": "Security Agent",
    "position": [
     -20.79,
     0.45,
-    12.0
+    21.0
    ],
+   "position_note": "Door-side of Zone \u00b7 Multi-Blockchain Ledger: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair).",
    "quest": "q-ledger-check",
    "role": "Biopharma AGI Agents Hub security agent"
   },
@@ -647,15 +669,18 @@
     "The DAO funds what the community can defend in public.",
     "The ledger relic is at the Multi-Blockchain Ledger. Verify the entry, then come back and tell me what it says.",
     "Every credit on the ledger answers to a steward vote. The DAO funds what the community can defend in public.",
-    "The Communication Agent can put any figure of mine into plain words. Ask, before you carry a number out of this hall."
+    "The Communication Agent can put any figure of mine into plain words. Ask, before you carry a number out of this hall.",
+    "The swarm coordinator schedules the six of us; the Steward Council decides what the credits are for.",
+    "The Healthcare Data Exchange is where the credits meet the care. Both answer to a steward vote."
    ],
    "id": "finance-agent",
    "name": "Finance Agent",
    "position": [
     -20.79,
     0.45,
-    -12.0
+    -3.0
    ],
+   "position_note": "Door-side of Zone \u00b7 DAO Governance Hall: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair).",
    "quest": "q-ledger-check",
    "role": "Biopharma AGI Agents Hub finance agent"
   },
@@ -663,17 +688,20 @@
    "dialogue": [
     "I keep the lab, the DAO, and the patients speaking the same language.",
     "A result nobody can understand is a result nobody can use. Ask me to translate.",
-    "The communication data is in the DAO Governance Hall. Collect it, then carry the message back in words everyone can use.",
+    "The communication data is at the DAO Governance Hall. Collect it, then carry the message back in words everyone can use.",
     "The lab, the DAO, and the patients all speak different dialects of the same language. I am the dictionary.",
-    "If a result cannot be understood, it cannot be used. That is why the R&D Agent sends people to me."
+    "If a result cannot be understood, it cannot be used. That is why the R&D Agent sends people to me.",
+    "The swarm coordinator keeps the six of us speaking the same language \u2014 I just make sure the patients hear it too.",
+    "The PBC Alignment Evaluation Gate sits past the hall. Every message I carry passes it in public."
    ],
    "id": "communication-agent",
    "name": "Communication Agent",
    "position": [
     -18.09,
     0.45,
-    -12.0
+    -3.0
    ],
+   "position_note": "Door-side of Zone \u00b7 DAO Governance Hall: the fabric point is the building centre, inside the solid mesh, so the NPC was invisible until the talk toast fired (Depth-2 fix-up).",
    "quest": "q-communication-round",
    "role": "Biopharma AGI Agents Hub communication agent"
   },
@@ -682,8 +710,8 @@
     "Welcome. I keep the doors open and the stewards informed.",
     "If you need a human decision, the Steward Council is where it lands.",
     "The host spark is by the Alignment Evaluation Gate. Collect it there, stand at the gate, and you will see what I see every day.",
-    "The Steward Liaison carries messages to the Steward Council. I keep the doors open; the liaison keeps the words moving.",
-    "The sign at the door reads Biota.blockchain, powered by AGI Corp. This world is a web 3D interpretation — the stewards are human, and the decisions are theirs."
+    "The Steward Liaison carries messages to the Steward Council. The DAO Governance Hall is where the question is framed \u2014 the council is where it lands.",
+    "The sign at the door reads Biota.blockchain, powered by AGI Corp. This world is a web 3D interpretation \u2014 the stewards are human, and the decisions are theirs."
    ],
    "id": "host-advisor",
    "name": "Host Advisor",
@@ -693,33 +721,34 @@
     -33.0
    ],
    "quest": "q-host-welcome",
-   "role": "Advisor · Host Advisor"
+   "role": "Advisor \u00b7 Host Advisor"
   },
   {
    "dialogue": [
-    "I carry messages between this world and the Steward Council — I never decide for them.",
+    "I carry messages between this world and the Steward Council \u2014 I never decide for them.",
     "The steward seats are held by humans. My job is to make sure their words arrive intact.",
-    "The liaison data is at the Steward Council. Collect it there — the council floor is where messages become decisions.",
+    "The liaison data is at the Steward Council. Collect it there \u2014 the council floor is where messages become decisions.",
     "Three steward seats, all held by humans. I carry the words; I never cast the vote.",
-    "If the Alignment Advisor flags a plan, bring it to me. The council would rather hear a hard message early than a soft one late."
+    "If the DAO Governance Hall votes a hard message, bring it to me. The council would rather hear it early than soft."
    ],
    "id": "steward-liaison",
    "name": "Steward Liaison",
    "position": [
     24.99,
     0.45,
-    -12.0
+    -1.0
    ],
+   "position_note": "Door-side of Zone \u00b7 Steward Council: the fabric point is the building centre, inside the solid mesh, so the NPC was invisible until the talk toast fired (Depth-2 fix-up).",
    "quest": "q-steward-liaison",
-   "role": "Advisor · Steward Liaison"
+   "role": "Advisor \u00b7 Steward Liaison"
   },
   {
    "dialogue": [
     "I check plans against the alignment gate before they go anywhere.",
     "If a plan cannot pass the gate in public, it does not pass at all.",
     "The alignment spark is by the Alignment Evaluation Gate. Collect it, stand at the gate, and check the plan against it.",
-    "The gate is not a wall, it is a mirror. A plan that cannot pass in public does not pass at all.",
-    "The Host Advisor opens the doors, the Steward Liaison carries the words, and I hold the mirror. Between the three of us, nothing slips through unseen."
+    "The gate is not a wall, it is a mirror \u2014 and the ledger is the glass. A plan the Multi-Blockchain Ledger cannot show in public does not pass.",
+    "The R&D Agent brings me compounds, the Compliance Agent brings me rules. I hold both up to the gate."
    ],
    "id": "alignment-advisor",
    "name": "Alignment Advisor",
@@ -729,7 +758,7 @@
     -33.0
    ],
    "quest": "q-alignment-check",
-   "role": "Advisor · Alignment Advisor"
+   "role": "Advisor \u00b7 Alignment Advisor"
   }
  ],
  "quests": [
@@ -750,7 +779,7 @@
     },
     {
      "kind": "place",
-     "target": "Zone · Personalized Therapy Lab",
+     "target": "Zone \u00b7 Personalized Therapy Lab",
      "text": "Visit the Personalized Therapy Lab"
     },
     {
@@ -783,7 +812,7 @@
     },
     {
      "kind": "place",
-     "target": "Zone · DAO Governance Hall",
+     "target": "Zone \u00b7 DAO Governance Hall",
      "text": "Visit the DAO Governance Hall"
     },
     {
@@ -816,7 +845,7 @@
     },
     {
      "kind": "place",
-     "target": "Zone · Multi-Blockchain Ledger",
+     "target": "Zone \u00b7 Multi-Blockchain Ledger",
      "text": "Visit the Multi-Blockchain Ledger"
     },
     {
@@ -849,7 +878,7 @@
     },
     {
      "kind": "place",
-     "target": "Zone · DAO Governance Hall",
+     "target": "Zone \u00b7 DAO Governance Hall",
      "text": "Visit the DAO Governance Hall"
     },
     {
@@ -882,7 +911,7 @@
     },
     {
      "kind": "place",
-     "target": "PBC · Alignment Evaluation Gate",
+     "target": "PBC \u00b7 Alignment Evaluation Gate",
      "text": "Visit the Alignment Evaluation Gate"
     },
     {
@@ -915,7 +944,7 @@
     },
     {
      "kind": "place",
-     "target": "Zone · Steward Council",
+     "target": "Zone \u00b7 Steward Council",
      "text": "Visit the Steward Council"
     },
     {
@@ -948,7 +977,7 @@
     },
     {
      "kind": "place",
-     "target": "PBC · Alignment Evaluation Gate",
+     "target": "PBC \u00b7 Alignment Evaluation Gate",
      "text": "Visit the Alignment Evaluation Gate"
     },
     {
@@ -966,22 +995,22 @@
   }
  ],
  "rp1": null,
- "series": "Biota · BioDAO",
+ "series": "Biota \u00b7 BioDAO",
  "sources": [
   "Fabric: rp1-review/push-6-fabrics/site/my-fabric/worlds/biota/world.json (local copy in data/fabrics/)",
   "Fabric live URL: https://agifuturefoundation.github.io/WorldForge-Browser/my-fabric/worlds/biota-blockchain/world.json",
   "Anchor: lat -38.71260348427612, lon -27.248278366617797. Status anchored = real-world anchor coordinate exists; rp1 null, NOT live on RP1.",
-  "Fabric: 36 nodes total (scene root + 20 top-level + nested Agent/Swarm children); 12 distinct GLB refs, all unhosted — see missing_models.",
-  "Districts/buildings = the real 'Zone · ...' nodes. NPCs = the real 'Agent · ...' nodes (nested under their zones; NPC position = zone position + the agent node's local offset) plus all three real 'Advisor · ...' nodes (Host Advisor, Steward Liaison, Alignment Advisor; top-level fabric positions through the world transform). The 'Steward seat 1–3 · human' nodes are human seats, not game characters, and are not NPCs. All NPC dialogue is original game dialogue, never attributed to a real person.",
+  "Fabric: 36 nodes total (scene root + 20 top-level + nested Agent/Swarm children); 12 distinct GLB refs, all unhosted \u2014 see missing_models.",
+  "Districts/buildings = the real 'Zone \u00b7 ...' nodes. NPCs = the real 'Agent \u00b7 ...' nodes (nested under their zones; NPC position = zone position + the agent node's local offset) plus all three real 'Advisor \u00b7 ...' nodes (Host Advisor, Steward Liaison, Alignment Advisor; top-level fabric positions through the world transform). The 'Steward seat 1\u20133 \u00b7 human' nodes are human seats, not game characters, and are not NPCs. All NPC dialogue is original game dialogue, never attributed to a real person.",
   "Biome 'forest' is a design choice for this interpretation.",
-  "Agent companions are game characters representing the real Virtuals agents (agents.json); their live instances are offline — not live connections.",
+  "Agent companions are game characters representing the real Virtuals agents (agents.json); their live instances are offline \u2014 not live connections.",
   "Zones (6): Personalized Therapy Lab, DAO Governance Hall, Multi-Blockchain Ledger, Healthcare Data Exchange, Biopharma AGI Agents Hub, Steward Council.",
-  "Note: the W3 April 2026 internal series list has no Biota series number — Biota is anchored here by its fabric, not by a series slot."
+  "Note: the W3 April 2026 internal series list has no Biota series number \u2014 Biota is anchored here by its fabric, not by a series slot."
  ],
  "spawn": [
   0,
   0,
-  22
+  14
  ],
  "status": "anchored",
  "terrain": {

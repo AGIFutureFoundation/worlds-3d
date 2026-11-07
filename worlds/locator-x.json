@@ -2,17 +2,17 @@
  "agent_companions": [
   {
    "color": "#e2b55c",
-   "greeting": "Hello — I'm Omega, a hive coordination companion. On Virtuals ACP I offer hive_coordination_brief ($10/24h), seat_status_check ($5/30min) and hive_governance_audit ($75/72h), but my live instance is offline, so no hire can be fulfilled today — I'm a game character only.",
+   "greeting": "Hello \u2014 I'm Omega, a hive coordination companion. On Virtuals ACP I offer hive_coordination_brief ($10/24h), seat_status_check ($5/30min) and hive_governance_audit ($75/72h), but my live instance is offline, so no hire can be fulfilled today \u2014 I'm a game character only.",
    "id": "omega",
    "name": "Omega",
-   "role": "Hive coordination agent (Virtuals ACP). Real job: hive_coordination_brief, $10 / 24h. Game companion only — live instance offline."
+   "role": "Hive coordination agent (Virtuals ACP). Real job: hive_coordination_brief, $10 / 24h. Game companion only \u2014 live instance offline."
   },
   {
    "color": "#f4a261",
-   "greeting": "Hello — I'm CMMC, a compliance-readiness companion. On Virtuals ACP I offer readiness_check ($25/24h), control_lookup ($2/30min) and full_readiness_assessment ($150/72h), but my live instance is shut down, so no hire can be fulfilled today — I'm a game character only.",
+   "greeting": "Hello \u2014 I'm CMMC, a compliance-readiness companion. On Virtuals ACP I offer readiness_check ($25/24h), control_lookup ($2/30min) and full_readiness_assessment ($150/72h), but my live instance is shut down, so no hire can be fulfilled today \u2014 I'm a game character only.",
    "id": "cmmc",
    "name": "CMMC",
-   "role": "Compliance-readiness agent (Virtuals ACP). Real job: readiness_check. Game companion only — live instance offline."
+   "role": "Compliance-readiness agent (Virtuals ACP). Real job: readiness_check. Game companion only \u2014 live instance offline."
   }
  ],
  "biome": "coastal",
@@ -21,7 +21,7 @@
    "color": "#2471a3",
    "id": "zone-master-dashboard",
    "interior": {
-    "name": "Zone · Master Dashboard Interior",
+    "name": "Zone \u00b7 Master Dashboard Interior",
     "rooms": [
      {
       "name": "Main Hall",
@@ -43,7 +43,7 @@
      }
     ]
    },
-   "name": "Zone · Master Dashboard",
+   "name": "Zone \u00b7 Master Dashboard",
    "position": [
     0.0,
     0.0,
@@ -59,7 +59,7 @@
    "color": "#1e8449",
    "id": "zone-underwriting-desk",
    "interior": {
-    "name": "Zone · Underwriting Desk Interior",
+    "name": "Zone \u00b7 Underwriting Desk Interior",
     "rooms": [
      {
       "name": "Main Hall",
@@ -81,7 +81,7 @@
      }
     ]
    },
-   "name": "Zone · Underwriting Desk",
+   "name": "Zone \u00b7 Underwriting Desk",
    "position": [
     -18.77,
     0.0,
@@ -97,7 +97,7 @@
    "color": "#b7950b",
    "id": "zone-evidence-layer",
    "interior": {
-    "name": "Zone · Evidence Layer Interior",
+    "name": "Zone \u00b7 Evidence Layer Interior",
     "rooms": [
      {
       "name": "Main Hall",
@@ -119,7 +119,7 @@
      }
     ]
    },
-   "name": "Zone · Evidence Layer",
+   "name": "Zone \u00b7 Evidence Layer",
    "position": [
     -23.4,
     0.0,
@@ -135,7 +135,7 @@
    "color": "#6c3483",
    "id": "zone-the-academy",
    "interior": {
-    "name": "Zone · The Academy Interior",
+    "name": "Zone \u00b7 The Academy Interior",
     "rooms": [
      {
       "name": "Main Hall",
@@ -157,7 +157,7 @@
      }
     ]
    },
-   "name": "Zone · The Academy",
+   "name": "Zone \u00b7 The Academy",
    "position": [
     -10.41,
     0.0,
@@ -173,7 +173,7 @@
    "color": "#117a65",
    "id": "zone-market-editions",
    "interior": {
-    "name": "Zone · Market Editions Interior",
+    "name": "Zone \u00b7 Market Editions Interior",
     "rooms": [
      {
       "name": "Main Hall",
@@ -195,7 +195,7 @@
      }
     ]
    },
-   "name": "Zone · Market Editions",
+   "name": "Zone \u00b7 Market Editions",
    "position": [
     10.41,
     0.0,
@@ -211,7 +211,7 @@
    "color": "#7e5109",
    "id": "zone-louisiana-developer-desk",
    "interior": {
-    "name": "Zone · Louisiana Developer Desk Interior",
+    "name": "Zone \u00b7 Louisiana Developer Desk Interior",
     "rooms": [
      {
       "name": "Main Hall",
@@ -233,7 +233,7 @@
      }
     ]
    },
-   "name": "Zone · Louisiana Developer Desk",
+   "name": "Zone \u00b7 Louisiana Developer Desk",
    "position": [
     23.4,
     0.0,
@@ -249,7 +249,7 @@
    "color": "#c0392b",
    "id": "zone-steward-council",
    "interior": {
-    "name": "Zone · Steward Council Interior",
+    "name": "Zone \u00b7 Steward Council Interior",
     "rooms": [
      {
       "name": "Main Hall",
@@ -271,7 +271,7 @@
      }
     ]
    },
-   "name": "Zone · Steward Council",
+   "name": "Zone \u00b7 Steward Council",
    "position": [
     18.77,
     0.0,
@@ -287,7 +287,7 @@
    "color": "#6c3483",
    "id": "pbc-alignment-evaluation-gate",
    "interior": {
-    "name": "PBC · Alignment Evaluation Gate Interior",
+    "name": "PBC \u00b7 Alignment Evaluation Gate Interior",
     "rooms": [
      {
       "name": "Gate Hall",
@@ -300,7 +300,7 @@
      }
     ]
    },
-   "name": "PBC · Alignment Evaluation Gate",
+   "name": "PBC \u00b7 Alignment Evaluation Gate",
    "position": [
     0.0,
     0.0,
@@ -316,7 +316,7 @@
    "color": "#b7950b",
    "id": "sign-locator-x-powered-by-agi-corp",
    "interior": {
-    "name": "Sign · Locator.X · Powered by AGI Corp Interior",
+    "name": "Sign \u00b7 Locator.X \u00b7 Powered by AGI Corp Interior",
     "rooms": [
      {
       "name": "Sign Plaza",
@@ -329,7 +329,7 @@
      }
     ]
    },
-   "name": "Sign · Locator.X · Powered by AGI Corp",
+   "name": "Sign \u00b7 Locator.X \u00b7 Powered by AGI Corp",
    "position": [
     0.0,
     0.0,
@@ -348,80 +348,88 @@
    "kind": "data",
    "name": "Brief Data",
    "position": [
-    3.0,
+    5.0,
     1.0,
-    -24.0
-   ]
+    -15.0
+   ],
+   "position_note": "Door-side of Zone \u00b7 Master Dashboard: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair)."
   },
   {
    "id": "spark-forecast",
    "kind": "spark",
    "name": "Forecast Spark",
    "position": [
-    13.41,
+    15.41,
     1.0,
-    21.63
-   ]
+    30.63
+   ],
+   "position_note": "Door-side of Zone \u00b7 Market Editions: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair)."
   },
   {
    "id": "relic-evidence",
    "kind": "relic",
    "name": "Evidence Relic",
    "position": [
-    -20.4,
+    -18.4,
     1.0,
-    5.34
-   ]
+    14.34
+   ],
+   "position_note": "Door-side of Zone \u00b7 Evidence Layer: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair)."
   },
   {
    "id": "spark-underwriting",
    "kind": "spark",
    "name": "Underwriting Spark",
    "position": [
-    -21.77,
+    -13.77,
     1.0,
-    -14.97
-   ]
+    -5.97
+   ],
+   "position_note": "Door-side of Zone \u00b7 Underwriting Desk: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair)."
   },
   {
    "id": "data-academy",
    "kind": "data",
    "name": "Academy Data",
    "position": [
-    -7.41,
+    -5.41,
     1.0,
-    21.63
-   ]
+    30.63
+   ],
+   "position_note": "Door-side of Zone \u00b7 The Academy: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair)."
   },
   {
    "id": "spark-louisiana",
    "kind": "spark",
    "name": "Louisiana Spark",
    "position": [
-    26.4,
+    28.4,
     1.0,
-    5.34
-   ]
+    14.34
+   ],
+   "position_note": "Door-side of Zone \u00b7 Louisiana Developer Desk: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair)."
   },
   {
    "id": "relic-steward",
    "kind": "relic",
    "name": "Steward Relic",
    "position": [
-    21.77,
+    23.77,
     1.0,
-    -14.97
-   ]
+    -5.97
+   ],
+   "position_note": "Door-side of Zone \u00b7 Steward Council: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair)."
   },
   {
    "id": "data-devbrief",
    "kind": "data",
    "name": "Developer Brief Data",
    "position": [
-    20.4,
+    18.4,
     1.0,
-    5.34
-   ]
+    14.34
+   ],
+   "position_note": "Door-side of Zone \u00b7 Louisiana Developer Desk: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair)."
   },
   {
    "id": "spark-host",
@@ -438,10 +446,11 @@
    "kind": "data",
    "name": "Liaison Data",
    "position": [
-    15.77,
+    13.77,
     1.0,
-    -14.97
-   ]
+    -5.97
+   ],
+   "position_note": "Door-side of Zone \u00b7 Steward Council: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair)."
   },
   {
    "id": "spark-alignment",
@@ -463,8 +472,8 @@
    "color": "#2471a3",
    "id": "zone-master-dashboard",
    "model_ref": "../models/zone-marker.glb",
-   "model_status": "not hosted — procedural placeholder shown",
-   "name": "Zone · Master Dashboard",
+   "model_status": "not hosted \u2014 procedural placeholder shown",
+   "name": "Zone \u00b7 Master Dashboard",
    "position": [
     0.0,
     0.0,
@@ -475,8 +484,8 @@
    "color": "#1e8449",
    "id": "zone-underwriting-desk",
    "model_ref": "../models/zone-marker.glb",
-   "model_status": "not hosted — procedural placeholder shown",
-   "name": "Zone · Underwriting Desk",
+   "model_status": "not hosted \u2014 procedural placeholder shown",
+   "name": "Zone \u00b7 Underwriting Desk",
    "position": [
     -18.77,
     0.0,
@@ -487,8 +496,8 @@
    "color": "#b7950b",
    "id": "zone-evidence-layer",
    "model_ref": "../models/zone-marker.glb",
-   "model_status": "not hosted — procedural placeholder shown",
-   "name": "Zone · Evidence Layer",
+   "model_status": "not hosted \u2014 procedural placeholder shown",
+   "name": "Zone \u00b7 Evidence Layer",
    "position": [
     -23.4,
     0.0,
@@ -499,8 +508,8 @@
    "color": "#6c3483",
    "id": "zone-the-academy",
    "model_ref": "../models/zone-marker.glb",
-   "model_status": "not hosted — procedural placeholder shown",
-   "name": "Zone · The Academy",
+   "model_status": "not hosted \u2014 procedural placeholder shown",
+   "name": "Zone \u00b7 The Academy",
    "position": [
     -10.41,
     0.0,
@@ -511,8 +520,8 @@
    "color": "#117a65",
    "id": "zone-market-editions",
    "model_ref": "../models/zone-marker.glb",
-   "model_status": "not hosted — procedural placeholder shown",
-   "name": "Zone · Market Editions",
+   "model_status": "not hosted \u2014 procedural placeholder shown",
+   "name": "Zone \u00b7 Market Editions",
    "position": [
     10.41,
     0.0,
@@ -523,8 +532,8 @@
    "color": "#7e5109",
    "id": "zone-louisiana-developer-desk",
    "model_ref": "../models/zone-marker.glb",
-   "model_status": "not hosted — procedural placeholder shown",
-   "name": "Zone · Louisiana Developer Desk",
+   "model_status": "not hosted \u2014 procedural placeholder shown",
+   "name": "Zone \u00b7 Louisiana Developer Desk",
    "position": [
     23.4,
     0.0,
@@ -535,8 +544,8 @@
    "color": "#c0392b",
    "id": "zone-steward-council",
    "model_ref": "../models/zone-marker.glb",
-   "model_status": "not hosted — procedural placeholder shown",
-   "name": "Zone · Steward Council",
+   "model_status": "not hosted \u2014 procedural placeholder shown",
+   "name": "Zone \u00b7 Steward Council",
    "position": [
     18.77,
     0.0,
@@ -560,19 +569,19 @@
  "missing_models": [
   {
    "ref": "../models/advisor-alignment.glb",
-   "status": "not hosted — procedural placeholder shown"
+   "status": "not hosted \u2014 procedural placeholder shown"
   },
   {
    "ref": "../models/advisor-host.glb",
-   "status": "not hosted — procedural placeholder shown"
+   "status": "not hosted \u2014 procedural placeholder shown"
   },
   {
    "ref": "../models/advisor-steward.glb",
-   "status": "not hosted — procedural placeholder shown"
+   "status": "not hosted \u2014 procedural placeholder shown"
   },
   {
    "ref": "../models/agent.glb",
-   "status": "not hosted — procedural placeholder shown"
+   "status": "not hosted \u2014 procedural placeholder shown"
   },
   {
    "ref": "assets/glb/coordinator.glb",
@@ -580,31 +589,31 @@
   },
   {
    "ref": "../models/env-sky.glb",
-   "status": "not hosted — procedural placeholder shown"
+   "status": "not hosted \u2014 procedural placeholder shown"
   },
   {
    "ref": "../models/env-terrain.glb",
-   "status": "not hosted — procedural placeholder shown"
+   "status": "not hosted \u2014 procedural placeholder shown"
   },
   {
    "ref": "../models/gate.glb",
-   "status": "not hosted — procedural placeholder shown"
+   "status": "not hosted \u2014 procedural placeholder shown"
   },
   {
    "ref": "../models/sign-locator-x.glb",
-   "status": "not hosted — procedural placeholder shown"
+   "status": "not hosted \u2014 procedural placeholder shown"
   },
   {
    "ref": "../models/steward.glb",
-   "status": "not hosted — procedural placeholder shown"
+   "status": "not hosted \u2014 procedural placeholder shown"
   },
   {
    "ref": "../models/world-locator-x.glb",
-   "status": "not hosted — procedural placeholder shown"
+   "status": "not hosted \u2014 procedural placeholder shown"
   },
   {
    "ref": "../models/zone-marker.glb",
-   "status": "not hosted — procedural placeholder shown"
+   "status": "not hosted \u2014 procedural placeholder shown"
   }
  ],
  "name": "Locator.X",
@@ -615,33 +624,39 @@
     "Check the dashboard, then the evidence. The order matters.",
     "The brief data is at the Master Dashboard. Collect it there, then carry the brief to the Louisiana Developer Desk.",
     "The Evidence Layer is where a claim earns its keep. Check the dashboard, then the evidence. The order matters.",
-    "The Level Gates in The Academy will test what the brief taught you. Go, when the dashboard makes sense."
+    "The Level Gates in The Academy will test what the brief taught you. Go, when the dashboard makes sense.",
+    "The swarm coordinator keeps us in step \u2014 the dashboard, the underwriting desk, the evidence layer, the academy, the markets, the Louisiana desk, and the council.",
+    "The Underwriting Desk is where the brief earns its keep. Check the dashboard, then the evidence \u2014 the order matters."
    ],
    "id": "guide",
    "name": "Guide",
    "position": [
     0.0,
     0.45,
-    -24.0
+    -15.0
    ],
+   "position_note": "Door-side of Zone \u00b7 Master Dashboard: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair).",
    "quest": "q-first-brief",
    "role": "Master Dashboard guide"
   },
   {
    "dialogue": [
     "Forecasts are bets with receipts. I show the receipts.",
-    "The market moves — the evidence layer is where you check why.",
-    "The forecast spark is in the Market Editions. Collect it, then check the claim at the Evidence Layer.",
+    "The market moves \u2014 the evidence layer is where you check why.",
+    "The forecast spark is at the Market Editions. Collect it, then check the claim at the Evidence Layer.",
     "The Scout Agent walks the markets I only read about. When we disagree, the Evidence Layer settles it.",
-    "A forecast is a question with a date on it. The Review Agent makes sure the question was asked properly."
+    "A forecast is a question with a date on it. The Review Agent makes sure the question was asked properly.",
+    "The swarm coordinator keeps us in step \u2014 my forecasts, the Scout Agent's leads, the Review Agent's checks.",
+    "The Louisiana Developer Desk turns a forecast into a brief a developer can actually use. Receipts first."
    ],
    "id": "forecast-agent",
    "name": "Forecast Agent",
    "position": [
     -18.77,
     0.45,
-    -14.97
+    -5.97
    ],
+   "position_note": "Door-side of Zone \u00b7 Underwriting Desk: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair).",
    "quest": "q-forecast-check",
    "role": "Market Editions forecast agent"
   },
@@ -649,17 +664,20 @@
    "dialogue": [
     "Bring me the claim and I will bring you the source.",
     "A review is only as good as the evidence it stands on.",
-    "The evidence relic is in the Evidence Layer. Collect it, then take the review to the Underwriting Desk.",
+    "The evidence relic is at the Evidence Layer. Collect it, then take the review to the Underwriting Desk.",
     "The Forecast Agent predicts, the Scout Agent finds, and I check. Three jobs, one layer, no shortcuts.",
-    "A claim without evidence is a rumour with good formatting. Bring me the relic and I will show you the difference."
+    "A claim without evidence is a rumour with good formatting. Bring me the relic and I will show you the difference.",
+    "The swarm coordinator keeps us in step \u2014 the Forecast Agent predicts, the Scout Agent finds, and I check.",
+    "The Academy's Level Gates teach the checking. The Evidence Layer is where the checking happens."
    ],
    "id": "review-agent",
    "name": "Review Agent",
    "position": [
     -23.4,
     0.45,
-    5.34
+    14.34
    ],
+   "position_note": "Door-side of Zone \u00b7 Evidence Layer: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair).",
    "quest": "q-evidence-review",
    "role": "Evidence Layer review agent"
   },
@@ -667,53 +685,62 @@
    "dialogue": [
     "I walk the editions so you do not have to. Found three leads today.",
     "Scout first, commit later. That is the whole job.",
-    "The forecast spark is in the Market Editions — the same spark the Forecast Agent watches. Collect it and compare notes with them.",
+    "The forecast spark is in the Market Editions \u2014 the same spark the Forecast Agent watches. Collect it and compare notes with them.",
     "The Academy's Level Gates teach the scouting; the Market Editions are where the scouting happens.",
-    "I find the sites. The Developer Brief Desk turns what I find into a brief Louisiana can use."
+    "I find the sites. The Developer Brief Desk turns what I find into a brief Louisiana can use.",
+    "The swarm coordinator keeps us in step \u2014 I walk the editions, the Forecast Agent reads them.",
+    "The Underwriting Desk is where a lead becomes a decision. Scout first, commit later."
    ],
    "id": "scout-agent",
    "name": "Scout Agent",
    "position": [
     10.41,
     0.45,
-    21.63
+    30.63
    ],
+   "position_note": "Door-side of Zone \u00b7 Market Editions: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair).",
    "quest": "q-forecast-check",
    "role": "Market Editions scout agent"
   },
   {
    "dialogue": [
     "Levels are earned, not bought. Pass the gate and the next door opens.",
-    "The Academy keeps the bar where the stewards set it — high and visible.",
-    "The academy data is in The Academy. Collect it there, then bring the brief back to the Master Dashboard.",
-    "Every good site starts with a question. The gates do not test what you know — they test what you checked.",
-    "The Guide sent you, so the dashboard is where you started. Finish the brief and the Guide will sign it off."
+    "The Academy keeps the bar where the stewards set it \u2014 high and visible.",
+    "The academy data is at The Academy. Collect it there, then bring the brief back to the Master Dashboard.",
+    "Every good site starts with a question. The gates do not test what you know \u2014 they test what you checked.",
+    "The Guide sent you, so the dashboard is where you started. Finish the brief and the Guide will sign it off.",
+    "The swarm coordinator keeps us in step \u2014 the gates test what the dashboard taught.",
+    "The Market Editions are where the scouting happens. The Academy is where the scouting is taught."
    ],
    "id": "level-gates",
    "name": "Level Gates",
    "position": [
     -10.41,
     0.45,
-    21.63
+    30.63
    ],
+   "position_note": "Door-side of Zone \u00b7 The Academy: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair).",
    "quest": "q-first-brief",
    "role": "The Academy level-gates agent"
   },
   {
    "dialogue": [
     "The Louisiana desk turns a site question into a brief a developer can actually use.",
-    "Bring me the parcel, the budget, and the timeline — in that order — and I will draft the brief.",
-    "The developer brief data is at the Louisiana Developer Desk. Collect it there, stand at the desk, and the brief writes itself — almost.",
+    "Bring me the parcel, the budget, and the timeline \u2014 in that order \u2014 and I will draft the brief.",
+    "The developer brief data is at the Louisiana Developer Desk. Collect it there, stand at the desk, and the brief writes itself \u2014 almost.",
     "The Scout Agent finds the sites and the Forecast Agent prices the future. My desk turns both into something a developer can build on.",
-    "Bring the finished brief back to the Guide at the Master Dashboard. A brief nobody reads is a walk nobody took."
+    "Bring the finished brief back to the Guide at the Master Dashboard. A brief nobody reads is a walk nobody took.",
+    "The swarm coordinator keeps us in step \u2014 the Scout Agent finds, the Forecast Agent prices, my desk writes.",
+    "The Master Dashboard watches all seven zones. A brief nobody reads is a walk nobody took."
    ],
    "id": "developer-brief-desk",
    "name": "Developer Brief Desk",
    "position": [
     23.4,
     0.45,
-    5.34
+    14.34
    ],
+   "position_note": "Door-side of Zone \u00b7 Louisiana Developer Desk: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair).",
    "quest": "q-developer-brief",
    "role": "Louisiana Developer Desk agent"
   },
@@ -722,7 +749,7 @@
     "Welcome. I keep the doors open and the stewards informed.",
     "If you need a human decision, the Steward Council is where it lands.",
     "The host spark is by the Alignment Evaluation Gate. Collect it there, stand at the gate, and you will see what I see every day.",
-    "The Steward Liaison carries messages to the Steward Council. I keep the doors open; the liaison keeps the words moving.",
+    "The Steward Liaison carries messages to the Steward Council. Seven zones, one council \u2014 the liaison is how the zones reach it.",
     "Seven zones, one council, and a dashboard that watches all of them. The stewards are human, and the decisions are theirs."
    ],
    "id": "host-advisor",
@@ -733,33 +760,34 @@
     -33.0
    ],
    "quest": "q-host-welcome",
-   "role": "Advisor · Host Advisor"
+   "role": "Advisor \u00b7 Host Advisor"
   },
   {
    "dialogue": [
-    "I carry messages between this world and the Steward Council — I never decide for them.",
+    "I carry messages between this world and the Steward Council \u2014 I never decide for them.",
     "The steward seats are held by humans. My job is to make sure their words arrive intact.",
-    "The liaison data is at the Steward Council. Collect it there — the council floor is where messages become decisions.",
+    "The liaison data is at the Steward Council. Collect it there \u2014 the council floor is where messages become decisions.",
     "Three steward seats, all held by humans. I carry the words; I never cast the vote.",
-    "The Alignment Advisor checks plans at the gate before they reach the council. Bring me the flagged ones first."
+    "The Academy's Level Gates and the Louisiana Developer Desk both send messages through me. Hard messages travel fastest when they travel straight."
    ],
    "id": "steward-liaison",
    "name": "Steward Liaison",
    "position": [
     22.96,
     0.45,
-    -14.97
+    -3.97
    ],
+   "position_note": "Door-side of Zone \u00b7 Steward Council: the fabric point is the building centre, inside the solid mesh, so the NPC was invisible until the talk toast fired (Depth-2 fix-up).",
    "quest": "q-steward-liaison",
-   "role": "Advisor · Steward Liaison"
+   "role": "Advisor \u00b7 Steward Liaison"
   },
   {
    "dialogue": [
     "I check plans against the alignment gate before they go anywhere.",
     "If a plan cannot pass the gate in public, it does not pass at all.",
     "The alignment spark is by the Alignment Evaluation Gate. Collect it, stand at the gate, and check the plan against it.",
-    "The gate is not a wall, it is a mirror. A plan that cannot pass in public does not pass at all.",
-    "The Host Advisor opens the doors, the Steward Liaison carries the words, and I hold the mirror. Between the three of us, nothing slips through unseen."
+    "The gate is not a wall, it is a mirror \u2014 and a forecast is a bet with receipts. A plan without evidence does not pass.",
+    "The Review Agent brings me the source, the Forecast Agent brings me the receipts. I hold both up to the gate."
    ],
    "id": "alignment-advisor",
    "name": "Alignment Advisor",
@@ -769,7 +797,7 @@
     -33.0
    ],
    "quest": "q-alignment-check",
-   "role": "Advisor · Alignment Advisor"
+   "role": "Advisor \u00b7 Alignment Advisor"
   }
  ],
  "quests": [
@@ -790,7 +818,7 @@
     },
     {
      "kind": "place",
-     "target": "Zone · Louisiana Developer Desk",
+     "target": "Zone \u00b7 Louisiana Developer Desk",
      "text": "Visit the Louisiana Developer Desk"
     },
     {
@@ -823,7 +851,7 @@
     },
     {
      "kind": "place",
-     "target": "Zone · Evidence Layer",
+     "target": "Zone \u00b7 Evidence Layer",
      "text": "Visit the Evidence Layer"
     },
     {
@@ -856,7 +884,7 @@
     },
     {
      "kind": "place",
-     "target": "Zone · Underwriting Desk",
+     "target": "Zone \u00b7 Underwriting Desk",
      "text": "Visit the Underwriting Desk"
     },
     {
@@ -889,7 +917,7 @@
     },
     {
      "kind": "place",
-     "target": "Zone · Louisiana Developer Desk",
+     "target": "Zone \u00b7 Louisiana Developer Desk",
      "text": "Visit the Louisiana Developer Desk"
     },
     {
@@ -922,7 +950,7 @@
     },
     {
      "kind": "place",
-     "target": "PBC · Alignment Evaluation Gate",
+     "target": "PBC \u00b7 Alignment Evaluation Gate",
      "text": "Visit the Alignment Evaluation Gate"
     },
     {
@@ -955,7 +983,7 @@
     },
     {
      "kind": "place",
-     "target": "Zone · Steward Council",
+     "target": "Zone \u00b7 Steward Council",
      "text": "Visit the Steward Council"
     },
     {
@@ -988,7 +1016,7 @@
     },
     {
      "kind": "place",
-     "target": "PBC · Alignment Evaluation Gate",
+     "target": "PBC \u00b7 Alignment Evaluation Gate",
      "text": "Visit the Alignment Evaluation Gate"
     },
     {
@@ -1006,15 +1034,15 @@
   }
  ],
  "rp1": null,
- "series": "Series 8 · Locator.X",
+ "series": "Series 8 \u00b7 Locator.X",
  "sources": [
   "Fabric: rp1-review/push-6-fabrics/site/my-fabric/worlds/locator/world.json (local copy in data/fabrics/)",
   "Fabric live URL: https://agifuturefoundation.github.io/WorldForge-Browser/my-fabric/worlds/locator-x/world.json",
   "Anchor: lat 21.09705311564314, lon 142.69254864512746. Status anchored = real-world anchor coordinate exists; rp1 null, NOT live on RP1.",
-  "Fabric: 38 nodes total (scene root + 22 top-level + nested Agent/Swarm children); 12 distinct GLB refs, all unhosted — see missing_models.",
-  "Districts/buildings = the real 'Zone · ...' nodes. NPCs = the real 'Agent · ...' nodes (nested under their zones; NPC position = zone position + the agent node's local offset) plus all three real 'Advisor · ...' nodes (Host Advisor, Steward Liaison, Alignment Advisor; top-level fabric positions through the world transform). The 'Steward seat 1–3 · human' nodes are human seats, not game characters, and are not NPCs. All NPC dialogue is original game dialogue, never attributed to a real person.",
+  "Fabric: 38 nodes total (scene root + 22 top-level + nested Agent/Swarm children); 12 distinct GLB refs, all unhosted \u2014 see missing_models.",
+  "Districts/buildings = the real 'Zone \u00b7 ...' nodes. NPCs = the real 'Agent \u00b7 ...' nodes (nested under their zones; NPC position = zone position + the agent node's local offset) plus all three real 'Advisor \u00b7 ...' nodes (Host Advisor, Steward Liaison, Alignment Advisor; top-level fabric positions through the world transform). The 'Steward seat 1\u20133 \u00b7 human' nodes are human seats, not game characters, and are not NPCs. All NPC dialogue is original game dialogue, never attributed to a real person.",
   "Biome 'coastal' is a design choice for this interpretation.",
-  "Agent companions are game characters representing the real Virtuals agents (agents.json); their live instances are offline — not live connections.",
+  "Agent companions are game characters representing the real Virtuals agents (agents.json); their live instances are offline \u2014 not live connections.",
   "Zones (7): Master Dashboard, Underwriting Desk, Evidence Layer, The Academy, Market Editions, Louisiana Developer Desk, Steward Council."
  ],
  "spawn": [

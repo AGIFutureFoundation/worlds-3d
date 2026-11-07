@@ -2,17 +2,17 @@
  "agent_companions": [
   {
    "color": "#6fd3c1",
-   "greeting": "Hello — I'm Tactile, a workflow companion. On Virtuals ACP I offer workflow_plan ($10/24h), step_check ($1/5min) and workflow_audit ($50/48h), but my live instance is shut down, so no hire can be fulfilled today — I'm a game character only.",
+   "greeting": "Hello \u2014 I'm Tactile, a workflow companion. On Virtuals ACP I offer workflow_plan ($10/24h), step_check ($1/5min) and workflow_audit ($50/48h), but my live instance is shut down, so no hire can be fulfilled today \u2014 I'm a game character only.",
    "id": "tactile",
    "name": "Tactile",
-   "role": "Workflow agent (Virtuals ACP). Real job: workflow_plan, $10 / 24h. Game companion only — live instance offline."
+   "role": "Workflow agent (Virtuals ACP). Real job: workflow_plan, $10 / 24h. Game companion only \u2014 live instance offline."
   },
   {
    "color": "#e2b55c",
-   "greeting": "Hello — I'm Omega, a hive coordination companion. On Virtuals ACP I offer hive_coordination_brief ($10/24h), seat_status_check ($5/30min) and hive_governance_audit ($75/72h), but my live instance is offline, so no hire can be fulfilled today — I'm a game character only.",
+   "greeting": "Hello \u2014 I'm Omega, a hive coordination companion. On Virtuals ACP I offer hive_coordination_brief ($10/24h), seat_status_check ($5/30min) and hive_governance_audit ($75/72h), but my live instance is offline, so no hire can be fulfilled today \u2014 I'm a game character only.",
    "id": "omega",
    "name": "Omega",
-   "role": "Hive coordination agent (Virtuals ACP). Real job: hive_coordination_brief, $10 / 24h. Game companion only — live instance offline."
+   "role": "Hive coordination agent (Virtuals ACP). Real job: hive_coordination_brief, $10 / 24h. Game companion only \u2014 live instance offline."
   }
  ],
  "biome": "city",
@@ -477,7 +477,7 @@
    "color": "#2471a3",
    "id": "sim-tower-crane-lift",
    "interior": {
-    "name": "Sim · Tower Crane Lift Interior",
+    "name": "Sim \u00b7 Tower Crane Lift Interior",
     "rooms": [
      {
       "name": "Sim Bay",
@@ -490,7 +490,7 @@
      }
     ]
    },
-   "name": "Sim · Tower Crane Lift",
+   "name": "Sim \u00b7 Tower Crane Lift",
    "position": [
     12.08,
     0.0,
@@ -506,7 +506,7 @@
    "color": "#2471a3",
    "id": "sim-excavator-trench-cut",
    "interior": {
-    "name": "Sim · Excavator Trench Cut Interior",
+    "name": "Sim \u00b7 Excavator Trench Cut Interior",
     "rooms": [
      {
       "name": "Sim Bay",
@@ -519,7 +519,7 @@
      }
     ]
    },
-   "name": "Sim · Excavator Trench Cut",
+   "name": "Sim \u00b7 Excavator Trench Cut",
    "position": [
     10.16,
     0.0,
@@ -535,7 +535,7 @@
    "color": "#2471a3",
    "id": "sim-forklift-yard-run",
    "interior": {
-    "name": "Sim · Forklift Yard Run Interior",
+    "name": "Sim \u00b7 Forklift Yard Run Interior",
     "rooms": [
      {
       "name": "Sim Bay",
@@ -548,7 +548,7 @@
      }
     ]
    },
-   "name": "Sim · Forklift Yard Run",
+   "name": "Sim \u00b7 Forklift Yard Run",
    "position": [
     5.02,
     0.0,
@@ -564,7 +564,7 @@
    "color": "#2471a3",
    "id": "sim-weld-bead-run",
    "interior": {
-    "name": "Sim · Weld Bead Run Interior",
+    "name": "Sim \u00b7 Weld Bead Run Interior",
     "rooms": [
      {
       "name": "Sim Bay",
@@ -577,7 +577,7 @@
      }
     ]
    },
-   "name": "Sim · Weld Bead Run",
+   "name": "Sim \u00b7 Weld Bead Run",
    "position": [
     -1.72,
     0.0,
@@ -593,7 +593,7 @@
    "color": "#2471a3",
    "id": "sim-scaffold-bay-build",
    "interior": {
-    "name": "Sim · Scaffold Bay Build Interior",
+    "name": "Sim \u00b7 Scaffold Bay Build Interior",
     "rooms": [
      {
       "name": "Sim Bay",
@@ -606,7 +606,7 @@
      }
     ]
    },
-   "name": "Sim · Scaffold Bay Build",
+   "name": "Sim \u00b7 Scaffold Bay Build",
    "position": [
     -7.91,
     0.0,
@@ -622,7 +622,7 @@
    "color": "#2471a3",
    "id": "sim-rigging-signal-call",
    "interior": {
-    "name": "Sim · Rigging Signal Call Interior",
+    "name": "Sim \u00b7 Rigging Signal Call Interior",
     "rooms": [
      {
       "name": "Sim Bay",
@@ -635,7 +635,7 @@
      }
     ]
    },
-   "name": "Sim · Rigging Signal Call",
+   "name": "Sim \u00b7 Rigging Signal Call",
    "position": [
     -11.59,
     0.0,
@@ -651,7 +651,7 @@
    "color": "#2471a3",
    "id": "sim-load-chart-judgment",
    "interior": {
-    "name": "Sim · Load Chart Judgment Interior",
+    "name": "Sim \u00b7 Load Chart Judgment Interior",
     "rooms": [
      {
       "name": "Sim Bay",
@@ -664,7 +664,7 @@
      }
     ]
    },
-   "name": "Sim · Load Chart Judgment",
+   "name": "Sim \u00b7 Load Chart Judgment",
    "position": [
     -11.59,
     0.0,
@@ -680,7 +680,7 @@
    "color": "#2471a3",
    "id": "sim-pressure-washer-surface-clean",
    "interior": {
-    "name": "Sim · Pressure Washer Surface Clean Interior",
+    "name": "Sim \u00b7 Pressure Washer Surface Clean Interior",
     "rooms": [
      {
       "name": "Sim Bay",
@@ -693,7 +693,7 @@
      }
     ]
    },
-   "name": "Sim · Pressure Washer Surface Clean",
+   "name": "Sim \u00b7 Pressure Washer Surface Clean",
    "position": [
     -7.91,
     0.0,
@@ -709,7 +709,7 @@
    "color": "#2471a3",
    "id": "sim-airless-paint-sprayer-finish",
    "interior": {
-    "name": "Sim · Airless Paint Sprayer Finish Interior",
+    "name": "Sim \u00b7 Airless Paint Sprayer Finish Interior",
     "rooms": [
      {
       "name": "Sim Bay",
@@ -722,7 +722,7 @@
      }
     ]
    },
-   "name": "Sim · Airless Paint Sprayer Finish",
+   "name": "Sim \u00b7 Airless Paint Sprayer Finish",
    "position": [
     -1.72,
     0.0,
@@ -738,7 +738,7 @@
    "color": "#2471a3",
    "id": "sim-boom-lift-basket-work",
    "interior": {
-    "name": "Sim · Boom Lift Basket Work Interior",
+    "name": "Sim \u00b7 Boom Lift Basket Work Interior",
     "rooms": [
      {
       "name": "Sim Bay",
@@ -751,7 +751,7 @@
      }
     ]
    },
-   "name": "Sim · Boom Lift Basket Work",
+   "name": "Sim \u00b7 Boom Lift Basket Work",
    "position": [
     5.02,
     0.0,
@@ -767,7 +767,7 @@
    "color": "#2471a3",
    "id": "sim-overhead-crane-shop-move",
    "interior": {
-    "name": "Sim · Overhead Crane Shop Move Interior",
+    "name": "Sim \u00b7 Overhead Crane Shop Move Interior",
     "rooms": [
      {
       "name": "Sim Bay",
@@ -780,7 +780,7 @@
      }
     ]
    },
-   "name": "Sim · Overhead Crane Shop Move",
+   "name": "Sim \u00b7 Overhead Crane Shop Move",
    "position": [
     10.16,
     0.0,
@@ -4561,79 +4561,157 @@
    "kind": "spark",
    "name": "Crane Spark",
    "position": [
-    14.08,
+    72.18,
     1.0,
     0.0
-   ]
+   ],
+   "position_note": "Structural District plate: the sim/hall it belongs to sits inside the solid hall grid, so the item waits on the district plate (Depth-2 reachability repair)."
   },
   {
    "id": "relic-weld",
    "kind": "relic",
    "name": "Weld Relic",
    "position": [
-    0.28,
+    68.96,
     1.0,
-    11.96
-   ]
+    7.78
+   ],
+   "position_note": "Structural District plate: the sim/hall it belongs to sits inside the solid hall grid, so the item waits on the district plate (Depth-2 reachability repair)."
   },
   {
    "id": "spark-iron",
    "kind": "spark",
    "name": "Iron Spark",
    "position": [
-    -10.05,
+    61.18,
     1.0,
-    8.7
-   ]
+    11.0
+   ],
+   "position_note": "Structural District plate: the sim/hall it belongs to sits inside the solid hall grid, so the item waits on the district plate (Depth-2 reachability repair)."
   },
   {
    "id": "spark-rigging",
    "kind": "spark",
    "name": "Rigging Spark",
    "position": [
-    -9.59,
+    53.4,
     1.0,
-    3.4
-   ]
+    7.78
+   ],
+   "position_note": "Structural District plate: the sim/hall it belongs to sits inside the solid hall grid, so the item waits on the district plate (Depth-2 reachability repair)."
   },
   {
    "id": "data-loadchart",
    "kind": "data",
    "name": "Load Chart Data",
    "position": [
-    -9.59,
+    50.18,
     1.0,
-    -3.4
-   ]
+    0.0
+   ],
+   "position_note": "Structural District plate: the sim/hall it belongs to sits inside the solid hall grid, so the item waits on the district plate (Depth-2 reachability repair)."
   },
   {
    "id": "spark-scaffold",
    "kind": "spark",
    "name": "Scaffold Spark",
    "position": [
-    -5.91,
+    53.4,
     1.0,
-    9.13
-   ]
+    -7.78
+   ],
+   "position_note": "Structural District plate: the sim/hall it belongs to sits inside the solid hall grid, so the item waits on the district plate (Depth-2 reachability repair)."
   },
   {
    "id": "relic-crane",
    "kind": "relic",
    "name": "Crane Relic",
    "position": [
-    -1.3499999999999996,
+    61.18,
     1.0,
-    0.0
-   ]
+    -11.0
+   ],
+   "position_note": "Structural District plate: the sim/hall it belongs to sits inside the solid hall grid, so the item waits on the district plate (Depth-2 reachability repair)."
   },
   {
    "id": "spark-boom",
    "kind": "spark",
    "name": "Boom Lift Spark",
    "position": [
-    7.02,
+    68.96,
     1.0,
-    -10.99
+    -7.78
+   ],
+   "position_note": "Structural District plate: the sim/hall it belongs to sits inside the solid hall grid, so the item waits on the district plate (Depth-2 reachability repair)."
+  },
+  {
+   "id": "spark-envelope",
+   "kind": "spark",
+   "name": "Envelope Spark",
+   "position": [
+    46.26,
+    1.0,
+    43.26
+   ]
+  },
+  {
+   "id": "spark-systems",
+   "kind": "spark",
+   "name": "Systems Spark",
+   "position": [
+    3.0,
+    1.0,
+    61.18
+   ]
+  },
+  {
+   "id": "spark-energy",
+   "kind": "spark",
+   "name": "Energy Spark",
+   "position": [
+    -40.26,
+    1.0,
+    43.26
+   ]
+  },
+  {
+   "id": "spark-earthworks",
+   "kind": "spark",
+   "name": "Earthworks Spark",
+   "position": [
+    -58.18,
+    1.0,
+    0.0
+   ]
+  },
+  {
+   "id": "spark-heavy",
+   "kind": "spark",
+   "name": "Heavy Spark",
+   "position": [
+    -40.26,
+    1.0,
+    -43.26
+   ]
+  },
+  {
+   "id": "spark-transport",
+   "kind": "spark",
+   "name": "Transport Spark",
+   "position": [
+    3.0,
+    1.0,
+    -61.18
+   ]
+  },
+  {
+   "id": "spark-survey",
+   "kind": "spark",
+   "name": "Survey Spark",
+   "position": [
+    46.26,
+    1.0,
+    -43.26
    ]
   }
  ],
@@ -5256,35 +5334,43 @@
    "dialogue": [
     "First day on the deck? Watch the crane, mind your tie-off, and ask before you lift.",
     "The Ironworkers hall runs the steel. Earn the lift and the crew has your back.",
-    "The iron spark is at the Ironworkers hall. Collect it, walk the Structural District, and come back with the circuit done.",
+    "The iron spark is on the Structural District plate. Collect it, walk the district, and come back with the circuit done.",
     "The Crane Operators run the lift and the Riggers & Signalpersons run the calls. Steel moves when all three agree.",
-    "The Load Chart Judgment sim is where a good lift is decided before the hook ever moves. Go and judge one."
+    "The Load Chart Judgment sim is where a good lift is decided before the hook ever moves. The chart never lies \u2014 learn to read it.",
+    "The Envelope & Finish District takes the frame we raise and makes it a building. Go and see the Carpenters hall.",
+    "The Heavy Industry District makes the steel before we ever raise it \u2014 the Machinists hall is where it starts.",
+    "Seven more districts ring the deck. Every one of them has a lead now \u2014 start with the Envelope Lead."
    ],
    "id": "ironworkers-foreman",
    "name": "Ironworkers Foreman",
    "position": [
-    -13.05,
+    67.18,
     0.0,
-    8.7
+    0.0
    ],
+   "position_note": "Structural District plate: the hall grid is one solid block, so the lead waits on the district plate (Depth-2 reachability repair).",
    "quest": "q-structural-circuit",
    "role": "Ironworkers hall lead"
   },
   {
    "dialogue": [
-    "A clean bead starts before the arc — clean metal, steady hand, right heat.",
-    "Run the sim bay first. The bead never lies, but the sim lets you try again.",
-    "The weld relic is by the Welding Trades hall. Collect it, then run the Weld Bead Run sim and show me a clean bead.",
+    "A clean bead starts before the arc \u2014 clean metal, steady hand, right heat.",
+    "Practise the bead first. The bead never lies, but a practise run lets you try again.",
+    "The weld relic is on the Structural District plate. Collect it, then show me a clean bead.",
     "The Boilermakers next door weld pressure; we weld structure. Same fire, different promises.",
-    "Bring the bead back to the Ironworkers Foreman when the circuit calls for it. A clean bead is a structural promise."
+    "Bring the bead back to the Ironworkers Foreman when the circuit calls for it. A clean bead is a structural promise.",
+    "The Building Systems District wires and pipes what we weld. The Electrical Workers hall is worth a walk.",
+    "The Airless Paint Sprayer Finish sim is the last coat on the work we start. Finish what you start.",
+    "The Energy & Utilities District keeps the arc lit. Thank the Solar Installers hall next time you strike one."
    ],
    "id": "welding-instructor",
    "name": "Welding Instructor",
    "position": [
-    -4.35,
+    61.18,
     0.0,
-    8.7
+    6.0
    ],
+   "position_note": "Structural District plate: the hall grid is one solid block, so the lead waits on the district plate (Depth-2 reachability repair).",
    "quest": "q-clean-bead",
    "role": "Welding Trades hall instructor"
   },
@@ -5292,37 +5378,171 @@
    "dialogue": [
     "Every lift is a conversation between the operator and the signalperson.",
     "Learn the signals cold. On this deck, a missed signal is a missed lift.",
-    "The crane spark is at the Tower Crane Lift sim. Collect it, stand in the sim bay, and run your first supervised lift.",
+    "The crane spark is on the Structural District plate. Collect it, then run your first supervised lift.",
     "The Riggers & Signalpersons Lead calls the lift; I run the crane. One voice, one hook, no surprises.",
-    "The Load Chart Data is by the rigging bay. Read it before you lift — the chart is the lift, the crane is just the muscle."
+    "The Load Chart Data is by the rigging bay. Read it before you lift \u2014 the chart is the lift, the crane is just the muscle.",
+    "The Transport & Mobility District moves every load before the crane ever sees it \u2014 the Rail Track Workers hall runs the rails.",
+    "The Overhead Crane Shop Move sim is the lift indoors. Same calls, smaller room.",
+    "The Survey, Safety & Environment District checks every lift before it happens. The Survey Lead's word is final."
    ],
    "id": "crane-operator-lead",
    "name": "Crane Operator Lead",
    "position": [
-    -4.35,
+    55.18,
     0.0,
     0.0
    ],
+   "position_note": "Structural District plate: the hall grid is one solid block, so the lead waits on the district plate (Depth-2 reachability repair).",
    "quest": "q-first-lift",
    "role": "Crane Operators hall lead"
   },
   {
    "dialogue": [
-    "Rigging is trust you can measure — check the sling, check the angle, check again.",
+    "Rigging is trust you can measure \u2014 check the sling, check the angle, check again.",
     "Signal clear and the load moves. Signal sloppy and nothing moves at all.",
-    "The rigging spark is by the Riggers & Signalpersons hall. Collect it, then stand in the Tower Crane Lift sim with the Crane Operator Lead.",
+    "The rigging spark is on the Structural District plate. Collect it, then check the signals with the Crane Operator Lead.",
     "The Rigging Signal Call sim is where the calls are learned. A wrong call is worse than a slow lift.",
-    "The Scaffold Bay Build sim is where the lift starts — no scaffold, no lift. Check it before the crane moves."
+    "The Scaffold Bay Build sim is where the lift starts \u2014 no scaffold, no lift. The Scaffold Erectors build every bay the crane needs.",
+    "The Rigging Signal Call sim is where the calls are learned \u2014 the Survey Lead learned them the same way.",
+    "The Earthworks & Plant District sets the ground the crane stands on. The Operating Engineers hall keeps it level.",
+    "Every district has a lead and a circuit now. The rigging never changes \u2014 check the sling, check the angle, check again."
    ],
    "id": "riggers-signal-lead",
    "name": "Riggers & Signalpersons Lead",
    "position": [
-    -13.05,
+    61.18,
+    0.0,
+    -6.0
+   ],
+   "position_note": "Structural District plate: the hall grid is one solid block, so the lead waits on the district plate (Depth-2 reachability repair).",
+   "quest": "q-first-lift",
+   "role": "Riggers & Signalpersons hall lead"
+  },
+  {
+   "dialogue": [
+    "The Envelope & Finish District is where a building stops being a frame and starts being a place.",
+    "Carpenters, Drywall Finishers, Glaziers, Roofers & Waterproofers \u2014 the finish starts with the frame the Structural District raised.",
+    "The finish spark is on the Envelope & Finish District plate. Collect it, walk the district, and bring the circuit back to me.",
+    "Scaffold work is how the finish is reached safely. The Scaffold Erectors build every bay the finish needs.",
+    "Painters & Allied Trades, Floor Coverers, Tile Setters \u2014 every hall here answers to the same question: will it last?"
+   ],
+   "id": "envelope-lead",
+   "name": "Envelope Lead",
+   "position": [
+    43.26,
+    0.0,
+    43.26
+   ],
+   "quest": "q-envelope-circuit",
+   "role": "Envelope & Finish District lead"
+  },
+  {
+   "dialogue": [
+    "The Building Systems District is the part of the building nobody sees and everybody depends on.",
+    "Electrical Workers, Plumbers & Pipefitters, HVAC/R Technicians \u2014 power, water, air. In that order, every time.",
+    "The systems spark is on the Building Systems District plate. Collect it, walk the district, and bring the circuit back to me.",
+    "The high work in this district is done from baskets and lifts. Learn the basket before you learn the ceiling.",
+    "Fire Sprinkler Fitters, Elevator Constructors, Building Automation Techs \u2014 the building only works when the systems agree."
+   ],
+   "id": "systems-lead",
+   "name": "Systems Lead",
+   "position": [
+    0.0,
+    0.0,
+    61.18
+   ],
+   "quest": "q-systems-circuit",
+   "role": "Building Systems District lead"
+  },
+  {
+   "dialogue": [
+    "The Energy & Utilities District is where the power comes from \u2014 and where it has to go back to.",
+    "Solar Installers, Wind Turbine Technicians, Utility Line Workers, Substation Technicians \u2014 the grid starts here.",
+    "The energy spark is on the Energy & Utilities District plate. Collect it, walk the district, and bring the circuit back to me.",
+    "Battery Storage Technicians and EV Charging Installers are the newest halls here. The district keeps growing.",
+    "Transmission Linemen carry it further than any of us. Ask them where the line goes next."
+   ],
+   "id": "energy-lead",
+   "name": "Energy Lead",
+   "position": [
+    -43.26,
+    0.0,
+    43.26
+   ],
+   "quest": "q-energy-circuit",
+   "role": "Energy & Utilities District lead"
+  },
+  {
+   "dialogue": [
+    "The Earthworks & Plant District is where every building starts: ground, machines, and people who know both.",
+    "Operating Engineers, Heavy Equipment Technicians, Laborers, Demolition Workers \u2014 nothing stands until the ground is ready.",
+    "The earthworks spark is on the Earthworks & Plant District plate. Collect it, walk the district, and bring the circuit back to me.",
+    "The first cut is the one that matters. A straight trench is a promise to the crew behind you.",
+    "Concrete Pump Operators and Drillers & Blasters finish what the trench starts. Ground first, building second."
+   ],
+   "id": "earthworks-lead",
+   "name": "Earthworks Lead",
+   "position": [
+    -61.18,
     0.0,
     0.0
    ],
-   "quest": "q-first-lift",
-   "role": "Riggers & Signalpersons hall lead"
+   "quest": "q-earthworks-circuit",
+   "role": "Earthworks & Plant District lead"
+  },
+  {
+   "dialogue": [
+    "The Heavy Industry District is where the steel is made before the Structural District ever raises it.",
+    "Machinists, Tool & Die Makers, Foundry Workers, Smelter Operators \u2014 the halls that make the parts the deck depends on.",
+    "The heavy spark is on the Heavy Industry District plate. Collect it, walk the district, and bring the circuit back to me.",
+    "Pipeline Trades, Tank Erectors, Marine Pipefitters \u2014 heavy work, and every joint is checked twice.",
+    "The heavy lift indoors is the shop move. If you can move it in the shop, you can move it anywhere."
+   ],
+   "id": "heavy-lead",
+   "name": "Heavy Industry Lead",
+   "position": [
+    -43.26,
+    0.0,
+    -43.26
+   ],
+   "quest": "q-heavy-circuit",
+   "role": "Heavy Industry District lead"
+  },
+  {
+   "dialogue": [
+    "The Transport & Mobility District is how everything \u2014 and everyone \u2014 gets to the site.",
+    "Rail Track Workers, Rail Signal Technicians, Overhead Catenary Linemen \u2014 the rails run on their schedule, not ours.",
+    "The transport spark is on the Transport & Mobility District plate. Collect it, walk the district, and bring the circuit back to me.",
+    "The forklift yard run is the first drive most of us ever do here. Yard first, road second.",
+    "Aviation Ground Support, Port Crane Technicians, Fleet Diesel Technicians \u2014 every way in and out of a site lives here."
+   ],
+   "id": "transport-lead",
+   "name": "Transport Lead",
+   "position": [
+    0.0,
+    0.0,
+    -61.18
+   ],
+   "quest": "q-transport-circuit",
+   "role": "Transport & Mobility District lead"
+  },
+  {
+   "dialogue": [
+    "The Survey, Safety & Environment District is where the site is measured before anyone builds on it \u2014 and checked while they do.",
+    "Construction Surveyors, Hazmat & Environmental, Site Safety Coordinators \u2014 measure first, build second, check always.",
+    "The survey spark is on the Survey, Safety & Environment District plate. Collect it, walk the district, and bring the circuit back to me.",
+    "The Load Chart Judgment sim is where a good lift is decided before the hook ever moves \u2014 the surveyors taught the crane crews that.",
+    "Confined Space Rescue and High-Angle Rescue are the halls you hope never to need and are glad are here."
+   ],
+   "id": "survey-lead",
+   "name": "Survey Lead",
+   "position": [
+    43.26,
+    0.0,
+    -43.26
+   ],
+   "quest": "q-survey-circuit",
+   "role": "Survey, Safety & Environment District lead"
   }
  ],
  "quests": [
@@ -5339,12 +5559,12 @@
     {
      "kind": "collectible",
      "target": "spark-crane",
-     "text": "Collect the lift spark at the Tower Crane sim"
+     "text": "Collect the lift spark on the Structural District plate"
     },
     {
      "kind": "place",
-     "target": "Sim · Tower Crane Lift",
-     "text": "Stand in the Tower Crane Lift sim bay"
+     "target": "Structural District",
+     "text": "Stand in the Structural District where the crane works"
     },
     {
      "kind": "npc",
@@ -5372,12 +5592,12 @@
     {
      "kind": "collectible",
      "target": "relic-weld",
-     "text": "Collect the weld relic from the Weld Bead sim"
+     "text": "Collect the weld relic on the Structural District plate"
     },
     {
      "kind": "place",
-     "target": "Sim · Weld Bead Run",
-     "text": "Stand in the Weld Bead Run sim bay"
+     "target": "Structural District",
+     "text": "Stand in the Structural District where the weld holds"
     },
     {
      "kind": "npc",
@@ -5405,7 +5625,7 @@
     {
      "kind": "collectible",
      "target": "spark-iron",
-     "text": "Collect the iron spark at the Ironworkers hall"
+     "text": "Collect the iron spark on the Structural District plate"
     },
     {
      "kind": "npc",
@@ -5424,24 +5644,255 @@
     }
    ],
    "title": "Structural Circuit"
+  },
+  {
+   "description": "Walk the Envelope & Finish District and bring back its spark.",
+   "id": "q-envelope-circuit",
+   "reward": "Envelope Circuit Badge",
+   "steps": [
+    {
+     "kind": "npc",
+     "target": "envelope-lead",
+     "text": "Talk to the Envelope Lead"
+    },
+    {
+     "kind": "collectible",
+     "target": "spark-envelope",
+     "text": "Collect the envelope spark on the Envelope & Finish District plate"
+    },
+    {
+     "kind": "place",
+     "target": "Envelope & Finish District",
+     "text": "Walk the Envelope & Finish District"
+    },
+    {
+     "kind": "npc",
+     "target": "systems-lead",
+     "text": "Compare the finish with the Systems Lead at the Building Systems District"
+    },
+    {
+     "kind": "npc",
+     "target": "envelope-lead",
+     "text": "Report back to the Envelope Lead"
+    }
+   ],
+   "title": "Envelope Circuit"
+  },
+  {
+   "description": "Walk the Building Systems District and bring back its spark.",
+   "id": "q-systems-circuit",
+   "reward": "Systems Circuit Badge",
+   "steps": [
+    {
+     "kind": "npc",
+     "target": "systems-lead",
+     "text": "Talk to the Systems Lead"
+    },
+    {
+     "kind": "collectible",
+     "target": "spark-systems",
+     "text": "Collect the systems spark on the Building Systems District plate"
+    },
+    {
+     "kind": "place",
+     "target": "Building Systems District",
+     "text": "Walk the Building Systems District"
+    },
+    {
+     "kind": "npc",
+     "target": "energy-lead",
+     "text": "Check the power plan with the Energy Lead"
+    },
+    {
+     "kind": "npc",
+     "target": "systems-lead",
+     "text": "Report back to the Systems Lead"
+    }
+   ],
+   "title": "Systems Circuit"
+  },
+  {
+   "description": "Walk the Energy & Utilities District and bring back its spark.",
+   "id": "q-energy-circuit",
+   "reward": "Energy Circuit Badge",
+   "steps": [
+    {
+     "kind": "npc",
+     "target": "energy-lead",
+     "text": "Talk to the Energy Lead"
+    },
+    {
+     "kind": "collectible",
+     "target": "spark-energy",
+     "text": "Collect the energy spark on the Energy & Utilities District plate"
+    },
+    {
+     "kind": "place",
+     "target": "Energy & Utilities District",
+     "text": "Walk the Energy & Utilities District"
+    },
+    {
+     "kind": "npc",
+     "target": "systems-lead",
+     "text": "Confirm the feed with the Systems Lead"
+    },
+    {
+     "kind": "npc",
+     "target": "energy-lead",
+     "text": "Report back to the Energy Lead"
+    }
+   ],
+   "title": "Energy Circuit"
+  },
+  {
+   "description": "Walk the Earthworks & Plant District and bring back its spark.",
+   "id": "q-earthworks-circuit",
+   "reward": "Earthworks Circuit Badge",
+   "steps": [
+    {
+     "kind": "npc",
+     "target": "earthworks-lead",
+     "text": "Talk to the Earthworks Lead"
+    },
+    {
+     "kind": "collectible",
+     "target": "spark-earthworks",
+     "text": "Collect the earthworks spark on the Earthworks & Plant District plate"
+    },
+    {
+     "kind": "place",
+     "target": "Earthworks & Plant District",
+     "text": "Walk the Earthworks & Plant District"
+    },
+    {
+     "kind": "npc",
+     "target": "survey-lead",
+     "text": "Have the Survey Lead check the ground work"
+    },
+    {
+     "kind": "npc",
+     "target": "earthworks-lead",
+     "text": "Report back to the Earthworks Lead"
+    }
+   ],
+   "title": "Earthworks Circuit"
+  },
+  {
+   "description": "Walk the Heavy Industry District and bring back its spark.",
+   "id": "q-heavy-circuit",
+   "reward": "Heavy Circuit Badge",
+   "steps": [
+    {
+     "kind": "npc",
+     "target": "heavy-lead",
+     "text": "Talk to the Heavy Industry Lead"
+    },
+    {
+     "kind": "collectible",
+     "target": "spark-heavy",
+     "text": "Collect the heavy spark on the Heavy Industry District plate"
+    },
+    {
+     "kind": "place",
+     "target": "Heavy Industry District",
+     "text": "Walk the Heavy Industry District"
+    },
+    {
+     "kind": "npc",
+     "target": "transport-lead",
+     "text": "Ask the Transport Lead how the heavy parts travel"
+    },
+    {
+     "kind": "npc",
+     "target": "heavy-lead",
+     "text": "Report back to the Heavy Industry Lead"
+    }
+   ],
+   "title": "Heavy Circuit"
+  },
+  {
+   "description": "Walk the Transport & Mobility District and bring back its spark.",
+   "id": "q-transport-circuit",
+   "reward": "Transport Circuit Badge",
+   "steps": [
+    {
+     "kind": "npc",
+     "target": "transport-lead",
+     "text": "Talk to the Transport Lead"
+    },
+    {
+     "kind": "collectible",
+     "target": "spark-transport",
+     "text": "Collect the transport spark on the Transport & Mobility District plate"
+    },
+    {
+     "kind": "place",
+     "target": "Transport & Mobility District",
+     "text": "Walk the Transport & Mobility District"
+    },
+    {
+     "kind": "npc",
+     "target": "heavy-lead",
+     "text": "Check the load with the Heavy Industry Lead"
+    },
+    {
+     "kind": "npc",
+     "target": "transport-lead",
+     "text": "Report back to the Transport Lead"
+    }
+   ],
+   "title": "Transport Circuit"
+  },
+  {
+   "description": "Walk the Survey, Safety & Environment District and bring back its spark.",
+   "id": "q-survey-circuit",
+   "reward": "Survey Circuit Badge",
+   "steps": [
+    {
+     "kind": "npc",
+     "target": "survey-lead",
+     "text": "Talk to the Survey Lead"
+    },
+    {
+     "kind": "collectible",
+     "target": "spark-survey",
+     "text": "Collect the survey spark on the Survey, Safety & Environment District plate"
+    },
+    {
+     "kind": "place",
+     "target": "Survey, Safety & Environment District",
+     "text": "Walk the Survey, Safety & Environment District"
+    },
+    {
+     "kind": "npc",
+     "target": "earthworks-lead",
+     "text": "Walk the ground check with the Earthworks Lead"
+    },
+    {
+     "kind": "npc",
+     "target": "survey-lead",
+     "text": "Report back to the Survey Lead"
+    }
+   ],
+   "title": "Survey Circuit"
   }
  ],
  "rp1": null,
- "series": "Series 10 · SmartCiti.X",
+ "series": "Series 10 \u00b7 SmartCiti.X",
  "sources": [
   "Fabric: rp1-review/push-6-fabrics/site/my-fabric/holodeck.json (local copy in data/fabrics/holodeck.json)",
   "Fabric live URL: https://agifuturefoundation.github.io/WorldForge-Browser/my-fabric/holodeck.json",
   "Anchor: lat 39.84645175015757, lon -86.621608018757 (Indianapolis / SmartCiti.X Holodeck anchor). Status anchored = real-world anchor coordinate exists; rp1 null, NOT live on RP1.",
-  "Fabric: 131 nodes total (scene root + 19 top-level + 111 nested); 124 distinct GLB refs, all unhosted — see missing_models.",
-  "Districts = the 8 real top-level '* District' nodes. Buildings = all 111 real hall nodes (12 Structural District halls + 21 Envelope & Finish + 18 Building Systems + 17 Energy & Utilities + 12 Earthworks & Plant + 10 Heavy Industry + 10 Transport & Mobility + 11 Survey, Safety & Environment) + the 11 real 'Sim · ...' nodes. Hall positions are the fabric node's own position through the world's fabric_transform (scale 0.15), exactly as Phase 1 did for the Structural halls — so halls from different districts share the same central plan grid and may overlap in-world; the fabric gives no separate per-district offset. Every hall model is unhosted — labelled procedural placeholder shown.",
-  "NPCs: the Holodeck fabric has no 'Agent · ...' nodes; NPC roles are named after real fabric hall nodes and all dialogue is original game dialogue, never attributed to a real person.",
+  "Fabric: 131 nodes total (scene root + 19 top-level + 111 nested); 124 distinct GLB refs, all unhosted \u2014 see missing_models.",
+  "Districts = the 8 real top-level '* District' nodes. Buildings = all 111 real hall nodes (12 Structural District halls + 21 Envelope & Finish + 18 Building Systems + 17 Energy & Utilities + 12 Earthworks & Plant + 10 Heavy Industry + 10 Transport & Mobility + 11 Survey, Safety & Environment) + the 11 real 'Sim \u00b7 ...' nodes. Hall positions are the fabric node's own position through the world's fabric_transform (scale 0.15), exactly as Phase 1 did for the Structural halls \u2014 so halls from different districts share the same central plan grid and may overlap in-world; the fabric gives no separate per-district offset. Every hall model is unhosted \u2014 labelled procedural placeholder shown.",
+  "NPCs: the Holodeck fabric has no 'Agent \u00b7 ...' nodes; NPC roles are named after real fabric hall nodes and all dialogue is original game dialogue, never attributed to a real person.",
   "Biome 'city' is a design choice for this interpretation.",
-  "Agent companions are game characters representing the real Virtuals agents (agents.json); their live instances are offline — not live connections."
+  "Agent companions are game characters representing the real Virtuals agents (agents.json); their live instances are offline \u2014 not live connections."
  ],
  "spawn": [
   0,
   0,
-  24
+  28
  ],
  "status": "anchored",
  "terrain": {

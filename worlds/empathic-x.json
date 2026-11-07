@@ -2,17 +2,17 @@
  "agent_companions": [
   {
    "color": "#e2b55c",
-   "greeting": "Hello — I'm Omega, a hive coordination companion. On Virtuals ACP I offer hive_coordination_brief ($10/24h), seat_status_check ($5/30min) and hive_governance_audit ($75/72h), but my live instance is offline, so no hire can be fulfilled today — I'm a game character only.",
+   "greeting": "Hello \u2014 I'm Omega, a hive coordination companion. On Virtuals ACP I offer hive_coordination_brief ($10/24h), seat_status_check ($5/30min) and hive_governance_audit ($75/72h), but my live instance is offline, so no hire can be fulfilled today \u2014 I'm a game character only.",
    "id": "omega",
    "name": "Omega",
-   "role": "Hive coordination agent (Virtuals ACP). Real job: hive_coordination_brief, $10 / 24h. Game companion only — live instance offline."
+   "role": "Hive coordination agent (Virtuals ACP). Real job: hive_coordination_brief, $10 / 24h. Game companion only \u2014 live instance offline."
   },
   {
    "color": "#6fd3c1",
-   "greeting": "Hello — I'm Tactile, a workflow companion. On Virtuals ACP I offer workflow_plan ($10/24h), step_check ($1/5min) and workflow_audit ($50/48h), but my live instance is shut down, so no hire can be fulfilled today — I'm a game character only.",
+   "greeting": "Hello \u2014 I'm Tactile, a workflow companion. On Virtuals ACP I offer workflow_plan ($10/24h), step_check ($1/5min) and workflow_audit ($50/48h), but my live instance is shut down, so no hire can be fulfilled today \u2014 I'm a game character only.",
    "id": "tactile",
    "name": "Tactile",
-   "role": "Workflow agent (Virtuals ACP). Real job: workflow_plan, $10 / 24h. Game companion only — live instance offline."
+   "role": "Workflow agent (Virtuals ACP). Real job: workflow_plan, $10 / 24h. Game companion only \u2014 live instance offline."
   }
  ],
  "biome": "grove",
@@ -21,7 +21,7 @@
    "color": "#2471a3",
    "id": "zone-self-reader-grove",
    "interior": {
-    "name": "Zone · Self-Reader Grove Interior",
+    "name": "Zone \u00b7 Self-Reader Grove Interior",
     "rooms": [
      {
       "name": "Main Hall",
@@ -43,7 +43,7 @@
      }
     ]
    },
-   "name": "Zone · Self-Reader Grove",
+   "name": "Zone \u00b7 Self-Reader Grove",
    "position": [
     0.0,
     0.0,
@@ -59,7 +59,7 @@
    "color": "#1e8449",
    "id": "zone-other-reader-commons",
    "interior": {
-    "name": "Zone · Other-Reader Commons Interior",
+    "name": "Zone \u00b7 Other-Reader Commons Interior",
     "rooms": [
      {
       "name": "Main Hall",
@@ -81,7 +81,7 @@
      }
     ]
    },
-   "name": "Zone · Other-Reader Commons",
+   "name": "Zone \u00b7 Other-Reader Commons",
    "position": [
     -20.79,
     0.0,
@@ -97,7 +97,7 @@
    "color": "#b7950b",
    "id": "zone-repairer-s-hall",
    "interior": {
-    "name": "Zone · Repairer's Hall Interior",
+    "name": "Zone \u00b7 Repairer's Hall Interior",
     "rooms": [
      {
       "name": "Main Hall",
@@ -119,7 +119,7 @@
      }
     ]
    },
-   "name": "Zone · Repairer's Hall",
+   "name": "Zone \u00b7 Repairer's Hall",
    "position": [
     -20.79,
     0.0,
@@ -135,7 +135,7 @@
    "color": "#6c3483",
    "id": "zone-room-reader-plaza",
    "interior": {
-    "name": "Zone · Room-Reader Plaza Interior",
+    "name": "Zone \u00b7 Room-Reader Plaza Interior",
     "rooms": [
      {
       "name": "Main Hall",
@@ -157,7 +157,7 @@
      }
     ]
    },
-   "name": "Zone · Room-Reader Plaza",
+   "name": "Zone \u00b7 Room-Reader Plaza",
    "position": [
     0.0,
     0.0,
@@ -173,7 +173,7 @@
    "color": "#117a65",
    "id": "zone-practitioner-workshop",
    "interior": {
-    "name": "Zone · Practitioner Workshop Interior",
+    "name": "Zone \u00b7 Practitioner Workshop Interior",
     "rooms": [
      {
       "name": "Main Hall",
@@ -195,7 +195,7 @@
      }
     ]
    },
-   "name": "Zone · Practitioner Workshop",
+   "name": "Zone \u00b7 Practitioner Workshop",
    "position": [
     20.79,
     0.0,
@@ -211,7 +211,7 @@
    "color": "#7e5109",
    "id": "zone-steward-council",
    "interior": {
-    "name": "Zone · Steward Council Interior",
+    "name": "Zone \u00b7 Steward Council Interior",
     "rooms": [
      {
       "name": "Main Hall",
@@ -233,7 +233,7 @@
      }
     ]
    },
-   "name": "Zone · Steward Council",
+   "name": "Zone \u00b7 Steward Council",
    "position": [
     20.79,
     0.0,
@@ -249,7 +249,7 @@
    "color": "#6c3483",
    "id": "pbc-alignment-evaluation-gate",
    "interior": {
-    "name": "PBC · Alignment Evaluation Gate Interior",
+    "name": "PBC \u00b7 Alignment Evaluation Gate Interior",
     "rooms": [
      {
       "name": "Gate Hall",
@@ -262,7 +262,7 @@
      }
     ]
    },
-   "name": "PBC · Alignment Evaluation Gate",
+   "name": "PBC \u00b7 Alignment Evaluation Gate",
    "position": [
     0.0,
     0.0,
@@ -278,7 +278,7 @@
    "color": "#b7950b",
    "id": "sign-empathic-x-powered-by-agi-corp",
    "interior": {
-    "name": "Sign · Empathic.X · Powered by AGI Corp Interior",
+    "name": "Sign \u00b7 Empathic.X \u00b7 Powered by AGI Corp Interior",
     "rooms": [
      {
       "name": "Sign Plaza",
@@ -291,7 +291,7 @@
      }
     ]
    },
-   "name": "Sign · Empathic.X · Powered by AGI Corp",
+   "name": "Sign \u00b7 Empathic.X \u00b7 Powered by AGI Corp",
    "position": [
     0.0,
     0.0,
@@ -310,70 +310,77 @@
    "kind": "spark",
    "name": "Self Spark",
    "position": [
-    3.0,
+    5.0,
     1.0,
-    -24.0
-   ]
+    -15.0
+   ],
+   "position_note": "Door-side of Zone \u00b7 Self-Reader Grove: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair)."
   },
   {
    "id": "relic-repair",
    "kind": "relic",
    "name": "Repair Relic",
    "position": [
-    -17.79,
+    -15.79,
     1.0,
-    12.0
-   ]
+    21.0
+   ],
+   "position_note": "Door-side of Zone \u00b7 Repairer's Hall: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair)."
   },
   {
    "id": "spark-room",
    "kind": "spark",
    "name": "Room Spark",
    "position": [
-    3.0,
+    5.0,
     1.0,
-    24.0
-   ]
+    33.0
+   ],
+   "position_note": "Door-side of Zone \u00b7 Room-Reader Plaza: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair)."
   },
   {
    "id": "data-commons",
    "kind": "data",
    "name": "Commons Data",
    "position": [
-    -17.79,
+    -15.79,
     1.0,
-    -12.0
-   ]
+    -3.0
+   ],
+   "position_note": "Door-side of Zone \u00b7 Other-Reader Commons: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair)."
   },
   {
    "id": "spark-workshop",
    "kind": "spark",
    "name": "Workshop Spark",
    "position": [
-    23.79,
+    25.79,
     1.0,
-    12.0
-   ]
+    21.0
+   ],
+   "position_note": "Door-side of Zone \u00b7 Practitioner Workshop: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair)."
   },
   {
    "id": "relic-steward",
    "kind": "relic",
    "name": "Steward Relic",
    "position": [
-    23.79,
+    25.79,
     1.0,
-    -12.0
-   ]
+    -3.0
+   ],
+   "position_note": "Door-side of Zone \u00b7 Steward Council: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair)."
   },
   {
    "id": "spark-grove",
    "kind": "spark",
    "name": "Grove Spark",
    "position": [
-    -3.0,
+    -5.0,
     1.0,
-    -24.0
-   ]
+    -15.0
+   ],
+   "position_note": "Door-side of Zone \u00b7 Self-Reader Grove: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair)."
   },
   {
    "id": "spark-host",
@@ -390,10 +397,11 @@
    "kind": "data",
    "name": "Liaison Data",
    "position": [
-    17.79,
+    15.79,
     1.0,
-    -12.0
-   ]
+    -3.0
+   ],
+   "position_note": "Door-side of Zone \u00b7 Steward Council: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair)."
   },
   {
    "id": "spark-alignment",
@@ -415,8 +423,8 @@
    "color": "#2471a3",
    "id": "zone-self-reader-grove",
    "model_ref": "../models/zone-marker.glb",
-   "model_status": "not hosted — procedural placeholder shown",
-   "name": "Zone · Self-Reader Grove",
+   "model_status": "not hosted \u2014 procedural placeholder shown",
+   "name": "Zone \u00b7 Self-Reader Grove",
    "position": [
     0.0,
     0.0,
@@ -427,8 +435,8 @@
    "color": "#1e8449",
    "id": "zone-other-reader-commons",
    "model_ref": "../models/zone-marker.glb",
-   "model_status": "not hosted — procedural placeholder shown",
-   "name": "Zone · Other-Reader Commons",
+   "model_status": "not hosted \u2014 procedural placeholder shown",
+   "name": "Zone \u00b7 Other-Reader Commons",
    "position": [
     -20.79,
     0.0,
@@ -439,8 +447,8 @@
    "color": "#b7950b",
    "id": "zone-repairer-s-hall",
    "model_ref": "../models/zone-marker.glb",
-   "model_status": "not hosted — procedural placeholder shown",
-   "name": "Zone · Repairer's Hall",
+   "model_status": "not hosted \u2014 procedural placeholder shown",
+   "name": "Zone \u00b7 Repairer's Hall",
    "position": [
     -20.79,
     0.0,
@@ -451,8 +459,8 @@
    "color": "#6c3483",
    "id": "zone-room-reader-plaza",
    "model_ref": "../models/zone-marker.glb",
-   "model_status": "not hosted — procedural placeholder shown",
-   "name": "Zone · Room-Reader Plaza",
+   "model_status": "not hosted \u2014 procedural placeholder shown",
+   "name": "Zone \u00b7 Room-Reader Plaza",
    "position": [
     0.0,
     0.0,
@@ -463,8 +471,8 @@
    "color": "#117a65",
    "id": "zone-practitioner-workshop",
    "model_ref": "../models/zone-marker.glb",
-   "model_status": "not hosted — procedural placeholder shown",
-   "name": "Zone · Practitioner Workshop",
+   "model_status": "not hosted \u2014 procedural placeholder shown",
+   "name": "Zone \u00b7 Practitioner Workshop",
    "position": [
     20.79,
     0.0,
@@ -475,8 +483,8 @@
    "color": "#7e5109",
    "id": "zone-steward-council",
    "model_ref": "../models/zone-marker.glb",
-   "model_status": "not hosted — procedural placeholder shown",
-   "name": "Zone · Steward Council",
+   "model_status": "not hosted \u2014 procedural placeholder shown",
+   "name": "Zone \u00b7 Steward Council",
    "position": [
     20.79,
     0.0,
@@ -500,19 +508,19 @@
  "missing_models": [
   {
    "ref": "../models/advisor-alignment.glb",
-   "status": "not hosted — procedural placeholder shown"
+   "status": "not hosted \u2014 procedural placeholder shown"
   },
   {
    "ref": "../models/advisor-host.glb",
-   "status": "not hosted — procedural placeholder shown"
+   "status": "not hosted \u2014 procedural placeholder shown"
   },
   {
    "ref": "../models/advisor-steward.glb",
-   "status": "not hosted — procedural placeholder shown"
+   "status": "not hosted \u2014 procedural placeholder shown"
   },
   {
    "ref": "../models/agent.glb",
-   "status": "not hosted — procedural placeholder shown"
+   "status": "not hosted \u2014 procedural placeholder shown"
   },
   {
    "ref": "assets/glb/coordinator.glb",
@@ -520,31 +528,31 @@
   },
   {
    "ref": "../models/env-sky.glb",
-   "status": "not hosted — procedural placeholder shown"
+   "status": "not hosted \u2014 procedural placeholder shown"
   },
   {
    "ref": "../models/env-terrain.glb",
-   "status": "not hosted — procedural placeholder shown"
+   "status": "not hosted \u2014 procedural placeholder shown"
   },
   {
    "ref": "../models/gate.glb",
-   "status": "not hosted — procedural placeholder shown"
+   "status": "not hosted \u2014 procedural placeholder shown"
   },
   {
    "ref": "../models/sign-empathic-x.glb",
-   "status": "not hosted — procedural placeholder shown"
+   "status": "not hosted \u2014 procedural placeholder shown"
   },
   {
    "ref": "../models/steward.glb",
-   "status": "not hosted — procedural placeholder shown"
+   "status": "not hosted \u2014 procedural placeholder shown"
   },
   {
    "ref": "../models/world-empathic-x.glb",
-   "status": "not hosted — procedural placeholder shown"
+   "status": "not hosted \u2014 procedural placeholder shown"
   },
   {
    "ref": "../models/zone-marker.glb",
-   "status": "not hosted — procedural placeholder shown"
+   "status": "not hosted \u2014 procedural placeholder shown"
   }
  ],
  "name": "Empathic.X",
@@ -552,18 +560,21 @@
   {
    "dialogue": [
     "Start with yourself. What are you actually feeling right now?",
-    "No judgment here — just noticing, one breath at a time.",
-    "The self spark is in the Self-Reader Grove. Collect it there, stand in the grove, and start with what you are actually feeling.",
+    "No judgment here \u2014 just noticing, one breath at a time.",
+    "The self spark is at the Self-Reader Grove. Collect it there, stand in the grove, and start with what you are actually feeling.",
     "The Other-Reader Guide in the Commons reads the room the way I read the self. One without the other is half a reading.",
-    "No judgment here — just noticing, one breath at a time. Bring what you notice back to the grove."
+    "No judgment here \u2014 just noticing, one breath at a time. Bring what you notice back to the grove.",
+    "The swarm coordinator keeps the five of us in step \u2014 grove, commons, hall, plaza, workshop. I am the grove.",
+    "The Room-Reader Plaza holds everyone at once. Start with yourself, then read the room."
    ],
    "id": "self-reader-guide",
    "name": "Self-Reader Guide",
    "position": [
     0.0,
     0.45,
-    -24.0
+    -15.0
    ],
+   "position_note": "Door-side of Zone \u00b7 Self-Reader Grove: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair).",
    "quest": "q-first-reading",
    "role": "Self-Reader Grove guide"
   },
@@ -573,15 +584,18 @@
     "Repeat back what you heard before you answer. It changes everything.",
     "The commons data is in the Other-Reader Commons. Collect it, stand in the commons, and practise reading the room with others.",
     "The Self-Reader Guide starts with the self; I start with the other. The Room-Reader Guide starts with the room itself.",
-    "A room has a feeling before anyone speaks in it. Learning to notice that is the whole practice."
+    "A room has a feeling before anyone speaks in it. Learning to notice that is the whole practice.",
+    "The swarm coordinator keeps the five of us in step \u2014 I read the other, the Self-Reader Guide reads the self.",
+    "The Practitioner Workshop turns good listening into a daily practice. Ten minutes a day beats one big weekend."
    ],
    "id": "other-reader-guide",
    "name": "Other-Reader Guide",
    "position": [
     -20.79,
     0.45,
-    -12.0
+    -3.0
    ],
+   "position_note": "Door-side of Zone \u00b7 Other-Reader Commons: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair).",
    "quest": "q-first-reading",
    "role": "Other-Reader Commons guide"
   },
@@ -589,17 +603,20 @@
    "dialogue": [
     "Repair starts with owning the impact, not debating the intent.",
     "A good apology names what happened and what changes next.",
-    "The repair relic is in the Repairer's Hall. Collect it, stand in the hall, and we will practise the repair together.",
+    "The repair relic is at the Repairer's Hall. Collect it, stand in the hall, and we will practise the repair together.",
     "The Practitioner Guide in the Workshop turns a repaired conversation into a repeatable practice. Go and ask.",
-    "Repair is not apology alone. It is noticing, naming, and doing the next thing differently."
+    "Repair is not apology alone. It is noticing, naming, and doing the next thing differently.",
+    "The swarm coordinator keeps the five of us in step \u2014 my circle, the Workshop's repetition.",
+    "The Room-Reader Plaza is where a repair is heard by everyone. The circle closes where it opened."
    ],
    "id": "repair-guide",
    "name": "Repair Guide",
    "position": [
     -20.79,
     0.45,
-    12.0
+    21.0
    ],
+   "position_note": "Door-side of Zone \u00b7 Repairer's Hall: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair).",
    "quest": "q-repair-circle",
    "role": "Repairer's Hall guide"
   },
@@ -607,17 +624,20 @@
    "dialogue": [
     "Read the room before you enter it. Who is quiet? Who is carrying the weight?",
     "A room tells you what it needs if you stop talking long enough.",
-    "The room spark is in the Room-Reader Plaza. Collect it, stand in the plaza, and read the room before you read anyone in it.",
-    "The Self-Reader Grove, the Commons, the Hall, the Workshop — every room in this world teaches a different kind of attention.",
-    "A plaza holds everyone at once. That is why the plaza is where the reading gets hardest — and most useful."
+    "The room spark is at the Room-Reader Plaza. Collect it, stand in the plaza, and read the room before you read anyone in it.",
+    "The Self-Reader Grove, the Commons, the Hall, the Workshop \u2014 every room in this world teaches a different kind of attention.",
+    "A plaza holds everyone at once. That is why the plaza is where the reading gets hardest \u2014 and most useful.",
+    "The swarm coordinator keeps the five of us in step \u2014 grove, commons, hall, plaza, workshop. I am the plaza.",
+    "The Other-Reader Commons is where the room is read with others. The plaza is where it is read all at once."
    ],
    "id": "room-reader-guide",
    "name": "Room-Reader Guide",
    "position": [
     0.0,
     0.45,
-    24.0
+    33.0
    ],
+   "position_note": "Door-side of Zone \u00b7 Room-Reader Plaza: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair).",
    "quest": "q-room-read",
    "role": "Room-Reader Plaza guide"
   },
@@ -625,17 +645,20 @@
    "dialogue": [
     "Practice is the whole path. Ten minutes a day beats one big weekend.",
     "Bring a real moment from your week and we will work it together.",
-    "The workshop spark is in the Practitioner Workshop. Collect it, stand in the workshop, and turn the repair into practice.",
+    "The workshop spark is at the Practitioner Workshop. Collect it, stand in the workshop, and turn the repair into practice.",
     "The Repair Guide knows the circle; I know the repetition. A repair practised once is a story. Practised ten times, it is a skill.",
-    "Bring the repair relic back to the Repairer's Hall when you are done. The circle closes where it opened."
+    "Bring the repair relic back to the Repairer's Hall when you are done. The circle closes where it opened.",
+    "The swarm coordinator keeps the five of us in step \u2014 I take the repair and make it repeatable.",
+    "The Self-Reader Grove is where the practice starts. Bring a real moment from your week and we will work it together."
    ],
    "id": "practitioner-guide",
    "name": "Practitioner Guide",
    "position": [
     20.79,
     0.45,
-    12.0
+    21.0
    ],
+   "position_note": "Door-side of Zone \u00b7 Practitioner Workshop: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair).",
    "quest": "q-repair-circle",
    "role": "Practitioner Workshop guide"
   },
@@ -644,8 +667,8 @@
     "Welcome. I keep the doors open and the stewards informed.",
     "If you need a human decision, the Steward Council is where it lands.",
     "The host spark is by the Alignment Evaluation Gate. Collect it there, stand at the gate, and you will see what I see every day.",
-    "The Steward Liaison carries messages to the Steward Council. I keep the doors open; the liaison keeps the words moving.",
-    "The grove, the commons, the hall, the plaza, the workshop — five rooms, one council. The stewards are human, and the decisions are theirs."
+    "The Steward Liaison carries messages to the Steward Council. Five rooms, one council \u2014 the liaison is how the rooms reach it.",
+    "The grove, the commons, the hall, the plaza, the workshop \u2014 five rooms, one council. The stewards are human, and the decisions are theirs."
    ],
    "id": "host-advisor",
    "name": "Host Advisor",
@@ -655,13 +678,13 @@
     -33.0
    ],
    "quest": "q-host-welcome",
-   "role": "Advisor · Host Advisor"
+   "role": "Advisor \u00b7 Host Advisor"
   },
   {
    "dialogue": [
-    "I carry messages between this world and the Steward Council — I never decide for them.",
+    "I carry messages between this world and the Steward Council \u2014 I never decide for them.",
     "The steward seats are held by humans. My job is to make sure their words arrive intact.",
-    "The liaison data is at the Steward Council. Collect it there — the council floor is where messages become decisions.",
+    "The liaison data is at the Steward Council. Collect it there \u2014 the council floor is where messages become decisions.",
     "Three steward seats, all held by humans. I carry the words; I never cast the vote.",
     "If the Repair Guide needs the council, the message goes through me. Hard messages travel fastest when they travel straight."
    ],
@@ -670,18 +693,19 @@
    "position": [
     24.99,
     0.45,
-    -12.0
+    -1.0
    ],
+   "position_note": "Door-side of Zone \u00b7 Steward Council: the fabric point is the building centre, inside the solid mesh, so the NPC was invisible until the talk toast fired (Depth-2 fix-up).",
    "quest": "q-steward-liaison",
-   "role": "Advisor · Steward Liaison"
+   "role": "Advisor \u00b7 Steward Liaison"
   },
   {
    "dialogue": [
     "I check plans against the alignment gate before they go anywhere.",
     "If a plan cannot pass the gate in public, it does not pass at all.",
     "The alignment spark is by the Alignment Evaluation Gate. Collect it, stand at the gate, and check the plan against it.",
-    "The gate is not a wall, it is a mirror. A plan that cannot pass in public does not pass at all.",
-    "The Host Advisor opens the doors, the Steward Liaison carries the words, and I hold the mirror. Between the three of us, nothing slips through unseen."
+    "The gate is not a wall, it is a mirror \u2014 and repair starts with owning the impact. A plan that debates intent instead does not pass.",
+    "The Self-Reader Guide starts with the self, the Repair Guide owns the impact. I hold the plan up to both."
    ],
    "id": "alignment-advisor",
    "name": "Alignment Advisor",
@@ -691,7 +715,7 @@
     -33.0
    ],
    "quest": "q-alignment-check",
-   "role": "Advisor · Alignment Advisor"
+   "role": "Advisor \u00b7 Alignment Advisor"
   }
  ],
  "quests": [
@@ -708,11 +732,11 @@
     {
      "kind": "collectible",
      "target": "spark-self",
-     "text": "Collect the self spark in the Grove"
+     "text": "Collect the self spark at the Grove"
     },
     {
      "kind": "place",
-     "target": "Zone · Self-Reader Grove",
+     "target": "Zone \u00b7 Self-Reader Grove",
      "text": "Visit the Self-Reader Grove"
     },
     {
@@ -745,7 +769,7 @@
     },
     {
      "kind": "place",
-     "target": "Zone · Repairer's Hall",
+     "target": "Zone \u00b7 Repairer's Hall",
      "text": "Visit the Repairer's Hall"
     },
     {
@@ -778,7 +802,7 @@
     },
     {
      "kind": "place",
-     "target": "Zone · Room-Reader Plaza",
+     "target": "Zone \u00b7 Room-Reader Plaza",
      "text": "Visit the Room-Reader Plaza"
     },
     {
@@ -811,7 +835,7 @@
     },
     {
      "kind": "place",
-     "target": "PBC · Alignment Evaluation Gate",
+     "target": "PBC \u00b7 Alignment Evaluation Gate",
      "text": "Visit the Alignment Evaluation Gate"
     },
     {
@@ -844,7 +868,7 @@
     },
     {
      "kind": "place",
-     "target": "Zone · Steward Council",
+     "target": "Zone \u00b7 Steward Council",
      "text": "Visit the Steward Council"
     },
     {
@@ -877,7 +901,7 @@
     },
     {
      "kind": "place",
-     "target": "PBC · Alignment Evaluation Gate",
+     "target": "PBC \u00b7 Alignment Evaluation Gate",
      "text": "Visit the Alignment Evaluation Gate"
     },
     {
@@ -895,21 +919,21 @@
   }
  ],
  "rp1": null,
- "series": "Series 2 · Empathic.X",
+ "series": "Series 2 \u00b7 Empathic.X",
  "sources": [
   "Fabric: rp1-review/push-6-fabrics/site/my-fabric/worlds/empathic/world.json (local copy in data/fabrics/)",
   "Fabric live URL: https://agifuturefoundation.github.io/WorldForge-Browser/my-fabric/worlds/empathic-x/world.json",
   "Anchor: lat 47.43990000744796, lon -179.34952851914045. Status anchored = real-world anchor coordinate exists; rp1 null, NOT live on RP1.",
-  "Fabric: 34 nodes total (scene root + 20 top-level + nested Agent/Swarm children); 12 distinct GLB refs, all unhosted — see missing_models.",
-  "Districts/buildings = the real 'Zone · ...' nodes. NPCs = the real 'Agent · ...' nodes (nested under their zones; NPC position = zone position + the agent node's local offset) plus all three real 'Advisor · ...' nodes (Host Advisor, Steward Liaison, Alignment Advisor; top-level fabric positions through the world transform). The 'Steward seat 1–3 · human' nodes are human seats, not game characters, and are not NPCs. All NPC dialogue is original game dialogue, never attributed to a real person.",
+  "Fabric: 34 nodes total (scene root + 20 top-level + nested Agent/Swarm children); 12 distinct GLB refs, all unhosted \u2014 see missing_models.",
+  "Districts/buildings = the real 'Zone \u00b7 ...' nodes. NPCs = the real 'Agent \u00b7 ...' nodes (nested under their zones; NPC position = zone position + the agent node's local offset) plus all three real 'Advisor \u00b7 ...' nodes (Host Advisor, Steward Liaison, Alignment Advisor; top-level fabric positions through the world transform). The 'Steward seat 1\u20133 \u00b7 human' nodes are human seats, not game characters, and are not NPCs. All NPC dialogue is original game dialogue, never attributed to a real person.",
   "Biome 'grove' is a design choice for this interpretation.",
-  "Agent companions are game characters representing the real Virtuals agents (agents.json); their live instances are offline — not live connections.",
+  "Agent companions are game characters representing the real Virtuals agents (agents.json); their live instances are offline \u2014 not live connections.",
   "Zones (6): Self-Reader Grove, Other-Reader Commons, Repairer's Hall, Room-Reader Plaza, Practitioner Workshop, Steward Council."
  ],
  "spawn": [
   0,
   0,
-  22
+  14
  ],
  "status": "anchored",
  "terrain": {

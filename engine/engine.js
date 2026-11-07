@@ -1,6 +1,9 @@
 // worlds-3d engine — plain Three.js r160, no backend, no runtime CDN.
 // Vendored Three.js source: three@0.160.0 (unpkg, downloaded once at build time).
 // Everything below runs from file:// or GitHub Pages with relative paths only.
+// Depth-2 (2026-11-07): weather presets differentiated (dusk vs golden-hour,
+// rain darker, per-preset star dimming); perf: cached HUD refs, shared label
+// materials, queued interior props, typed-array rain loop, mobile pixel-ratio cap 1.5.
 import * as THREE from 'three';
 import { GLTFLoader } from './GLTFLoader.js';
 
@@ -85,10 +88,18 @@ function makeLabelSprite(text, opts = {}) {
     });
     labelTextureCache.set(key, tex);
   }
-  const mat = new THREE.SpriteMaterial({ map: tex, transparent: true, depthWrite: false });
+  // Materials are shared per cache key too (same texture + style always
+  // produced the same material); per-sprite state lives on the Sprite.
+  let mat = labelMaterialCache.get(key);
+  if (!mat) {
+    mat = new THREE.SpriteMaterial({ map: tex, transparent: true, depthWrite: false });
+    labelMaterialCache.set(key, mat);
+  }
   const s = new THREE.Sprite(mat); s.scale.set(10, 2.5, 1); return s;
 }
 const labelTextureCache = new Map();
+const labelMaterialCache = new Map(); // one SpriteMaterial per (texture, style):
+// the Holodeck's 122 'EXIT → outside' labels shared one texture but built 122 materials.
 // Reused sky colours — applyTimeOfDay runs every frame, so these live
 // here (module scope) instead of being allocated 8x per frame.
 const SKY_DAY_TOP = new THREE.Color(0x2f6fd0), SKY_DAY_BOT = new THREE.Color(0xcfe8f5);
@@ -186,6 +197,10 @@ export function mountWorld(container, worldDef, options = {}) {
       <div class="w3d-touch-btns"><button class="w3d-btn-jump">Jump</button><button class="w3d-btn-interact">Interact</button></div></div>
     <div class="w3d-fallback" hidden><p>${NO_WEBGL_MSG}</p><p class="w3d-fallback-sub">This world is a WebGL experience. Try a recent desktop or mobile browser with hardware acceleration enabled.</p></div>`;
   const $ = (sel) => hud.querySelector(sel);
+  // Cached HUD refs: applyTimeOfDay runs every frame, so the time slider
+  // and clock are looked up once here, not re-queried 60x/s. (Depth-2.)
+  const timeInput = $('.w3d-time input');
+  const clockElTop = $('.w3d-clock');
   $('.w3d-title strong').textContent = def.name || 'Untitled World';
   const badge = $('.w3d-badge'); badge.textContent = (def.status || 'demo').toUpperCase();
   badge.classList.add('w3d-badge-' + (def.status || 'demo'));
@@ -231,7 +246,11 @@ export function mountWorld(container, worldDef, options = {}) {
     };
   }
   state.webgl = true;
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+  // Pixel-ratio cap: 2 on desktop, 1.5 on coarse-pointer (touch) devices.
+  // Fill-rate scales with DPR^2, so 1.5 renders 44% fewer pixels than 2
+  // on a DPR-2 phone for a small sharpness cost. (Depth-2 perf pass.)
+  const prCap = (window.matchMedia && window.matchMedia('(pointer: coarse)').matches) ? 1.5 : 2;
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, prCap));
   renderer.setSize(container.clientWidth || 800, container.clientHeight || 600);
   renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = THREE.PCFSoftShadowMap;
@@ -252,6 +271,8 @@ export function mountWorld(container, worldDef, options = {}) {
   // so a world with many hosted models cannot stall the first frame or
   // saturate the network. A failed load keeps the procedural form in place
   // (never a blank hole) and is counted in state.modelLoads.failed.
+  // Kept at 2 in the Depth-2 perf pass: districts eager (<=8/world) drain in
+  // <=4 rounds; the unbounded path was interior props, now queued (below).
   const MAX_CONCURRENT_LOADS = 2;
   const LAZY_LOAD_RADIUS = 120;
   let activeLoads = 0;
@@ -404,8 +425,10 @@ export function mountWorld(container, worldDef, options = {}) {
     sun.visible = sunH > -0.12 && indoorF < 0.5;
     moon.visible = sunH < 0.12 && indoorF < 0.5;
     moonHalo.visible = moon.visible;
+    moonHalo.material.opacity = 0.10 * (0.4 + 0.6 * nightF); // halo breathes with the night
     // Stars: base night opacity (twinkled in the main loop from state.nightF).
-    const starBase = THREE.MathUtils.clamp(0.9 - dayF * 1.4, 0, 0.9) * (1 - indoorF);
+    // Stars dim under cloud/rain/mist (per-preset `stars`) as well as indoors.
+    const starBase = THREE.MathUtils.clamp(0.9 - dayF * 1.4, 0, 0.9) * (1 - indoorF) * (wc ? (wc.stars ?? 1) : 1);
     stars.material.opacity = starBase;
     stars2.material.opacity = starBase * 0.55;
     if (indoorF > 0) {
@@ -418,9 +441,8 @@ export function mountWorld(container, worldDef, options = {}) {
     } else {
       ambient.intensity = wc ? wc.ambient : 0.25;
     }
-    const slider = $('.w3d-time input');
-    if (slider && slider !== document.activeElement) slider.value = String(state.hour);
-    const clk = $('.w3d-clock'); if (clk) clk.textContent = fmtHour(state.hour);
+    if (timeInput && timeInput !== document.activeElement) timeInput.value = String(state.hour);
+    if (clockElTop) clockElTop.textContent = fmtHour(state.hour);
   }
 
   // ---------- Weather ----------
@@ -431,21 +453,21 @@ export function mountWorld(container, worldDef, options = {}) {
   // scale (camera far plane 1200), which lets clear/indoor keep a single
   // persistent THREE.Fog instance instead of toggling scene.fog.
   const WEATHER_PRESETS = {
-    'clear':      { fog: 0xcfe8f5, fogNear: 400, fogFar: 1200, light: 1, ambient: 0.25, clouds: 0, rain: 0, wind: 0, indoor: 0 },
-    'cloudy':     { fog: 0x9aa8b5, fogNear: 60, fogFar: 320, light: 0.7, ambient: 0.3, clouds: 1, rain: 0, wind: 0.15, indoor: 0 },
-    'rain':       { fog: 0x9aa8b5, fogNear: 60, fogFar: 320, light: 0.45, ambient: 0.32, clouds: 1, rain: 1, wind: 0.5, indoor: 0 },
-    'dusk':       { fog: 0x6b4a5a, fogNear: 80, fogFar: 420, light: 0.8, ambient: 0.28, clouds: 0, rain: 0, wind: 0, indoor: 0 },
-    'indoor':     { fog: 0xcfe8f5, fogNear: 400, fogFar: 1200, light: 1, ambient: 0.55, clouds: 0, rain: 0, wind: 0, indoor: 1 },
-    'mist':       { fog: 0xa8b4bd, fogNear: 25, fogFar: 190, light: 0.55, ambient: 0.34, clouds: 0, rain: 0, wind: 0.05, indoor: 0 },
-    'golden-hour': { fog: 0x6b4a5a, fogNear: 80, fogFar: 420, light: 0.9, ambient: 0.28, clouds: 0, rain: 0, wind: 0.05, indoor: 0 },
-    'breeze':     { fog: 0xcfe8f5, fogNear: 400, fogFar: 1200, light: 1, ambient: 0.25, clouds: 1, rain: 0, wind: 1, indoor: 0 },
+    'clear':      { fog: 0xcfe8f5, fogNear: 400, fogFar: 1200, light: 1, ambient: 0.25, clouds: 0, rain: 0, wind: 0, indoor: 0, stars: 1 },
+    'cloudy':     { fog: 0x9aa8b5, fogNear: 60, fogFar: 320, light: 0.7, ambient: 0.3, clouds: 1, rain: 0, wind: 0.15, indoor: 0, stars: 0.35 },
+    'rain':       { fog: 0x7d8a97, fogNear: 60, fogFar: 300, light: 0.45, ambient: 0.32, clouds: 1, rain: 1, wind: 0.5, indoor: 0, stars: 0.15 },
+    'dusk':       { fog: 0x4a3a5a, fogNear: 70, fogFar: 380, light: 0.7, ambient: 0.26, clouds: 0.15, rain: 0, wind: 0, indoor: 0, stars: 0.9 },
+    'indoor':     { fog: 0xcfe8f5, fogNear: 400, fogFar: 1200, light: 1, ambient: 0.55, clouds: 0, rain: 0, wind: 0, indoor: 1, stars: 0 },
+    'mist':       { fog: 0xa8b4bd, fogNear: 25, fogFar: 190, light: 0.55, ambient: 0.34, clouds: 0, rain: 0, wind: 0.05, indoor: 0, stars: 0.3 },
+    'golden-hour': { fog: 0xc98a4a, fogNear: 90, fogFar: 460, light: 0.95, ambient: 0.30, clouds: 0.35, rain: 0, wind: 0.05, indoor: 0, stars: 0.9 },
+    'breeze':     { fog: 0xcfe8f5, fogNear: 400, fogFar: 1200, light: 1, ambient: 0.25, clouds: 1, rain: 0, wind: 1, indoor: 0, stars: 1 },
   };
   function weatherStateFor(preset) {
     const p = WEATHER_PRESETS[preset] || WEATHER_PRESETS.clear;
     return {
       fogColor: new THREE.Color(p.fog), fogNear: p.fogNear, fogFar: p.fogFar,
       light: p.light, ambient: p.ambient, clouds: p.clouds, rain: p.rain,
-      wind: p.wind, indoor: p.indoor,
+      wind: p.wind, indoor: p.indoor, stars: p.stars ?? 1,
     };
   }
   // Current (lerped) and target weather. Initialised to the world's preset
@@ -467,6 +489,9 @@ export function mountWorld(container, worldDef, options = {}) {
     cur.rain += (tgt.rain - cur.rain) * k;
     cur.wind += (tgt.wind - cur.wind) * k;
     cur.indoor += (tgt.indoor - cur.indoor) * k;
+    cur.stars += (tgt.stars - cur.stars) * k; // Depth-2: without this the
+    // per-preset star dimming never cross-faded — weatherCur.stars stayed
+    // at the mount preset's value forever (caught by test-depth2.mjs).
     sceneFog.color.copy(cur.fogColor);
     sceneFog.near = cur.fogNear; sceneFog.far = cur.fogFar;
     rain.material.opacity = 0.85 * cur.rain;
@@ -680,10 +705,15 @@ export function mountWorld(container, worldDef, options = {}) {
           crate.position.set(px, 0.6, pz); crate.castShadow = true; ig.add(crate);
         };
         if (prop.model) {
-          loader.load(prop.model, (gltf) => {
+          // Through the shared queue: a direct loader.load here bypassed
+          // the MAX_CONCURRENT_LOADS cap, so a world with many interior
+          // props could start them all at once. The fallback is the same
+          // crate on failure; the load now also counts in
+          // state.modelLoads like every other GLB load. (Depth-2.)
+          enqueueModelLoad(prop.model, (gltf) => {
             gltf.scene.position.set(px, 0, pz); gltf.scene.traverse((o) => { if (o.isMesh) o.castShadow = true; });
             ig.add(gltf.scene);
-          }, undefined, () => fallback());
+          }, () => fallback());
         } else fallback();
       });
       ig.add(new THREE.PointLight(0xffe9c0, 60, 30)); ig.children[ig.children.length - 1].position.set(0, rh - 0.5, 0);
@@ -830,18 +860,45 @@ export function mountWorld(container, worldDef, options = {}) {
 
   function tryJump() { if (grounded) { velY = 8.5; grounded = false; } }
   function nearestNPC() {
+    // No outdoor NPC is talkable from inside a building: the room's
+    // local coords can coincide with an outdoor NPC's world coords, and
+    // the 2D distance check would let that NPC hijack E presses meant
+    // for the EXIT pad (hub capsule-guide at (-5.4,-2.2) did exactly
+    // this). There are no interior NPCs in any world. (Depth-2 debug.)
+    if (state.insideBuilding) return null;
     let best = null, bd = 4.5;
     for (const n of npcs) { const d = Math.hypot(n.pos[0] - avatarPos.x, n.pos[1] - avatarPos.z); if (d < bd) { bd = d; best = n; } }
     return best;
   }
   function interact() {
-    const npc = nearestNPC();
-    if (npc) { openDialogue(npc); return; }
+    // Inside a building, Interact is the EXIT pad only. The exit trigger
+    // is 1.2 u, matching the pad's 1.4 u visual radius: the old 2.2 u
+    // radius covered the entry spawn point 1.5 u from the pad, so one
+    // stray E press right after entering teleported the player straight
+    // back out. nearestNPC() already returns null indoors, so no outdoor
+    // NPC can hijack the press. (Depth-2 debug.)
     if (state.insideBuilding) {
       const it = interiors.get(state.insideBuilding);
-      if (it && Math.hypot(avatarPos.x - 0, avatarPos.z - (it.roomSize[2] / 2 - 1.5)) < 2.2) { exitInterior(); return; }
+      if (it && Math.hypot(avatarPos.x - 0, avatarPos.z - (it.roomSize[2] / 2 - 1.5)) < 1.2) { exitInterior(); return; }
+      return;
     }
+    const npc = nearestNPC();
     const near = state.nearBuilding;
+    // A door-side NPC stands 1.5 u in front of its door, on the approach
+    // axis — with NPC-first priority the building could never be entered,
+    // because the door's 3 u zone sits entirely inside the NPC's 4.5 u
+    // talk zone (31 door-side NPCs blocked entry). Closest target wins:
+    // walk right up to the door to enter, stand back a step to talk.
+    if (npc && near) {
+      const doorD = Math.hypot(near.door[0] - avatarPos.x, near.door[1] - avatarPos.z);
+      const npcD = Math.hypot(npc.pos[0] - avatarPos.x, npc.pos[1] - avatarPos.z);
+      if (doorD < npcD) {
+        if (interiors.has(near.def.id)) { enterInterior(near.def.id); return; }
+        toast(`${near.def.name} — interior not defined for this building.`);
+        return;
+      }
+    }
+    if (npc) { openDialogue(npc); return; }
     if (near && interiors.has(near.def.id)) { enterInterior(near.def.id); return; }
     if (near) toast(`${near.def.name} — interior not defined for this building.`);
   }
@@ -960,7 +1017,6 @@ export function mountWorld(container, worldDef, options = {}) {
   let raf = 0; state.running = true;
   let lazyTimer = 0; // throttle for the lazy building-model scan
   let lazyScanDone = lazyModels.length === 0; // true once every lazy model has started
-  const clockEl = $('.w3d-clock');
   function animate() {
     if (!state.running) return;
     raf = requestAnimationFrame(animate);
@@ -995,10 +1051,9 @@ export function mountWorld(container, worldDef, options = {}) {
     avatar.children[0].position.y = 1.05 + (moving && grounded ? Math.abs(Math.sin(t * 10)) * 0.08 : 0);
 
     // day cycle
-    if (state.dayCycle && !($('.w3d-time input') === document.activeElement)) {
+    if (state.dayCycle && !(timeInput === document.activeElement)) {
       applyTimeOfDay(state.hour + dt * 0.15); // ~4 min per full day at 60fps; slider overrides
     } else applyTimeOfDay(state.hour);
-    if (clockEl) clockEl.textContent = fmtHour(state.hour);
 
     // weather animation: cross-fade toward the preset target, then animate.
     updateWeather(dt);
@@ -1007,21 +1062,26 @@ export function mountWorld(container, worldDef, options = {}) {
       // re-randomised) so it never rains at the origin while the player
       // walks away; wind slants the fall. Drops fall 28–46 u/s, respawn at
       // 55–60 u, and the box follows the avatar exactly.
+      // Direct Float32Array access (Depth-2): the old per-drop getX/getY/
+      // getZ/setX/setY/setZ calls were 6 attribute lookups per drop per
+      // frame for 1400 drops; the math below is identical.
       const pos = rainGeo.attributes.position;
+      const arr = pos.array;
       const windX = state.weatherCur.wind * 14; // u/s of horizontal slant
       for (let i = 0; i < RAIN_N; i++) {
-        let y = pos.getY(i) - rainVel[i] * dt;
-        let x = pos.getX(i) + windX * dt;
+        const i3 = i * 3;
+        let y = arr[i3 + 1] - rainVel[i] * dt;
+        let x = arr[i3] + windX * dt;
         if (y < 0) {
           y = 55 + Math.random() * 5;
           x = avatarPos.x + (Math.random() - 0.5) * 120;
-          pos.setZ(i, avatarPos.z + (Math.random() - 0.5) * 120);
+          arr[i3 + 2] = avatarPos.z + (Math.random() - 0.5) * 120;
         }
         // Wrap x/z into the box around the avatar (modulo keeps it seamless).
         const dx = (((x - avatarPos.x + 60) % 120) + 120) % 120 - 60;
-        const dz = (((pos.getZ(i) - avatarPos.z + 60) % 120) + 120) % 120 - 60;
-        pos.setX(i, avatarPos.x + dx); pos.setZ(i, avatarPos.z + dz);
-        pos.setY(i, y);
+        const dz = (((arr[i3 + 2] - avatarPos.z + 60) % 120) + 120) % 120 - 60;
+        arr[i3] = avatarPos.x + dx; arr[i3 + 2] = avatarPos.z + dz;
+        arr[i3 + 1] = y;
       }
       pos.needsUpdate = true;
     }
@@ -1033,7 +1093,7 @@ export function mountWorld(container, worldDef, options = {}) {
     // Star twinkle at night: gentle ±12% breathing on both layers.
     if (state.nightF > 0.05) {
       const tw = 1 + Math.sin(t * 1.7) * 0.12;
-      const base = THREE.MathUtils.clamp(0.9 - state.dayF * 1.4, 0, 0.9) * (1 - state.weatherCur.indoor) * tw;
+      const base = THREE.MathUtils.clamp(0.9 - state.dayF * 1.4, 0, 0.9) * (1 - state.weatherCur.indoor) * (state.weatherCur.stars ?? 1) * tw;
       stars.material.opacity = base;
       stars2.material.opacity = base * 0.55;
     }
@@ -1054,6 +1114,13 @@ export function mountWorld(container, worldDef, options = {}) {
     }
     // NPC proximity + quest talk step
     const near = nearestNPC();
+    if (near) {
+      // The nearest NPC turns to face the player. (The placeholder
+      // avatars are radially symmetric capsules with camera-facing
+      // sprite labels, so this changes nothing visible today — it keeps
+      // the behaviour correct for future asymmetric NPC models.)
+      near.group.lookAt(avatarPos.x, near.group.position.y, avatarPos.z);
+    }
     if (near && near !== state.nearNPC) {
       state.nearNPC = near;
       toast(`${near.def.name}: press E / Interact to talk.`);

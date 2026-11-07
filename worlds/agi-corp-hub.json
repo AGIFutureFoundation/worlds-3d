@@ -2,17 +2,17 @@
  "agent_companions": [
   {
    "color": "#e2b55c",
-   "greeting": "Hello — I'm Omega, a hive coordination companion. On Virtuals ACP I offer hive_coordination_brief ($10/24h), seat_status_check ($5/30min) and hive_governance_audit ($75/72h), but my live instance is offline, so no hire can be fulfilled today — I'm a game character only.",
+   "greeting": "Hello \u2014 I'm Omega, a hive coordination companion. On Virtuals ACP I offer hive_coordination_brief ($10/24h), seat_status_check ($5/30min) and hive_governance_audit ($75/72h), but my live instance is offline, so no hire can be fulfilled today \u2014 I'm a game character only.",
    "id": "omega",
    "name": "Omega",
-   "role": "Hive coordination agent (Virtuals ACP). Real job: hive_coordination_brief, $10 / 24h. Game companion only — live instance offline."
+   "role": "Hive coordination agent (Virtuals ACP). Real job: hive_coordination_brief, $10 / 24h. Game companion only \u2014 live instance offline."
   },
   {
    "color": "#b5179e",
-   "greeting": "Hello — I'm WAVE, a bioacoustics companion. On Virtuals ACP I offer species_identification ($5/30min), sound_clip_id ($1/5min) and expedition_sound_map ($100/72h), but my live instance is shut down and hosting payment is required before redeploy, so no hire can be fulfilled today — I'm a game character only.",
+   "greeting": "Hello \u2014 I'm WAVE, a bioacoustics companion. On Virtuals ACP I offer species_identification ($5/30min), sound_clip_id ($1/5min) and expedition_sound_map ($100/72h), but my live instance is shut down and hosting payment is required before redeploy, so no hire can be fulfilled today \u2014 I'm a game character only.",
    "id": "wave",
    "name": "WAVE",
-   "role": "Bioacoustics agent (Virtuals ACP). Real job: species_identification. Game companion only — live instance offline."
+   "role": "Bioacoustics agent (Virtuals ACP). Real job: species_identification. Game companion only \u2014 live instance offline."
   }
  ],
  "biome": "hub",
@@ -290,20 +290,22 @@
    "kind": "spark",
    "name": "Duck Spark",
    "position": [
-    4.2,
-    1,
-    5.4
-   ]
+    9.2,
+    1.0,
+    9.9
+   ],
+   "position_note": "Door-side of Hub Duck: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair)."
   },
   {
    "id": "relic-capsule",
    "kind": "relic",
    "name": "Capsule Relic",
    "position": [
-    -5.4,
-    1,
-    -7.2
-   ]
+    -10.4,
+    1.0,
+    -2.2
+   ],
+   "position_note": "Door-side of Capsule Feature: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair)."
   },
   {
    "id": "spark-stool",
@@ -320,10 +322,11 @@
    "kind": "data",
    "name": "Desk Data",
    "position": [
-    8.4,
-    1,
-    0
-   ]
+    13.4,
+    1.0,
+    4.5
+   ],
+   "position_note": "Door-side of Welcome Desk: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair)."
   },
   {
    "id": "spark-bucket",
@@ -340,10 +343,11 @@
    "kind": "relic",
    "name": "Container Relic",
    "position": [
-    -9.6,
-    1,
-    7.2
-   ]
+    -4.6,
+    1.0,
+    12.2
+   ],
+   "position_note": "Door-side of Lobby Feature: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair)."
   }
  ],
  "coordinates": null,
@@ -352,7 +356,7 @@
    "color": "#2471a3",
    "id": "lobby",
    "model_ref": null,
-   "model_status": "design choice — the Hub fabric has no district nodes; the lobby is one district",
+   "model_status": "design choice \u2014 the Hub fabric has no district nodes; the lobby is one district",
    "name": "Lobby",
    "position": [
     0,
@@ -364,7 +368,7 @@
  "fabric_nodes_total": 9,
  "fabric_nodes_used": "All 9 fabric nodes (scene root + 8 children); the 7 nodes with GLB refs are buildings with their real local GLB as an interior prop",
  "fabric_transform": {
-  "mapping": "HUB ONLY — hub fabric positions are [x, y, z] with z as height: engine_x = fabric_x * scale; engine_y = fabric_z * scale; engine_z = fabric_y * scale",
+  "mapping": "HUB ONLY \u2014 hub fabric positions are [x, y, z] with z as height: engine_x = fabric_x * scale; engine_y = fabric_z * scale; engine_z = fabric_y * scale",
   "offset": [
    0,
    0,
@@ -379,19 +383,20 @@
  "npcs": [
   {
    "dialogue": [
-    "Welcome to the AGI Corp Hub. The duck runs the lobby — I just work here.",
+    "Welcome to the AGI Corp Hub. The duck runs the lobby \u2014 I just work here.",
     "Take the tour, grab a spark, and mind the capsule. It hums.",
-    "The Welcome Desk is where every tour starts. The duck spark is over by the Hub Duck — you cannot miss the gold glint.",
+    "The Welcome Desk is where every tour starts. The duck spark is over by the Hub Duck \u2014 you cannot miss the gold glint.",
     "If the Capsule Guide waves you over, go. The capsule only hums for visitors who finish the tour.",
-    "The companions drifting around the lobby are game characters. Say hello — they will point you at the tour."
+    "The companions drifting around the lobby are game characters. Say hello \u2014 they will point you at the tour."
    ],
    "id": "lobby-host",
    "name": "Lobby Host",
    "position": [
-    8.4,
+    10.4,
     0.0,
-    0.0
+    4.5
    ],
+   "position_note": "Door-side of Welcome Desk, stepped 2 u east so it no longer stands in the Desk Tin doorway (Depth-2 debug fix; was 0.7 u from the Desk Tin door). The fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair).",
    "quest": "q-welcome-tour",
    "role": "Welcome Desk host"
   },
@@ -401,15 +406,16 @@
     "Feed it a spark and it will follow you around the lobby. Probably.",
     "The duck spark sits right beside the Hub Duck. Collect it and the duck will follow you around the lobby. Probably.",
     "The stool spark is by the Lobby Stool, and the bucket spark by the Bucket. The lobby hides sparks the way a pond hides stones.",
-    "Ask the Lobby Host about the Welcome Tour when you are done here — the tour ends back at the Hub Duck, where it started."
+    "Ask the Lobby Host about the Welcome Tour when you are done here \u2014 the tour ends back at the Hub Duck, where it started."
    ],
    "id": "duck-keeper",
    "name": "Duck Keeper",
    "position": [
     4.2,
     0.0,
-    5.4
+    9.9
    ],
+   "position_note": "Door-side of Hub Duck: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair).",
    "quest": "q-welcome-tour",
    "role": "Hub Duck keeper"
   },
@@ -426,8 +432,9 @@
    "position": [
     -5.4,
     0.0,
-    -7.2
+    -2.2
    ],
+   "position_note": "Door-side of Capsule Feature: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair).",
    "quest": "q-capsule-run",
    "role": "Capsule Feature guide"
   }
@@ -501,15 +508,15 @@
   }
  ],
  "rp1": null,
- "series": "Company 130 · Hub lobby",
+ "series": "Company 130 \u00b7 Hub lobby",
  "sources": [
-  "Scene: rp1-review/scenes/agi-corp-hub.json — 'demo scene — NOT live on RP1', anchored false, coordinates null.",
-  "Hub: 9 nodes total (scene root + 8 children); 7 verified-local GLB refs (Stool, Bucket, Crate, Tin, Container, duck, capsule) — all copied to assets/glb/. Fill Light and Rim Light have no model ref.",
-  "Buildings/interiors use the real local GLBs as props — the only world whose models exist locally.",
-  "NPCs: the Hub fabric has no 'Agent · ...' nodes; NPC roles are named after real fabric nodes (Welcome Desk, Hub Duck, Capsule Feature) and all dialogue is original game dialogue, never attributed to a real person.",
-  "District 'Lobby' is a design choice — the Hub fabric has no district nodes.",
+  "Scene: rp1-review/scenes/agi-corp-hub.json \u2014 'demo scene \u2014 NOT live on RP1', anchored false, coordinates null.",
+  "Hub: 9 nodes total (scene root + 8 children); 7 verified-local GLB refs (Stool, Bucket, Crate, Tin, Container, duck, capsule) \u2014 all copied to assets/glb/. Fill Light and Rim Light have no model ref.",
+  "Buildings/interiors use the real local GLBs as props \u2014 the only world whose models exist locally.",
+  "NPCs: the Hub fabric has no 'Agent \u00b7 ...' nodes; NPC roles are named after real fabric nodes (Welcome Desk, Hub Duck, Capsule Feature) and all dialogue is original game dialogue, never attributed to a real person.",
+  "District 'Lobby' is a design choice \u2014 the Hub fabric has no district nodes.",
   "Biome 'hub' is a design choice for this interpretation.",
-  "Agent companions are game characters representing the real Virtuals agents (agents.json); their live instances are offline — not live connections."
+  "Agent companions are game characters representing the real Virtuals agents (agents.json); their live instances are offline \u2014 not live connections."
  ],
  "spawn": [
   0,

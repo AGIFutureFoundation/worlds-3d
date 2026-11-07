@@ -92,11 +92,18 @@
       if (biome && w.biome !== biome) return false;
       if (group && w.group !== group) return false;
       if (!q) return true;
-      return (w.name + ' ' + (w.place || '') + ' ' + w.slug).toLowerCase().indexOf(q) !== -1;
+      // Search covers biome + group too, so 'desert', 'curated' or 'city' find worlds. (Depth-2.)
+      return (w.name + ' ' + (w.place || '') + ' ' + w.slug + ' ' + (w.biome || '') + ' ' + (w.group || '')).toLowerCase().indexOf(q) !== -1;
     });
   }
 
   var state = { q: '', biome: '', group: '', page: 1 };
+
+  function clearFilters(data) {
+    state.q = ''; state.biome = ''; state.group = ''; state.page = 1;
+    el('search').value = ''; el('biome').value = ''; el('group').value = '';
+    renderList(data);
+  }
 
   function renderList(data) {
     var host = el('world-grid');
@@ -147,15 +154,17 @@
       if (state.page < pages) p += '<button data-page="' + (state.page + 1) + '" type="button">Next →</button>';
       pager.innerHTML = p;
       pager.querySelectorAll('button[data-page]').forEach(function (b) {
-        b.addEventListener('click', function () { state.page = parseInt(b.getAttribute('data-page'), 10); renderList(data); window.scrollTo(0, 0); });
+        // Paging returns to the list heading, not the top of the page (the hero
+        // is a long scroll away from the list on a phone). (Depth-2.)
+        b.addEventListener('click', function () { state.page = parseInt(b.getAttribute('data-page'), 10); renderList(data); var head = document.getElementById('all-worlds'); if (head) head.scrollIntoView(); else window.scrollTo(0, 0); });
       });
     }
     var clear = el('clear-filters');
-    if (clear) clear.addEventListener('click', function () {
-      state.q = ''; state.biome = ''; state.group = ''; state.page = 1;
-      el('search').value = ''; el('biome').value = ''; el('group').value = '';
-      renderList(data);
-    });
+    if (clear) clear.addEventListener('click', function () { clearFilters(data); });
+    // The header clear button shows whenever any filter is active, not
+    // only on an empty result. (Depth-2.)
+    var top = el('clear-filters-top');
+    if (top) top.hidden = !(state.q || state.biome || state.group);
   }
 
   function fillSelects(data) {
@@ -187,6 +196,8 @@
     if (search) search.addEventListener('input', function () { state.q = search.value; state.page = 1; renderList(data); });
     if (biome) biome.addEventListener('change', function () { state.biome = biome.value; state.page = 1; renderList(data); });
     if (group) group.addEventListener('change', function () { state.group = group.value; state.page = 1; renderList(data); });
+    var top = el('clear-filters-top');
+    if (top) top.addEventListener('click', function () { clearFilters(data); });
     renderList(data);
   }
 

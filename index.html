@@ -34,16 +34,17 @@
   <h2>Playable now — the 7 flagships</h2>
   <div class="grid" id="flagships"></div>
 
-  <h2>All 544 WorldForge worlds</h2>
+  <h2 id="all-worlds">All 544 WorldForge worlds</h2>
   <div class="controls">
     <label for="search">Search</label>
-    <input type="search" id="search" placeholder="Name or place — try “bull”, “dam”, “lagoon”…">
+    <input type="search" id="search" placeholder="Name, place, biome or group — try “bull”, “desert”, “curated”…”">
     <label for="biome">Biome</label>
     <select id="biome"><option value="">All biomes</option></select>
     <label for="group">Group</label>
     <select id="group"><option value="">All groups</option></select>
+    <button id="clear-filters-top" type="button" hidden>Clear filters</button>
   </div>
-  <p id="list-count"></p>
+  <p id="list-count" aria-live="polite"></p>
   <div class="grid" id="world-grid"></div>
   <div id="pagination"></div>
 </main>

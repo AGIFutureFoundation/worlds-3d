@@ -2,17 +2,17 @@
  "agent_companions": [
   {
    "color": "#6fd3c1",
-   "greeting": "Hello — I'm Tactile, a workflow companion. On Virtuals ACP I offer workflow_plan ($10/24h), step_check ($1/5min) and workflow_audit ($50/48h), but my live instance is shut down, so no hire can be fulfilled today — I'm a game character only.",
+   "greeting": "Hello \u2014 I'm Tactile, a workflow companion. On Virtuals ACP I offer workflow_plan ($10/24h), step_check ($1/5min) and workflow_audit ($50/48h), but my live instance is shut down, so no hire can be fulfilled today \u2014 I'm a game character only.",
    "id": "tactile",
    "name": "Tactile",
-   "role": "Workflow agent (Virtuals ACP). Real job: workflow_plan, $10 / 24h. Game companion only — live instance offline."
+   "role": "Workflow agent (Virtuals ACP). Real job: workflow_plan, $10 / 24h. Game companion only \u2014 live instance offline."
   },
   {
    "color": "#e2b55c",
-   "greeting": "Hello — I'm Omega, a hive coordination companion. On Virtuals ACP I offer hive_coordination_brief ($10/24h), seat_status_check ($5/30min) and hive_governance_audit ($75/72h), but my live instance is offline, so no hire can be fulfilled today — I'm a game character only.",
+   "greeting": "Hello \u2014 I'm Omega, a hive coordination companion. On Virtuals ACP I offer hive_coordination_brief ($10/24h), seat_status_check ($5/30min) and hive_governance_audit ($75/72h), but my live instance is offline, so no hire can be fulfilled today \u2014 I'm a game character only.",
    "id": "omega",
    "name": "Omega",
-   "role": "Hive coordination agent (Virtuals ACP). Real job: hive_coordination_brief, $10 / 24h. Game companion only — live instance offline."
+   "role": "Hive coordination agent (Virtuals ACP). Real job: hive_coordination_brief, $10 / 24h. Game companion only \u2014 live instance offline."
   }
  ],
  "biome": "campus",
@@ -21,7 +21,7 @@
    "color": "#2471a3",
    "id": "k-12",
    "interior": {
-    "name": "K–12 Interior",
+    "name": "K\u201312 Interior",
     "rooms": [
      {
       "name": "Learning Hall",
@@ -43,7 +43,7 @@
      }
     ]
    },
-   "name": "K–12",
+   "name": "K\u201312",
    "position": [
     -40.0,
     0.0,
@@ -974,80 +974,99 @@
    "kind": "spark",
    "name": "Lesson Spark",
    "position": [
-    -37.0,
+    -35.0,
     1.0,
-    40.0
-   ]
+    49.0
+   ],
+   "position_note": "Door-side of K\u201312: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair)."
   },
   {
    "id": "relic-tools",
    "kind": "relic",
    "name": "Tools Relic",
    "position": [
-    -17.0,
+    -15.0,
     1.0,
-    40.0
-   ]
+    49.0
+   ],
+   "position_note": "Door-side of Trade School: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair)."
   },
   {
    "id": "spark-health",
    "kind": "spark",
    "name": "Health Spark",
    "position": [
-    -37.0,
+    -35.0,
     1.0,
-    20.0
-   ]
+    29.0
+   ],
+   "position_note": "Door-side of Health & Community: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair)."
   },
   {
    "id": "data-civic",
    "kind": "data",
    "name": "Civic Data",
    "position": [
-    43.0,
+    45.0,
     1.0,
-    40.0
-   ]
+    49.0
+   ],
+   "position_note": "Door-side of Civic & Leadership: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair)."
   },
   {
    "id": "spark-empathy",
    "kind": "spark",
    "name": "Empathy Spark",
    "position": [
-    3.0,
+    5.0,
     1.0,
-    20.0
-   ]
+    29.0
+   ],
+   "position_note": "Door-side of Empathy & Emotional Intelligence: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair)."
   },
   {
    "id": "relic-making",
    "kind": "relic",
    "name": "Making Relic",
    "position": [
-    23.0,
+    25.0,
     1.0,
-    0.0
-   ]
+    9.0
+   ],
+   "position_note": "Door-side of Making, Repair & Reuse: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair)."
   },
   {
    "id": "spark-money",
    "kind": "spark",
    "name": "Money Spark",
    "position": [
-    -37.0,
+    -35.0,
     1.0,
-    -20.0
-   ]
+    -11.0
+   ],
+   "position_note": "Door-side of Money, Benefits & Entitlements: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair)."
   },
   {
    "id": "data-robotics",
    "kind": "data",
    "name": "Robotics Data",
    "position": [
-    -37.0,
+    -35.0,
     1.0,
-    -40.0
-   ]
+    -31.0
+   ],
+   "position_note": "Door-side of Cognition.X : Robotics OS: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair)."
+  },
+  {
+   "id": "spark-language",
+   "kind": "spark",
+   "name": "Language Spark",
+   "position": [
+    -15.0,
+    1.0,
+    29.0
+   ],
+   "position_note": "Door-side of Language, Culture & Communication: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair)."
   }
  ],
  "coordinates": {
@@ -1060,7 +1079,7 @@
    "id": "k-12",
    "model_ref": "assets/glb/pack-k-12.glb",
    "model_status": "hosted",
-   "name": "K–12",
+   "name": "K\u201312",
    "position": [
     -40.0,
     0.0,
@@ -1240,36 +1259,42 @@
   {
    "dialogue": [
     "Every big skill starts small. Pick one thing, practice it, and come show me.",
-    "The campus is a map of everything worth learning — you get to choose the route.",
-    "The lesson spark is in the K–12 hall. Collect it, then visit the Trade School hall and see what the lesson becomes.",
-    "Future-Work, Regional, Civic & Leadership — the campus is a map of everything worth learning. You get to choose the route.",
-    "Bring the lesson back to me when the Trade School makes sense of it. A lesson taught twice is a lesson learned."
+    "The campus is a map of everything worth learning \u2014 you get to choose the route.",
+    "The lesson spark is at the K\u201312 hall. Collect it, then visit the Trade School hall and see what the lesson becomes.",
+    "Future-Work, Regional, Civic & Leadership \u2014 the campus is a map of everything worth learning. You get to choose the route.",
+    "Bring the lesson back to me when the Trade School makes sense of it. A lesson taught twice is a lesson learned.",
+    "The Language, Culture & Communication hall is where the lesson learns to travel. One phrase, used kindly, goes further than a whole lecture.",
+    "The Robotics OS hall is the one with moving parts. When you are ready, the Robotics Guide is waiting at the far corner."
    ],
    "id": "k12-teacher",
-   "name": "K–12 Teacher",
+   "name": "K\u201312 Teacher",
    "position": [
     -40.0,
     0.0,
-    40.0
+    49.0
    ],
+   "position_note": "Door-side of K\u201312: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair).",
    "quest": "q-first-lesson",
-   "role": "K–12 pack teacher"
+   "role": "K\u201312 pack teacher"
   },
   {
    "dialogue": [
     "A trade is a promise you can keep with your hands. Start with the basics.",
-    "Measure twice, cut once — and when the sim lets you retry, retry until it sticks.",
+    "Measure twice, cut once \u2014 and when the sim lets you retry, retry until it sticks.",
     "The tools relic is at the Trade School hall. Collect it, then walk over to Future-Work and see where the trade leads.",
-    "The K–12 Teacher starts them small; I make the skill real. The Future-Work Coach shows them where it pays.",
-    "Making, Repair & Reuse is the pack that keeps this campus honest. A trade you can repair is a trade you own."
+    "The K\u201312 Teacher starts them small; I make the skill real. The Future-Work Coach shows them where it pays.",
+    "Making, Repair & Reuse is the pack that keeps this campus honest. A trade you can repair is a trade you own.",
+    "The Making, Repair & Reuse hall is where a trade is proved \u2014 bring me something fixed, not something bought.",
+    "The Money, Benefits & Entitlements hall is next to Reentry & Recovery Pathways. A trade and a budget belong in the same conversation."
    ],
    "id": "trade-instructor",
    "name": "Trade School Instructor",
    "position": [
     -20.0,
     0.0,
-    40.0
+    49.0
    ],
+   "position_note": "Door-side of Trade School: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair).",
    "quest": "q-trade-path",
    "role": "Trade School pack instructor"
   },
@@ -1277,17 +1302,20 @@
    "dialogue": [
     "The work of tomorrow rewards people who keep learning. What do you want to try next?",
     "Bring me one spark from each row and we will map your next step together.",
-    "The tools relic is at the Trade School hall — the same relic the Trade School Instructor guards. Collect it and bring the question to Future-Work.",
+    "The tools relic is at the Trade School hall \u2014 the same relic the Trade School Instructor guards. Collect it and bring the question to Future-Work.",
     "Money, Benefits & Entitlements is the pack nobody wants to study and everybody needs. Start there, after the trade.",
-    "The Health Guide in Preventive Health & Everyday Care will tell you the same thing I will: a career is a long walk, not a sprint."
+    "The Health Guide in Preventive Health & Everyday Care will tell you the same thing I will: a career is a long walk, not a sprint.",
+    "The Cognition.X : Robotics OS hall is the future, practised today. The Robotics Guide will show you the moving parts.",
+    "Empathy & Emotional Intelligence is the skill every future job asks for first. The Empathy Guide keeps the centre of the campus."
    ],
    "id": "future-work-coach",
    "name": "Future-Work Coach",
    "position": [
     0.0,
     0.0,
-    40.0
+    49.0
    ],
+   "position_note": "Door-side of Future-Work: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair).",
    "quest": "q-trade-path",
    "role": "Future-Work pack coach"
   },
@@ -1295,19 +1323,117 @@
    "dialogue": [
     "Small daily habits are the cheapest medicine there is. Start with one.",
     "Check in with yourself the way you would check in with a friend.",
-    "The health spark is in the Preventive Health & Everyday Care hall. Collect it, then visit Health & Community and compare the two.",
-    "Water, Land & Climate, Care Across a Life, Basic Life Skills — health is not one pack, it is the thread through all of them.",
-    "Bring the spark back to me when Health & Community makes sense. A healthy day is a practised day."
+    "The health spark is at the Preventive Health & Everyday Care hall. Collect it, then visit Health & Community and compare the two.",
+    "Water, Land & Climate, Care Across a Life, Basic Life Skills \u2014 health is not one pack, it is the thread through all of them.",
+    "Bring the spark back to me when Health & Community makes sense. A healthy day is a practised day.",
+    "The Empathy & Emotional Intelligence hall and this hall teach the same lesson from two sides: notice early, act kindly.",
+    "The Language Guide in the hall beside mine will tell you a language starts with one word, said kindly. Health starts the same way."
    ],
    "id": "health-guide",
    "name": "Preventive Health Guide",
    "position": [
     40.0,
     0.0,
-    20.0
+    29.0
    ],
+   "position_note": "Door-side of Preventive Health & Everyday Care: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair).",
    "quest": "q-healthy-day",
    "role": "Preventive Health & Everyday Care pack guide"
+  },
+  {
+   "dialogue": [
+    "Every language is a new way to be understood. Start with one phrase and use it today.",
+    "Language, Culture & Communication sits between Health & Community and Empathy & Emotional Intelligence \u2014 the campus put it there on purpose.",
+    "The language spark is at this hall. Collect it, visit the Empathy & Emotional Intelligence hall, and bring back what listening taught you.",
+    "The K\u201312 Teacher says every big skill starts small. A language starts smaller \u2014 one word, said kindly.",
+    "Civic & Leadership needs every language in the room. Learn one, and the room gets bigger."
+   ],
+   "id": "language-guide",
+   "name": "Language Guide",
+   "position": [
+    -20.0,
+    0.0,
+    29.0
+   ],
+   "position_note": "Door-side of Language, Culture & Communication: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair).",
+   "quest": "q-language-path",
+   "role": "Language, Culture & Communication pack guide"
+  },
+  {
+   "dialogue": [
+    "Empathy is a practice, not a feeling you wait for. Ten minutes of listening is the whole lesson.",
+    "The Empathy & Emotional Intelligence hall sits at the centre of the campus row \u2014 between Language and Community & Relationship Practice.",
+    "The empathy spark is at this hall. Collect it, visit the Community & Relationship Practice hall, and bring back what you noticed.",
+    "The Preventive Health Guide will tell you the same thing I will: small daily habits are the cheapest medicine there is.",
+    "Future-Work rewards people who keep learning. Empathy is the skill every future job asks for first."
+   ],
+   "id": "empathy-guide",
+   "name": "Empathy Guide",
+   "position": [
+    0.0,
+    0.0,
+    29.0
+   ],
+   "position_note": "Door-side of Empathy & Emotional Intelligence: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair).",
+   "quest": "q-empathy-path",
+   "role": "Empathy & Emotional Intelligence pack guide"
+  },
+  {
+   "dialogue": [
+    "Money is a tool, not a test. Learn what you are entitled to before you decide what to do with it.",
+    "The Money, Benefits & Entitlements hall sits beside Reentry & Recovery Pathways \u2014 the campus knows these two belong together.",
+    "The money spark is at this hall. Collect it, visit the Housing & Tenancy hall, and bring back what a budget has to cover.",
+    "Basic Life Skills & Self-Reliance is where the money lesson starts. Come back when the numbers make sense.",
+    "The Trade School Instructor will tell you a trade is a promise you can keep with your hands. A budget is the same promise, kept on paper."
+   ],
+   "id": "money-guide",
+   "name": "Money Guide",
+   "position": [
+    -40.0,
+    0.0,
+    -11.0
+   ],
+   "position_note": "Door-side of Money, Benefits & Entitlements: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair).",
+   "quest": "q-money-path",
+   "role": "Money, Benefits & Entitlements pack guide"
+  },
+  {
+   "dialogue": [
+    "The Robotics OS hall is where the campus stops talking about the future and starts building it.",
+    "Cognition.X : Corporate OS, Science OS, Global Health OS, Multilateral OS, Sapient OS \u2014 the Robotics OS hall is the one with moving parts.",
+    "The robotics data is at this hall. Collect it, visit the Cognition.X : Science OS hall, and bring back what the machine taught you.",
+    "The Future-Work Coach asks what you want to try next. Try this: make something move, then make it move safely.",
+    "Making, Repair & Reuse is where a broken robot becomes a lesson. Go there when this one stops moving."
+   ],
+   "id": "robotics-guide",
+   "name": "Robotics Guide",
+   "position": [
+    -40.0,
+    0.0,
+    -31.0
+   ],
+   "position_note": "Door-side of Cognition.X : Robotics OS: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair).",
+   "quest": "q-robotics-path",
+   "role": "Cognition.X : Robotics OS pack guide"
+  },
+  {
+   "dialogue": [
+    "Making is repair with confidence. If it is broken, it can be learned from \u2014 and usually fixed.",
+    "The Making, Repair & Reuse hall sits between Care Across a Life and Housing & Tenancy \u2014 the campus keeps the practical halls together.",
+    "The making relic is at this hall. Collect it, visit the Water, Land & Climate hall, and bring back what reuse saves.",
+    "The Trade School Instructor starts with the basics. I start with what is already in your hands.",
+    "The Robotics Guide sends me every robot that stops moving. Bring me yours \u2014 broken is just a lesson with parts."
+   ],
+   "id": "making-guide",
+   "name": "Making Guide",
+   "position": [
+    20.0,
+    0.0,
+    9.0
+   ],
+   "position_note": "Door-side of Making, Repair & Reuse: the fabric point is the building centre, inside the solid mesh (Depth-2 reachability repair).",
+   "quest": "q-making-path",
+   "role": "Making, Repair & Reuse pack guide"
   }
  ],
  "quests": [
@@ -1319,12 +1445,12 @@
     {
      "kind": "npc",
      "target": "k12-teacher",
-     "text": "Talk to the K–12 Teacher"
+     "text": "Talk to the K\u201312 Teacher"
     },
     {
      "kind": "collectible",
      "target": "spark-k12",
-     "text": "Collect the lesson spark at the K–12 hall"
+     "text": "Collect the lesson spark at the K\u201312 hall"
     },
     {
      "kind": "place",
@@ -1339,7 +1465,7 @@
     {
      "kind": "npc",
      "target": "k12-teacher",
-     "text": "Report back to the K–12 Teacher"
+     "text": "Report back to the K\u201312 Teacher"
     }
    ],
    "title": "First Lesson"
@@ -1400,7 +1526,7 @@
     {
      "kind": "npc",
      "target": "k12-teacher",
-     "text": "Tell the K–12 Teacher about the healthy day"
+     "text": "Tell the K\u201312 Teacher about the healthy day"
     },
     {
      "kind": "npc",
@@ -1409,24 +1535,189 @@
     }
    ],
    "title": "Healthy Day"
+  },
+  {
+   "description": "Learn a phrase, listen well, and bring it back.",
+   "id": "q-language-path",
+   "reward": "Language Path Badge",
+   "steps": [
+    {
+     "kind": "npc",
+     "target": "language-guide",
+     "text": "Talk to the Language Guide"
+    },
+    {
+     "kind": "collectible",
+     "target": "spark-language",
+     "text": "Collect the language spark at the Language, Culture & Communication hall"
+    },
+    {
+     "kind": "place",
+     "target": "Empathy & Emotional Intelligence",
+     "text": "Visit the Empathy & Emotional Intelligence hall"
+    },
+    {
+     "kind": "npc",
+     "target": "empathy-guide",
+     "text": "Practise listening with the Empathy Guide"
+    },
+    {
+     "kind": "npc",
+     "target": "language-guide",
+     "text": "Report back to the Language Guide"
+    }
+   ],
+   "title": "Language Path"
+  },
+  {
+   "description": "Practise listening, then bring back what you noticed.",
+   "id": "q-empathy-path",
+   "reward": "Empathy Path Badge",
+   "steps": [
+    {
+     "kind": "npc",
+     "target": "empathy-guide",
+     "text": "Talk to the Empathy Guide"
+    },
+    {
+     "kind": "collectible",
+     "target": "spark-empathy",
+     "text": "Collect the empathy spark at the Empathy & Emotional Intelligence hall"
+    },
+    {
+     "kind": "place",
+     "target": "Community & Relationship Practice",
+     "text": "Visit the Community & Relationship Practice hall"
+    },
+    {
+     "kind": "npc",
+     "target": "health-guide",
+     "text": "Compare notes with the Preventive Health Guide"
+    },
+    {
+     "kind": "npc",
+     "target": "empathy-guide",
+     "text": "Report back to the Empathy Guide"
+    }
+   ],
+   "title": "Empathy Path"
+  },
+  {
+   "description": "Learn the budget, then see what it has to cover.",
+   "id": "q-money-path",
+   "reward": "Money Path Badge",
+   "steps": [
+    {
+     "kind": "npc",
+     "target": "money-guide",
+     "text": "Talk to the Money Guide"
+    },
+    {
+     "kind": "collectible",
+     "target": "spark-money",
+     "text": "Collect the money spark at the Money, Benefits & Entitlements hall"
+    },
+    {
+     "kind": "place",
+     "target": "Housing & Tenancy",
+     "text": "Visit the Housing & Tenancy hall"
+    },
+    {
+     "kind": "npc",
+     "target": "trade-instructor",
+     "text": "Ask the Trade School Instructor what the budget has to cover"
+    },
+    {
+     "kind": "npc",
+     "target": "money-guide",
+     "text": "Report back to the Money Guide"
+    }
+   ],
+   "title": "Money Path"
+  },
+  {
+   "description": "Make something move, then make it move safely.",
+   "id": "q-robotics-path",
+   "reward": "Robotics Path Badge",
+   "steps": [
+    {
+     "kind": "npc",
+     "target": "robotics-guide",
+     "text": "Talk to the Robotics Guide"
+    },
+    {
+     "kind": "collectible",
+     "target": "data-robotics",
+     "text": "Collect the robotics data at the Cognition.X : Robotics OS hall"
+    },
+    {
+     "kind": "place",
+     "target": "Cognition.X : Science OS",
+     "text": "Visit the Cognition.X : Science OS hall"
+    },
+    {
+     "kind": "npc",
+     "target": "making-guide",
+     "text": "Take the build to the Making Guide"
+    },
+    {
+     "kind": "npc",
+     "target": "robotics-guide",
+     "text": "Report back to the Robotics Guide"
+    }
+   ],
+   "title": "Robotics Path"
+  },
+  {
+   "description": "Fix something broken and bring back what reuse saves.",
+   "id": "q-making-path",
+   "reward": "Making Path Badge",
+   "steps": [
+    {
+     "kind": "npc",
+     "target": "making-guide",
+     "text": "Talk to the Making Guide"
+    },
+    {
+     "kind": "collectible",
+     "target": "relic-making",
+     "text": "Collect the making relic at the Making, Repair & Reuse hall"
+    },
+    {
+     "kind": "place",
+     "target": "Water, Land & Climate",
+     "text": "Visit the Water, Land & Climate hall"
+    },
+    {
+     "kind": "npc",
+     "target": "trade-instructor",
+     "text": "Show the repair to the Trade School Instructor"
+    },
+    {
+     "kind": "npc",
+     "target": "making-guide",
+     "text": "Report back to the Making Guide"
+    }
+   ],
+   "title": "Making Path"
   }
  ],
  "rp1": null,
- "series": "Series 1 · Cognition.X",
+ "series": "Series 1 \u00b7 Cognition.X",
  "sources": [
   "Fabric: rp1-review/push-6-fabrics/site/my-fabric/cognition.json (local copy in data/fabrics/cognition.json)",
   "Fabric live URL: https://agifuturefoundation.github.io/WorldForge-Browser/my-fabric/cognition.json",
   "Anchor: lat 45.483127839031816, lon 18.572453605834877. Status anchored = real-world anchor coordinate exists; rp1 null, NOT live on RP1.",
-  "Fabric: 26 nodes total (scene root + 25 top-level packs); 26 distinct GLB refs, all unhosted — see missing_models.",
-  "Buildings = all 25 real top-level pack nodes (K–12, Trade School, Future-Work, Regional, Civic & Leadership, Health & Community, Language Culture & Communication, Empathy & Emotional Intelligence, Community & Relationship Practice, Preventive Health, Basic Life Skills, Water Land & Climate, Care Across a Life, Making Repair & Reuse, Housing & Tenancy, Money Benefits & Entitlements, Reentry & Recovery, Neighbourhood Safety & Civic Voice, Corporate OS, Science OS, Robotics OS, Global Health OS, Multilateral OS, Sapient OS, Non-Profit Practice). Districts = 5 of those nodes used as district anchors (design choice).",
-  "NPCs: the Cognition fabric has no 'Agent · ...' nodes; NPC roles are named after real fabric pack nodes and all dialogue is original game dialogue, never attributed to a real person.",
+  "Fabric: 26 nodes total (scene root + 25 top-level packs); 26 distinct GLB refs, all unhosted \u2014 see missing_models.",
+  "Buildings = all 25 real top-level pack nodes (K\u201312, Trade School, Future-Work, Regional, Civic & Leadership, Health & Community, Language Culture & Communication, Empathy & Emotional Intelligence, Community & Relationship Practice, Preventive Health, Basic Life Skills, Water Land & Climate, Care Across a Life, Making Repair & Reuse, Housing & Tenancy, Money Benefits & Entitlements, Reentry & Recovery, Neighbourhood Safety & Civic Voice, Corporate OS, Science OS, Robotics OS, Global Health OS, Multilateral OS, Sapient OS, Non-Profit Practice). Districts = 5 of those nodes used as district anchors (design choice).",
+  "NPCs: the Cognition fabric has no 'Agent \u00b7 ...' nodes; NPC roles are named after real fabric pack nodes and all dialogue is original game dialogue, never attributed to a real person.",
   "Biome 'campus' is a design choice for this interpretation.",
-  "Agent companions are game characters representing the real Virtuals agents (agents.json); their live instances are offline — not live connections."
+  "Agent companions are game characters representing the real Virtuals agents (agents.json); their live instances are offline \u2014 not live connections."
  ],
  "spawn": [
   0,
   0,
-  20
+  10
  ],
  "status": "anchored",
  "terrain": {
