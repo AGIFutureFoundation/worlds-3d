@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Worlds 3D — Playable WorldForge Worlds</title>
 <meta name="description" content="A web 3D lobby over the 544 WorldForge worlds: 7 playable flagships built from the real anchored fabrics, the rest indexed with their real status. Not RP1, not footage.">
-<link rel="stylesheet" href="site.css">
-<script src="data.js"></script>
-<script src="lobby.js" defer></script>
+<link rel="stylesheet" href="./site.css">
+  <script type="module" crossorigin src="./assets/main-CXqCBepr.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/worlds-data-BoncZjXh.js">
 </head>
 <body>
 <header class="site-header">
@@ -29,7 +29,7 @@
     <p class="lede">Pick a world. Walk it. The seven flagships below are playable now — third-person avatar, NPCs with quests, collectibles, weather and day cycles. The full index underneath covers all 544 WorldForge worlds with their real place, biome and status.</p>
     <p class="stats" id="stats">Loading worlds…</p>
   </div>
-  <p class="error" id="data-error" hidden><strong>World data failed to load.</strong> The lobby needs <code>data.js</code> next to this page. If you opened this file directly, make sure <code>data.js</code>, <code>lobby.js</code> and <code>site.css</code> are in the same folder.</p>
+  <p class="error" id="data-error" hidden><strong>World data failed to load.</strong> The lobby needs its bundled world data. If you opened this file directly, make sure the built site was deployed as a whole.</p>
 
   <h2>Playable now — the 7 flagships</h2>
   <div class="grid" id="flagships"></div>
@@ -51,7 +51,7 @@
 <footer class="site-footer">
   <div class="wrap">
     <p>Sources: the 544-world list from the WorldForge-Browser repo (all rp1:null); the 6 anchored fabrics live on GitHub Pages; the AGI Corp Hub lobby scene built locally 2026-11-06. Agent companions are game characters representing the real Virtuals agents (Omega, Tactile, ALS, CMMC, WAVE) — their live instances are offline, so companions are not live connections. Meet the real agents on the <a href="https://app.virtuals.io/acp" target="_blank" rel="noopener">Virtuals ACP marketplace ↗</a> and the <a href="https://fellowship-chat.pages.dev/#agents" target="_blank" rel="noopener">Worlds Hub Agents section ↗</a> — all 5 are listed but offline, so no hire can be fulfilled today.</p>
-    <p>Built with Three.js r160, vendored locally — no backend, no account, no payment. The RP1 portal attach is blocked until the map service has a public endpoint (Oracle VPS pending); this web build is the playable step before that.</p>
+    <p>Built with Meta IWSDK 1.1 (Three.js super-three) — playable in the browser and on a Quest headset. No backend, no account, no payment. The RP1 portal attach is blocked until the map service has a public endpoint (Oracle VPS pending); this web build is the playable step before that.</p>
   </div>
 </footer>
 </body>
