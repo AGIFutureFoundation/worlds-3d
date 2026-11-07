@@ -46,8 +46,8 @@
         40.0
       ],
       "color": "#2471a3",
-      "model_ref": "cognition/models/pack-k-12.glb",
-      "model_status": "not hosted — procedural placeholder shown"
+      "model_ref": "assets/glb/pack-k-12.glb",
+      "model_status": "hosted"
     },
     {
       "id": "health-community",
@@ -58,8 +58,8 @@
         20.0
       ],
       "color": "#1e8449",
-      "model_ref": "cognition/models/pack-health-community.glb",
-      "model_status": "not hosted — procedural placeholder shown"
+      "model_ref": "assets/glb/pack-health-community.glb",
+      "model_status": "hosted"
     },
     {
       "id": "basic-life-skills-self-reliance",
@@ -70,8 +70,8 @@
         0.0
       ],
       "color": "#b7950b",
-      "model_ref": "cognition/models/pack-basic-life-skills-self-reliance.glb",
-      "model_status": "not hosted — procedural placeholder shown"
+      "model_ref": "assets/glb/pack-basic-life-skills-self-reliance.glb",
+      "model_status": "hosted"
     },
     {
       "id": "money-benefits-entitlements",
@@ -82,8 +82,8 @@
         -20.0
       ],
       "color": "#6c3483",
-      "model_ref": "cognition/models/pack-money-benefits-entitlements.glb",
-      "model_status": "not hosted — procedural placeholder shown"
+      "model_ref": "assets/glb/pack-money-benefits-entitlements.glb",
+      "model_status": "hosted"
     },
     {
       "id": "cognition-x-robotics-os",
@@ -94,8 +94,8 @@
         -40.0
       ],
       "color": "#117a65",
-      "model_ref": "cognition/models/pack-robotics-os.glb",
-      "model_status": "not hosted — procedural placeholder shown"
+      "model_ref": "assets/glb/pack-robotics-os.glb",
+      "model_status": "hosted"
     }
   ],
   "buildings": [
@@ -1283,108 +1283,108 @@
   ],
   "missing_models": [
     {
-      "ref": "cognition/models/campus.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/campus.glb",
+      "status": "hosted"
     },
     {
-      "ref": "cognition/models/pack-basic-life-skills-self-reliance.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/pack-basic-life-skills-self-reliance.glb",
+      "status": "hosted"
     },
     {
-      "ref": "cognition/models/pack-care-across-a-life.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/pack-care-across-a-life.glb",
+      "status": "hosted"
     },
     {
-      "ref": "cognition/models/pack-civic-leadership.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/pack-civic-leadership.glb",
+      "status": "hosted"
     },
     {
-      "ref": "cognition/models/pack-community-relationship-practice.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/pack-community-relationship-practice.glb",
+      "status": "hosted"
     },
     {
-      "ref": "cognition/models/pack-corporate-os.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/pack-corporate-os.glb",
+      "status": "hosted"
     },
     {
-      "ref": "cognition/models/pack-empathy-emotional-intelligence.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/pack-empathy-emotional-intelligence.glb",
+      "status": "hosted"
     },
     {
-      "ref": "cognition/models/pack-future-work.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/pack-future-work.glb",
+      "status": "hosted"
     },
     {
-      "ref": "cognition/models/pack-global-health-os.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/pack-global-health-os.glb",
+      "status": "hosted"
     },
     {
-      "ref": "cognition/models/pack-health-community.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/pack-health-community.glb",
+      "status": "hosted"
     },
     {
-      "ref": "cognition/models/pack-housing-tenancy.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/pack-housing-tenancy.glb",
+      "status": "hosted"
     },
     {
-      "ref": "cognition/models/pack-k-12.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/pack-k-12.glb",
+      "status": "hosted"
     },
     {
-      "ref": "cognition/models/pack-language-culture-communication.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/pack-language-culture-communication.glb",
+      "status": "hosted"
     },
     {
-      "ref": "cognition/models/pack-making-repair-reuse.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/pack-making-repair-reuse.glb",
+      "status": "hosted"
     },
     {
-      "ref": "cognition/models/pack-money-benefits-entitlements.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/pack-money-benefits-entitlements.glb",
+      "status": "hosted"
     },
     {
-      "ref": "cognition/models/pack-multilateral-os.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/pack-multilateral-os.glb",
+      "status": "hosted"
     },
     {
-      "ref": "cognition/models/pack-neighbourhood-safety-civic-voice.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/pack-neighbourhood-safety-civic-voice.glb",
+      "status": "hosted"
     },
     {
-      "ref": "cognition/models/pack-non-profit-practice.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/pack-non-profit-practice.glb",
+      "status": "hosted"
     },
     {
-      "ref": "cognition/models/pack-preventive-health-everyday-care.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/pack-preventive-health-everyday-care.glb",
+      "status": "hosted"
     },
     {
-      "ref": "cognition/models/pack-reentry-recovery-pathways.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/pack-reentry-recovery-pathways.glb",
+      "status": "hosted"
     },
     {
-      "ref": "cognition/models/pack-regional.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/pack-regional.glb",
+      "status": "hosted"
     },
     {
-      "ref": "cognition/models/pack-robotics-os.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/pack-robotics-os.glb",
+      "status": "hosted"
     },
     {
-      "ref": "cognition/models/pack-sapient-os.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/pack-sapient-os.glb",
+      "status": "hosted"
     },
     {
-      "ref": "cognition/models/pack-science-os.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/pack-science-os.glb",
+      "status": "hosted"
     },
     {
-      "ref": "cognition/models/pack-trade-school.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/pack-trade-school.glb",
+      "status": "hosted"
     },
     {
-      "ref": "cognition/models/pack-water-land-climate.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/pack-water-land-climate.glb",
+      "status": "hosted"
     }
   ],
   "sources": [

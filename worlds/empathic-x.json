@@ -796,8 +796,8 @@
       "status": "not hosted — procedural placeholder shown"
     },
     {
-      "ref": "../models/coordinator.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/coordinator.glb",
+      "status": "hosted"
     },
     {
       "ref": "../models/env-sky.glb",

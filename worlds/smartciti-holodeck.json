@@ -46,8 +46,8 @@
         0.0
       ],
       "color": "#c0392b",
-      "model_ref": "assets/Container.glb",
-      "model_status": "not hosted — procedural placeholder shown"
+      "model_ref": "assets/glb/Container.glb",
+      "model_status": "hosted"
     },
     {
       "id": "envelope-finish-district",
@@ -58,8 +58,8 @@
         43.26
       ],
       "color": "#d35400",
-      "model_ref": "assets/Container.glb",
-      "model_status": "not hosted — procedural placeholder shown"
+      "model_ref": "assets/glb/Container.glb",
+      "model_status": "hosted"
     },
     {
       "id": "building-systems-district",
@@ -70,8 +70,8 @@
         61.18
       ],
       "color": "#b7950b",
-      "model_ref": "assets/Container.glb",
-      "model_status": "not hosted — procedural placeholder shown"
+      "model_ref": "assets/glb/Container.glb",
+      "model_status": "hosted"
     },
     {
       "id": "energy-utilities-district",
@@ -82,8 +82,8 @@
         43.26
       ],
       "color": "#1e8449",
-      "model_ref": "assets/Container.glb",
-      "model_status": "not hosted — procedural placeholder shown"
+      "model_ref": "assets/glb/Container.glb",
+      "model_status": "hosted"
     },
     {
       "id": "earthworks-plant-district",
@@ -94,8 +94,8 @@
         0.0
       ],
       "color": "#2471a3",
-      "model_ref": "assets/Container.glb",
-      "model_status": "not hosted — procedural placeholder shown"
+      "model_ref": "assets/glb/Container.glb",
+      "model_status": "hosted"
     },
     {
       "id": "heavy-industry-district",
@@ -106,8 +106,8 @@
         -43.26
       ],
       "color": "#6c3483",
-      "model_ref": "assets/Container.glb",
-      "model_status": "not hosted — procedural placeholder shown"
+      "model_ref": "assets/glb/Container.glb",
+      "model_status": "hosted"
     },
     {
       "id": "transport-mobility-district",
@@ -118,8 +118,8 @@
         -61.18
       ],
       "color": "#117a65",
-      "model_ref": "assets/Container.glb",
-      "model_status": "not hosted — procedural placeholder shown"
+      "model_ref": "assets/glb/Container.glb",
+      "model_status": "hosted"
     },
     {
       "id": "survey-safety-environment-district",
@@ -130,8 +130,8 @@
         -43.26
       ],
       "color": "#7e5109",
-      "model_ref": "assets/Container.glb",
-      "model_status": "not hosted — procedural placeholder shown"
+      "model_ref": "assets/glb/Container.glb",
+      "model_status": "hosted"
     }
   ],
   "buildings": [
@@ -4906,500 +4906,500 @@
   ],
   "missing_models": [
     {
-      "ref": "assets/Container.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/Container.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/deck.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/deck.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-acoustic.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-acoustic.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-airfield.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-airfield.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-asbestos.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-asbestos.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-automation-int.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-automation-int.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-aviation-ground.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-aviation-ground.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-bas-controls.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-bas-controls.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-battery-storage.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-battery-storage.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-blasters.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-blasters.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-boilermakers.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-boilermakers.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-bricklayers.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-bricklayers.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-bridge-inspect.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-bridge-inspect.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-cable-splicers.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-cable-splicers.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-carpenters.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-carpenters.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-catenary.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-catenary.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-cement-masons.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-cement-masons.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-cladding.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-cladding.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-cleanroom.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-cleanroom.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-concrete-pump.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-concrete-pump.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-confined-space.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-confined-space.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-crane-ops.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-crane-ops.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-curtainwall.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-curtainwall.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-data-center.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-data-center.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-decking.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-decking.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-demolition.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-demolition.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-district-energy.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-district-energy.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-divers.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-divers.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-drywall.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-drywall.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-electricians.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-electricians.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-elevator.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-elevator.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-ev-charging.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-ev-charging.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-fabricators.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-fabricators.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-fiber-splicers.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-fiber-splicers.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-fire-alarm.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-fire-alarm.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-fire-sprinkler.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-fire-sprinkler.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-firestop.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-firestop.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-fleet-diesel.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-fleet-diesel.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-flooring.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-flooring.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-foundry.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-foundry.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-gas-distrib.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-gas-distrib.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-geothermal.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-geothermal.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-glaziers.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-glaziers.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-grounds.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-grounds.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-hazmat.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-hazmat.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-heavy-equip.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-heavy-equip.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-high-angle.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-high-angle.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-hvacr.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-hvacr.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-hydro.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-hydro.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-hydrogen.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-hydrogen.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-industrial-clean.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-industrial-clean.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-instrumentation.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-instrumentation.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-insulators.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-insulators.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-ironworkers.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-ironworkers.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-laborers.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-laborers.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-lathers.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-lathers.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-lead-abatement.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-lead-abatement.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-line-workers.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-line-workers.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-machinists.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-machinists.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-marine-pipe.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-marine-pipe.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-marine-terminal.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-marine-terminal.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-masonry-restore.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-masonry-restore.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-medical-gas.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-medical-gas.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-meter-techs.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-meter-techs.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-millwrights.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-millwrights.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-miners.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-miners.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-mold-remediation.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-mold-remediation.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-network-cabling.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-network-cabling.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-nuclear.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-nuclear.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-operating-eng.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-operating-eng.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-painters.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-painters.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-piling.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-piling.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-pipefitters.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-pipefitters.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-pipeline.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-pipeline.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-plasterers.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-plasterers.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-platers.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-platers.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-plc-techs.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-plc-techs.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-port-crane.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-port-crane.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-post-tension.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-post-tension.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-precast.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-precast.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-rail-signals.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-rail-signals.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-rail-track.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-rail-track.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-refractory.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-refractory.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-riggers.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-riggers.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-robotics.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-robotics.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-roofers.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-roofers.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-scaffold.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-scaffold.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-security-sys.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-security-sys.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-sheetmetal.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-sheetmetal.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-shipfitters.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-shipfitters.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-shoring.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-shoring.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-site-safety.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-site-safety.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-smelter.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-smelter.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-solar.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-solar.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-spill-response.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-spill-response.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-steel-erectors.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-steel-erectors.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-stone-carvers.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-stone-carvers.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-substation.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-substation.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-survey-drone.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-survey-drone.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-surveyors.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-surveyors.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-tank-erectors.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-tank-erectors.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-teamsters.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-teamsters.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-terrazzo.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-terrazzo.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-tilesetters.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-tilesetters.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-toolmakers.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-toolmakers.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-transit-vehicle.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-transit-vehicle.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-transmission.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-transmission.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-wastewater.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-wastewater.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-water-distrib.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-water-distrib.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-waterproofers.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-waterproofers.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-welders.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-welders.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-wind.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-wind.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/models/hall-window-glazing.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/hall-window-glazing.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/sims/sim-airless-sprayer.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/sim-airless-sprayer.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/sims/sim-boom-lift.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/sim-boom-lift.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/sims/sim-crane-lift.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/sim-crane-lift.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/sims/sim-excavator-trench.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/sim-excavator-trench.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/sims/sim-forklift-run.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/sim-forklift-run.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/sims/sim-load-chart.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/sim-load-chart.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/sims/sim-overhead-crane.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/sim-overhead-crane.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/sims/sim-pressure-washer.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/sim-pressure-washer.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/sims/sim-rigging-signals.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/sim-rigging-signals.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/sims/sim-scaffold-bay.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/sim-scaffold-bay.glb",
+      "status": "hosted"
     },
     {
-      "ref": "holodeck/sims/sim-weld-bead.glb",
-      "status": "not hosted — procedural placeholder shown"
+      "ref": "assets/glb/sim-weld-bead.glb",
+      "status": "hosted"
     }
   ],
   "sources": [
