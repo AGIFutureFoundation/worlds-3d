@@ -1,0 +1,28 @@
+# Worlds 3D — playable WorldForge worlds
+
+A web 3D lobby over the 544 WorldForge worlds: 7 playable flagships built from the real anchored fabrics, the rest indexed with their real status. Not RP1, not footage. Fully static, no backend.
+
+Live: https://agifuturefoundation.github.io/worlds-3d/ (GitHub Pages, repo AGIFutureFoundation/worlds-3d, branch main).
+
+## Pages
+
+- Home (/): the lobby — the 7 playable worlds, engine status, honest state (0 worlds live on RP1).
+- Player (/player.html): the in-browser 3D player for one world at a time.
+
+## Data
+
+- /data.js: the world registry (7 worlds) and model references. 174 distinct GLB model paths are referenced; only 7 GLB files are present in /assets/glb/ — the district, hall, pack, and simulation models are not hosted yet, so the engine renders placeholders and status plaques for them. Do not present any world as fully modeled.
+- /worlds/: one JSON definition per playable world (7): agi-corp-hub, biota-blockchain, cognition-x, diagnostic-x, empathic-x, locator-x, smartciti-holodeck.
+- /data/worlds.json, /data/anchors.json, /data/fabrics/: fabric and anchor data for the 6 anchored fabrics (cognition, diagnostic, empathic, locator, biota-blockchain, smartciti-holodeck).
+- /engine/: the Three.js player engine (test page /engine/test.html is a developer self-check, not a public page and not in the sitemap).
+
+## Key facts (do not restate otherwise)
+
+- Zero worlds are live on RP1. The 6 anchored fabric JSONs are live on GitHub Pages; the 3D models are largely not hosted.
+- Only two entities are verified as filed: AGI Future Foundation (CA Nonprofit Public Benefit Corp, Entity B20260196664, filed 2026-04-24) and AGI Fellowship (CA Nonprofit Religious Corp, Entity B20260229217, filed 2026-05-13). No IRS 501(c)(3) determination letter exists for either — neither is tax-exempt and no donation is tax-deductible.
+- AGI Corp has an EIN only; incorporation is unverified. W3 = 33 named sub-series in an April 2026 internal list (not a filing).
+
+## Contact
+
+- Foundation: x@agifuturefoundation.org. Fellowship church: agent@agifellowship.church.
+- Machine-readable: /sitemap.xml, /robots.txt, /llms.txt. No API, no MCP server, no status endpoint.

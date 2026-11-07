@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://agifuturefoundation.github.io/worlds-3d/sitemap.xml
