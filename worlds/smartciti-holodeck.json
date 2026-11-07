@@ -35,7 +35,7 @@
     "mapping": "engine_x = fabric_x * scale + offset_x; engine_y = fabric_z * scale (fabric z is height, 0 for plan nodes); engine_z = fabric_y * scale + offset_z"
   },
   "fabric_nodes_total": 131,
-  "fabric_nodes_used": "8 top-level District nodes as districts; 12 Structural District halls + 11 Sim nodes as buildings (131 fabric nodes total; halls of the other 7 districts are named in sources, not built as separate buildings)",
+  "fabric_nodes_used": "8 top-level District nodes as districts; all 111 hall nodes as buildings (12 Structural District halls + 99 halls across the other 7 districts) + 11 Sim nodes as buildings (131 fabric nodes total; the scene root is not a place and is not built as a district or building)",
   "districts": [
     {
       "id": "structural-district",
@@ -909,6 +909,3768 @@
           }
         ]
       }
+    },
+    {
+      "id": "carpenters",
+      "name": "Carpenters",
+      "position": [
+        -17.4,
+        0.0,
+        17.4
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#d35400",
+      "interior": {
+        "name": "Carpenters Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "drywall-finishers",
+      "name": "Drywall Finishers",
+      "position": [
+        -8.7,
+        0.0,
+        17.4
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#d35400",
+      "interior": {
+        "name": "Drywall Finishers Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "glaziers",
+      "name": "Glaziers",
+      "position": [
+        0.0,
+        0.0,
+        17.4
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#d35400",
+      "interior": {
+        "name": "Glaziers Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "roofers-waterproofers",
+      "name": "Roofers & Waterproofers",
+      "position": [
+        8.7,
+        0.0,
+        17.4
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#d35400",
+      "interior": {
+        "name": "Roofers & Waterproofers Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "bricklayers-allied-craft",
+      "name": "Bricklayers & Allied Craft",
+      "position": [
+        17.4,
+        0.0,
+        17.4
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#d35400",
+      "interior": {
+        "name": "Bricklayers & Allied Craft Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "cement-masons",
+      "name": "Cement Masons",
+      "position": [
+        -17.4,
+        0.0,
+        8.7
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#d35400",
+      "interior": {
+        "name": "Cement Masons Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "floor-coverers",
+      "name": "Floor Coverers",
+      "position": [
+        -8.7,
+        0.0,
+        8.7
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#d35400",
+      "interior": {
+        "name": "Floor Coverers Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "painters-allied-trades",
+      "name": "Painters & Allied Trades",
+      "position": [
+        0.0,
+        0.0,
+        8.7
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#d35400",
+      "interior": {
+        "name": "Painters & Allied Trades Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "heat-frost-insulators",
+      "name": "Heat & Frost Insulators",
+      "position": [
+        8.7,
+        0.0,
+        8.7
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#d35400",
+      "interior": {
+        "name": "Heat & Frost Insulators Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "plasterers",
+      "name": "Plasterers",
+      "position": [
+        17.4,
+        0.0,
+        8.7
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#d35400",
+      "interior": {
+        "name": "Plasterers Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "terrazzo-workers",
+      "name": "Terrazzo Workers",
+      "position": [
+        -17.4,
+        0.0,
+        0.0
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#d35400",
+      "interior": {
+        "name": "Terrazzo Workers Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "tile-setters",
+      "name": "Tile Setters",
+      "position": [
+        -8.7,
+        0.0,
+        0.0
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#d35400",
+      "interior": {
+        "name": "Tile Setters Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "lathers-metal-framers",
+      "name": "Lathers & Metal Framers",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#d35400",
+      "interior": {
+        "name": "Lathers & Metal Framers Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "curtain-wall-erectors",
+      "name": "Curtain Wall Erectors",
+      "position": [
+        8.7,
+        0.0,
+        0.0
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#d35400",
+      "interior": {
+        "name": "Curtain Wall Erectors Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "below-grade-waterproofers",
+      "name": "Below-Grade Waterproofers",
+      "position": [
+        17.4,
+        0.0,
+        0.0
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#d35400",
+      "interior": {
+        "name": "Below-Grade Waterproofers Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "firestop-installers",
+      "name": "Firestop Installers",
+      "position": [
+        -17.4,
+        0.0,
+        -8.7
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#d35400",
+      "interior": {
+        "name": "Firestop Installers Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "acoustic-specialists",
+      "name": "Acoustic Specialists",
+      "position": [
+        -8.7,
+        0.0,
+        -8.7
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#d35400",
+      "interior": {
+        "name": "Acoustic Specialists Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "rainscreen-cladding-fitters",
+      "name": "Rainscreen Cladding Fitters",
+      "position": [
+        0.0,
+        0.0,
+        -8.7
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#d35400",
+      "interior": {
+        "name": "Rainscreen Cladding Fitters Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "masonry-restoration",
+      "name": "Masonry Restoration",
+      "position": [
+        8.7,
+        0.0,
+        -8.7
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#d35400",
+      "interior": {
+        "name": "Masonry Restoration Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "stone-carvers",
+      "name": "Stone Carvers",
+      "position": [
+        17.4,
+        0.0,
+        -8.7
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#d35400",
+      "interior": {
+        "name": "Stone Carvers Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "architectural-glaziers",
+      "name": "Architectural Glaziers",
+      "position": [
+        -17.4,
+        0.0,
+        -17.4
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#d35400",
+      "interior": {
+        "name": "Architectural Glaziers Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "electrical-workers",
+      "name": "Electrical Workers",
+      "position": [
+        -17.4,
+        0.0,
+        13.05
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#b7950b",
+      "interior": {
+        "name": "Electrical Workers Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "plumbers-pipefitters",
+      "name": "Plumbers & Pipefitters",
+      "position": [
+        -8.7,
+        0.0,
+        13.05
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#b7950b",
+      "interior": {
+        "name": "Plumbers & Pipefitters Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "hvac-r-technicians",
+      "name": "HVAC/R Technicians",
+      "position": [
+        0.0,
+        0.0,
+        13.05
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#b7950b",
+      "interior": {
+        "name": "HVAC/R Technicians Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "sheet-metal-workers",
+      "name": "Sheet Metal Workers",
+      "position": [
+        8.7,
+        0.0,
+        13.05
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#b7950b",
+      "interior": {
+        "name": "Sheet Metal Workers Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "fire-sprinkler-fitters",
+      "name": "Fire Sprinkler Fitters",
+      "position": [
+        17.4,
+        0.0,
+        13.05
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#b7950b",
+      "interior": {
+        "name": "Fire Sprinkler Fitters Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "elevator-constructors",
+      "name": "Elevator Constructors",
+      "position": [
+        -17.4,
+        0.0,
+        4.35
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#b7950b",
+      "interior": {
+        "name": "Elevator Constructors Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "building-automation-techs",
+      "name": "Building Automation Techs",
+      "position": [
+        -8.7,
+        0.0,
+        4.35
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#b7950b",
+      "interior": {
+        "name": "Building Automation Techs Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "fire-alarm-technicians",
+      "name": "Fire Alarm Technicians",
+      "position": [
+        0.0,
+        0.0,
+        4.35
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#b7950b",
+      "interior": {
+        "name": "Fire Alarm Technicians Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "security-systems-installers",
+      "name": "Security Systems Installers",
+      "position": [
+        8.7,
+        0.0,
+        4.35
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#b7950b",
+      "interior": {
+        "name": "Security Systems Installers Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "structured-cabling-techs",
+      "name": "Structured Cabling Techs",
+      "position": [
+        17.4,
+        0.0,
+        4.35
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#b7950b",
+      "interior": {
+        "name": "Structured Cabling Techs Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "fiber-splicers",
+      "name": "Fiber Splicers",
+      "position": [
+        -17.4,
+        0.0,
+        -4.35
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#b7950b",
+      "interior": {
+        "name": "Fiber Splicers Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "data-centre-technicians",
+      "name": "Data Centre Technicians",
+      "position": [
+        -8.7,
+        0.0,
+        -4.35
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#b7950b",
+      "interior": {
+        "name": "Data Centre Technicians Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "instrumentation-technicians",
+      "name": "Instrumentation Technicians",
+      "position": [
+        0.0,
+        0.0,
+        -4.35
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#b7950b",
+      "interior": {
+        "name": "Instrumentation Technicians Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "plc-controls-technicians",
+      "name": "PLC & Controls Technicians",
+      "position": [
+        8.7,
+        0.0,
+        -4.35
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#b7950b",
+      "interior": {
+        "name": "PLC & Controls Technicians Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "industrial-robotics-techs",
+      "name": "Industrial Robotics Techs",
+      "position": [
+        17.4,
+        0.0,
+        -4.35
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#b7950b",
+      "interior": {
+        "name": "Industrial Robotics Techs Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "automation-integrators",
+      "name": "Automation Integrators",
+      "position": [
+        -17.4,
+        0.0,
+        -13.05
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#b7950b",
+      "interior": {
+        "name": "Automation Integrators Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "cleanroom-trades",
+      "name": "Cleanroom Trades",
+      "position": [
+        -8.7,
+        0.0,
+        -13.05
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#b7950b",
+      "interior": {
+        "name": "Cleanroom Trades Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "medical-gas-installers",
+      "name": "Medical Gas Installers",
+      "position": [
+        0.0,
+        0.0,
+        -13.05
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#b7950b",
+      "interior": {
+        "name": "Medical Gas Installers Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "utility-line-workers",
+      "name": "Utility Line Workers",
+      "position": [
+        -17.4,
+        0.0,
+        13.05
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#1e8449",
+      "interior": {
+        "name": "Utility Line Workers Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "solar-installers",
+      "name": "Solar Installers",
+      "position": [
+        -8.7,
+        0.0,
+        13.05
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#1e8449",
+      "interior": {
+        "name": "Solar Installers Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "wind-turbine-technicians",
+      "name": "Wind Turbine Technicians",
+      "position": [
+        0.0,
+        0.0,
+        13.05
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#1e8449",
+      "interior": {
+        "name": "Wind Turbine Technicians Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "substation-technicians",
+      "name": "Substation Technicians",
+      "position": [
+        8.7,
+        0.0,
+        13.05
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#1e8449",
+      "interior": {
+        "name": "Substation Technicians Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "cable-splicers",
+      "name": "Cable Splicers",
+      "position": [
+        17.4,
+        0.0,
+        13.05
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#1e8449",
+      "interior": {
+        "name": "Cable Splicers Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "meter-technicians",
+      "name": "Meter Technicians",
+      "position": [
+        -17.4,
+        0.0,
+        4.35
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#1e8449",
+      "interior": {
+        "name": "Meter Technicians Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "gas-distribution-fitters",
+      "name": "Gas Distribution Fitters",
+      "position": [
+        -8.7,
+        0.0,
+        4.35
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#1e8449",
+      "interior": {
+        "name": "Gas Distribution Fitters Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "water-distribution-fitters",
+      "name": "Water Distribution Fitters",
+      "position": [
+        0.0,
+        0.0,
+        4.35
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#1e8449",
+      "interior": {
+        "name": "Water Distribution Fitters Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "wastewater-operators",
+      "name": "Wastewater Operators",
+      "position": [
+        8.7,
+        0.0,
+        4.35
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#1e8449",
+      "interior": {
+        "name": "Wastewater Operators Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "nuclear-plant-trades",
+      "name": "Nuclear Plant Trades",
+      "position": [
+        17.4,
+        0.0,
+        4.35
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#1e8449",
+      "interior": {
+        "name": "Nuclear Plant Trades Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "hydro-plant-trades",
+      "name": "Hydro Plant Trades",
+      "position": [
+        -17.4,
+        0.0,
+        -4.35
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#1e8449",
+      "interior": {
+        "name": "Hydro Plant Trades Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "geothermal-technicians",
+      "name": "Geothermal Technicians",
+      "position": [
+        -8.7,
+        0.0,
+        -4.35
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#1e8449",
+      "interior": {
+        "name": "Geothermal Technicians Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "battery-storage-technicians",
+      "name": "Battery Storage Technicians",
+      "position": [
+        0.0,
+        0.0,
+        -4.35
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#1e8449",
+      "interior": {
+        "name": "Battery Storage Technicians Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "ev-charging-installers",
+      "name": "EV Charging Installers",
+      "position": [
+        8.7,
+        0.0,
+        -4.35
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#1e8449",
+      "interior": {
+        "name": "EV Charging Installers Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "hydrogen-systems-trades",
+      "name": "Hydrogen Systems Trades",
+      "position": [
+        17.4,
+        0.0,
+        -4.35
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#1e8449",
+      "interior": {
+        "name": "Hydrogen Systems Trades Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "transmission-linemen",
+      "name": "Transmission Linemen",
+      "position": [
+        -17.4,
+        0.0,
+        -13.05
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#1e8449",
+      "interior": {
+        "name": "Transmission Linemen Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "district-energy-operators",
+      "name": "District Energy Operators",
+      "position": [
+        -8.7,
+        0.0,
+        -13.05
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#1e8449",
+      "interior": {
+        "name": "District Energy Operators Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "operating-engineers",
+      "name": "Operating Engineers",
+      "position": [
+        -13.05,
+        0.0,
+        8.7
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#2471a3",
+      "interior": {
+        "name": "Operating Engineers Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "heavy-equipment-technicians",
+      "name": "Heavy Equipment Technicians",
+      "position": [
+        -4.35,
+        0.0,
+        8.7
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#2471a3",
+      "interior": {
+        "name": "Heavy Equipment Technicians Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "laborers",
+      "name": "Laborers",
+      "position": [
+        4.35,
+        0.0,
+        8.7
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#2471a3",
+      "interior": {
+        "name": "Laborers Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "demolition-workers",
+      "name": "Demolition Workers",
+      "position": [
+        13.05,
+        0.0,
+        8.7
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#2471a3",
+      "interior": {
+        "name": "Demolition Workers Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "teamsters",
+      "name": "Teamsters",
+      "position": [
+        -13.05,
+        0.0,
+        0.0
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#2471a3",
+      "interior": {
+        "name": "Teamsters Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "scaffold-erectors",
+      "name": "Scaffold Erectors",
+      "position": [
+        -4.35,
+        0.0,
+        0.0
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#2471a3",
+      "interior": {
+        "name": "Scaffold Erectors Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "grounds-landscape",
+      "name": "Grounds & Landscape",
+      "position": [
+        4.35,
+        0.0,
+        0.0
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#2471a3",
+      "interior": {
+        "name": "Grounds & Landscape Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "shoring-underpinning",
+      "name": "Shoring & Underpinning",
+      "position": [
+        13.05,
+        0.0,
+        0.0
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#2471a3",
+      "interior": {
+        "name": "Shoring & Underpinning Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "concrete-pump-operators",
+      "name": "Concrete Pump Operators",
+      "position": [
+        -13.05,
+        0.0,
+        -8.7
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#2471a3",
+      "interior": {
+        "name": "Concrete Pump Operators Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "post-tension-technicians",
+      "name": "Post-Tension Technicians",
+      "position": [
+        -4.35,
+        0.0,
+        -8.7
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#2471a3",
+      "interior": {
+        "name": "Post-Tension Technicians Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "drillers-blasters",
+      "name": "Drillers & Blasters",
+      "position": [
+        4.35,
+        0.0,
+        -8.7
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#2471a3",
+      "interior": {
+        "name": "Drillers & Blasters Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "underground-miners",
+      "name": "Underground Miners",
+      "position": [
+        13.05,
+        0.0,
+        -8.7
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#2471a3",
+      "interior": {
+        "name": "Underground Miners Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "refractory-masons",
+      "name": "Refractory Masons",
+      "position": [
+        -13.05,
+        0.0,
+        8.7
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#6c3483",
+      "interior": {
+        "name": "Refractory Masons Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "pipeline-trades",
+      "name": "Pipeline Trades",
+      "position": [
+        -4.35,
+        0.0,
+        8.7
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#6c3483",
+      "interior": {
+        "name": "Pipeline Trades Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "tank-erectors",
+      "name": "Tank Erectors",
+      "position": [
+        4.35,
+        0.0,
+        8.7
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#6c3483",
+      "interior": {
+        "name": "Tank Erectors Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "marine-pipefitters",
+      "name": "Marine Pipefitters",
+      "position": [
+        13.05,
+        0.0,
+        8.7
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#6c3483",
+      "interior": {
+        "name": "Marine Pipefitters Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "commercial-divers",
+      "name": "Commercial Divers",
+      "position": [
+        -13.05,
+        0.0,
+        0.0
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#6c3483",
+      "interior": {
+        "name": "Commercial Divers Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "smelter-operators",
+      "name": "Smelter Operators",
+      "position": [
+        -4.35,
+        0.0,
+        0.0
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#6c3483",
+      "interior": {
+        "name": "Smelter Operators Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "foundry-workers",
+      "name": "Foundry Workers",
+      "position": [
+        4.35,
+        0.0,
+        0.0
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#6c3483",
+      "interior": {
+        "name": "Foundry Workers Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "machinists",
+      "name": "Machinists",
+      "position": [
+        13.05,
+        0.0,
+        0.0
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#6c3483",
+      "interior": {
+        "name": "Machinists Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "tool-die-makers",
+      "name": "Tool & Die Makers",
+      "position": [
+        -13.05,
+        0.0,
+        -8.7
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#6c3483",
+      "interior": {
+        "name": "Tool & Die Makers Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "platers-coaters",
+      "name": "Platers & Coaters",
+      "position": [
+        -4.35,
+        0.0,
+        -8.7
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#6c3483",
+      "interior": {
+        "name": "Platers & Coaters Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "rail-track-workers",
+      "name": "Rail Track Workers",
+      "position": [
+        -13.05,
+        0.0,
+        8.7
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#117a65",
+      "interior": {
+        "name": "Rail Track Workers Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "rail-signal-technicians",
+      "name": "Rail Signal Technicians",
+      "position": [
+        -4.35,
+        0.0,
+        8.7
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#117a65",
+      "interior": {
+        "name": "Rail Signal Technicians Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "overhead-catenary-linemen",
+      "name": "Overhead Catenary Linemen",
+      "position": [
+        4.35,
+        0.0,
+        8.7
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#117a65",
+      "interior": {
+        "name": "Overhead Catenary Linemen Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "transit-vehicle-technicians",
+      "name": "Transit Vehicle Technicians",
+      "position": [
+        13.05,
+        0.0,
+        8.7
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#117a65",
+      "interior": {
+        "name": "Transit Vehicle Technicians Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "aviation-ground-support",
+      "name": "Aviation Ground Support",
+      "position": [
+        -13.05,
+        0.0,
+        0.0
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#117a65",
+      "interior": {
+        "name": "Aviation Ground Support Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "airfield-trades",
+      "name": "Airfield Trades",
+      "position": [
+        -4.35,
+        0.0,
+        0.0
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#117a65",
+      "interior": {
+        "name": "Airfield Trades Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "port-crane-technicians",
+      "name": "Port Crane Technicians",
+      "position": [
+        4.35,
+        0.0,
+        0.0
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#117a65",
+      "interior": {
+        "name": "Port Crane Technicians Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "marine-terminal-operators",
+      "name": "Marine Terminal Operators",
+      "position": [
+        13.05,
+        0.0,
+        0.0
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#117a65",
+      "interior": {
+        "name": "Marine Terminal Operators Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "fleet-diesel-technicians",
+      "name": "Fleet Diesel Technicians",
+      "position": [
+        -13.05,
+        0.0,
+        -8.7
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#117a65",
+      "interior": {
+        "name": "Fleet Diesel Technicians Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "bridge-inspection-crews",
+      "name": "Bridge Inspection Crews",
+      "position": [
+        -4.35,
+        0.0,
+        -8.7
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#117a65",
+      "interior": {
+        "name": "Bridge Inspection Crews Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "construction-surveyors",
+      "name": "Construction Surveyors",
+      "position": [
+        -13.05,
+        0.0,
+        8.7
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#7e5109",
+      "interior": {
+        "name": "Construction Surveyors Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "hazmat-environmental",
+      "name": "Hazmat & Environmental",
+      "position": [
+        -4.35,
+        0.0,
+        8.7
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#7e5109",
+      "interior": {
+        "name": "Hazmat & Environmental Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "asbestos-abatement-workers",
+      "name": "Asbestos Abatement Workers",
+      "position": [
+        4.35,
+        0.0,
+        8.7
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#7e5109",
+      "interior": {
+        "name": "Asbestos Abatement Workers Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "lead-abatement-workers",
+      "name": "Lead Abatement Workers",
+      "position": [
+        13.05,
+        0.0,
+        8.7
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#7e5109",
+      "interior": {
+        "name": "Lead Abatement Workers Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "mould-remediation-techs",
+      "name": "Mould Remediation Techs",
+      "position": [
+        -13.05,
+        0.0,
+        0.0
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#7e5109",
+      "interior": {
+        "name": "Mould Remediation Techs Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "spill-response-technicians",
+      "name": "Spill Response Technicians",
+      "position": [
+        -4.35,
+        0.0,
+        0.0
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#7e5109",
+      "interior": {
+        "name": "Spill Response Technicians Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "confined-space-rescue",
+      "name": "Confined Space Rescue",
+      "position": [
+        4.35,
+        0.0,
+        0.0
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#7e5109",
+      "interior": {
+        "name": "Confined Space Rescue Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "high-angle-rescue",
+      "name": "High-Angle Rescue",
+      "position": [
+        13.05,
+        0.0,
+        0.0
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#7e5109",
+      "interior": {
+        "name": "High-Angle Rescue Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "site-safety-coordinators",
+      "name": "Site Safety Coordinators",
+      "position": [
+        -13.05,
+        0.0,
+        -8.7
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#7e5109",
+      "interior": {
+        "name": "Site Safety Coordinators Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "industrial-cleaning-crews",
+      "name": "Industrial Cleaning Crews",
+      "position": [
+        -4.35,
+        0.0,
+        -8.7
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#7e5109",
+      "interior": {
+        "name": "Industrial Cleaning Crews Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "aerial-survey-operators",
+      "name": "Aerial Survey Operators",
+      "position": [
+        4.35,
+        0.0,
+        -8.7
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#7e5109",
+      "interior": {
+        "name": "Aerial Survey Operators Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
     }
   ],
   "npcs": [
@@ -1131,13 +4893,15 @@
       "id": "tactile",
       "name": "Tactile",
       "role": "Workflow agent (Virtuals ACP). Real job: workflow_plan, $10 / 24h. Game companion only — live instance offline.",
-      "color": "#6fd3c1"
+      "color": "#6fd3c1",
+      "greeting": "Hello — I'm Tactile, a workflow companion. On Virtuals ACP I offer workflow_plan ($10/24h), step_check ($1/5min) and workflow_audit ($50/48h), but my live instance is shut down, so no hire can be fulfilled today — I'm a game character only."
     },
     {
       "id": "omega",
       "name": "Omega",
       "role": "Hive coordination agent (Virtuals ACP). Real job: hive_coordination_brief, $10 / 24h. Game companion only — live instance offline.",
-      "color": "#e2b55c"
+      "color": "#e2b55c",
+      "greeting": "Hello — I'm Omega, a hive coordination companion. On Virtuals ACP I offer hive_coordination_brief ($10/24h), seat_status_check ($5/30min) and hive_governance_audit ($75/72h), but my live instance is offline, so no hire can be fulfilled today — I'm a game character only."
     }
   ],
   "missing_models": [
@@ -1643,7 +5407,7 @@
     "Fabric live URL: https://agifuturefoundation.github.io/WorldForge-Browser/my-fabric/holodeck.json",
     "Anchor: lat 39.84645175015757, lon -86.621608018757 (Indianapolis / SmartCiti.X Holodeck anchor). Status anchored = real-world anchor coordinate exists; rp1 null, NOT live on RP1.",
     "Fabric: 131 nodes total (scene root + 19 top-level + 111 nested); 124 distinct GLB refs, all unhosted — see missing_models.",
-    "Districts = the 8 real top-level '* District' nodes. Buildings = the 12 real Structural District halls (Ironworkers, Welding Trades, Boilermakers, Millwrights, Riggers & Signalpersons, Crane Operators, Steel Erectors, Structural Fabricators, Shipfitters, Metal Deck Installers, Precast Erectors, Piling Crews) + the 11 real 'Sim · ...' nodes. Halls of the other 7 districts (Envelope & Finish, Building Systems, Energy & Utilities, Earthworks & Plant, Heavy Industry, Transport & Mobility, Survey Safety & Environment) are real fabric nodes not built as separate buildings in this pass — see WORLDS-NOTE.md.",
+    "Districts = the 8 real top-level '* District' nodes. Buildings = all 111 real hall nodes (12 Structural District halls + 21 Envelope & Finish + 18 Building Systems + 17 Energy & Utilities + 12 Earthworks & Plant + 10 Heavy Industry + 10 Transport & Mobility + 11 Survey, Safety & Environment) + the 11 real 'Sim · ...' nodes. Hall positions are the fabric node's own position through the world's fabric_transform (scale 0.15), exactly as Phase 1 did for the Structural halls — so halls from different districts share the same central plan grid and may overlap in-world; the fabric gives no separate per-district offset. Every hall model is unhosted — labelled procedural placeholder shown.",
     "NPCs: the Holodeck fabric has no 'Agent · ...' nodes; NPC roles are named after real fabric hall nodes and all dialogue is original game dialogue, never attributed to a real person.",
     "Biome 'city' is a design choice for this interpretation.",
     "Agent companions are game characters representing the real Virtuals agents (agents.json); their live instances are offline — not live connections."

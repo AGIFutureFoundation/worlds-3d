@@ -1270,13 +1270,15 @@
       "id": "tactile",
       "name": "Tactile",
       "role": "Workflow agent (Virtuals ACP). Real job: workflow_plan, $10 / 24h. Game companion only — live instance offline.",
-      "color": "#6fd3c1"
+      "color": "#6fd3c1",
+      "greeting": "Hello — I'm Tactile, a workflow companion. On Virtuals ACP I offer workflow_plan ($10/24h), step_check ($1/5min) and workflow_audit ($50/48h), but my live instance is shut down, so no hire can be fulfilled today — I'm a game character only."
     },
     {
       "id": "omega",
       "name": "Omega",
       "role": "Hive coordination agent (Virtuals ACP). Real job: hive_coordination_brief, $10 / 24h. Game companion only — live instance offline.",
-      "color": "#e2b55c"
+      "color": "#e2b55c",
+      "greeting": "Hello — I'm Omega, a hive coordination companion. On Virtuals ACP I offer hive_coordination_brief ($10/24h), seat_status_check ($5/30min) and hive_governance_audit ($75/72h), but my live instance is offline, so no hire can be fulfilled today — I'm a game character only."
     }
   ],
   "missing_models": [

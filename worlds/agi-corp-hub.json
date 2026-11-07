@@ -477,13 +477,15 @@
       "id": "omega",
       "name": "Omega",
       "role": "Hive coordination agent (Virtuals ACP). Real job: hive_coordination_brief, $10 / 24h. Game companion only — live instance offline.",
-      "color": "#e2b55c"
+      "color": "#e2b55c",
+      "greeting": "Hello — I'm Omega, a hive coordination companion. On Virtuals ACP I offer hive_coordination_brief ($10/24h), seat_status_check ($5/30min) and hive_governance_audit ($75/72h), but my live instance is offline, so no hire can be fulfilled today — I'm a game character only."
     },
     {
       "id": "wave",
       "name": "WAVE",
       "role": "Bioacoustics agent (Virtuals ACP). Real job: species_identification. Game companion only — live instance offline.",
-      "color": "#b5179e"
+      "color": "#b5179e",
+      "greeting": "Hello — I'm WAVE, a bioacoustics companion. On Virtuals ACP I offer species_identification ($5/30min), sound_clip_id ($1/5min) and expedition_sound_map ($100/72h), but my live instance is shut down and hosting payment is required before redeploy, so no hire can be fulfilled today — I'm a game character only."
     }
   ],
   "missing_models": [],

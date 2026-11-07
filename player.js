@@ -71,7 +71,8 @@ function fillInfo(world) {
     + (world.quests || []).length + ' quests · '
     + (world.collectibles || []).length + ' collectibles</p>'
     + '<p>' + esc(missingNote) + '</p>'
-    + (companions ? '<h3>Agent companions</h3><ul>' + companions + '</ul>' : '')
+    + (companions ? '<h3>Agent companions</h3><ul>' + companions + '</ul>'
+    + '<p class="note">Meet the real agents: <a href="https://app.virtuals.io/acp" target="_blank" rel="noopener">Virtuals ACP marketplace ↗</a> · <a href="https://fellowship-chat.pages.dev/#agents" target="_blank" rel="noopener">Worlds Hub Agents ↗</a>. All 5 are listed but offline — no hire can be fulfilled today.</p>' : '')
     + (sources ? '<h3>Sources</h3><ul class="sources">' + sources + '</ul>' : '')
     + '<p class="note">Web 3D interpretation — not RP1, not footage. Companions are game characters representing the real Virtuals agents; their live instances are offline.</p>';
 }
@@ -104,6 +105,15 @@ function init() {
       panel.classList.toggle('open');
       toggle.textContent = panel.classList.contains('open') ? '✕ Close info' : 'ⓘ World info';
     });
+    // Desktop starts with the panel open (the sidebar is part of the layout);
+    // mobile starts closed (it slides over the scene). The toggle then works
+    // the same way on both: .open means visible. (Playtest 2026-11-06: the
+    // button label flipped but the panel never hid on desktop, because .open
+    // only had a rule inside the mobile media query.)
+    if (window.matchMedia && !window.matchMedia('(max-width: 760px)').matches) {
+      panel.classList.add('open');
+      toggle.textContent = '✕ Close info';
+    }
   }
 }
 

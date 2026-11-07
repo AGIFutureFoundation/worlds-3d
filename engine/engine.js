@@ -288,12 +288,31 @@ export function mountWorld(container, worldDef, options = {}) {
 
   function applyWeather(preset) {
     state.weather = preset;
-    const isRain = preset === 'rain', isCloudy = preset === 'cloudy' || isRain, isDusk = preset === 'dusk';
+    const isRain = preset === 'rain';
+    const isCloudy = preset === 'cloudy' || isRain;
+    const isDusk = preset === 'dusk';
+    const isIndoor = preset === 'indoor';
+    const isMist = preset === 'mist';
+    const isGolden = preset === 'golden-hour';
+    const isBreeze = preset === 'breeze';
     rain.visible = isRain;
-    clouds.visible = isCloudy;
-    scene.fog = (isRain || isCloudy) ? new THREE.Fog(0x9aa8b5, 60, 320) : (isDusk ? new THREE.Fog(0x6b4a5a, 80, 420) : null);
-    if (isDusk) { applyTimeOfDay(18.4); } else { applyTimeOfDay(state.hour); }
-    sunLight.intensity *= isRain ? 0.45 : (isCloudy ? 0.7 : 1);
+    clouds.visible = isCloudy || isBreeze;
+    if (isMist) scene.fog = new THREE.Fog(0xa8b4bd, 25, 190);
+    else if (isRain || isCloudy) scene.fog = new THREE.Fog(0x9aa8b5, 60, 320);
+    else if (isDusk || isGolden) scene.fog = new THREE.Fog(0x6b4a5a, 80, 420);
+    else scene.fog = null;
+    if (isDusk) { applyTimeOfDay(18.4); } else if (isGolden) { applyTimeOfDay(17.6); } else { applyTimeOfDay(state.hour); }
+    if (isIndoor) {
+      // warm steady interior light: dim the sky dome, hide sun/moon/stars, raise ambient
+      skyUniforms.topColor.value.multiplyScalar(0.45);
+      skyUniforms.bottomColor.value.multiplyScalar(0.6);
+      sun.visible = false; moon.visible = false; stars.material.opacity = 0;
+      sunLight.intensity = 1.5; sunLight.color.setHex(0xffd9a0);
+      ambient.intensity = 0.55;
+    } else {
+      ambient.intensity = 0.25;
+      sunLight.intensity *= isRain ? 0.45 : (isCloudy ? 0.7 : (isMist ? 0.55 : (isGolden ? 0.9 : 1)));
+    }
     hud.querySelectorAll('.w3d-weather button').forEach((b) =>
       b.classList.toggle('active', b.dataset.weather === preset));
   }
@@ -773,7 +792,10 @@ export function mountWorld(container, worldDef, options = {}) {
       const d = Math.hypot(comp.group.position.x - avatarPos.x, comp.group.position.z - avatarPos.z);
       if (!comp.greeted && d < 6) {
         comp.greeted = true; state.companionGreeted = true;
-        toast(`${comp.def.name} (${comp.def.role || 'companion'}): Hello, traveller — I can guide you around this world.`);
+        const line = comp.def.greeting
+          ? `${comp.def.name}: ${comp.def.greeting}`
+          : `${comp.def.name} (${comp.def.role || 'companion'}): Hello, traveller — I can guide you around this world.`;
+        toast(line);
       }
     }
     // compass strip
@@ -813,7 +835,7 @@ export function mountWorld(container, worldDef, options = {}) {
       window.removeEventListener('resize', onResize);
       renderer.dispose(); renderer.domElement.remove(); hud.remove();
     },
-    setWeather(preset) { if (['clear', 'cloudy', 'rain', 'dusk'].includes(preset)) applyWeather(preset); },
+    setWeather(preset) { if (['clear', 'cloudy', 'rain', 'dusk', 'indoor', 'mist', 'golden-hour', 'breeze'].includes(preset)) applyWeather(preset); },
     setTimeOfDay(hour) { applyTimeOfDay(hour); },
     teleport(pos) {
       if (!Array.isArray(pos) || pos.length < 3) return;

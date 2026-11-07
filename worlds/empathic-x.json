@@ -473,6 +473,51 @@
         "Bring a real moment from your week and we will work it together."
       ],
       "quest": "q-repair-circle"
+    },
+    {
+      "id": "host-advisor",
+      "name": "Host Advisor",
+      "role": "Advisor · Host Advisor",
+      "position": [
+        6.75,
+        0.0,
+        -33.0
+      ],
+      "dialogue": [
+        "Welcome. I keep the doors open and the stewards informed.",
+        "If you need a human decision, the Steward Council is where it lands."
+      ],
+      "quest": "q-host-welcome"
+    },
+    {
+      "id": "steward-liaison",
+      "name": "Steward Liaison",
+      "role": "Advisor · Steward Liaison",
+      "position": [
+        24.99,
+        0.45,
+        -12.0
+      ],
+      "dialogue": [
+        "I carry messages between this world and the Steward Council — I never decide for them.",
+        "The steward seats are held by humans. My job is to make sure their words arrive intact."
+      ],
+      "quest": "q-steward-liaison"
+    },
+    {
+      "id": "alignment-advisor",
+      "name": "Alignment Advisor",
+      "role": "Advisor · Alignment Advisor",
+      "position": [
+        -6.75,
+        0.0,
+        -33.0
+      ],
+      "dialogue": [
+        "I check plans against the alignment gate before they go anywhere.",
+        "If a plan cannot pass the gate in public, it does not pass at all."
+      ],
+      "quest": "q-alignment-check"
     }
   ],
   "quests": [
@@ -544,6 +589,75 @@
         }
       ],
       "reward": "Room Reader's Mark"
+    },
+    {
+      "id": "q-host-welcome",
+      "title": "Host's Welcome",
+      "description": "Meet the Host Advisor and check the alignment gate.",
+      "steps": [
+        {
+          "text": "Talk to the Host Advisor",
+          "target": "host-advisor",
+          "kind": "npc"
+        },
+        {
+          "text": "Collect the host spark by the gate",
+          "target": "spark-host",
+          "kind": "collectible"
+        },
+        {
+          "text": "Visit the Alignment Evaluation Gate",
+          "target": "PBC · Alignment Evaluation Gate",
+          "kind": "place"
+        }
+      ],
+      "reward": "Host's Welcome Badge"
+    },
+    {
+      "id": "q-steward-liaison",
+      "title": "Steward Liaison",
+      "description": "Carry a message to the Steward Council with the liaison.",
+      "steps": [
+        {
+          "text": "Talk to the Steward Liaison",
+          "target": "steward-liaison",
+          "kind": "npc"
+        },
+        {
+          "text": "Collect the liaison data at the Steward Council",
+          "target": "data-liaison",
+          "kind": "collectible"
+        },
+        {
+          "text": "Visit the Steward Council",
+          "target": "Zone · Steward Council",
+          "kind": "place"
+        }
+      ],
+      "reward": "Liaison's Note (game item)"
+    },
+    {
+      "id": "q-alignment-check",
+      "title": "Alignment Check",
+      "description": "Put a plan through the alignment check with the advisor.",
+      "steps": [
+        {
+          "text": "Talk to the Alignment Advisor",
+          "target": "alignment-advisor",
+          "kind": "npc"
+        },
+        {
+          "text": "Collect the alignment spark by the gate",
+          "target": "spark-alignment",
+          "kind": "collectible"
+        },
+        {
+          "text": "Visit the Alignment Evaluation Gate",
+          "target": "PBC · Alignment Evaluation Gate",
+          "kind": "place"
+        }
+      ],
+      "reward": "Alignment Check Badge"
     }
   ],
   "collectibles": [
@@ -616,6 +730,36 @@
         -24.0
       ],
       "kind": "spark"
+    },
+    {
+      "id": "spark-host",
+      "name": "Host Spark",
+      "position": [
+        8.75,
+        1,
+        -33.0
+      ],
+      "kind": "spark"
+    },
+    {
+      "id": "data-liaison",
+      "name": "Liaison Data",
+      "position": [
+        17.79,
+        1.0,
+        -12.0
+      ],
+      "kind": "data"
+    },
+    {
+      "id": "spark-alignment",
+      "name": "Alignment Spark",
+      "position": [
+        -8.75,
+        1,
+        -33.0
+      ],
+      "kind": "spark"
     }
   ],
   "agent_companions": [
@@ -623,13 +767,15 @@
       "id": "omega",
       "name": "Omega",
       "role": "Hive coordination agent (Virtuals ACP). Real job: hive_coordination_brief, $10 / 24h. Game companion only — live instance offline.",
-      "color": "#e2b55c"
+      "color": "#e2b55c",
+      "greeting": "Hello — I'm Omega, a hive coordination companion. On Virtuals ACP I offer hive_coordination_brief ($10/24h), seat_status_check ($5/30min) and hive_governance_audit ($75/72h), but my live instance is offline, so no hire can be fulfilled today — I'm a game character only."
     },
     {
       "id": "tactile",
       "name": "Tactile",
       "role": "Workflow agent (Virtuals ACP). Real job: workflow_plan, $10 / 24h. Game companion only — live instance offline.",
-      "color": "#6fd3c1"
+      "color": "#6fd3c1",
+      "greeting": "Hello — I'm Tactile, a workflow companion. On Virtuals ACP I offer workflow_plan ($10/24h), step_check ($1/5min) and workflow_audit ($50/48h), but my live instance is shut down, so no hire can be fulfilled today — I'm a game character only."
     }
   ],
   "missing_models": [
@@ -687,7 +833,7 @@
     "Fabric live URL: https://agifuturefoundation.github.io/WorldForge-Browser/my-fabric/worlds/empathic-x/world.json",
     "Anchor: lat 47.43990000744796, lon -179.34952851914045. Status anchored = real-world anchor coordinate exists; rp1 null, NOT live on RP1.",
     "Fabric: 34 nodes total (scene root + 20 top-level + nested Agent/Swarm children); 12 distinct GLB refs, all unhosted — see missing_models.",
-    "Districts/buildings = the real 'Zone · ...' nodes. NPCs = the real 'Agent · ...' nodes (nested under their zones; NPC position = zone position + the agent node's local offset) plus the real 'Advisor · Host Advisor' node. All NPC dialogue is original game dialogue, never attributed to a real person.",
+    "Districts/buildings = the real 'Zone · ...' nodes. NPCs = the real 'Agent · ...' nodes (nested under their zones; NPC position = zone position + the agent node's local offset) plus all three real 'Advisor · ...' nodes (Host Advisor, Steward Liaison, Alignment Advisor; top-level fabric positions through the world transform). The 'Steward seat 1–3 · human' nodes are human seats, not game characters, and are not NPCs. All NPC dialogue is original game dialogue, never attributed to a real person.",
     "Biome 'grove' is a design choice for this interpretation.",
     "Agent companions are game characters representing the real Virtuals agents (agents.json); their live instances are offline — not live connections.",
     "Zones (6): Self-Reader Grove, Other-Reader Commons, Repairer's Hall, Room-Reader Plaza, Practitioner Workshop, Steward Council."
