@@ -5,6 +5,17 @@
   'use strict';
 
   var PAGE_SIZE = 24;
+  var WEATHER_LABELS = {
+    'clear': 'Clear', 'cloudy': 'Cloudy', 'rain': 'Rain', 'dusk': 'Dusk',
+    'indoor': 'Indoor', 'mist': 'Mist', 'golden-hour': 'Golden hour', 'breeze': 'Breeze'
+  };
+
+  function weatherLabel(world) {
+    var preset = world.weather && world.weather.preset;
+    var label = WEATHER_LABELS[preset] || 'Clear';
+    var cycle = world.weather && world.weather.dayCycle === false ? ' · fixed time' : ' · day cycle';
+    return 'Weather: ' + label + cycle;
+  }
   var FLAGSHIP_ORDER = [
     'agi-corp-hub',
     'smartciti-holodeck',
@@ -45,11 +56,19 @@
       var missingNote = missing === 0
         ? 'All models local — the only world whose 3D models exist on disk.'
         : missing + ' fabric model refs unhosted — shown as labelled placeholders, never faked.';
+      var firstQuest = (w.quests || [])[0];
+      var companions = (w.agent_companions || []).map(function (c) { return c.name; });
       html += '<article class="card flagship">'
         + '<h3>' + esc(w.name) + '</h3>'
         + '<p class="series">' + esc(w.series || '') + ' · ' + esc(w.biome || '') + '</p>'
         + '<p>' + statusBadge(w) + '</p>'
         + '<p class="coords">' + esc(coordsText(w)) + '</p>'
+        + '<p class="weather">' + esc(weatherLabel(w)) + '</p>'
+        + (firstQuest
+          ? '<p class="first-quest">Start with: <strong>' + esc(firstQuest.title) + '</strong> — '
+            + firstQuest.steps.length + ' steps</p>'
+          : '')
+        + (companions.length ? '<p class="companions">Companions: ' + esc(companions.join(', ')) + '</p>' : '')
         + '<p class="counts">' + (w.districts || []).length + ' districts · '
         + (w.buildings || []).length + ' buildings · '
         + (w.npcs || []).length + ' NPCs · '
@@ -105,11 +124,26 @@
     });
     if (!slice.length) html = '<p class="empty">No worlds match those filters. <button id="clear-filters" type="button">Clear filters</button></p>';
     host.innerHTML = html;
-    if (countEl) countEl.textContent = filtered.length + ' of 544 worlds · page ' + state.page + ' of ' + pages;
+    if (countEl) {
+      var bits = [filtered.length + ' of 544 worlds', 'page ' + state.page + ' of ' + pages];
+      if (state.q) bits.push('search “' + state.q + '”');
+      if (state.biome) bits.push('biome ' + state.biome);
+      if (state.group) bits.push('group ' + state.group);
+      countEl.textContent = bits.join(' · ');
+    }
     if (pager) {
+      // Windowed page numbers: 1 … p-1 p p+1 … last (prev/next kept).
       var p = '';
       if (state.page > 1) p += '<button data-page="' + (state.page - 1) + '" type="button">← Previous</button>';
-      p += '<span> Page ' + state.page + ' / ' + pages + ' </span>';
+      var nums = [];
+      for (var i = 1; i <= pages; i++) {
+        if (i === 1 || i === pages || Math.abs(i - state.page) <= 1) nums.push(i);
+        else if (nums[nums.length - 1] !== '…') nums.push('…');
+      }
+      nums.forEach(function (n) {
+        if (n === '…') { p += '<span aria-hidden="true"> … </span>'; return; }
+        p += '<button data-page="' + n + '" type="button"' + (n === state.page ? ' aria-current="page"' : '') + '>' + n + '</button>';
+      });
       if (state.page < pages) p += '<button data-page="' + (state.page + 1) + '" type="button">Next →</button>';
       pager.innerHTML = p;
       pager.querySelectorAll('button[data-page]').forEach(function (b) {

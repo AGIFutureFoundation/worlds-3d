@@ -78,7 +78,9 @@ main.wrap h2 { font-size: 1.5rem; line-height: 1.25; margin: 28px 0 12px; }
 .card .coords { font-size: .92rem; color: var(--ink-2); }
 .card .counts { font-weight: 600; font-size: .95rem; }
 .card .models { font-size: .92rem; color: var(--ink-2); }
-.card .status { font-size: .92rem; color: var(--ink-2); }
+.card .weather, .card .first-quest, .card .companions { font-size: .92rem; color: var(--ink-2); }
+.card .first-quest strong { color: var(--ink); }
+#pagination button[aria-current="page"] { background: var(--gold-bright); color: #241a05; font-weight: 700; border-color: var(--gold-bright); }
 .card .subdomain { font-size: .85rem; color: var(--ink-2); word-break: break-all; }
 .card:hover { border-color: var(--teal-bright); }
 .flagship { border-top: 4px solid var(--gold-bright); }
@@ -139,9 +141,12 @@ body.player { background: #0a0f1c; color: #e8e4d8; height: 100dvh; display: flex
 .player-main { flex: 1 1 auto; display: flex; min-height: 0; }
 #app { flex: 1 1 auto; min-width: 0; position: relative; background: #0a0f1c; }
 #info-toggle {
-  position: absolute; top: 10px; right: 10px; z-index: 30;
+  /* In-flow flex item in the player bar (was position:absolute against the
+     viewport, which overlaid the world title on narrow screens — at 390px
+     it could cover the h1/tag. In-flow it wraps with the bar instead.) */
   font: inherit; padding: 10px 14px; border-radius: 8px; border: none;
   background: var(--gold-bright); color: #241a05; font-weight: 700; cursor: pointer; min-height: 44px;
+  flex: 0 0 auto;
 }
 #info-panel {
   flex: 0 0 320px; overflow-y: auto; background: #101a2e; color: #e8e4d8;

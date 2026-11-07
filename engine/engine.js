@@ -69,17 +69,41 @@ function canvasTexture(w, h, draw) {
 }
 function makeLabelSprite(text, opts = {}) {
   const { font = 44, fg = '#ffffff', bg = 'rgba(10,16,32,0.82)', pad = 18 } = opts;
-  const tex = canvasTexture(512, 128, (ctx, w, h) => {
-    ctx.fillStyle = bg; ctx.beginPath(); ctx.roundRect(6, 14, w - 12, h - 28, 18); ctx.fill();
-    ctx.fillStyle = fg; ctx.font = `bold ${font}px system-ui, sans-serif`;
-    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-    ctx.fillText(text.length > 26 ? text.slice(0, 25) + '…' : text, w / 2, h / 2);
-  });
+  // One canvas texture per distinct label text/style, shared by every
+  // sprite that shows it: the Holodeck repeats "EXIT → outside" 122 times
+  // (one per building interior), so an uncached build rasterised 122
+  // identical 512x128 canvases. Sharing the texture is identical output —
+  // scale lives on the Sprite, not the material.
+  const key = text + '|' + font + '|' + fg + '|' + bg + '|' + pad;
+  let tex = labelTextureCache.get(key);
+  if (!tex) {
+    tex = canvasTexture(512, 128, (ctx, w, h) => {
+      ctx.fillStyle = bg; ctx.beginPath(); ctx.roundRect(6, 14, w - 12, h - 28, 18); ctx.fill();
+      ctx.fillStyle = fg; ctx.font = `bold ${font}px system-ui, sans-serif`;
+      ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+      ctx.fillText(text.length > 26 ? text.slice(0, 25) + '…' : text, w / 2, h / 2);
+    });
+    labelTextureCache.set(key, tex);
+  }
   const mat = new THREE.SpriteMaterial({ map: tex, transparent: true, depthWrite: false });
   const s = new THREE.Sprite(mat); s.scale.set(10, 2.5, 1); return s;
 }
+const labelTextureCache = new Map();
+// Reused sky colours — applyTimeOfDay runs every frame, so these live
+// here (module scope) instead of being allocated 8x per frame.
+const SKY_DAY_TOP = new THREE.Color(0x2f6fd0), SKY_DAY_BOT = new THREE.Color(0xcfe8f5);
+const SKY_NIGHT_TOP = new THREE.Color(0x050914), SKY_NIGHT_BOT = new THREE.Color(0x0e1a2e);
+const SKY_DUSK_TOP = new THREE.Color(0x5a3a6b), SKY_DUSK_BOT = new THREE.Color(0xff9a5a);
+const SKY_HORIZON_DAY = new THREE.Color(0xdfeef8), SKY_HORIZON_DUSK = new THREE.Color(0xff9a5a);
+const SKY_HORIZON_NIGHT = new THREE.Color(0x1a2f4a);
 function buildingTexture(baseColor) {
-  return canvasTexture(256, 256, (ctx, w, h) => {
+  // One canvas per distinct colour, shared by every building that uses it:
+  // the Holodeck builds 122 buildings from ~8 district colours, so an
+  // uncached build would rasterise 122 identical 256x256 canvases at mount.
+  // Output is identical — same colour always produced the same canvas.
+  let tex = buildingTextureCache.get(baseColor);
+  if (tex) return tex;
+  tex = canvasTexture(256, 256, (ctx, w, h) => {
     ctx.fillStyle = baseColor; ctx.fillRect(0, 0, w, h);
     ctx.fillStyle = 'rgba(255,255,255,0.08)'; ctx.fillRect(0, 0, w, 10);
     for (let row = 0; row < 4; row++) for (let col = 0; col < 5; col++) {
@@ -90,7 +114,10 @@ function buildingTexture(baseColor) {
     }
     ctx.fillStyle = '#3a2a18'; ctx.fillRect(w / 2 - 18, h - 52, 36, 52); // door
   });
+  buildingTextureCache.set(baseColor, tex);
+  return tex;
 }
+const buildingTextureCache = new Map();
 function waterTexture() {
   return canvasTexture(128, 128, (ctx, w, h) => {
     ctx.fillStyle = '#1d6f8e'; ctx.fillRect(0, 0, w, h);
@@ -144,6 +171,8 @@ export function mountWorld(container, worldDef, options = {}) {
       <div class="w3d-weather" role="group" aria-label="Weather">
         <button data-weather="clear">☀ Clear</button><button data-weather="cloudy">☁ Cloudy</button>
         <button data-weather="rain">🌧 Rain</button><button data-weather="dusk">🌆 Dusk</button>
+        <button data-weather="indoor">🏠 Indoor</button><button data-weather="mist">🌫 Mist</button>
+        <button data-weather="golden-hour">🌅 Golden hour</button><button data-weather="breeze">🍃 Breeze</button>
       </div>
       <label class="w3d-time">🕐 <input type="range" min="0" max="24" step="0.25" value="${state.hour}" aria-label="Time of day"> <span class="w3d-clock"></span></label>
     </div>
@@ -280,9 +309,14 @@ export function mountWorld(container, worldDef, options = {}) {
   }
 
   // ---------- Sky: gradient dome + sun + moon + stars, driven by hour ----------
+  // The dome shader mixes top/bottom colours by height and adds a horizon
+  // band (horizonColor, driven by dusk/night in applyTimeOfDay) so sunsets
+  // and night skies read as a glow at the horizon, not a flat gradient.
   const skyUniforms = {
     topColor: { value: new THREE.Color(0x3a7bd5) },
     bottomColor: { value: new THREE.Color(0xcfe8f5) },
+    horizonColor: { value: new THREE.Color(0xdfeef8) },
+    horizonStrength: { value: 0 },
     offset: { value: 0 }, exponent: { value: 0.7 },
   };
   const sky = new THREE.Mesh(
@@ -290,16 +324,21 @@ export function mountWorld(container, worldDef, options = {}) {
     new THREE.ShaderMaterial({
       uniforms: skyUniforms, side: THREE.BackSide, depthWrite: false, fog: false,
       vertexShader: 'varying vec3 vP; void main(){ vP=position; gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0); }',
-      fragmentShader: `uniform vec3 topColor; uniform vec3 bottomColor; uniform float offset; uniform float exponent;
+      fragmentShader: `uniform vec3 topColor; uniform vec3 bottomColor; uniform vec3 horizonColor; uniform float horizonStrength; uniform float offset; uniform float exponent;
         varying vec3 vP; void main(){ float h=normalize(vP+vec3(0.0,offset,0.0)).y;
-        gl_FragColor=vec4(mix(bottomColor,topColor,pow(max(h,0.0),exponent)),1.0); }`,
+        vec3 col=mix(bottomColor,topColor,pow(max(h,0.0),exponent));
+        float band=exp(-abs(h)*6.0);
+        col=mix(col,horizonColor,band*horizonStrength);
+        gl_FragColor=vec4(col,1.0); }`,
     }));
   scene.add(sky);
   const sun = new THREE.Mesh(new THREE.CircleGeometry(22, 32),
     new THREE.MeshBasicMaterial({ color: 0xffe9a8, fog: false }));
   const moon = new THREE.Mesh(new THREE.CircleGeometry(14, 32),
     new THREE.MeshBasicMaterial({ color: 0xe8ecf5, fog: false }));
-  scene.add(sun); scene.add(moon);
+  const moonHalo = new THREE.Mesh(new THREE.CircleGeometry(30, 32),
+    new THREE.MeshBasicMaterial({ color: 0xe8ecf5, fog: false, transparent: true, opacity: 0.10 }));
+  scene.add(sun); scene.add(moon); scene.add(moonHalo);
   const starGeo = new THREE.BufferGeometry();
   {
     const n = 700, pos = new Float32Array(n * 3), r = mulberry32(99);
@@ -311,6 +350,19 @@ export function mountWorld(container, worldDef, options = {}) {
   }
   const stars = new THREE.Points(starGeo, new THREE.PointsMaterial({ color: 0xffffff, size: 2.2, sizeAttenuation: false, transparent: true, opacity: 0, fog: false }));
   scene.add(stars);
+  // Second, dimmer star layer (smaller points, lower base opacity) so the
+  // night sky has depth instead of one flat field of identical stars.
+  const starGeo2 = new THREE.BufferGeometry();
+  {
+    const n = 450, pos = new Float32Array(n * 3), r = mulberry32(2024);
+    for (let i = 0; i < n; i++) {
+      const th = r() * Math.PI * 2, ph = Math.acos(r() * 0.9);
+      pos[i * 3] = 860 * Math.sin(ph) * Math.cos(th); pos[i * 3 + 1] = 860 * Math.cos(ph) + 40; pos[i * 3 + 2] = 860 * Math.sin(ph) * Math.sin(th);
+    }
+    starGeo2.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+  }
+  const stars2 = new THREE.Points(starGeo2, new THREE.PointsMaterial({ color: 0xcfe0ff, size: 1.2, sizeAttenuation: false, transparent: true, opacity: 0, fog: false }));
+  scene.add(stars2);
   const sunLight = new THREE.DirectionalLight(0xffffff, 2.2);
   sunLight.castShadow = true;
   sunLight.shadow.mapSize.set(2048, 2048);
@@ -324,26 +376,105 @@ export function mountWorld(container, worldDef, options = {}) {
     const t = state.hour / 24, ang = t * Math.PI * 2 - Math.PI / 2; // 6h sunrise, 18h sunset
     const sunH = Math.sin(ang), dayF = THREE.MathUtils.clamp(sunH * 2 + 0.25, 0, 1);
     const duskF = THREE.MathUtils.clamp(1 - Math.abs(sunH) * 3, 0, 1) * (sunH > -0.15 ? 1 : 0);
+    const nightF = 1 - dayF;
     _v1.set(Math.cos(ang), Math.sin(ang), 0.25).normalize().multiplyScalar(820);
     sun.position.copy(_v1); sun.lookAt(0, 0, 0);
     moon.position.copy(_v1).multiplyScalar(-1); moon.lookAt(0, 0, 0);
-    const dayTop = new THREE.Color(0x2f6fd0), dayBot = new THREE.Color(0xcfe8f5);
-    const nightTop = new THREE.Color(0x050914), nightBot = new THREE.Color(0x0e1a2e);
-    const duskTop = new THREE.Color(0x5a3a6b), duskBot = new THREE.Color(0xff9a5a);
+    moonHalo.position.copy(moon.position); moonHalo.lookAt(0, 0, 0);
+    const dayTop = SKY_DAY_TOP, dayBot = SKY_DAY_BOT;
+    const nightTop = SKY_NIGHT_TOP, nightBot = SKY_NIGHT_BOT;
+    const duskTop = SKY_DUSK_TOP, duskBot = SKY_DUSK_BOT;
     skyUniforms.topColor.value.copy(nightTop).lerp(dayTop, dayF).lerp(duskTop, duskF * 0.6);
     skyUniforms.bottomColor.value.copy(nightBot).lerp(dayBot, dayF).lerp(duskBot, duskF * 0.7);
-    sunLight.intensity = 0.15 + dayF * 2.1;
+    // Horizon glow: warm band at dusk, faint deep-blue band at night.
+    skyUniforms.horizonColor.value.copy(SKY_HORIZON_DAY)
+      .lerp(SKY_HORIZON_DUSK, duskF).lerp(SKY_HORIZON_NIGHT, nightF * 0.6);
+    skyUniforms.horizonStrength.value = duskF * 0.8 + nightF * 0.35;
+    state.dayF = dayF; state.duskF = duskF; state.nightF = nightF;
+    // Weather light/ambient are applied HERE every frame (not once in
+    // applyWeather): the day cycle rewrites sunLight.intensity on every
+    // frame, so a one-shot multiply in applyWeather was overwritten on the
+    // very next frame and rain/clouds/mist never actually dimmed the light.
+    const wc = state.weatherCur;
+    const indoorF = wc ? wc.indoor : 0;
+    sunLight.intensity = (0.15 + dayF * 2.1) * (wc ? wc.light : 1);
     sunLight.color.setHex(duskF > 0.4 ? 0xffb36b : 0xfff3d6);
     sunLight.position.copy(_v1).normalize().multiplyScalar(160);
     sun.material.color.setHex(duskF > 0.4 ? 0xff8a3d : 0xffe9a8);
-    sun.visible = sunH > -0.12; moon.visible = sunH < 0.12;
-    stars.material.opacity = THREE.MathUtils.clamp(0.9 - dayF * 1.4, 0, 0.9);
+    sun.visible = sunH > -0.12 && indoorF < 0.5;
+    moon.visible = sunH < 0.12 && indoorF < 0.5;
+    moonHalo.visible = moon.visible;
+    // Stars: base night opacity (twinkled in the main loop from state.nightF).
+    const starBase = THREE.MathUtils.clamp(0.9 - dayF * 1.4, 0, 0.9) * (1 - indoorF);
+    stars.material.opacity = starBase;
+    stars2.material.opacity = starBase * 0.55;
+    if (indoorF > 0) {
+      // Warm steady interior light: dim the sky dome, raise ambient, warm sun.
+      skyUniforms.topColor.value.multiplyScalar(1 - indoorF * 0.55);
+      skyUniforms.bottomColor.value.multiplyScalar(1 - indoorF * 0.4);
+      sunLight.intensity = sunLight.intensity * (1 - indoorF) + 1.5 * indoorF;
+      sunLight.color.setHex(0xffd9a0);
+      ambient.intensity = 0.25 + (0.55 - 0.25) * indoorF;
+    } else {
+      ambient.intensity = wc ? wc.ambient : 0.25;
+    }
     const slider = $('.w3d-time input');
     if (slider && slider !== document.activeElement) slider.value = String(state.hour);
     const clk = $('.w3d-clock'); if (clk) clk.textContent = fmtHour(state.hour);
   }
 
   // ---------- Weather ----------
+  // Presets are data, not branches: every preset is a target for the same
+  // lerped state (see state.weatherCur), so switching presets cross-fades
+  // fog, light, rain, clouds and wind over ~1 s instead of snapping.
+  // fogFar 1200 / fogNear 400 is effectively "no fog" at this world's
+  // scale (camera far plane 1200), which lets clear/indoor keep a single
+  // persistent THREE.Fog instance instead of toggling scene.fog.
+  const WEATHER_PRESETS = {
+    'clear':      { fog: 0xcfe8f5, fogNear: 400, fogFar: 1200, light: 1, ambient: 0.25, clouds: 0, rain: 0, wind: 0, indoor: 0 },
+    'cloudy':     { fog: 0x9aa8b5, fogNear: 60, fogFar: 320, light: 0.7, ambient: 0.3, clouds: 1, rain: 0, wind: 0.15, indoor: 0 },
+    'rain':       { fog: 0x9aa8b5, fogNear: 60, fogFar: 320, light: 0.45, ambient: 0.32, clouds: 1, rain: 1, wind: 0.5, indoor: 0 },
+    'dusk':       { fog: 0x6b4a5a, fogNear: 80, fogFar: 420, light: 0.8, ambient: 0.28, clouds: 0, rain: 0, wind: 0, indoor: 0 },
+    'indoor':     { fog: 0xcfe8f5, fogNear: 400, fogFar: 1200, light: 1, ambient: 0.55, clouds: 0, rain: 0, wind: 0, indoor: 1 },
+    'mist':       { fog: 0xa8b4bd, fogNear: 25, fogFar: 190, light: 0.55, ambient: 0.34, clouds: 0, rain: 0, wind: 0.05, indoor: 0 },
+    'golden-hour': { fog: 0x6b4a5a, fogNear: 80, fogFar: 420, light: 0.9, ambient: 0.28, clouds: 0, rain: 0, wind: 0.05, indoor: 0 },
+    'breeze':     { fog: 0xcfe8f5, fogNear: 400, fogFar: 1200, light: 1, ambient: 0.25, clouds: 1, rain: 0, wind: 1, indoor: 0 },
+  };
+  function weatherStateFor(preset) {
+    const p = WEATHER_PRESETS[preset] || WEATHER_PRESETS.clear;
+    return {
+      fogColor: new THREE.Color(p.fog), fogNear: p.fogNear, fogFar: p.fogFar,
+      light: p.light, ambient: p.ambient, clouds: p.clouds, rain: p.rain,
+      wind: p.wind, indoor: p.indoor,
+    };
+  }
+  // Current (lerped) and target weather. Initialised to the world's preset
+  // so the first frame is already correct; only later switches cross-fade.
+  state.weatherCur = weatherStateFor(state.weather);
+  state.weatherTarget = weatherStateFor(state.weather);
+  const sceneFog = new THREE.Fog(0xcfe8f5, 400, 1200);
+  scene.fog = sceneFog;
+  function updateWeather(dt) {
+    // Exponential approach: ~63% of the way in 0.6 s, ~95% in ~1.8 s.
+    const k = Math.min(1, dt * 1.7);
+    const cur = state.weatherCur, tgt = state.weatherTarget;
+    cur.fogColor.lerp(tgt.fogColor, k);
+    cur.fogNear += (tgt.fogNear - cur.fogNear) * k;
+    cur.fogFar += (tgt.fogFar - cur.fogFar) * k;
+    cur.light += (tgt.light - cur.light) * k;
+    cur.ambient += (tgt.ambient - cur.ambient) * k;
+    cur.clouds += (tgt.clouds - cur.clouds) * k;
+    cur.rain += (tgt.rain - cur.rain) * k;
+    cur.wind += (tgt.wind - cur.wind) * k;
+    cur.indoor += (tgt.indoor - cur.indoor) * k;
+    sceneFog.color.copy(cur.fogColor);
+    sceneFog.near = cur.fogNear; sceneFog.far = cur.fogFar;
+    rain.material.opacity = 0.85 * cur.rain;
+    rain.visible = cur.rain > 0.02;
+    cloudMat.opacity = 0.85 * cur.clouds;
+    clouds.visible = cur.clouds > 0.02;
+  }
+
   const rainGeo = new THREE.BufferGeometry();
   const RAIN_N = 1400, rainPos = new Float32Array(RAIN_N * 3), rainVel = new Float32Array(RAIN_N);
   {
@@ -354,12 +485,12 @@ export function mountWorld(container, worldDef, options = {}) {
     }
     rainGeo.setAttribute('position', new THREE.BufferAttribute(rainPos, 3));
   }
-  const rain = new THREE.Points(rainGeo, new THREE.PointsMaterial({ color: 0x9fc8e8, size: 0.55, transparent: true, opacity: 0.7 }));
+  const rain = new THREE.Points(rainGeo, new THREE.PointsMaterial({ color: 0x9fc8e8, size: 0.55, transparent: true, opacity: 0 }));
   rain.visible = false; rain.frustumCulled = false; scene.add(rain);
   const clouds = new THREE.Group(); scene.add(clouds);
+  const cloudMat = new THREE.MeshLambertMaterial({ color: 0xffffff, transparent: true, opacity: 0 });
   {
     const r = mulberry32(1234);
-    const cloudMat = new THREE.MeshLambertMaterial({ color: 0xffffff, transparent: true, opacity: 0.85 });
     for (let i = 0; i < 10; i++) {
       const g = new THREE.Group();
       const puffs = 3 + Math.floor(r() * 3);
@@ -374,32 +505,13 @@ export function mountWorld(container, worldDef, options = {}) {
   clouds.visible = false;
 
   function applyWeather(preset) {
+    if (!WEATHER_PRESETS[preset]) preset = 'clear';
     state.weather = preset;
-    const isRain = preset === 'rain';
-    const isCloudy = preset === 'cloudy' || isRain;
-    const isDusk = preset === 'dusk';
-    const isIndoor = preset === 'indoor';
-    const isMist = preset === 'mist';
-    const isGolden = preset === 'golden-hour';
-    const isBreeze = preset === 'breeze';
-    rain.visible = isRain;
-    clouds.visible = isCloudy || isBreeze;
-    if (isMist) scene.fog = new THREE.Fog(0xa8b4bd, 25, 190);
-    else if (isRain || isCloudy) scene.fog = new THREE.Fog(0x9aa8b5, 60, 320);
-    else if (isDusk || isGolden) scene.fog = new THREE.Fog(0x6b4a5a, 80, 420);
-    else scene.fog = null;
-    if (isDusk) { applyTimeOfDay(18.4); } else if (isGolden) { applyTimeOfDay(17.6); } else { applyTimeOfDay(state.hour); }
-    if (isIndoor) {
-      // warm steady interior light: dim the sky dome, hide sun/moon/stars, raise ambient
-      skyUniforms.topColor.value.multiplyScalar(0.45);
-      skyUniforms.bottomColor.value.multiplyScalar(0.6);
-      sun.visible = false; moon.visible = false; stars.material.opacity = 0;
-      sunLight.intensity = 1.5; sunLight.color.setHex(0xffd9a0);
-      ambient.intensity = 0.55;
-    } else {
-      ambient.intensity = 0.25;
-      sunLight.intensity *= isRain ? 0.45 : (isCloudy ? 0.7 : (isMist ? 0.55 : (isGolden ? 0.9 : 1)));
-    }
+    state.weatherTarget = weatherStateFor(preset);
+    // Dusk / golden-hour jump the clock once, on the explicit switch —
+    // the day cycle then carries on from there.
+    if (preset === 'dusk') { state.hour = 18.4; applyTimeOfDay(state.hour); }
+    else if (preset === 'golden-hour') { state.hour = 17.6; applyTimeOfDay(state.hour); }
     hud.querySelectorAll('.w3d-weather button').forEach((b) =>
       b.classList.toggle('active', b.dataset.weather === preset));
   }
@@ -752,6 +864,33 @@ export function mountWorld(container, worldDef, options = {}) {
 
   // ---------- Dialogue + quests ----------
   const questsById = {}; (def.quests || []).forEach((q) => { questsById[q.id] = q; state.questProgress[q.id] = 0; });
+  // Place-step targets: every building/district name maps to a ground
+  // circle (building: centre + half-diagonal, min 6 u; district: plate
+  // radius 18 u). Buildings win on a name clash (zones appear as both a
+  // district plate and a building at the same spot). 'place' quest steps
+  // resolve against these real targets — nothing invented.
+  const placeTargets = [];
+  buildingBounds.forEach((b) => {
+    const w = (b.maxX - b.minX) / 2, dd = (b.maxZ - b.minZ) / 2;
+    placeTargets.push({ name: b.def.name, x: (b.minX + b.maxX) / 2, z: (b.minZ + b.maxZ) / 2, r: Math.max(6, Math.hypot(w, dd)) });
+  });
+  (def.districts || []).forEach((d) => {
+    if (placeTargets.some((p) => p.name === d.name)) return;
+    const [dx, , dz] = d.position || [0, 0, 0];
+    placeTargets.push({ name: d.name, x: dx, z: dz, r: 18 });
+  });
+  function checkPlaceSteps() {
+    if (state.insideBuilding) return;
+    for (const qid of Object.keys(state.questsAccepted)) {
+      if (state.questsComplete[qid]) continue;
+      const q = questsById[qid], step = q.steps[state.questProgress[qid]];
+      if (!step || step.kind !== 'place') continue;
+      const tgt = placeTargets.find((p) => p.name === step.target);
+      if (tgt && Math.hypot(tgt.x - avatarPos.x, tgt.z - avatarPos.z) < tgt.r) {
+        advanceQuestStep('place', step.target);
+      }
+    }
+  }
   let dialogNPC = null, dialogLine = 0;
   function openDialogue(npc) {
     dialogNPC = npc; dialogLine = 0;
@@ -762,6 +901,11 @@ export function mountWorld(container, worldDef, options = {}) {
     qb.hidden = !(qid && questsById[qid] && !state.questsAccepted[qid]);
     qb.textContent = qid && questsById[qid] ? `Accept quest: ${questsById[qid].title}` : 'Accept quest';
     $('.w3d-dialog').hidden = false;
+    // Talking to an NPC completes any accepted quest step that asks for it.
+    // (Before this, 'npc' steps never advanced: advanceQuestStep was only
+    // ever called for 'collectible' and 'position' steps, so no quest whose
+    // first step was "talk to X" — i.e. every quest — could ever complete.)
+    advanceQuestStep('npc', npc.def.id);
   }
   $('.w3d-dialog-next').addEventListener('click', () => {
     if (!dialogNPC) return;
@@ -774,6 +918,9 @@ export function mountWorld(container, worldDef, options = {}) {
     if (!dialogNPC || !dialogNPC.def.quest) return;
     acceptQuest(dialogNPC.def.quest);
     $('.w3d-dialog-quest').hidden = true;
+    // The quest's first step is usually "talk to this NPC" — the player is
+    // already talking to them, so that step completes on accept.
+    advanceQuestStep('npc', dialogNPC.def.id);
   });
   function acceptQuest(qid) {
     const q = questsById[qid]; if (!q || state.questsAccepted[qid]) return;
@@ -812,6 +959,7 @@ export function mountWorld(container, worldDef, options = {}) {
   // ---------- Main loop ----------
   let raf = 0; state.running = true;
   let lazyTimer = 0; // throttle for the lazy building-model scan
+  let lazyScanDone = lazyModels.length === 0; // true once every lazy model has started
   const clockEl = $('.w3d-clock');
   function animate() {
     if (!state.running) return;
@@ -852,20 +1000,43 @@ export function mountWorld(container, worldDef, options = {}) {
     } else applyTimeOfDay(state.hour);
     if (clockEl) clockEl.textContent = fmtHour(state.hour);
 
-    // weather animation
+    // weather animation: cross-fade toward the preset target, then animate.
+    updateWeather(dt);
     if (rain.visible) {
+      // Rain lives in a 120x120x60 box centred on the avatar (wrapped, not
+      // re-randomised) so it never rains at the origin while the player
+      // walks away; wind slants the fall. Drops fall 28–46 u/s, respawn at
+      // 55–60 u, and the box follows the avatar exactly.
       const pos = rainGeo.attributes.position;
+      const windX = state.weatherCur.wind * 14; // u/s of horizontal slant
       for (let i = 0; i < RAIN_N; i++) {
         let y = pos.getY(i) - rainVel[i] * dt;
-        if (y < 0) { y = 55 + Math.random() * 5; pos.setX(i, avatarPos.x + (Math.random() - 0.5) * 120); pos.setZ(i, avatarPos.z + (Math.random() - 0.5) * 120); }
+        let x = pos.getX(i) + windX * dt;
+        if (y < 0) {
+          y = 55 + Math.random() * 5;
+          x = avatarPos.x + (Math.random() - 0.5) * 120;
+          pos.setZ(i, avatarPos.z + (Math.random() - 0.5) * 120);
+        }
+        // Wrap x/z into the box around the avatar (modulo keeps it seamless).
+        const dx = (((x - avatarPos.x + 60) % 120) + 120) % 120 - 60;
+        const dz = (((pos.getZ(i) - avatarPos.z + 60) % 120) + 120) % 120 - 60;
+        pos.setX(i, avatarPos.x + dx); pos.setZ(i, avatarPos.z + dz);
         pos.setY(i, y);
       }
       pos.needsUpdate = true;
     }
     if (clouds.visible) clouds.children.forEach((c) => {
-      c.position.x += c.userData.speed * dt;
+      // Drift speed scales with the preset wind (breeze drifts fastest).
+      c.position.x += c.userData.speed * (1 + state.weatherCur.wind * 2) * dt;
       if (c.position.x > 200) c.position.x = -200;
     });
+    // Star twinkle at night: gentle ±12% breathing on both layers.
+    if (state.nightF > 0.05) {
+      const tw = 1 + Math.sin(t * 1.7) * 0.12;
+      const base = THREE.MathUtils.clamp(0.9 - state.dayF * 1.4, 0, 0.9) * (1 - state.weatherCur.indoor) * tw;
+      stars.material.opacity = base;
+      stars2.material.opacity = base * 0.55;
+    }
     if (water) { waterTex.offset.x = (t * 0.02) % 1; waterTex.offset.y = (t * 0.013) % 1; water.material.opacity = 0.66 + Math.sin(t * 0.8) * 0.06; }
 
     // collectibles: spin + bob, pickup on proximity
@@ -929,9 +1100,19 @@ export function mountWorld(container, worldDef, options = {}) {
       }
     }
 
-    // lazy GLB loading for hosted buildings (throttled: one scan per 0.5 s)
+    // lazy GLB loading for hosted buildings + place-step quest checks
+    // (throttled: one scan per 0.5 s — neither needs per-frame precision,
+    // and the scan is O(buildings) in the Holodeck's 122-building world).
+    // Once every lazy model has started, the scan stops entirely.
     lazyTimer += dt;
-    if (lazyTimer >= 0.5) { lazyTimer = 0; checkLazyModels(); }
+    if (lazyTimer >= 0.5) {
+      lazyTimer = 0;
+      if (!lazyScanDone) {
+        checkLazyModels();
+        if (lazyModels.every((e) => e.started)) lazyScanDone = true;
+      }
+      checkPlaceSteps();
+    }
 
     updateCamera(dt);
     renderer.render(scene, camera);
