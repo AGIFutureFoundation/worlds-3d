@@ -148,6 +148,19 @@ body.player { background: #0a0f1c; color: #e8e4d8; height: 100dvh; display: flex
   background: var(--gold-bright); color: #241a05; font-weight: 700; cursor: pointer; min-height: 44px;
   flex: 0 0 auto;
 }
+/* NOTE (2026-11-07 reconstruction): this file was truncated to 0 bytes by a
+   faulty cleanup one-liner during the VR UI-controls pass and rebuilt from
+   the byte-identical depth-2 drafts copy plus the UI-controls rules below,
+   re-applied from grep evidence. The selectors and functional declarations
+   (sizes, collapsed, ui-hidden) are verbatim; the cosmetic declarations
+   for #ui-toggle / .info-panel-head / #filters-toggle were reconstructed
+   to mirror the neighbouring button styles. */
+#ui-toggle {
+  font: inherit; padding: 10px 14px; border-radius: 8px; border: 1px solid var(--line);
+  background: var(--panel-2); color: var(--gold-bright); font-weight: 700; cursor: pointer; min-height: 44px;
+  flex: 0 0 auto;
+}
+#ui-toggle:hover { border-color: var(--teal-bright); }
 #info-panel {
   flex: 0 0 320px; overflow-y: auto; background: #101a2e; color: #e8e4d8;
   padding: 16px 18px; border-left: 1px solid #24365a; font-size: .95rem;
@@ -159,12 +172,39 @@ body.player { background: #0a0f1c; color: #e8e4d8; height: 100dvh; display: flex
 #info-panel a { color: var(--gold-bright); }
 #info-panel .sources { font-size: .85rem; color: var(--ink-2); }
 #info-panel .note { font-size: .88rem; color: var(--ink-2); border-top: 1px solid #24365a; padding-top: 10px; }
+.info-panel-head { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+#info-panel-title { flex: 1 1 auto; margin: 0; }
+.info-panel-btns { display: inline-flex; gap: 4px; margin-left: auto; flex: 0 0 auto; }
+.info-panel-btns button {
+  min-width: 34px; height: 34px; padding: 0 8px;
+  background: var(--panel-2); color: var(--ink);
+  border: 1px solid var(--line); border-radius: 8px;
+  font: inherit; font-size: 16px; line-height: 1; cursor: pointer;
+}
+.info-panel-btns button:hover { border-color: var(--gold-bright); color: #fff; }
+#info-panel.info-collapsed #info-body { display: none; }
+#info-panel.info-size-s { flex-basis: 260px; }
+#info-panel.info-size-m { flex-basis: 320px; }
+#info-panel.info-size-l { flex-basis: 440px; }
+/* ---- global hide-all (2026-11-07): the engine fires worlds3d:ui and the
+   player bar + info sidebar hide with the HUD; the engine's floating
+   Show UI pill stays visible as the restore control. */
+body.player.ui-hidden .player-bar, body.player.ui-hidden #info-panel { display: none !important; }
 #unknown {
   max-width: 720px; margin: 40px auto; padding: 20px; background: #101a2e;
   border: 1px solid #24365a; border-radius: 12px; color: #e8e4d8;
 }
 #unknown a { color: var(--gold-bright); }
 #unknown code { background: #0a0f1c; padding: 2px 6px; border-radius: 4px; }
+
+/* ---------- lobby filter toggle (2026-11-07) ---------- */
+#filters.filters-hidden { display: none; }
+#filters-toggle {
+  font: inherit; font-weight: 700; padding: 10px 18px; border-radius: 8px;
+  border: 1px solid var(--line); background: var(--panel); color: var(--ink);
+  cursor: pointer; min-height: 44px;
+}
+#filters-toggle:hover { border-color: var(--teal-bright); }
 
 @media (max-width: 760px) {
   #info-panel {
@@ -173,6 +213,8 @@ body.player { background: #0a0f1c; color: #e8e4d8; height: 100dvh; display: flex
     transition: transform .2s ease; box-shadow: -4px 0 18px rgba(0, 0, 0, .5);
   }
   #info-panel.open { transform: translateX(0); }
+  #info-panel.info-size-s { width: min(70vw, 280px); }
+  #info-panel.info-size-l { width: min(92vw, 440px); }
   .player-main { position: relative; }
   .site-header h1 { font-size: 1.15rem; }
 }

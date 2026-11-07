@@ -71,3 +71,71 @@
   .w3d-controls { bottom: 8px; }
   .w3d-dialog { bottom: 210px; }
 }
+
+/* ---- Panel controls: close / minimise / size / hide-all (2026-11-07) ----
+   Every HUD panel has a head row (title + ⤢ size / – minimise / × close).
+   Closed panels hide entirely and are re-opened from the ▦ Panels menu.
+   H or the Hide UI button hides every panel at once; only the minimal
+   Show UI pill (bottom-right) stays visible. The no-WebGL fallback is never
+   hidden by hide-all — without WebGL there is no world to look at. */
+.w3d-panel-head { display: flex; align-items: center; gap: 8px; }
+.w3d-panel-head h3 { margin: 0; flex: 1 1 auto; min-width: 0; }
+.w3d-panel-head .w3d-panel-title { font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: #ffd23f; font-weight: 700; flex: 1 1 auto; }
+.w3d-panel-btns { display: inline-flex; gap: 4px; margin-left: auto; flex: 0 0 auto; }
+.w3d-panel-btns button {
+  min-width: 36px; min-height: 36px; padding: 4px 8px; font-size: 16px; line-height: 1;
+  background: rgba(255,255,255,.08); color: #fff; border: 1px solid rgba(255,255,255,.25);
+  border-radius: 8px; cursor: pointer;
+}
+.w3d-panel-btns button:hover { border-color: #ffd23f; color: #ffd23f; }
+.w3d-panel.w3d-closed { display: none !important; }
+.w3d-panel.w3d-collapsed .w3d-panel-body { display: none; }
+.w3d-panel.w3d-collapsed .w3d-panel-head { cursor: pointer; }
+.w3d-controls .w3d-panel-body { display: flex; flex-direction: column; align-items: center; gap: 6px; width: 100%; }
+.w3d-topbar.w3d-compact .w3d-label { display: none; }
+.w3d-counters.w3d-collapsed .w3d-collect { display: none; }
+/* size steps (only applied once the user taps ⤢; defaults are the CSS above) */
+.w3d-quest.w3d-size-s, .w3d-info.w3d-size-s { width: 190px; }
+.w3d-quest.w3d-size-m, .w3d-info.w3d-size-m { width: 240px; }
+.w3d-quest.w3d-size-l, .w3d-info.w3d-size-l { width: 320px; max-width: 86vw; }
+.w3d-controls.w3d-size-s { width: min(320px, 94vw); }
+.w3d-controls.w3d-size-m { width: min(480px, 94vw); }
+.w3d-controls.w3d-size-l { width: min(640px, 96vw); }
+.w3d-dialog.w3d-size-s { width: min(320px, 92vw); }
+.w3d-dialog.w3d-size-m { width: min(460px, 92vw); }
+.w3d-dialog.w3d-size-l { width: min(640px, 94vw); }
+/* floating UI controls: always reachable, bottom-right corner */
+.w3d-ui-fab, .w3d-panels-menu, .w3d-ui-restore { pointer-events: auto; }
+.w3d-ui-fab { position: absolute; right: 12px; bottom: 12px; display: flex; gap: 8px; z-index: 30; }
+.w3d-ui-fab button, .w3d-ui-restore button {
+  min-height: 44px; padding: 10px 16px; font-size: 14px; font-weight: 700;
+  background: rgba(8,14,30,.9); color: #fff; border: 1px solid rgba(255,255,255,.35);
+  border-radius: 999px; cursor: pointer;
+}
+.w3d-ui-fab button:hover, .w3d-ui-restore button:hover { border-color: #ffd23f; color: #ffd23f; }
+.w3d-ui-restore { position: absolute; right: 12px; bottom: 12px; z-index: 30; }
+.w3d-ui-restore button { background: #ffd23f; color: #111; border-color: #ffd23f; }
+.w3d-panels-menu {
+  position: absolute; right: 12px; bottom: 64px; z-index: 30; min-width: 230px;
+  background: rgba(8,14,30,.94); border: 1px solid rgba(255,255,255,.25); border-radius: 12px;
+  padding: 8px; display: flex; flex-direction: column; gap: 4px;
+}
+.w3d-panels-menu-title { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: #ffd23f; padding: 4px 8px 6px; }
+.w3d-panels-menu button {
+  display: flex; justify-content: space-between; gap: 12px; width: 100%; text-align: left;
+  background: transparent; color: #fff; border: 1px solid transparent; border-radius: 8px;
+  padding: 8px 10px; font-size: 14px; cursor: pointer;
+}
+.w3d-panels-menu button:hover { border-color: rgba(255,255,255,.35); }
+/* hide-all: every panel goes, the fallback and the restore pill stay */
+.w3d-ui-hidden .w3d-topbar, .w3d-ui-hidden .w3d-quest, .w3d-ui-hidden .w3d-counters,
+.w3d-ui-hidden .w3d-controls, .w3d-ui-hidden .w3d-info, .w3d-ui-hidden .w3d-dialog,
+.w3d-ui-hidden .w3d-touch, .w3d-ui-hidden .w3d-toast { display: none !important; }
+.w3d-ui-hidden .w3d-ui-fab, .w3d-ui-hidden .w3d-panels-menu { display: none !important; }
+@media (max-width: 640px) {
+  /* leave a right-hand gutter so the bottom-centre controls never sit under the Hide UI pill */
+  .w3d-controls { left: 8px; right: 64px; transform: none; width: auto; }
+}
+@media (pointer: coarse) {
+  .w3d-panel-btns button { min-width: 44px; min-height: 44px; }
+}

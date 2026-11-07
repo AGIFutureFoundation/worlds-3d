@@ -46,8 +46,10 @@ function showUnknown(data, requested) {
 }
 
 function fillInfo(world) {
-  var host = el('info-panel');
+  var host = el('info-body');
   if (!host) return;
+  var title = el('info-panel-title');
+  if (title) title.textContent = world.name || 'World info';
   var coords = world.coordinates
     ? 'Anchor ' + world.coordinates.lat.toFixed(5) + ', ' + world.coordinates.lon.toFixed(5)
     : 'No coordinates — demo lobby, no real-world location claimed.';
@@ -98,10 +100,63 @@ function init() {
   var controller = mountWorld(el('app'), world, {});
   window.__world = controller;
   window.__worldDef = world;
+  // Global hide-all: the engine hides its own HUD and fires worlds3d:ui; the
+  // outer page hides the top bar + info sidebar with it, and the engine's
+  // floating Show UI pill (inside #app) stays visible as the restore control.
+  var uiToggle = el('ui-toggle');
+  function syncUiToggle(hidden) {
+    if (!uiToggle) return;
+    uiToggle.textContent = hidden ? '👁 Show UI (H)' : '🙈 Hide UI (H)';
+  }
+  if (uiToggle) uiToggle.addEventListener('click', function () {
+    if (controller && controller.toggleUI) controller.toggleUI();
+  });
+  window.addEventListener('worlds3d:ui', function (e) {
+    var hidden = !!(e.detail && e.detail.hidden);
+    document.body.classList.toggle('ui-hidden', hidden);
+    syncUiToggle(hidden);
+  });
   var toggle = el('info-toggle');
   var panel = el('info-panel');
+  // Info sidebar controls (2026-11-07): × closes (reopen from World info),
+  // – minimises to the header bar, ⤢ cycles small / medium / large.
+  var infoClosed = false;
+  var infoSizes = ['info-size-s', 'info-size-m', 'info-size-l'];
+  var infoSizeIdx = 1; // medium = the default 320px sidebar
+  var infoClose = el('info-close');
+  var infoMin = el('info-min');
+  var infoSize = el('info-size');
+  if (infoClose && panel && toggle) {
+    infoClose.addEventListener('click', function () {
+      infoClosed = true;
+      panel.classList.remove('open');
+      panel.classList.remove('info-collapsed');
+      if (infoMin) { infoMin.textContent = '–'; infoMin.setAttribute('aria-expanded', 'true'); }
+      toggle.textContent = 'ⓘ World info';
+    });
+  }
+  if (infoMin && panel) {
+    infoMin.addEventListener('click', function () {
+      var collapsed = panel.classList.toggle('info-collapsed');
+      infoMin.textContent = collapsed ? '▸' : '–';
+      infoMin.setAttribute('aria-expanded', String(!collapsed));
+    });
+  }
+  if (infoSize && panel) {
+    infoSize.addEventListener('click', function () {
+      panel.classList.remove(infoSizes[infoSizeIdx]);
+      infoSizeIdx = (infoSizeIdx + 1) % infoSizes.length;
+      panel.classList.add(infoSizes[infoSizeIdx]);
+    });
+  }
   if (toggle && panel) {
     toggle.addEventListener('click', function () {
+      if (infoClosed) {
+        infoClosed = false;
+        panel.classList.add('open');
+        toggle.textContent = '✕ Close info';
+        return;
+      }
       panel.classList.toggle('open');
       toggle.textContent = panel.classList.contains('open') ? '✕ Close info' : 'ⓘ World info';
     });

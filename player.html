@@ -4,50 +4,37 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>World — worlds-3d</title>
-<meta name="description" content="Play one WorldForge flagship world in the browser or on a Quest headset: third-person avatar, NPCs, quests, weather and day cycles. Web 3D interpretation — not RP1.">
-<link rel="stylesheet" href="./player.css">
-<link rel="stylesheet" href="./site.css">
-  <script type="module" crossorigin src="./assets/player-Bgo8Tl2S.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/worlds-data-BoncZjXh.js">
+<meta name="description" content="Play one WorldForge flagship world in the browser: third-person avatar, NPCs, quests, weather and day cycles. Web 3D interpretation — not RP1.">
+<link rel="stylesheet" href="engine/engine.css">
+<link rel="stylesheet" href="site.css">
+<script type="importmap">
+{ "imports": { "three": "./engine/three.module.min.js" } }
+</script>
+<script src="data.js"></script>
+<script type="module" src="player.js"></script>
 </head>
 <body class="player">
 <header class="player-bar">
   <a href="index.html">← Lobby</a>
   <h1 id="world-title">Loading world…</h1>
   <span class="tag">Web 3D interpretation — not on RP1</span>
-  <button id="enter-vr" type="button">🥽 Enter VR</button>
+  <button id="ui-toggle" type="button" title="Hide all panels for a clear view (H)">🙈 Hide UI (H)</button>
   <button id="info-toggle" type="button">ⓘ World info</button>
 </header>
-<p class="error" id="data-error" hidden style="margin:12px"><strong>World data failed to load.</strong> This page needs its bundled world data. Make sure the built site was deployed as a whole.</p>
+<p class="error" id="data-error" hidden style="margin:12px"><strong>World data failed to load.</strong> This page needs <code>data.js</code> next to it. Make sure <code>data.js</code>, <code>player.js</code> and the <code>engine/</code> folder are in place.</p>
 <div class="player-main">
-  <div id="scene-container">
-    <div class="w3d-hud">
-      <div class="w3d-topbar">
-        <div class="w3d-title"><strong></strong><span class="w3d-badge"></span></div>
-        <div class="w3d-label">Web 3D interpretation — not on RP1</div>
-      </div>
-      <div class="w3d-quest"><h3>Quests</h3><div class="w3d-quest-body">No quest accepted yet.</div></div>
-      <div class="w3d-counters"><span class="w3d-collect">✦ 0 collected</span><span class="w3d-compass">N</span></div>
-      <div class="w3d-controls">
-        <div class="w3d-weather" role="group" aria-label="Weather">
-          <button data-weather="clear">☀ Clear</button><button data-weather="cloudy">☁ Cloudy</button>
-          <button data-weather="rain">🌧 Rain</button><button data-weather="dusk">🌆 Dusk</button>
-          <button data-weather="indoor">🏠 Indoor</button><button data-weather="mist">🌫 Mist</button>
-          <button data-weather="golden-hour">🌅 Golden hour</button><button data-weather="breeze">🍃 Breeze</button>
-        </div>
-        <label class="w3d-time">🕐 <input type="range" min="0" max="24" step="0.25" value="10" aria-label="Time of day"> <span class="w3d-clock"></span></label>
-      </div>
-      <div class="w3d-info"><h3>About this place</h3><div class="w3d-info-body"></div></div>
-      <div class="w3d-dialog" hidden><h3 class="w3d-dialog-name"></h3><p class="w3d-dialog-line"></p>
-        <div class="w3d-dialog-btns"><button class="w3d-dialog-next">Next ▸</button>
-        <button class="w3d-dialog-quest" hidden>Accept quest</button>
-        <button class="w3d-dialog-close">Close</button></div></div>
-      <div class="w3d-toast" hidden></div>
-      <div class="w3d-touch"><div class="w3d-joy"><div class="w3d-joy-knob"></div></div>
-        <div class="w3d-touch-btns"><button class="w3d-btn-jump">Jump</button><button class="w3d-btn-interact">Interact</button></div></div>
+  <div id="app"></div>
+  <aside id="info-panel" aria-label="World information">
+    <div class="info-panel-head">
+      <h2 id="info-panel-title">World info</h2>
+      <span class="info-panel-btns">
+        <button id="info-size" type="button" title="Change panel size (small / medium / large)">⤢ Size</button>
+        <button id="info-min" type="button" title="Minimise panel" aria-expanded="true">–</button>
+        <button id="info-close" type="button" title="Close panel (reopen from World info)">×</button>
+      </span>
     </div>
-  </div>
-  <aside id="info-panel" aria-label="World information"></aside>
+    <div id="info-body"></div>
+  </aside>
 </div>
 <div id="unknown" hidden></div>
 </body>

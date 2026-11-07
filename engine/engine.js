@@ -172,13 +172,19 @@ export function mountWorld(container, worldDef, options = {}) {
   container.classList.add('w3d-container');
   const hud = document.createElement('div'); hud.className = 'w3d-hud'; container.appendChild(hud);
   hud.innerHTML = `
-    <div class="w3d-topbar">
+    <div class="w3d-topbar w3d-panel w3d-panel-head" data-panel="topbar">
       <div class="w3d-title"><strong></strong><span class="w3d-badge"></span></div>
       <div class="w3d-label">Web 3D interpretation — not on RP1</div>
+      <span class="w3d-panel-btns">
+        <button type="button" data-w3d-action="size" data-w3d-panel="topbar" title="Compact title bar (hide the tag line)">⤢</button>
+        <button type="button" data-w3d-action="close" data-w3d-panel="topbar" title="Close the title bar (reopen from Panels)">×</button>
+      </span>
     </div>
-    <div class="w3d-quest"><h3>Quests</h3><div class="w3d-quest-body">No quest accepted yet.</div></div>
-    <div class="w3d-counters"><span class="w3d-collect">✦ 0 collected</span><span class="w3d-compass">N</span></div>
-    <div class="w3d-controls">
+    <div class="w3d-quest w3d-panel" data-panel="quest"><div class="w3d-panel-head"><h3>Quests</h3><span class="w3d-panel-btns"><button type="button" data-w3d-action="size" data-w3d-panel="quest" title="Change panel size (small / medium / large)">⤢</button><button type="button" data-w3d-action="minimise" data-w3d-panel="quest" title="Minimise panel" aria-expanded="true">–</button><button type="button" data-w3d-action="close" data-w3d-panel="quest" title="Close panel (reopen from Panels)">×</button></span></div><div class="w3d-panel-body"><div class="w3d-quest-body">No quest accepted yet.</div></div></div>
+    <div class="w3d-counters w3d-panel" data-panel="counters"><span class="w3d-panel-btns"><button type="button" data-w3d-action="minimise" data-w3d-panel="counters" title="Minimise counters (keeps the compass)" aria-expanded="true">–</button><button type="button" data-w3d-action="close" data-w3d-panel="counters" title="Close counters (reopen from Panels)">×</button></span><span class="w3d-collect">✦ 0 collected</span><span class="w3d-compass">N</span></div>
+    <div class="w3d-controls w3d-panel" data-panel="controls">
+      <div class="w3d-panel-head"><span class="w3d-panel-title">Weather &amp; time</span><span class="w3d-panel-btns"><button type="button" data-w3d-action="size" data-w3d-panel="controls" title="Change panel size (small / medium / large)">⤢</button><button type="button" data-w3d-action="minimise" data-w3d-panel="controls" title="Minimise panel" aria-expanded="true">–</button><button type="button" data-w3d-action="close" data-w3d-panel="controls" title="Close panel (reopen from Panels)">×</button></span></div>
+      <div class="w3d-panel-body">
       <div class="w3d-weather" role="group" aria-label="Weather">
         <button data-weather="clear">☀ Clear</button><button data-weather="cloudy">☁ Cloudy</button>
         <button data-weather="rain">🌧 Rain</button><button data-weather="dusk">🌆 Dusk</button>
@@ -186,15 +192,20 @@ export function mountWorld(container, worldDef, options = {}) {
         <button data-weather="golden-hour">🌅 Golden hour</button><button data-weather="breeze">🍃 Breeze</button>
       </div>
       <label class="w3d-time">🕐 <input type="range" min="0" max="24" step="0.25" value="${state.hour}" aria-label="Time of day"> <span class="w3d-clock"></span></label>
+      </div>
     </div>
-    <div class="w3d-info"><h3>About this place</h3><div class="w3d-info-body"></div></div>
-    <div class="w3d-dialog" hidden><h3 class="w3d-dialog-name"></h3><p class="w3d-dialog-line"></p>
+    <div class="w3d-info w3d-panel" data-panel="info"><div class="w3d-panel-head"><h3>About this place</h3><span class="w3d-panel-btns"><button type="button" data-w3d-action="size" data-w3d-panel="info" title="Change panel size (small / medium / large)">⤢</button><button type="button" data-w3d-action="minimise" data-w3d-panel="info" title="Minimise panel" aria-expanded="true">–</button><button type="button" data-w3d-action="close" data-w3d-panel="info" title="Close panel (reopen from Panels)">×</button></span></div><div class="w3d-panel-body"><div class="w3d-info-body"></div></div></div>
+    <div class="w3d-dialog w3d-panel" data-panel="dialog" hidden><div class="w3d-panel-head"><h3 class="w3d-dialog-name"></h3><span class="w3d-panel-btns"><button type="button" data-w3d-action="size" data-w3d-panel="dialog" title="Change panel size (small / medium / large)">⤢</button><button type="button" data-w3d-action="minimise" data-w3d-panel="dialog" title="Minimise dialogue" aria-expanded="true">–</button><button type="button" data-w3d-action="close" data-w3d-panel="dialog" title="Close dialogue">×</button></span></div>
+      <div class="w3d-panel-body"><p class="w3d-dialog-line"></p>
       <div class="w3d-dialog-btns"><button class="w3d-dialog-next">Next ▸</button>
       <button class="w3d-dialog-quest" hidden>Accept quest</button>
-      <button class="w3d-dialog-close">Close</button></div></div>
+      <button class="w3d-dialog-close">Close</button></div></div></div>
     <div class="w3d-toast" hidden></div>
-    <div class="w3d-touch"><div class="w3d-joy"><div class="w3d-joy-knob"></div></div>
+    <div class="w3d-touch w3d-panel" data-panel="touch"><div class="w3d-joy"><div class="w3d-joy-knob"></div></div>
       <div class="w3d-touch-btns"><button class="w3d-btn-jump">Jump</button><button class="w3d-btn-interact">Interact</button></div></div>
+    <div class="w3d-ui-fab"><button class="w3d-ui-toggle" type="button" aria-pressed="false" title="Hide all panels (H)">🙈 Hide UI</button><button class="w3d-panels-btn" type="button" aria-expanded="false" aria-controls="w3d-panels-menu" title="Show or hide individual panels">▦ Panels</button></div>
+    <div class="w3d-panels-menu" id="w3d-panels-menu" hidden></div>
+    <div class="w3d-ui-restore" hidden><button type="button" title="Show all panels (H)">👁 Show UI (H)</button></div>
     <div class="w3d-fallback" hidden><p>${NO_WEBGL_MSG}</p><p class="w3d-fallback-sub">This world is a WebGL experience. Try a recent desktop or mobile browser with hardware acceleration enabled.</p></div>`;
   const $ = (sel) => hud.querySelector(sel);
   // Cached HUD refs: applyTimeOfDay runs every frame, so the time slider
@@ -230,6 +241,139 @@ export function mountWorld(container, worldDef, options = {}) {
   }
   function fmtHour(h) { const hh = Math.floor(h) % 24, mm = Math.floor((h % 1) * 60); return String(hh).padStart(2, '0') + ':' + String(mm).padStart(2, '0'); }
 
+  // ---------- Panel controls: close / minimise / size / hide-all (2026-11-07) ----------
+  // Every HUD panel gets a close (×) and a minimise (–) button and, where the
+  // panel has a body worth resizing, a size step (⤢ small/medium/large).
+  // Closed panels are re-openable from the ▦ Panels menu. H (or the Hide UI
+  // button) hides every panel at once for a clear view of the world; a minimal
+  // Show UI pill stays visible in the bottom-right corner to restore them.
+  // Exceptions, by design: the dialogue is not in the Panels menu — closing it
+  // ends the conversation and talking to an NPC again reopens it; the touch
+  // controls have no on-canvas × (an accidental tap while moving would strand
+  // a mobile player) and are hidden/shown via Hide-all and the Panels menu;
+  // the top bar and counters are single-line status bars, so their size step
+  // is a compact toggle (top bar) / collapse-to-compass (counters), not S/M/L.
+  const PANEL_DEFS = [
+    { id: 'topbar', label: 'Title bar' },
+    { id: 'quest', label: 'Quests', sizes: ['s', 'm', 'l'] },
+    { id: 'counters', label: 'Counters' },
+    { id: 'controls', label: 'Weather & time', sizes: ['s', 'm', 'l'] },
+    { id: 'info', label: 'About this place', sizes: ['s', 'm', 'l'] },
+    { id: 'dialog', label: 'Dialogue', sizes: ['s', 'm', 'l'] },
+    { id: 'touch', label: 'Touch controls' },
+  ];
+  const panelEls = {};
+  PANEL_DEFS.forEach((d) => { panelEls[d.id] = hud.querySelector('[data-panel="' + d.id + '"]'); });
+  const panelState = {}; // id -> 'open' | 'collapsed' | 'closed' (default 'open')
+  const panelSize = {};  // id -> size index, or null until the user picks a size (no class = default CSS size)
+  PANEL_DEFS.forEach((d) => { panelState[d.id] = 'open'; panelSize[d.id] = null; });
+  let uiHidden = false;
+  function isTypingTarget(t) {
+    return !!t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.tagName === 'SELECT' || t.isContentEditable);
+  }
+  function renderPanelsMenu() {
+    const menu = hud.querySelector('.w3d-panels-menu');
+    if (!menu) return;
+    const rows = PANEL_DEFS.filter((d) => d.id !== 'dialog').map((d) => {
+      const st = panelState[d.id];
+      const mark = st === 'open' ? '✓' : st === 'collapsed' ? '–' : '×';
+      return '<button type="button" data-w3d-menu-panel="' + d.id + '">'
+        + '<span>' + escapeHtml(d.label) + '</span><span>' + mark + ' ' + st + '</span></button>';
+    }).join('');
+    menu.innerHTML = '<div class="w3d-panels-menu-title">Panels — tap to show / hide</div>' + rows;
+  }
+  function applyPanelState(id) {
+    const el = panelEls[id];
+    if (!el) return;
+    const st = panelState[id];
+    el.classList.toggle('w3d-closed', st === 'closed');
+    el.classList.toggle('w3d-collapsed', st === 'collapsed');
+    const def = PANEL_DEFS.find((d) => d.id === id);
+    if (def && def.sizes) {
+      el.classList.remove('w3d-size-s', 'w3d-size-m', 'w3d-size-l');
+      if (panelSize[id] !== null && panelSize[id] !== undefined) el.classList.add('w3d-size-' + def.sizes[panelSize[id]]);
+    }
+    // Minimise button shows ▸ when collapsed, – when open.
+    const minBtn = el.querySelector('[data-w3d-action="minimise"]');
+    if (minBtn) { minBtn.textContent = st === 'collapsed' ? '▸' : '–'; minBtn.setAttribute('aria-expanded', String(st !== 'collapsed')); }
+    renderPanelsMenu();
+  }
+  function setPanel(id, state) {
+    if (!panelEls[id] || !(id in panelState)) return;
+    if (id === 'dialog' && state === 'closed') { closeDialog(); return; }
+    panelState[id] = state;
+    applyPanelState(id);
+  }
+  function cyclePanelSize(id) {
+    const def = PANEL_DEFS.find((d) => d.id === id);
+    if (!def || !def.sizes) {
+      // No stepped sizes: compact toggle (top bar hides its tag line).
+      const el = panelEls[id];
+      if (el) el.classList.toggle('w3d-compact');
+      return;
+    }
+    panelSize[id] = panelSize[id] === null || panelSize[id] === undefined
+      ? 0 : (panelSize[id] + 1) % def.sizes.length;
+    applyPanelState(id);
+  }
+  function setUIHidden(hidden) {
+    uiHidden = !!hidden;
+    container.classList.toggle('w3d-ui-hidden', uiHidden);
+    const toggle = hud.querySelector('.w3d-ui-toggle');
+    if (toggle) {
+      toggle.textContent = uiHidden ? '👁 Show UI' : '🙈 Hide UI';
+      toggle.setAttribute('aria-pressed', String(uiHidden));
+      toggle.title = uiHidden ? 'Show all panels (H)' : 'Hide all panels (H)';
+    }
+    const restore = hud.querySelector('.w3d-ui-restore');
+    if (restore) restore.hidden = !uiHidden;
+    const menu = hud.querySelector('.w3d-panels-menu');
+    if (menu) menu.hidden = true;
+    const panelsBtn = hud.querySelector('.w3d-panels-btn');
+    if (panelsBtn) panelsBtn.setAttribute('aria-expanded', 'false');
+    // Lets the outer page (player.html bar + info sidebar) hide with the HUD.
+    window.dispatchEvent(new CustomEvent('worlds3d:ui', { detail: { hidden: uiHidden } }));
+  }
+  function toggleUI() { setUIHidden(!uiHidden); }
+  // One delegated listener for every panel head button; clicking a collapsed
+  // head (not on a button) expands the panel again.
+  hud.addEventListener('click', (e) => {
+    const btn = e.target.closest ? e.target.closest('[data-w3d-action]') : null;
+    if (btn) {
+      const id = btn.getAttribute('data-w3d-panel');
+      const action = btn.getAttribute('data-w3d-action');
+      if (action === 'close') setPanel(id, 'closed');
+      else if (action === 'minimise') setPanel(id, panelState[id] === 'collapsed' ? 'open' : 'collapsed');
+      else if (action === 'size') cyclePanelSize(id);
+      return;
+    }
+    const head = e.target.closest ? e.target.closest('.w3d-panel-head') : null;
+    if (head) {
+      const panel = head.closest('.w3d-panel');
+      const id = panel && panel.getAttribute('data-panel');
+      if (id && panelState[id] === 'collapsed') setPanel(id, 'open');
+    }
+  });
+  const uiToggleBtn = hud.querySelector('.w3d-ui-toggle');
+  if (uiToggleBtn) uiToggleBtn.addEventListener('click', toggleUI);
+  const uiRestoreBtn = hud.querySelector('.w3d-ui-restore button');
+  if (uiRestoreBtn) uiRestoreBtn.addEventListener('click', () => setUIHidden(false));
+  const panelsBtn = hud.querySelector('.w3d-panels-btn');
+  if (panelsBtn) panelsBtn.addEventListener('click', () => {
+    const m = hud.querySelector('.w3d-panels-menu');
+    if (!m) return;
+    m.hidden = !m.hidden;
+    panelsBtn.setAttribute('aria-expanded', String(!m.hidden));
+  });
+  const panelsMenu = hud.querySelector('.w3d-panels-menu');
+  if (panelsMenu) panelsMenu.addEventListener('click', (e) => {
+    const b = e.target.closest ? e.target.closest('[data-w3d-menu-panel]') : null;
+    if (!b) return;
+    const id = b.getAttribute('data-w3d-menu-panel');
+    setPanel(id, panelState[id] === 'open' ? 'closed' : 'open');
+  });
+  renderPanelsMenu();
+
   // ---------- Renderer + graceful degradation ----------
   let renderer;
   try {
@@ -242,6 +386,8 @@ export function mountWorld(container, worldDef, options = {}) {
     return {
       stop() { hud.remove(); },
       setWeather() {}, setTimeOfDay() {}, teleport() {},
+      toggleUI() {}, setUIHidden() {}, isUIHidden() { return false; },
+      setPanel() {}, getPanelStates() { return {}; },
       state,
     };
   }
@@ -825,6 +971,14 @@ export function mountWorld(container, worldDef, options = {}) {
     keys[e.code] = true;
     if (e.code === 'Space') { e.preventDefault(); tryJump(); }
     if (e.code === 'KeyE') interact();
+    // H hides / restores every panel for a clear view (not while typing in a
+    // field — the time slider is an input, so H there must not hide the UI).
+    if (e.code === 'KeyH' && !isTypingTarget(e.target)) { e.preventDefault(); toggleUI(); }
+    if (e.code === 'Escape') {
+      const dlg = $('.w3d-dialog');
+      if (dlg && !dlg.hidden) closeDialog();
+      else if (uiHidden) setUIHidden(false);
+    }
   });
   window.addEventListener('keyup', (e) => { keys[e.code] = false; });
   renderer.domElement.addEventListener('pointerdown', (e) => {
@@ -949,7 +1103,22 @@ export function mountWorld(container, worldDef, options = {}) {
     }
   }
   let dialogNPC = null, dialogLine = 0;
+  function closeDialog() {
+    const d = $('.w3d-dialog');
+    if (d) d.hidden = true;
+    dialogNPC = null;
+    // A closed dialogue is not "closed" as a panel — talking to an NPC again
+    // reopens it — so reset its panel state instead of leaving it collapsed.
+    panelState.dialog = 'open';
+    const el = panelEls.dialog;
+    if (el) el.classList.remove('w3d-collapsed');
+  }
   function openDialogue(npc) {
+    // Talking is deliberate: if the UI was hidden for a clear view, bring it
+    // back so the conversation is actually visible.
+    if (uiHidden) setUIHidden(false);
+    panelState.dialog = 'open';
+    applyPanelState('dialog');
     dialogNPC = npc; dialogLine = 0;
     $('.w3d-dialog-name').textContent = npc.def.name + (npc.def.role ? ' — ' + npc.def.role : '');
     $('.w3d-dialog-line').textContent = (npc.def.dialogue && npc.def.dialogue[0]) || '…';
@@ -970,7 +1139,7 @@ export function mountWorld(container, worldDef, options = {}) {
     dialogLine = (dialogLine + 1) % Math.max(lines.length, 1);
     $('.w3d-dialog-line').textContent = lines[dialogLine] || '…';
   });
-  $('.w3d-dialog-close').addEventListener('click', () => { $('.w3d-dialog').hidden = true; dialogNPC = null; });
+  $('.w3d-dialog-close').addEventListener('click', closeDialog);
   $('.w3d-dialog-quest').addEventListener('click', () => {
     if (!dialogNPC || !dialogNPC.def.quest) return;
     acceptQuest(dialogNPC.def.quest);
@@ -1206,6 +1375,9 @@ export function mountWorld(container, worldDef, options = {}) {
     },
     setWeather(preset) { if (['clear', 'cloudy', 'rain', 'dusk', 'indoor', 'mist', 'golden-hour', 'breeze'].includes(preset)) applyWeather(preset); },
     setTimeOfDay(hour) { applyTimeOfDay(hour); },
+    toggleUI, setUIHidden,
+    isUIHidden() { return uiHidden; },
+    setPanel, getPanelStates() { return Object.assign({}, panelState); },
     teleport(pos) {
       if (!Array.isArray(pos) || pos.length < 3) return;
       if (state.insideBuilding) { state.insideBuilding = null; interiorGroup.visible = false; }

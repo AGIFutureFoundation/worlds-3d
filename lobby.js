@@ -198,6 +198,17 @@
     if (group) group.addEventListener('change', function () { state.group = group.value; state.page = 1; renderList(data); });
     var top = el('clear-filters-top');
     if (top) top.addEventListener('click', function () { clearFilters(data); });
+    // Filters box collapse (2026-11-07): the lobby is a page, not a 3D view,
+    // so this is its one collapsible box — the filter bar hides to a button.
+    var filtersToggle = el('filters-toggle');
+    var filters = el('filters');
+    if (filtersToggle && filters) {
+      filtersToggle.addEventListener('click', function () {
+        var hidden = filters.classList.toggle('filters-hidden');
+        filtersToggle.textContent = hidden ? '▸ Show filters' : '▾ Filters';
+        filtersToggle.setAttribute('aria-expanded', String(!hidden));
+      });
+    }
     renderList(data);
   }
 

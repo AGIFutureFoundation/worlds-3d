@@ -26,6 +26,8 @@ console.log('[test] mountWorld returned controller:', !!controller && typeof con
 console.log('[test] controller API:', Object.keys(controller || {}).join(', '));
 console.log('[test] setWeather/setTimeOfDay/teleport are functions:',
   typeof controller?.setWeather, typeof controller?.setTimeOfDay, typeof controller?.teleport);
+console.log('[test] panel controls (toggleUI/setUIHidden/setPanel/isUIHidden) are functions:',
+  typeof controller?.toggleUI, typeof controller?.setUIHidden, typeof controller?.setPanel, typeof controller?.isUIHidden);
 console.log('[test] state.webgl =', controller?.state?.webgl);
 console.log('[test] world =', controller?.state?.world?.id, '| weather =', controller?.state?.weather, '| hour =', controller?.state?.hour);
 </script>
