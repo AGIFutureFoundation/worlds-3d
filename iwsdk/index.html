@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Worlds 3D — Playable WorldForge Worlds</title>
+<meta name="description" content="A web 3D lobby over the 544 WorldForge worlds: 7 playable flagships built from the real anchored fabrics, the rest indexed with their real status. Not RP1, not footage.">
+<link rel="stylesheet" href="./site.css">
+  <script type="module" crossorigin src="./assets/main-BBw6Stsc.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/worlds-data-ByZYM2sR.js">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <h1><a href="index.html">Worlds 3D</a></h1>
+    <nav>
+      <a href="index.html">Lobby</a>
+      <a href="https://fellowship-chat.pages.dev/" target="_blank" rel="noopener">Worlds Hub ↗</a>
+      <a href="https://fellowship-chat.pages.dev/#agents" target="_blank" rel="noopener">Agents ↗</a>
+      <a href="https://app.virtuals.io/acp" target="_blank" rel="noopener">Virtuals ACP ↗</a>
+      <a href="https://agifuturefoundation.github.io/agifuturefoundation.org/" target="_blank" rel="noopener">Foundation ↗</a>
+      <a href="https://www.agifellowship.church/" target="_blank" rel="noopener">Fellowship ↗</a>
+    </nav>
+  </div>
+</header>
+<div class="honesty"><div class="wrap"><strong>Web 3D interpretation — not RP1, not footage.</strong> These worlds are playable in your browser from the real WorldForge fabric data. Nothing here is live on RP1 yet; every world shows its real status. Buildings use procedural placeholders where the real 3D models are not hosted.</div></div>
+<main class="wrap">
+  <div class="hero">
+    <p class="lede">Pick a world. Walk it. The seven flagships below are playable now — third-person avatar, NPCs with quests, collectibles, weather and day cycles. The full index underneath covers all 544 WorldForge worlds with their real place, biome and status.</p>
+    <div class="start-here">
+      <h2>Start here — your first 3 steps</h2>
+      <ol>
+        <li><strong>Play the Hub.</strong> Enter the AGI Corp Hub and meet your guides, Omega and WAVE.</li>
+        <li><strong>Follow the gold beam.</strong> The Welcome Tour walks you to the Lobby Host, the Hub Duck and the Duck Keeper — 5 steps, ending back at the Lobby Host.</li>
+        <li><strong>Pick your next world.</strong> Six more flagships are playable, and the index below covers all 544 WorldForge worlds.</li>
+      </ol>
+      <p><a class="btn" href="player.html?world=agi-corp-hub&amp;tour=q-welcome-tour">▶ Start here — the Hub Welcome Tour</a></p>
+    </div>
+    <p class="stats" id="stats">Loading worlds…</p>
+  </div>
+  <p class="error" id="data-error" hidden><strong>World data failed to load.</strong> The lobby needs its bundled world data. If you opened this file directly, make sure the built site was deployed as a whole.</p>
+
+  <h2>Playable now — the 7 flagships</h2>
+  <div class="grid" id="flagships"></div>
+
+  <h2 id="all-worlds">All 544 WorldForge worlds</h2>
+  <p><button id="filters-toggle" type="button" aria-expanded="true" aria-controls="filters">▾ Filters</button></p>
+  <div class="controls" id="filters">
+    <label for="search">Search</label>
+    <input type="search" id="search" placeholder="Name, place, biome or group — try “bull”, “desert”, “curated”…”">
+    <label for="biome">Biome</label>
+    <select id="biome"><option value="">All biomes</option></select>
+    <label for="group">Group</label>
+    <select id="group"><option value="">All groups</option></select>
+    <button id="clear-filters-top" type="button" hidden>Clear filters</button>
+  </div>
+  <p id="list-count" aria-live="polite"></p>
+  <div class="grid" id="world-grid"></div>
+  <div id="pagination"></div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Sources: the 544-world list from the WorldForge-Browser repo (all rp1:null); the 6 anchored fabrics live on GitHub Pages; the AGI Corp Hub lobby scene built locally 2026-11-06. Agent companions are game characters representing the real Virtuals agents (Omega, Tactile, ALS, CMMC, WAVE) — their live instances are offline, so companions are not live connections. Meet the real agents on the <a href="https://app.virtuals.io/acp" target="_blank" rel="noopener">Virtuals ACP marketplace ↗</a> and the <a href="https://fellowship-chat.pages.dev/#agents" target="_blank" rel="noopener">Worlds Hub Agents section ↗</a> — all 5 are listed but offline, so no hire can be fulfilled today.</p>
+    <p>Built with Meta IWSDK 1.1 (Three.js super-three) — playable in the browser and on a Quest headset. No backend, no account, no payment. The RP1 portal attach is blocked until the map service has a public endpoint (Oracle VPS pending); this web build is the playable step before that.</p>
+  </div>
+</footer>
+</body>
+</html>

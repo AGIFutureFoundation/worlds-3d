@@ -1,0 +1,308 @@
+/* worlds-3d shared styles — immersive dark theme, built around the player.
+   Shared system: 16px/1.6 type, 1080px wrap, 14px card radius, pill gold CTAs,
+   44px tap targets, teal focus. Brand: near-black navy, gold-bright, teal-bright. */
+:root {
+  --navy: #0b1e3a;
+  --navy-2: #101a2e;
+  --gold: #c9a227;
+  --gold-bright: #e2b55c;
+  --teal: #0e7c7b;
+  --teal-bright: #6fd3c1;
+  --bg: #0a0f1c;
+  --bg-2: #0d141b;
+  --panel: #111821;
+  --panel-2: #16202b;
+  --ink: #e8e4d8;
+  --ink-2: #9aa9b4;
+  --ink-3: #6b7c88;
+  --line: #243140;
+  --link: #6fd3c1;
+  --radius: 14px;
+  --radius-sm: 10px;
+  --radius-pill: 999px;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+  font-size: 16px;
+}
+a { color: var(--link); }
+a:hover { color: var(--gold-bright); }
+:focus-visible { outline: 2px solid var(--teal-bright); outline-offset: 2px; }
+
+/* ---------- header / banner ---------- */
+.site-header { background: var(--navy); color: #fff; padding: 14px 18px; border-bottom: 1px solid var(--line); }
+.site-header .wrap { max-width: 1080px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 8px 22px; align-items: center; }
+.site-header h1 { margin: 0; font-size: 1.35rem; letter-spacing: .02em; }
+.site-header h1 a { color: #fff; text-decoration: none; }
+.site-header nav a { color: var(--gold-bright); text-decoration: none; display: inline-block; padding: .7rem .8rem; margin-right: 4px; min-height: 44px; font-size: .95rem; font-weight: 600; }
+.site-header nav a:hover { text-decoration: underline; color: #fff; }
+.honesty {
+  background: #1c1607; border-bottom: 1px solid var(--gold);
+  color: var(--ink); padding: 10px 18px; font-size: .95rem;
+}
+.honesty .wrap, .wrap { max-width: 1080px; margin: 0 auto; }
+main.wrap { padding: 18px 18px 40px; }
+
+/* ---------- lobby hero ---------- */
+.hero {
+  background:
+    radial-gradient(700px 300px at 80% 0%, #16303a 0, transparent 65%),
+    radial-gradient(600px 280px at 5% 0%, #2a2113 0, transparent 60%);
+  border-radius: var(--radius);
+  padding: 22px 20px 10px;
+  margin: 0 0 10px;
+}
+.lede { font-size: 1.08rem; max-width: 70ch; color: var(--ink); margin-top: 0; }
+
+/* ---------- guided entry (Track 5) ---------- */
+.start-here {
+  background: var(--panel); border: 1px solid var(--gold); border-radius: var(--radius);
+  padding: 16px 18px; margin: 14px 0 12px;
+}
+.start-here h2 { margin: 0 0 8px; font-size: 1.15rem; color: var(--gold-bright); }
+.start-here ol { margin: 0 0 12px; padding-left: 22px; }
+.start-here li { margin: 6px 0; }
+.start-here p { margin: 8px 0 0; }
+.start-here-tag { color: var(--gold-bright); font-weight: 700; font-size: .95rem; margin: 2px 0 4px; }
+.stats {
+  background: var(--panel); border: 1px solid var(--line); color: var(--ink);
+  border-radius: var(--radius);
+  padding: 12px 16px; font-weight: 600; margin: 14px 0 12px;
+}
+.stats span { color: var(--gold-bright); }
+main.wrap h2 { font-size: 1.5rem; line-height: 1.25; margin: 28px 0 12px; }
+
+/* ---------- cards ---------- */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+.card {
+  background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 16px 18px; box-shadow: 0 1px 8px rgba(0, 0, 0, .4);
+}
+.card h3 { margin: 0 0 6px; font-size: 1.12rem; color: var(--ink); }
+.card p { margin: 8px 0; }
+.card .series, .card .place { color: var(--ink-2); font-size: .95rem; }
+.card .coords { font-size: .92rem; color: var(--ink-2); }
+.card .counts { font-weight: 600; font-size: .95rem; }
+.card .models { font-size: .92rem; color: var(--ink-2); }
+.card .weather, .card .first-quest, .card .companions { font-size: .92rem; color: var(--ink-2); }
+.card .first-quest strong { color: var(--ink); }
+#pagination button[aria-current="page"] { background: var(--gold-bright); color: #241a05; font-weight: 700; border-color: var(--gold-bright); }
+.card .subdomain { font-size: .85rem; color: var(--ink-2); word-break: break-all; }
+.card:hover { border-color: var(--teal-bright); }
+.flagship { border-top: 4px solid var(--gold-bright); }
+.badge {
+  display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
+  padding: 4px 9px; border-radius: 999px; color: #fff; background: var(--teal);
+}
+.badge-anchored { background: var(--teal); }
+.badge-demo { background: var(--gold-bright); color: #241a05; }
+.chip {
+  display: inline-block; font-size: .82rem; background: var(--panel-2); border: 1px solid var(--line); color: var(--ink-2);
+  border-radius: 999px; padding: 2px 10px; margin: 0 4px 4px 0;
+}
+.btn {
+  display: inline-block; background: var(--gold-bright); color: #241a05; font-weight: 700;
+  padding: .7rem 1.2rem; border-radius: var(--radius-pill); text-decoration: none; border: none; cursor: pointer; min-height: 44px;
+}
+.btn:hover { background: #f0cd7e; color: #241a05; }
+
+/* ---------- lobby controls ---------- */
+.controls {
+  display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
+  background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 12px 14px; margin: 18px 0;
+}
+.controls input[type="search"], .controls select {
+  font: inherit; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px;
+  background: var(--bg-2); color: var(--ink); min-height: 44px;
+}
+.controls input[type="search"] { flex: 1 1 220px; }
+.controls label { font-weight: 600; font-size: .95rem; color: var(--ink-2); }
+#list-count { font-weight: 600; color: var(--ink-2); margin: 6px 0 12px; }
+#pagination { text-align: center; margin: 22px 0; }
+#pagination button {
+  font: inherit; padding: 10px 18px; margin: 3px 6px; border-radius: 8px;
+  border: 1px solid var(--line); background: var(--panel); color: var(--ink); cursor: pointer; min-height: 44px;
+}
+#pagination button:hover { border-color: var(--teal-bright); }
+.empty { grid-column: 1 / -1; }
+.error {
+  background: #2a1210; border: 1px solid #7a2e28; color: #f2b8b5;
+  border-radius: var(--radius-sm); padding: 14px 16px; margin: 16px 0;
+}
+footer.site-footer { border-top: 1px solid var(--line); padding: 18px; color: var(--ink-2); font-size: .92rem; }
+footer.site-footer .wrap { max-width: 1080px; margin: 0 auto; }
+footer.site-footer a { color: var(--link); }
+
+/* ---------- player ---------- */
+body.player { background: #0a0f1c; color: #e8e4d8; height: 100dvh; display: flex; flex-direction: column; }
+.player-bar {
+  display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center;
+  background: var(--navy); color: #fff; padding: 10px 14px; flex: 0 0 auto;
+  border-bottom: 1px solid var(--line);
+}
+.player-bar a { color: var(--gold-bright); text-decoration: none; font-weight: 600; display: inline-block; padding: .7rem .8rem; min-height: 44px; }
+.player-bar h1 { margin: 0; font-size: 1.1rem; flex: 1 1 auto; }
+.player-bar .tag { font-size: .85rem; color: #ffd; opacity: .85; }
+.player-main { flex: 1 1 auto; display: flex; min-height: 0; }
+#app { flex: 1 1 auto; min-width: 0; position: relative; background: #0a0f1c; }
+#info-toggle {
+  /* In-flow flex item in the player bar (was position:absolute against the
+     viewport, which overlaid the world title on narrow screens — at 390px
+     it could cover the h1/tag. In-flow it wraps with the bar instead.) */
+  font: inherit; padding: 10px 14px; border-radius: 8px; border: none;
+  background: var(--gold-bright); color: #241a05; font-weight: 700; cursor: pointer; min-height: 44px;
+  flex: 0 0 auto;
+}
+#info-panel {
+  flex: 0 0 320px; overflow-y: auto; background: #101a2e; color: #e8e4d8;
+  padding: 16px 18px; border-left: 1px solid #24365a; font-size: .95rem;
+  display: none;
+}
+#info-panel.open { display: block; }
+#info-panel h2 { margin-top: 0; color: var(--gold-bright); }
+#info-panel h3 { color: var(--gold-bright); margin-bottom: 4px; }
+#info-panel a { color: var(--gold-bright); }
+#info-panel .sources { font-size: .85rem; color: var(--ink-2); }
+#info-panel .note { font-size: .88rem; color: var(--ink-2); border-top: 1px solid #24365a; padding-top: 10px; }
+#unknown {
+  max-width: 720px; margin: 40px auto; padding: 20px; background: #101a2e;
+  border: 1px solid #24365a; border-radius: 12px; color: #e8e4d8;
+}
+#unknown a { color: var(--gold-bright); }
+#unknown code { background: #0a0f1c; padding: 2px 6px; border-radius: 4px; }
+
+@media (max-width: 760px) {
+  #info-panel {
+    position: absolute; top: 0; right: 0; bottom: 0; z-index: 20;
+    width: min(86vw, 340px); transform: translateX(105%);
+    transition: transform .2s ease; box-shadow: -4px 0 18px rgba(0, 0, 0, .5);
+  }
+  #info-panel.open { transform: translateX(0); }
+  .player-main { position: relative; }
+  .site-header h1 { font-size: 1.15rem; }
+}
+
+/* ---------- VR-spaces UI controls: close / minimize / size / hide-all ----------
+   Shared by worlds-3d and worlds-3d-iwsdk (twin copy — keep in sync).
+   Applied by ui-controls.js to every HUD panel (.w3d-*), the player
+   #info-panel, and the lobby filter bar. Menus never permanently cover
+   the 3D view: panels are edge-docked, collapsible to a header bar,
+   closable, resizable, and all hideable at once (body.w3d-ui-hidden). */
+.w3d-panel-head {
+  display: flex; align-items: center; gap: 8px;
+  min-height: 34px; margin-bottom: 6px;
+}
+.w3d-panel-title {
+  flex: 1 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: #ffd23f;
+}
+.w3d-panel-tools { display: flex; gap: 4px; flex: 0 0 auto; }
+.w3d-panel-tools-inline { margin-left: auto; }
+.w3d-panel-btn {
+  min-width: 34px; height: 34px; padding: 0 8px;
+  background: rgba(255, 255, 255, .10); color: #fff;
+  border: 1px solid rgba(255, 255, 255, .30); border-radius: 8px;
+  font: inherit; font-size: 16px; line-height: 1; cursor: pointer;
+}
+.w3d-panel-btn:hover { background: rgba(255, 210, 63, .25); border-color: #ffd23f; }
+/* Minimized: header bar only, body hidden. */
+.w3d-panel.is-minimized .w3d-panel-body { display: none; }
+.w3d-panel.is-minimized .w3d-panel-head { margin-bottom: 0; }
+/* Closed by the user: stays closed until re-opened from the Panels menu
+   (or, for the world-info aside, from the player-bar toggle). */
+.w3d-panel.is-closed { display: none !important; }
+/* Size steps (S / M / L cycle; no class = default width). */
+.w3d-quest.w3d-size-s { width: 170px; }
+.w3d-quest.w3d-size-m { width: 240px; }
+.w3d-quest.w3d-size-l { width: min(320px, 86vw); }
+.w3d-info.w3d-size-s { width: 180px; }
+.w3d-info.w3d-size-m { width: 240px; }
+.w3d-info.w3d-size-l { width: min(320px, 86vw); }
+.w3d-controls.w3d-size-s { width: min(320px, 94vw); }
+.w3d-controls.w3d-size-m { width: min(480px, 94vw); }
+.w3d-controls.w3d-size-l { width: min(640px, 94vw); }
+.w3d-dialog.w3d-size-s { width: min(340px, 92vw); }
+.w3d-dialog.w3d-size-m { width: min(460px, 92vw); }
+.w3d-dialog.w3d-size-l { width: min(600px, 92vw); }
+/* Inline-chrome panels: what minimizing hides. */
+.w3d-topbar.is-minimized { padding-bottom: 6px; }
+.w3d-topbar.is-minimized .w3d-label, .w3d-topbar.is-minimized .w3d-badge { display: none; }
+.w3d-counters.is-minimized .w3d-collect { display: none; }
+/* World-info aside: same chrome, sized by flex-basis on desktop. */
+#info-panel.w3d-size-s { flex-basis: 240px; }
+#info-panel.w3d-size-m { flex-basis: 320px; }
+#info-panel.w3d-size-l { flex-basis: 420px; }
+#info-panel .w3d-panel-head { margin: 0 0 10px; }
+#info-panel .w3d-panel-title { color: var(--gold-bright); font-size: .95rem; text-transform: none; letter-spacing: 0; }
+#info-panel .w3d-panel-btn {
+  background: var(--panel-2); border-color: var(--line); color: var(--ink);
+}
+#info-panel .w3d-panel-btn:hover { border-color: var(--gold-bright); color: #fff; }
+/* Global hide-all: every panel + the toast go away; the floating cluster
+   (not a .w3d-panel) stays reachable, and the Show UI pill is the restore
+   control. Touch controls hide too (no on-canvas × of their own); the
+   Panels menu or the pill brings them back. */
+body.w3d-ui-hidden .w3d-panel,
+body.w3d-ui-hidden #info-panel,
+body.w3d-ui-hidden .w3d-touch,
+body.w3d-ui-hidden .w3d-toast { display: none !important; }
+.w3d-touch.is-closed { display: none !important; }
+/* Floating cluster: always reachable, bottom-right on desktop. */
+.w3d-ui-cluster {
+  position: absolute; right: 12px; bottom: 12px; z-index: 40;
+  display: flex; gap: 8px; align-items: flex-start; pointer-events: auto;
+}
+.w3d-ui-toggle, .w3d-ui-panels-btn {
+  font: inherit; font-size: 14px; font-weight: 700; min-height: 44px;
+  padding: 10px 14px; border-radius: 999px; cursor: pointer;
+  background: rgba(8, 14, 30, .92); color: #ffd23f;
+  border: 1px solid rgba(255, 210, 63, .55);
+}
+.w3d-ui-toggle:hover, .w3d-ui-panels-btn:hover { background: #ffd23f; color: #111; }
+.w3d-panels-menu {
+  position: absolute; right: 0; bottom: 56px; width: min(280px, 86vw);
+  max-height: 50vh; overflow-y: auto;
+  background: rgba(8, 14, 30, .96); border: 1px solid rgba(255, 255, 255, .25);
+  border-radius: 12px; padding: 10px 12px; color: #fff; font-size: 14px;
+}
+.w3d-panels-row {
+  display: flex; align-items: center; gap: 8px; padding: 6px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, .12);
+}
+.w3d-panels-name { flex: 1 1 auto; }
+.w3d-panels-btn {
+  font: inherit; font-size: 13px; font-weight: 700; min-height: 36px;
+  padding: 6px 12px; border-radius: 8px; cursor: pointer;
+  background: #2f6fd0; color: #fff; border: none;
+}
+.w3d-panels-btn:disabled { background: rgba(255, 255, 255, .18); color: rgba(255, 255, 255, .65); cursor: default; }
+.w3d-panels-hint { font-size: 12px; opacity: .75; margin: 8px 0 2px; line-height: 1.4; }
+/* Touch: keep the cluster clear of the joystick / Jump / Interact stack
+   (bottom-right, 96px up, ~162px tall) — dock it top-right instead,
+   below the counters, still thumb-reachable on the right edge. */
+@media (pointer: coarse) {
+  .w3d-ui-cluster { top: 140px; right: 12px; bottom: auto; }
+  .w3d-panels-menu { top: 56px; bottom: auto; }
+  .w3d-panel-btn { min-width: 40px; height: 40px; }
+}
+@media (max-width: 760px) {
+  #info-panel.w3d-size-s { width: min(86vw, 260px); }
+  #info-panel.w3d-size-m { width: min(86vw, 340px); }
+  #info-panel.w3d-size-l { width: min(86vw, 420px); }
+}
+/* ---------- lobby filter bar: same show / hide language as the live lobby ----------
+   The lobby has no 3D view, so no hide-all cluster here — just the bar
+   itself: the Filters button collapses it to a button. */
+#filters.filters-hidden { display: none; }
+#filters-toggle {
+  font: inherit; font-weight: 700; padding: 10px 18px; border-radius: 8px;
+  border: 1px solid var(--line); background: var(--panel); color: var(--ink);
+  cursor: pointer; min-height: 44px;
+}
+#filters-toggle:hover { border-color: var(--teal-bright); }
