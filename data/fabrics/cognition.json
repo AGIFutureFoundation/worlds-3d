@@ -1,0 +1,445 @@
+{
+ "Container": "cognition-x-campus",
+ "Services": [],
+ "Modules": [
+  {
+   "sUrl": "wasm/map.wasm"
+  }
+ ],
+ "Primary": {
+  "Ambient": {
+   "fBrightness": 0.12,
+   "fColor": "0xFFFFFF"
+  },
+  "Directional": {
+   "fBrightness": 0.6,
+   "fColor": "0xFFF4E0",
+   "Rotation": [
+    0.0,
+    0.5808,
+    0.6663,
+    0.468
+   ]
+  }
+ },
+ "Data": {
+  "Scene": {
+   "Head": {
+    "Self": "P-?"
+   },
+   "Name": "Cognition.X Campus",
+   "Resource": {
+    "sReference": "cognition/models/campus.glb"
+   },
+   "Transform": {
+    "Position": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "aChildren": [
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "K\u201312",
+     "Resource": {
+      "sReference": "cognition/models/pack-k-12.glb"
+     },
+     "Transform": {
+      "Position": [
+       -160.0,
+       160.0,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Trade School",
+     "Resource": {
+      "sReference": "cognition/models/pack-trade-school.glb"
+     },
+     "Transform": {
+      "Position": [
+       -80.0,
+       160.0,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Future-Work",
+     "Resource": {
+      "sReference": "cognition/models/pack-future-work.glb"
+     },
+     "Transform": {
+      "Position": [
+       0.0,
+       160.0,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Regional",
+     "Resource": {
+      "sReference": "cognition/models/pack-regional.glb"
+     },
+     "Transform": {
+      "Position": [
+       80.0,
+       160.0,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Civic & Leadership",
+     "Resource": {
+      "sReference": "cognition/models/pack-civic-leadership.glb"
+     },
+     "Transform": {
+      "Position": [
+       160.0,
+       160.0,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Health & Community",
+     "Resource": {
+      "sReference": "cognition/models/pack-health-community.glb"
+     },
+     "Transform": {
+      "Position": [
+       -160.0,
+       80.0,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Language, Culture & Communication",
+     "Resource": {
+      "sReference": "cognition/models/pack-language-culture-communication.glb"
+     },
+     "Transform": {
+      "Position": [
+       -80.0,
+       80.0,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Empathy & Emotional Intelligence",
+     "Resource": {
+      "sReference": "cognition/models/pack-empathy-emotional-intelligence.glb"
+     },
+     "Transform": {
+      "Position": [
+       0.0,
+       80.0,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Community & Relationship Practice",
+     "Resource": {
+      "sReference": "cognition/models/pack-community-relationship-practice.glb"
+     },
+     "Transform": {
+      "Position": [
+       80.0,
+       80.0,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Preventive Health & Everyday Care",
+     "Resource": {
+      "sReference": "cognition/models/pack-preventive-health-everyday-care.glb"
+     },
+     "Transform": {
+      "Position": [
+       160.0,
+       80.0,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Basic Life Skills & Self-Reliance",
+     "Resource": {
+      "sReference": "cognition/models/pack-basic-life-skills-self-reliance.glb"
+     },
+     "Transform": {
+      "Position": [
+       -160.0,
+       0.0,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Water, Land & Climate",
+     "Resource": {
+      "sReference": "cognition/models/pack-water-land-climate.glb"
+     },
+     "Transform": {
+      "Position": [
+       -80.0,
+       0.0,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Care Across a Life",
+     "Resource": {
+      "sReference": "cognition/models/pack-care-across-a-life.glb"
+     },
+     "Transform": {
+      "Position": [
+       0.0,
+       0.0,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Making, Repair & Reuse",
+     "Resource": {
+      "sReference": "cognition/models/pack-making-repair-reuse.glb"
+     },
+     "Transform": {
+      "Position": [
+       80.0,
+       0.0,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Housing & Tenancy",
+     "Resource": {
+      "sReference": "cognition/models/pack-housing-tenancy.glb"
+     },
+     "Transform": {
+      "Position": [
+       160.0,
+       0.0,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Money, Benefits & Entitlements",
+     "Resource": {
+      "sReference": "cognition/models/pack-money-benefits-entitlements.glb"
+     },
+     "Transform": {
+      "Position": [
+       -160.0,
+       -80.0,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Reentry & Recovery Pathways",
+     "Resource": {
+      "sReference": "cognition/models/pack-reentry-recovery-pathways.glb"
+     },
+     "Transform": {
+      "Position": [
+       -80.0,
+       -80.0,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Neighbourhood, Safety & Civic Voice",
+     "Resource": {
+      "sReference": "cognition/models/pack-neighbourhood-safety-civic-voice.glb"
+     },
+     "Transform": {
+      "Position": [
+       0.0,
+       -80.0,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Cognition.X : Corporate OS",
+     "Resource": {
+      "sReference": "cognition/models/pack-corporate-os.glb"
+     },
+     "Transform": {
+      "Position": [
+       80.0,
+       -80.0,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Cognition.X : Science OS",
+     "Resource": {
+      "sReference": "cognition/models/pack-science-os.glb"
+     },
+     "Transform": {
+      "Position": [
+       160.0,
+       -80.0,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Cognition.X : Robotics OS",
+     "Resource": {
+      "sReference": "cognition/models/pack-robotics-os.glb"
+     },
+     "Transform": {
+      "Position": [
+       -160.0,
+       -160.0,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Cognition.X : Global Health OS",
+     "Resource": {
+      "sReference": "cognition/models/pack-global-health-os.glb"
+     },
+     "Transform": {
+      "Position": [
+       -80.0,
+       -160.0,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Cognition.X : Multilateral OS",
+     "Resource": {
+      "sReference": "cognition/models/pack-multilateral-os.glb"
+     },
+     "Transform": {
+      "Position": [
+       0.0,
+       -160.0,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Cognition.X : Sapient OS",
+     "Resource": {
+      "sReference": "cognition/models/pack-sapient-os.glb"
+     },
+     "Transform": {
+      "Position": [
+       80.0,
+       -160.0,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Non-Profit Practice",
+     "Resource": {
+      "sReference": "cognition/models/pack-non-profit-practice.glb"
+     },
+     "Transform": {
+      "Position": [
+       160.0,
+       -160.0,
+       0.0
+      ]
+     }
+    }
+   ]
+  }
+ }
+}

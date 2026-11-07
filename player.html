@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>World — worlds-3d</title>
+<meta name="description" content="Play one WorldForge flagship world in the browser: third-person avatar, NPCs, quests, weather and day cycles. Web 3D interpretation — not RP1.">
+<link rel="stylesheet" href="engine/engine.css">
+<link rel="stylesheet" href="site.css">
+<script type="importmap">
+{ "imports": { "three": "./engine/three.module.min.js" } }
+</script>
+<script src="data.js"></script>
+<script type="module" src="player.js"></script>
+</head>
+<body class="player">
+<header class="player-bar">
+  <a href="index.html">← Lobby</a>
+  <h1 id="world-title">Loading world…</h1>
+  <span class="tag">Web 3D interpretation — not on RP1</span>
+  <button id="info-toggle" type="button">ⓘ World info</button>
+</header>
+<p class="error" id="data-error" hidden style="margin:12px"><strong>World data failed to load.</strong> This page needs <code>data.js</code> next to it. Make sure <code>data.js</code>, <code>player.js</code> and the <code>engine/</code> folder are in place.</p>
+<div class="player-main">
+  <div id="app"></div>
+  <aside id="info-panel" aria-label="World information"></aside>
+</div>
+<div id="unknown" hidden></div>
+</body>
+</html>

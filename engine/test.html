@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Test World — worlds-3d engine test</title>
+<link rel="stylesheet" href="./engine.css">
+<style>html,body{margin:0;padding:0;height:100%;background:#0a0f1c}</style>
+<script type="importmap">
+{ "imports": { "three": "./three.module.min.js" } }
+</script>
+</head>
+<body>
+<div id="app"></div>
+<script type="module">
+import { mountWorld } from './engine.js';
+
+const res = await fetch('./test-world.json');
+const worldDef = await res.json();
+const controller = mountWorld(document.getElementById('app'), worldDef, {});
+window.__world = controller; // for manual probing in devtools
+window.__worldDef = worldDef;
+
+// Self-checks that run in-page (visible in console, no WebGL needed for the parse checks):
+console.log('[test] mountWorld returned controller:', !!controller && typeof controller.stop === 'function');
+console.log('[test] controller API:', Object.keys(controller || {}).join(', '));
+console.log('[test] setWeather/setTimeOfDay/teleport are functions:',
+  typeof controller?.setWeather, typeof controller?.setTimeOfDay, typeof controller?.teleport);
+console.log('[test] state.webgl =', controller?.state?.webgl);
+console.log('[test] world =', controller?.state?.world?.id, '| weather =', controller?.state?.weather, '| hour =', controller?.state?.hour);
+</script>
+</body>
+</html>

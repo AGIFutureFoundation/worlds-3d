@@ -1,0 +1,611 @@
+{
+ "Container": "agi-corp-empathic-x",
+ "Services": [],
+ "Modules": [
+  {
+   "sUrl": "../../wasm/map.wasm"
+  }
+ ],
+ "Primary": {
+  "Ambient": {
+   "fBrightness": 0.12,
+   "fColor": "0xFFFFFF"
+  },
+  "Directional": {
+   "fBrightness": 0.6,
+   "fColor": "0xFFF4E0",
+   "Rotation": [
+    0.0,
+    0.5808,
+    0.6663,
+    0.468
+   ]
+  }
+ },
+ "Data": {
+  "Scene": {
+   "Head": {
+    "Self": "P-?"
+   },
+   "Name": "Empathic.X \u00b7 coming soon \u00b7 Powered by AGI Corp",
+   "Resource": {
+    "sReference": "../models/world-empathic-x.glb"
+   },
+   "Transform": {
+    "Position": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "aChildren": [
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Zone \u00b7 Self-Reader Grove",
+     "Resource": {
+      "sReference": "../models/zone-marker.glb"
+     },
+     "Transform": {
+      "Position": [
+       0.0,
+       -16.0,
+       0.0
+      ]
+     },
+     "aChildren": [
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Agent \u00b7 Self-Reader Guide",
+       "Resource": {
+        "sReference": "../models/agent.glb"
+       },
+       "Transform": {
+        "Position": [
+         0.0,
+         0.0,
+         0.3
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Zone \u00b7 Other-Reader Commons",
+     "Resource": {
+      "sReference": "../models/zone-marker.glb"
+     },
+     "Transform": {
+      "Position": [
+       -13.86,
+       -8.0,
+       0.0
+      ]
+     },
+     "aChildren": [
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Agent \u00b7 Other-Reader Guide",
+       "Resource": {
+        "sReference": "../models/agent.glb"
+       },
+       "Transform": {
+        "Position": [
+         0.0,
+         0.0,
+         0.3
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Zone \u00b7 Repairer's Hall",
+     "Resource": {
+      "sReference": "../models/zone-marker.glb"
+     },
+     "Transform": {
+      "Position": [
+       -13.86,
+       8.0,
+       0.0
+      ]
+     },
+     "aChildren": [
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Agent \u00b7 Repair Guide",
+       "Resource": {
+        "sReference": "../models/agent.glb"
+       },
+       "Transform": {
+        "Position": [
+         0.0,
+         0.0,
+         0.3
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Zone \u00b7 Room-Reader Plaza",
+     "Resource": {
+      "sReference": "../models/zone-marker.glb"
+     },
+     "Transform": {
+      "Position": [
+       -0.0,
+       16.0,
+       0.0
+      ]
+     },
+     "aChildren": [
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Agent \u00b7 Room-Reader Guide",
+       "Resource": {
+        "sReference": "../models/agent.glb"
+       },
+       "Transform": {
+        "Position": [
+         0.0,
+         0.0,
+         0.3
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Zone \u00b7 Practitioner Workshop",
+     "Resource": {
+      "sReference": "../models/zone-marker.glb"
+     },
+     "Transform": {
+      "Position": [
+       13.86,
+       8.0,
+       0.0
+      ]
+     },
+     "aChildren": [
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Agent \u00b7 Practitioner Guide",
+       "Resource": {
+        "sReference": "../models/agent.glb"
+       },
+       "Transform": {
+        "Position": [
+         0.0,
+         0.0,
+         0.3
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Zone \u00b7 Steward Council",
+     "Resource": {
+      "sReference": "../models/zone-marker.glb"
+     },
+     "Transform": {
+      "Position": [
+       13.86,
+       -8.0,
+       0.0
+      ]
+     },
+     "aChildren": [
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Steward seat 1 \u00b7 human",
+       "Resource": {
+        "sReference": "../models/steward.glb"
+       },
+       "Transform": {
+        "Position": [
+         -1.6,
+         0.0,
+         0.3
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Steward seat 2 \u00b7 human",
+       "Resource": {
+        "sReference": "../models/steward.glb"
+       },
+       "Transform": {
+        "Position": [
+         0.0,
+         0.0,
+         0.3
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Steward seat 3 \u00b7 human",
+       "Resource": {
+        "sReference": "../models/steward.glb"
+       },
+       "Transform": {
+        "Position": [
+         1.6,
+         0.0,
+         0.3
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Swarm coordinator \u00b7 Empathic.X",
+     "Resource": {
+      "sReference": "../models/coordinator.glb"
+     },
+     "Transform": {
+      "Position": [
+       0.0,
+       -5.5,
+       0.0
+      ]
+     },
+     "aChildren": [
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Swarm \u00b7 Self-Reader Guide",
+       "Resource": {
+        "sReference": "../models/agent.glb"
+       },
+       "Transform": {
+        "Position": [
+         4.5,
+         -5.5,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Swarm \u00b7 Other-Reader Guide",
+       "Resource": {
+        "sReference": "../models/agent.glb"
+       },
+       "Transform": {
+        "Position": [
+         1.39,
+         -1.22,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Swarm \u00b7 Repair Guide",
+       "Resource": {
+        "sReference": "../models/agent.glb"
+       },
+       "Transform": {
+        "Position": [
+         -3.64,
+         -2.85,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Swarm \u00b7 Room-Reader Guide",
+       "Resource": {
+        "sReference": "../models/agent.glb"
+       },
+       "Transform": {
+        "Position": [
+         -3.64,
+         -8.15,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Swarm \u00b7 Practitioner Guide",
+       "Resource": {
+        "sReference": "../models/agent.glb"
+       },
+       "Transform": {
+        "Position": [
+         1.39,
+         -9.78,
+         0.0
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "PBC \u00b7 Alignment Evaluation Gate",
+     "Resource": {
+      "sReference": "../models/gate.glb"
+     },
+     "Transform": {
+      "Position": [
+       0.0,
+       -24.0,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "L-?"
+     },
+     "Name": "Light \u00b7 Self-Reader Grove",
+     "Type": {
+      "bType": 1
+     },
+     "Transform": {
+      "Position": [
+       0.0,
+       -16.0,
+       5.0
+      ]
+     },
+     "Properties": {
+      "fBrightness": 0.5,
+      "fColor": "0x5B8CD6"
+     }
+    },
+    {
+     "Head": {
+      "Self": "L-?"
+     },
+     "Name": "Light \u00b7 Other-Reader Commons",
+     "Type": {
+      "bType": 1
+     },
+     "Transform": {
+      "Position": [
+       -13.86,
+       -8.0,
+       5.0
+      ]
+     },
+     "Properties": {
+      "fBrightness": 0.5,
+      "fColor": "0x7C5BD6"
+     }
+    },
+    {
+     "Head": {
+      "Self": "L-?"
+     },
+     "Name": "Light \u00b7 Repairer's Hall",
+     "Type": {
+      "bType": 1
+     },
+     "Transform": {
+      "Position": [
+       -13.86,
+       8.0,
+       5.0
+      ]
+     },
+     "Properties": {
+      "fBrightness": 0.5,
+      "fColor": "0xCE5BD6"
+     }
+    },
+    {
+     "Head": {
+      "Self": "L-?"
+     },
+     "Name": "Light \u00b7 Room-Reader Plaza",
+     "Type": {
+      "bType": 1
+     },
+     "Transform": {
+      "Position": [
+       -0.0,
+       16.0,
+       5.0
+      ]
+     },
+     "Properties": {
+      "fBrightness": 0.5,
+      "fColor": "0xD65B8C"
+     }
+    },
+    {
+     "Head": {
+      "Self": "L-?"
+     },
+     "Name": "Light \u00b7 Practitioner Workshop",
+     "Type": {
+      "bType": 1
+     },
+     "Transform": {
+      "Position": [
+       13.86,
+       8.0,
+       5.0
+      ]
+     },
+     "Properties": {
+      "fBrightness": 0.5,
+      "fColor": "0xD67C5B"
+     }
+    },
+    {
+     "Head": {
+      "Self": "L-?"
+     },
+     "Name": "Light \u00b7 Steward Council",
+     "Type": {
+      "bType": 1
+     },
+     "Transform": {
+      "Position": [
+       13.86,
+       -8.0,
+       5.0
+      ]
+     },
+     "Properties": {
+      "fBrightness": 0.5,
+      "fColor": "0xD6CE5B"
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Advisor \u00b7 Host Advisor",
+     "Resource": {
+      "sReference": "../models/advisor-host.glb"
+     },
+     "Transform": {
+      "Position": [
+       4.5,
+       -22.0,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Advisor \u00b7 Steward Liaison",
+     "Resource": {
+      "sReference": "../models/advisor-steward.glb"
+     },
+     "Transform": {
+      "Position": [
+       16.66,
+       -8.0,
+       0.3
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Advisor \u00b7 Alignment Advisor",
+     "Resource": {
+      "sReference": "../models/advisor-alignment.glb"
+     },
+     "Transform": {
+      "Position": [
+       -4.5,
+       -22.0,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Sky",
+     "Resource": {
+      "sReference": "../models/env-sky.glb"
+     },
+     "Transform": {
+      "Position": [
+       0.0,
+       0.0,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Terrain",
+     "Resource": {
+      "sReference": "../models/env-terrain.glb"
+     },
+     "Transform": {
+      "Position": [
+       0.0,
+       0.0,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Sign \u00b7 Empathic.X \u00b7 Powered by AGI Corp",
+     "Resource": {
+      "sReference": "../models/sign-empathic-x.glb"
+     },
+     "Transform": {
+      "Position": [
+       0.0,
+       -31.0,
+       0.0
+      ]
+     }
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "smartciti-holodeck",
+    "name": "SmartCiti.X Holodeck",
+    "series": "Series 10 \u00b7 SmartCiti.X",
+    "lat": 39.84645175015757,
+    "lon": -86.621608018757,
+    "fabric_url": "https://agifuturefoundation.github.io/WorldForge-Browser/my-fabric/holodeck.json",
+    "status": "anchored",
+    "rp1": null
+  },
+  {
+    "id": "cognition-x",
+    "name": "Cognition.X Campus",
+    "series": "Series 1 \u00b7 Cognition.X",
+    "lat": 45.483127839031816,
+    "lon": 18.572453605834877,
+    "fabric_url": "https://agifuturefoundation.github.io/WorldForge-Browser/my-fabric/cognition.json",
+    "status": "anchored",
+    "rp1": null
+  },
+  {
+    "id": "locator-x",
+    "name": "Locator.X",
+    "series": "Series 8 \u00b7 Locator.X",
+    "lat": 21.09705311564314,
+    "lon": 142.69254864512746,
+    "fabric_url": "https://agifuturefoundation.github.io/WorldForge-Browser/my-fabric/worlds/locator-x/world.json",
+    "status": "anchored",
+    "rp1": null
+  },
+  {
+    "id": "biota-blockchain",
+    "name": "Biota.blockchain",
+    "series": "Biota \u00b7 BioDAO",
+    "lat": -38.71260348427612,
+    "lon": -27.248278366617797,
+    "fabric_url": "https://agifuturefoundation.github.io/WorldForge-Browser/my-fabric/worlds/biota-blockchain/world.json",
+    "status": "anchored",
+    "rp1": null
+  },
+  {
+    "id": "empathic-x",
+    "name": "Empathic.X",
+    "series": "Series 2 \u00b7 Empathic.X",
+    "lat": 47.43990000744796,
+    "lon": -179.34952851914045,
+    "fabric_url": "https://agifuturefoundation.github.io/WorldForge-Browser/my-fabric/worlds/empathic-x/world.json",
+    "status": "anchored",
+    "rp1": null
+  },
+  {
+    "id": "diagnostic-x",
+    "name": "Diagnostic.X",
+    "series": "Series 3 \u00b7 Diagnostic.X",
+    "lat": 5.342706937662501,
+    "lon": 101.5663444901012,
+    "fabric_url": "https://agifuturefoundation.github.io/WorldForge-Browser/my-fabric/worlds/diagnostic-x/world.json",
+    "status": "anchored",
+    "rp1": null
+  }
+]

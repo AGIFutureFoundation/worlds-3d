@@ -1,0 +1,1651 @@
+{
+  "id": "smartciti-holodeck",
+  "name": "SmartCiti.X Holodeck",
+  "series": "Series 10 · SmartCiti.X",
+  "status": "anchored",
+  "rp1": null,
+  "coordinates": {
+    "lat": 39.84645175015757,
+    "lon": -86.621608018757
+  },
+  "fabric_url": "https://agifuturefoundation.github.io/WorldForge-Browser/my-fabric/holodeck.json",
+  "biome": "city",
+  "spawn": [
+    0,
+    0,
+    24
+  ],
+  "terrain": {
+    "size": 160,
+    "height": 6,
+    "seed": 1010,
+    "water": false
+  },
+  "weather": {
+    "preset": "clear",
+    "dayCycle": true
+  },
+  "fabric_transform": {
+    "scale": 0.15,
+    "offset": [
+      0,
+      0,
+      0
+    ],
+    "mapping": "engine_x = fabric_x * scale + offset_x; engine_y = fabric_z * scale (fabric z is height, 0 for plan nodes); engine_z = fabric_y * scale + offset_z"
+  },
+  "fabric_nodes_total": 131,
+  "fabric_nodes_used": "8 top-level District nodes as districts; 12 Structural District halls + 11 Sim nodes as buildings (131 fabric nodes total; halls of the other 7 districts are named in sources, not built as separate buildings)",
+  "districts": [
+    {
+      "id": "structural-district",
+      "name": "Structural District",
+      "position": [
+        61.18,
+        0.0,
+        0.0
+      ],
+      "color": "#c0392b",
+      "model_ref": "assets/Container.glb",
+      "model_status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "id": "envelope-finish-district",
+      "name": "Envelope & Finish District",
+      "position": [
+        43.26,
+        0.0,
+        43.26
+      ],
+      "color": "#d35400",
+      "model_ref": "assets/Container.glb",
+      "model_status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "id": "building-systems-district",
+      "name": "Building Systems District",
+      "position": [
+        0.0,
+        0.0,
+        61.18
+      ],
+      "color": "#b7950b",
+      "model_ref": "assets/Container.glb",
+      "model_status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "id": "energy-utilities-district",
+      "name": "Energy & Utilities District",
+      "position": [
+        -43.26,
+        0.0,
+        43.26
+      ],
+      "color": "#1e8449",
+      "model_ref": "assets/Container.glb",
+      "model_status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "id": "earthworks-plant-district",
+      "name": "Earthworks & Plant District",
+      "position": [
+        -61.18,
+        0.0,
+        0.0
+      ],
+      "color": "#2471a3",
+      "model_ref": "assets/Container.glb",
+      "model_status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "id": "heavy-industry-district",
+      "name": "Heavy Industry District",
+      "position": [
+        -43.26,
+        0.0,
+        -43.26
+      ],
+      "color": "#6c3483",
+      "model_ref": "assets/Container.glb",
+      "model_status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "id": "transport-mobility-district",
+      "name": "Transport & Mobility District",
+      "position": [
+        0.0,
+        0.0,
+        -61.18
+      ],
+      "color": "#117a65",
+      "model_ref": "assets/Container.glb",
+      "model_status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "id": "survey-safety-environment-district",
+      "name": "Survey, Safety & Environment District",
+      "position": [
+        43.26,
+        0.0,
+        -43.26
+      ],
+      "color": "#7e5109",
+      "model_ref": "assets/Container.glb",
+      "model_status": "not hosted — procedural placeholder shown"
+    }
+  ],
+  "buildings": [
+    {
+      "id": "ironworkers",
+      "name": "Ironworkers",
+      "position": [
+        -13.05,
+        0.0,
+        8.7
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#c0392b",
+      "interior": {
+        "name": "Ironworkers Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "welding-trades",
+      "name": "Welding Trades",
+      "position": [
+        -4.35,
+        0.0,
+        8.7
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#c0392b",
+      "interior": {
+        "name": "Welding Trades Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "boilermakers",
+      "name": "Boilermakers",
+      "position": [
+        4.35,
+        0.0,
+        8.7
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#c0392b",
+      "interior": {
+        "name": "Boilermakers Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "millwrights",
+      "name": "Millwrights",
+      "position": [
+        13.05,
+        0.0,
+        8.7
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#c0392b",
+      "interior": {
+        "name": "Millwrights Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "riggers-signalpersons",
+      "name": "Riggers & Signalpersons",
+      "position": [
+        -13.05,
+        0.0,
+        0.0
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#c0392b",
+      "interior": {
+        "name": "Riggers & Signalpersons Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "crane-operators",
+      "name": "Crane Operators",
+      "position": [
+        -4.35,
+        0.0,
+        0.0
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#c0392b",
+      "interior": {
+        "name": "Crane Operators Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "steel-erectors",
+      "name": "Steel Erectors",
+      "position": [
+        4.35,
+        0.0,
+        0.0
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#c0392b",
+      "interior": {
+        "name": "Steel Erectors Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "structural-fabricators",
+      "name": "Structural Fabricators",
+      "position": [
+        13.05,
+        0.0,
+        0.0
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#c0392b",
+      "interior": {
+        "name": "Structural Fabricators Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "shipfitters",
+      "name": "Shipfitters",
+      "position": [
+        -13.05,
+        0.0,
+        -8.7
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#c0392b",
+      "interior": {
+        "name": "Shipfitters Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "metal-deck-installers",
+      "name": "Metal Deck Installers",
+      "position": [
+        -4.35,
+        0.0,
+        -8.7
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#c0392b",
+      "interior": {
+        "name": "Metal Deck Installers Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "precast-erectors",
+      "name": "Precast Erectors",
+      "position": [
+        4.35,
+        0.0,
+        -8.7
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#c0392b",
+      "interior": {
+        "name": "Precast Erectors Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "piling-crews",
+      "name": "Piling Crews",
+      "position": [
+        13.05,
+        0.0,
+        -8.7
+      ],
+      "size": [
+        14,
+        8,
+        14
+      ],
+      "color": "#c0392b",
+      "interior": {
+        "name": "Piling Crews Interior",
+        "rooms": [
+          {
+            "name": "Training Floor",
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "props": []
+          },
+          {
+            "name": "Tool Crib",
+            "size": [
+              6,
+              4,
+              6
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "sim-tower-crane-lift",
+      "name": "Sim · Tower Crane Lift",
+      "position": [
+        12.08,
+        0.0,
+        0.0
+      ],
+      "size": [
+        8,
+        4,
+        8
+      ],
+      "color": "#2471a3",
+      "interior": {
+        "name": "Sim · Tower Crane Lift Interior",
+        "rooms": [
+          {
+            "name": "Sim Bay",
+            "size": [
+              7,
+              3,
+              7
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "sim-excavator-trench-cut",
+      "name": "Sim · Excavator Trench Cut",
+      "position": [
+        10.16,
+        0.0,
+        6.53
+      ],
+      "size": [
+        8,
+        4,
+        8
+      ],
+      "color": "#2471a3",
+      "interior": {
+        "name": "Sim · Excavator Trench Cut Interior",
+        "rooms": [
+          {
+            "name": "Sim Bay",
+            "size": [
+              7,
+              3,
+              7
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "sim-forklift-yard-run",
+      "name": "Sim · Forklift Yard Run",
+      "position": [
+        5.02,
+        0.0,
+        10.99
+      ],
+      "size": [
+        8,
+        4,
+        8
+      ],
+      "color": "#2471a3",
+      "interior": {
+        "name": "Sim · Forklift Yard Run Interior",
+        "rooms": [
+          {
+            "name": "Sim Bay",
+            "size": [
+              7,
+              3,
+              7
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "sim-weld-bead-run",
+      "name": "Sim · Weld Bead Run",
+      "position": [
+        -1.72,
+        0.0,
+        11.96
+      ],
+      "size": [
+        8,
+        4,
+        8
+      ],
+      "color": "#2471a3",
+      "interior": {
+        "name": "Sim · Weld Bead Run Interior",
+        "rooms": [
+          {
+            "name": "Sim Bay",
+            "size": [
+              7,
+              3,
+              7
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "sim-scaffold-bay-build",
+      "name": "Sim · Scaffold Bay Build",
+      "position": [
+        -7.91,
+        0.0,
+        9.13
+      ],
+      "size": [
+        8,
+        4,
+        8
+      ],
+      "color": "#2471a3",
+      "interior": {
+        "name": "Sim · Scaffold Bay Build Interior",
+        "rooms": [
+          {
+            "name": "Sim Bay",
+            "size": [
+              7,
+              3,
+              7
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "sim-rigging-signal-call",
+      "name": "Sim · Rigging Signal Call",
+      "position": [
+        -11.59,
+        0.0,
+        3.4
+      ],
+      "size": [
+        8,
+        4,
+        8
+      ],
+      "color": "#2471a3",
+      "interior": {
+        "name": "Sim · Rigging Signal Call Interior",
+        "rooms": [
+          {
+            "name": "Sim Bay",
+            "size": [
+              7,
+              3,
+              7
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "sim-load-chart-judgment",
+      "name": "Sim · Load Chart Judgment",
+      "position": [
+        -11.59,
+        0.0,
+        -3.4
+      ],
+      "size": [
+        8,
+        4,
+        8
+      ],
+      "color": "#2471a3",
+      "interior": {
+        "name": "Sim · Load Chart Judgment Interior",
+        "rooms": [
+          {
+            "name": "Sim Bay",
+            "size": [
+              7,
+              3,
+              7
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "sim-pressure-washer-surface-clean",
+      "name": "Sim · Pressure Washer Surface Clean",
+      "position": [
+        -7.91,
+        0.0,
+        -9.13
+      ],
+      "size": [
+        8,
+        4,
+        8
+      ],
+      "color": "#2471a3",
+      "interior": {
+        "name": "Sim · Pressure Washer Surface Clean Interior",
+        "rooms": [
+          {
+            "name": "Sim Bay",
+            "size": [
+              7,
+              3,
+              7
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "sim-airless-paint-sprayer-finish",
+      "name": "Sim · Airless Paint Sprayer Finish",
+      "position": [
+        -1.72,
+        0.0,
+        -11.96
+      ],
+      "size": [
+        8,
+        4,
+        8
+      ],
+      "color": "#2471a3",
+      "interior": {
+        "name": "Sim · Airless Paint Sprayer Finish Interior",
+        "rooms": [
+          {
+            "name": "Sim Bay",
+            "size": [
+              7,
+              3,
+              7
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "sim-boom-lift-basket-work",
+      "name": "Sim · Boom Lift Basket Work",
+      "position": [
+        5.02,
+        0.0,
+        -10.99
+      ],
+      "size": [
+        8,
+        4,
+        8
+      ],
+      "color": "#2471a3",
+      "interior": {
+        "name": "Sim · Boom Lift Basket Work Interior",
+        "rooms": [
+          {
+            "name": "Sim Bay",
+            "size": [
+              7,
+              3,
+              7
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "sim-overhead-crane-shop-move",
+      "name": "Sim · Overhead Crane Shop Move",
+      "position": [
+        10.16,
+        0.0,
+        -6.53
+      ],
+      "size": [
+        8,
+        4,
+        8
+      ],
+      "color": "#2471a3",
+      "interior": {
+        "name": "Sim · Overhead Crane Shop Move Interior",
+        "rooms": [
+          {
+            "name": "Sim Bay",
+            "size": [
+              7,
+              3,
+              7
+            ],
+            "props": []
+          }
+        ]
+      }
+    }
+  ],
+  "npcs": [
+    {
+      "id": "ironworkers-foreman",
+      "name": "Ironworkers Foreman",
+      "role": "Ironworkers hall lead",
+      "position": [
+        -13.05,
+        0.0,
+        8.7
+      ],
+      "dialogue": [
+        "First day on the deck? Watch the crane, mind your tie-off, and ask before you lift.",
+        "The Ironworkers hall runs the steel. Earn the lift and the crew has your back."
+      ],
+      "quest": "q-structural-circuit"
+    },
+    {
+      "id": "welding-instructor",
+      "name": "Welding Instructor",
+      "role": "Welding Trades hall instructor",
+      "position": [
+        -4.35,
+        0.0,
+        8.7
+      ],
+      "dialogue": [
+        "A clean bead starts before the arc — clean metal, steady hand, right heat.",
+        "Run the sim bay first. The bead never lies, but the sim lets you try again."
+      ],
+      "quest": "q-clean-bead"
+    },
+    {
+      "id": "crane-operator-lead",
+      "name": "Crane Operator Lead",
+      "role": "Crane Operators hall lead",
+      "position": [
+        -4.35,
+        0.0,
+        0.0
+      ],
+      "dialogue": [
+        "Every lift is a conversation between the operator and the signalperson.",
+        "Learn the signals cold. On this deck, a missed signal is a missed lift."
+      ],
+      "quest": "q-first-lift"
+    },
+    {
+      "id": "riggers-signal-lead",
+      "name": "Riggers & Signalpersons Lead",
+      "role": "Riggers & Signalpersons hall lead",
+      "position": [
+        -13.05,
+        0.0,
+        0.0
+      ],
+      "dialogue": [
+        "Rigging is trust you can measure — check the sling, check the angle, check again.",
+        "Signal clear and the load moves. Signal sloppy and nothing moves at all."
+      ],
+      "quest": "q-first-lift"
+    }
+  ],
+  "quests": [
+    {
+      "id": "q-first-lift",
+      "title": "First Lift",
+      "description": "Learn the crane signals and complete your first supervised lift.",
+      "steps": [
+        {
+          "text": "Talk to the Crane Operator Lead",
+          "target": "crane-operator-lead",
+          "kind": "npc"
+        },
+        {
+          "text": "Collect the lift spark at the Tower Crane sim",
+          "target": "spark-crane",
+          "kind": "collectible"
+        },
+        {
+          "text": "Stand in the Tower Crane Lift sim bay",
+          "target": "Sim · Tower Crane Lift",
+          "kind": "place"
+        }
+      ],
+      "reward": "Crane Signal Badge"
+    },
+    {
+      "id": "q-clean-bead",
+      "title": "Clean Bead",
+      "description": "Run the weld sim and bring back a bead worth showing.",
+      "steps": [
+        {
+          "text": "Talk to the Welding Instructor",
+          "target": "welding-instructor",
+          "kind": "npc"
+        },
+        {
+          "text": "Collect the weld relic from the Weld Bead sim",
+          "target": "relic-weld",
+          "kind": "collectible"
+        },
+        {
+          "text": "Stand in the Weld Bead Run sim bay",
+          "target": "Sim · Weld Bead Run",
+          "kind": "place"
+        }
+      ],
+      "reward": "Welder's Mark"
+    },
+    {
+      "id": "q-structural-circuit",
+      "title": "Structural Circuit",
+      "description": "Walk the Structural District and meet the halls that raise the steel.",
+      "steps": [
+        {
+          "text": "Visit the Structural District",
+          "target": "Structural District",
+          "kind": "place"
+        },
+        {
+          "text": "Collect the iron spark at the Ironworkers hall",
+          "target": "spark-iron",
+          "kind": "collectible"
+        },
+        {
+          "text": "Talk to the Ironworkers Foreman",
+          "target": "ironworkers-foreman",
+          "kind": "npc"
+        }
+      ],
+      "reward": "Structural Circuit Badge"
+    }
+  ],
+  "collectibles": [
+    {
+      "id": "spark-crane",
+      "name": "Crane Spark",
+      "position": [
+        14.08,
+        1.0,
+        0.0
+      ],
+      "kind": "spark"
+    },
+    {
+      "id": "relic-weld",
+      "name": "Weld Relic",
+      "position": [
+        0.28,
+        1.0,
+        11.96
+      ],
+      "kind": "relic"
+    },
+    {
+      "id": "spark-iron",
+      "name": "Iron Spark",
+      "position": [
+        -10.05,
+        1.0,
+        8.7
+      ],
+      "kind": "spark"
+    },
+    {
+      "id": "spark-rigging",
+      "name": "Rigging Spark",
+      "position": [
+        -9.59,
+        1.0,
+        3.4
+      ],
+      "kind": "spark"
+    },
+    {
+      "id": "data-loadchart",
+      "name": "Load Chart Data",
+      "position": [
+        -9.59,
+        1.0,
+        -3.4
+      ],
+      "kind": "data"
+    },
+    {
+      "id": "spark-scaffold",
+      "name": "Scaffold Spark",
+      "position": [
+        -5.91,
+        1.0,
+        9.13
+      ],
+      "kind": "spark"
+    },
+    {
+      "id": "relic-crane",
+      "name": "Crane Relic",
+      "position": [
+        -1.3499999999999996,
+        1.0,
+        0.0
+      ],
+      "kind": "relic"
+    },
+    {
+      "id": "spark-boom",
+      "name": "Boom Lift Spark",
+      "position": [
+        7.02,
+        1.0,
+        -10.99
+      ],
+      "kind": "spark"
+    }
+  ],
+  "agent_companions": [
+    {
+      "id": "tactile",
+      "name": "Tactile",
+      "role": "Workflow agent (Virtuals ACP). Real job: workflow_plan, $10 / 24h. Game companion only — live instance offline.",
+      "color": "#6fd3c1"
+    },
+    {
+      "id": "omega",
+      "name": "Omega",
+      "role": "Hive coordination agent (Virtuals ACP). Real job: hive_coordination_brief, $10 / 24h. Game companion only — live instance offline.",
+      "color": "#e2b55c"
+    }
+  ],
+  "missing_models": [
+    {
+      "ref": "assets/Container.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/deck.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-acoustic.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-airfield.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-asbestos.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-automation-int.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-aviation-ground.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-bas-controls.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-battery-storage.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-blasters.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-boilermakers.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-bricklayers.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-bridge-inspect.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-cable-splicers.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-carpenters.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-catenary.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-cement-masons.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-cladding.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-cleanroom.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-concrete-pump.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-confined-space.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-crane-ops.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-curtainwall.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-data-center.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-decking.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-demolition.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-district-energy.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-divers.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-drywall.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-electricians.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-elevator.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-ev-charging.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-fabricators.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-fiber-splicers.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-fire-alarm.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-fire-sprinkler.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-firestop.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-fleet-diesel.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-flooring.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-foundry.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-gas-distrib.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-geothermal.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-glaziers.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-grounds.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-hazmat.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-heavy-equip.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-high-angle.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-hvacr.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-hydro.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-hydrogen.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-industrial-clean.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-instrumentation.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-insulators.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-ironworkers.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-laborers.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-lathers.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-lead-abatement.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-line-workers.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-machinists.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-marine-pipe.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-marine-terminal.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-masonry-restore.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-medical-gas.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-meter-techs.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-millwrights.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-miners.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-mold-remediation.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-network-cabling.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-nuclear.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-operating-eng.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-painters.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-piling.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-pipefitters.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-pipeline.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-plasterers.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-platers.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-plc-techs.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-port-crane.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-post-tension.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-precast.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-rail-signals.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-rail-track.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-refractory.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-riggers.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-robotics.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-roofers.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-scaffold.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-security-sys.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-sheetmetal.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-shipfitters.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-shoring.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-site-safety.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-smelter.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-solar.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-spill-response.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-steel-erectors.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-stone-carvers.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-substation.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-survey-drone.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-surveyors.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-tank-erectors.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-teamsters.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-terrazzo.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-tilesetters.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-toolmakers.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-transit-vehicle.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-transmission.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-wastewater.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-water-distrib.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-waterproofers.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-welders.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-wind.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/models/hall-window-glazing.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/sims/sim-airless-sprayer.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/sims/sim-boom-lift.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/sims/sim-crane-lift.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/sims/sim-excavator-trench.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/sims/sim-forklift-run.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/sims/sim-load-chart.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/sims/sim-overhead-crane.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/sims/sim-pressure-washer.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/sims/sim-rigging-signals.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/sims/sim-scaffold-bay.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "holodeck/sims/sim-weld-bead.glb",
+      "status": "not hosted — procedural placeholder shown"
+    }
+  ],
+  "sources": [
+    "Fabric: rp1-review/push-6-fabrics/site/my-fabric/holodeck.json (local copy in data/fabrics/holodeck.json)",
+    "Fabric live URL: https://agifuturefoundation.github.io/WorldForge-Browser/my-fabric/holodeck.json",
+    "Anchor: lat 39.84645175015757, lon -86.621608018757 (Indianapolis / SmartCiti.X Holodeck anchor). Status anchored = real-world anchor coordinate exists; rp1 null, NOT live on RP1.",
+    "Fabric: 131 nodes total (scene root + 19 top-level + 111 nested); 124 distinct GLB refs, all unhosted — see missing_models.",
+    "Districts = the 8 real top-level '* District' nodes. Buildings = the 12 real Structural District halls (Ironworkers, Welding Trades, Boilermakers, Millwrights, Riggers & Signalpersons, Crane Operators, Steel Erectors, Structural Fabricators, Shipfitters, Metal Deck Installers, Precast Erectors, Piling Crews) + the 11 real 'Sim · ...' nodes. Halls of the other 7 districts (Envelope & Finish, Building Systems, Energy & Utilities, Earthworks & Plant, Heavy Industry, Transport & Mobility, Survey Safety & Environment) are real fabric nodes not built as separate buildings in this pass — see WORLDS-NOTE.md.",
+    "NPCs: the Holodeck fabric has no 'Agent · ...' nodes; NPC roles are named after real fabric hall nodes and all dialogue is original game dialogue, never attributed to a real person.",
+    "Biome 'city' is a design choice for this interpretation.",
+    "Agent companions are game characters representing the real Virtuals agents (agents.json); their live instances are offline — not live connections."
+  ]
+}

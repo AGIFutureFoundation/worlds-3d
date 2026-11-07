@@ -1,0 +1,695 @@
+{
+  "id": "empathic-x",
+  "name": "Empathic.X",
+  "series": "Series 2 · Empathic.X",
+  "status": "anchored",
+  "rp1": null,
+  "coordinates": {
+    "lat": 47.43990000744796,
+    "lon": -179.34952851914045
+  },
+  "fabric_url": "https://agifuturefoundation.github.io/WorldForge-Browser/my-fabric/worlds/empathic-x/world.json",
+  "biome": "grove",
+  "spawn": [
+    0,
+    0,
+    22
+  ],
+  "terrain": {
+    "size": 120,
+    "height": 5,
+    "seed": 102,
+    "water": false
+  },
+  "weather": {
+    "preset": "golden-hour",
+    "dayCycle": true
+  },
+  "fabric_transform": {
+    "scale": 1.5,
+    "offset": [
+      0,
+      0,
+      0
+    ],
+    "mapping": "engine_x = fabric_x * scale + offset_x; engine_y = fabric_z * scale (fabric z is height, 0 for plan nodes); engine_z = fabric_y * scale + offset_z"
+  },
+  "fabric_nodes_total": 34,
+  "fabric_nodes_used": "All 6 Zone nodes as districts and buildings, plus the PBC Alignment Evaluation Gate and the world Sign as buildings",
+  "districts": [
+    {
+      "id": "zone-self-reader-grove",
+      "name": "Zone · Self-Reader Grove",
+      "position": [
+        0.0,
+        0.0,
+        -24.0
+      ],
+      "color": "#2471a3",
+      "model_ref": "../models/zone-marker.glb",
+      "model_status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "id": "zone-other-reader-commons",
+      "name": "Zone · Other-Reader Commons",
+      "position": [
+        -20.79,
+        0.0,
+        -12.0
+      ],
+      "color": "#1e8449",
+      "model_ref": "../models/zone-marker.glb",
+      "model_status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "id": "zone-repairer-s-hall",
+      "name": "Zone · Repairer's Hall",
+      "position": [
+        -20.79,
+        0.0,
+        12.0
+      ],
+      "color": "#b7950b",
+      "model_ref": "../models/zone-marker.glb",
+      "model_status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "id": "zone-room-reader-plaza",
+      "name": "Zone · Room-Reader Plaza",
+      "position": [
+        0.0,
+        0.0,
+        24.0
+      ],
+      "color": "#6c3483",
+      "model_ref": "../models/zone-marker.glb",
+      "model_status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "id": "zone-practitioner-workshop",
+      "name": "Zone · Practitioner Workshop",
+      "position": [
+        20.79,
+        0.0,
+        12.0
+      ],
+      "color": "#117a65",
+      "model_ref": "../models/zone-marker.glb",
+      "model_status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "id": "zone-steward-council",
+      "name": "Zone · Steward Council",
+      "position": [
+        20.79,
+        0.0,
+        -12.0
+      ],
+      "color": "#7e5109",
+      "model_ref": "../models/zone-marker.glb",
+      "model_status": "not hosted — procedural placeholder shown"
+    }
+  ],
+  "buildings": [
+    {
+      "id": "zone-self-reader-grove",
+      "name": "Zone · Self-Reader Grove",
+      "position": [
+        0.0,
+        0.0,
+        -24.0
+      ],
+      "size": [
+        12,
+        7,
+        12
+      ],
+      "color": "#2471a3",
+      "interior": {
+        "name": "Zone · Self-Reader Grove Interior",
+        "rooms": [
+          {
+            "name": "Main Hall",
+            "size": [
+              10,
+              5,
+              10
+            ],
+            "props": []
+          },
+          {
+            "name": "Side Room",
+            "size": [
+              5,
+              4,
+              5
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "zone-other-reader-commons",
+      "name": "Zone · Other-Reader Commons",
+      "position": [
+        -20.79,
+        0.0,
+        -12.0
+      ],
+      "size": [
+        12,
+        7,
+        12
+      ],
+      "color": "#1e8449",
+      "interior": {
+        "name": "Zone · Other-Reader Commons Interior",
+        "rooms": [
+          {
+            "name": "Main Hall",
+            "size": [
+              10,
+              5,
+              10
+            ],
+            "props": []
+          },
+          {
+            "name": "Side Room",
+            "size": [
+              5,
+              4,
+              5
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "zone-repairer-s-hall",
+      "name": "Zone · Repairer's Hall",
+      "position": [
+        -20.79,
+        0.0,
+        12.0
+      ],
+      "size": [
+        12,
+        7,
+        12
+      ],
+      "color": "#b7950b",
+      "interior": {
+        "name": "Zone · Repairer's Hall Interior",
+        "rooms": [
+          {
+            "name": "Main Hall",
+            "size": [
+              10,
+              5,
+              10
+            ],
+            "props": []
+          },
+          {
+            "name": "Side Room",
+            "size": [
+              5,
+              4,
+              5
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "zone-room-reader-plaza",
+      "name": "Zone · Room-Reader Plaza",
+      "position": [
+        0.0,
+        0.0,
+        24.0
+      ],
+      "size": [
+        12,
+        7,
+        12
+      ],
+      "color": "#6c3483",
+      "interior": {
+        "name": "Zone · Room-Reader Plaza Interior",
+        "rooms": [
+          {
+            "name": "Main Hall",
+            "size": [
+              10,
+              5,
+              10
+            ],
+            "props": []
+          },
+          {
+            "name": "Side Room",
+            "size": [
+              5,
+              4,
+              5
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "zone-practitioner-workshop",
+      "name": "Zone · Practitioner Workshop",
+      "position": [
+        20.79,
+        0.0,
+        12.0
+      ],
+      "size": [
+        12,
+        7,
+        12
+      ],
+      "color": "#117a65",
+      "interior": {
+        "name": "Zone · Practitioner Workshop Interior",
+        "rooms": [
+          {
+            "name": "Main Hall",
+            "size": [
+              10,
+              5,
+              10
+            ],
+            "props": []
+          },
+          {
+            "name": "Side Room",
+            "size": [
+              5,
+              4,
+              5
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "zone-steward-council",
+      "name": "Zone · Steward Council",
+      "position": [
+        20.79,
+        0.0,
+        -12.0
+      ],
+      "size": [
+        12,
+        7,
+        12
+      ],
+      "color": "#7e5109",
+      "interior": {
+        "name": "Zone · Steward Council Interior",
+        "rooms": [
+          {
+            "name": "Main Hall",
+            "size": [
+              10,
+              5,
+              10
+            ],
+            "props": []
+          },
+          {
+            "name": "Side Room",
+            "size": [
+              5,
+              4,
+              5
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "pbc-alignment-evaluation-gate",
+      "name": "PBC · Alignment Evaluation Gate",
+      "position": [
+        0.0,
+        0.0,
+        -36.0
+      ],
+      "size": [
+        10,
+        6,
+        4
+      ],
+      "color": "#6c3483",
+      "interior": {
+        "name": "PBC · Alignment Evaluation Gate Interior",
+        "rooms": [
+          {
+            "name": "Gate Hall",
+            "size": [
+              8,
+              4,
+              3
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "sign-empathic-x-powered-by-agi-corp",
+      "name": "Sign · Empathic.X · Powered by AGI Corp",
+      "position": [
+        0.0,
+        0.0,
+        -46.5
+      ],
+      "size": [
+        10,
+        5,
+        2
+      ],
+      "color": "#b7950b",
+      "interior": {
+        "name": "Sign · Empathic.X · Powered by AGI Corp Interior",
+        "rooms": [
+          {
+            "name": "Sign Plaza",
+            "size": [
+              8,
+              4,
+              3
+            ],
+            "props": []
+          }
+        ]
+      }
+    }
+  ],
+  "npcs": [
+    {
+      "id": "self-reader-guide",
+      "name": "Self-Reader Guide",
+      "role": "Self-Reader Grove guide",
+      "position": [
+        0.0,
+        0.45,
+        -24.0
+      ],
+      "dialogue": [
+        "Start with yourself. What are you actually feeling right now?",
+        "No judgment here — just noticing, one breath at a time."
+      ],
+      "quest": "q-first-reading"
+    },
+    {
+      "id": "other-reader-guide",
+      "name": "Other-Reader Guide",
+      "role": "Other-Reader Commons guide",
+      "position": [
+        -20.79,
+        0.45,
+        -12.0
+      ],
+      "dialogue": [
+        "Listening is a skill, not a talent. Practice it like one.",
+        "Repeat back what you heard before you answer. It changes everything."
+      ],
+      "quest": "q-first-reading"
+    },
+    {
+      "id": "repair-guide",
+      "name": "Repair Guide",
+      "role": "Repairer's Hall guide",
+      "position": [
+        -20.79,
+        0.45,
+        12.0
+      ],
+      "dialogue": [
+        "Repair starts with owning the impact, not debating the intent.",
+        "A good apology names what happened and what changes next."
+      ],
+      "quest": "q-repair-circle"
+    },
+    {
+      "id": "room-reader-guide",
+      "name": "Room-Reader Guide",
+      "role": "Room-Reader Plaza guide",
+      "position": [
+        0.0,
+        0.45,
+        24.0
+      ],
+      "dialogue": [
+        "Read the room before you enter it. Who is quiet? Who is carrying the weight?",
+        "A room tells you what it needs if you stop talking long enough."
+      ],
+      "quest": "q-room-read"
+    },
+    {
+      "id": "practitioner-guide",
+      "name": "Practitioner Guide",
+      "role": "Practitioner Workshop guide",
+      "position": [
+        20.79,
+        0.45,
+        12.0
+      ],
+      "dialogue": [
+        "Practice is the whole path. Ten minutes a day beats one big weekend.",
+        "Bring a real moment from your week and we will work it together."
+      ],
+      "quest": "q-repair-circle"
+    }
+  ],
+  "quests": [
+    {
+      "id": "q-first-reading",
+      "title": "First Reading",
+      "description": "Learn to read yourself, then read the room with others.",
+      "steps": [
+        {
+          "text": "Talk to the Self-Reader Guide",
+          "target": "self-reader-guide",
+          "kind": "npc"
+        },
+        {
+          "text": "Collect the self spark in the Grove",
+          "target": "spark-self",
+          "kind": "collectible"
+        },
+        {
+          "text": "Visit the Self-Reader Grove",
+          "target": "Zone · Self-Reader Grove",
+          "kind": "place"
+        }
+      ],
+      "reward": "Reader's Leaf"
+    },
+    {
+      "id": "q-repair-circle",
+      "title": "Repair Circle",
+      "description": "Practice repair in the hall and carry it out into the commons.",
+      "steps": [
+        {
+          "text": "Talk to the Repair Guide",
+          "target": "repair-guide",
+          "kind": "npc"
+        },
+        {
+          "text": "Collect the repair relic",
+          "target": "relic-repair",
+          "kind": "collectible"
+        },
+        {
+          "text": "Visit the Repairer's Hall",
+          "target": "Zone · Repairer's Hall",
+          "kind": "place"
+        }
+      ],
+      "reward": "Repair Circle Badge"
+    },
+    {
+      "id": "q-room-read",
+      "title": "Room Read",
+      "description": "Read a room and report what it needs.",
+      "steps": [
+        {
+          "text": "Talk to the Room-Reader Guide",
+          "target": "room-reader-guide",
+          "kind": "npc"
+        },
+        {
+          "text": "Collect the room spark at the Plaza",
+          "target": "spark-room",
+          "kind": "collectible"
+        },
+        {
+          "text": "Visit the Room-Reader Plaza",
+          "target": "Zone · Room-Reader Plaza",
+          "kind": "place"
+        }
+      ],
+      "reward": "Room Reader's Mark"
+    }
+  ],
+  "collectibles": [
+    {
+      "id": "spark-self",
+      "name": "Self Spark",
+      "position": [
+        3.0,
+        1.0,
+        -24.0
+      ],
+      "kind": "spark"
+    },
+    {
+      "id": "relic-repair",
+      "name": "Repair Relic",
+      "position": [
+        -17.79,
+        1.0,
+        12.0
+      ],
+      "kind": "relic"
+    },
+    {
+      "id": "spark-room",
+      "name": "Room Spark",
+      "position": [
+        3.0,
+        1.0,
+        24.0
+      ],
+      "kind": "spark"
+    },
+    {
+      "id": "data-commons",
+      "name": "Commons Data",
+      "position": [
+        -17.79,
+        1.0,
+        -12.0
+      ],
+      "kind": "data"
+    },
+    {
+      "id": "spark-workshop",
+      "name": "Workshop Spark",
+      "position": [
+        23.79,
+        1.0,
+        12.0
+      ],
+      "kind": "spark"
+    },
+    {
+      "id": "relic-steward",
+      "name": "Steward Relic",
+      "position": [
+        23.79,
+        1.0,
+        -12.0
+      ],
+      "kind": "relic"
+    },
+    {
+      "id": "spark-grove",
+      "name": "Grove Spark",
+      "position": [
+        -3.0,
+        1.0,
+        -24.0
+      ],
+      "kind": "spark"
+    }
+  ],
+  "agent_companions": [
+    {
+      "id": "omega",
+      "name": "Omega",
+      "role": "Hive coordination agent (Virtuals ACP). Real job: hive_coordination_brief, $10 / 24h. Game companion only — live instance offline.",
+      "color": "#e2b55c"
+    },
+    {
+      "id": "tactile",
+      "name": "Tactile",
+      "role": "Workflow agent (Virtuals ACP). Real job: workflow_plan, $10 / 24h. Game companion only — live instance offline.",
+      "color": "#6fd3c1"
+    }
+  ],
+  "missing_models": [
+    {
+      "ref": "../models/advisor-alignment.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "../models/advisor-host.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "../models/advisor-steward.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "../models/agent.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "../models/coordinator.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "../models/env-sky.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "../models/env-terrain.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "../models/gate.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "../models/sign-empathic-x.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "../models/steward.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "../models/world-empathic-x.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "../models/zone-marker.glb",
+      "status": "not hosted — procedural placeholder shown"
+    }
+  ],
+  "sources": [
+    "Fabric: rp1-review/push-6-fabrics/site/my-fabric/worlds/empathic/world.json (local copy in data/fabrics/)",
+    "Fabric live URL: https://agifuturefoundation.github.io/WorldForge-Browser/my-fabric/worlds/empathic-x/world.json",
+    "Anchor: lat 47.43990000744796, lon -179.34952851914045. Status anchored = real-world anchor coordinate exists; rp1 null, NOT live on RP1.",
+    "Fabric: 34 nodes total (scene root + 20 top-level + nested Agent/Swarm children); 12 distinct GLB refs, all unhosted — see missing_models.",
+    "Districts/buildings = the real 'Zone · ...' nodes. NPCs = the real 'Agent · ...' nodes (nested under their zones; NPC position = zone position + the agent node's local offset) plus the real 'Advisor · Host Advisor' node. All NPC dialogue is original game dialogue, never attributed to a real person.",
+    "Biome 'grove' is a design choice for this interpretation.",
+    "Agent companions are game characters representing the real Virtuals agents (agents.json); their live instances are offline — not live connections.",
+    "Zones (6): Self-Reader Grove, Other-Reader Commons, Repairer's Hall, Room-Reader Plaza, Practitioner Workshop, Steward Council."
+  ]
+}

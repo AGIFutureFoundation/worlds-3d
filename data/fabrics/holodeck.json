@@ -1,0 +1,2141 @@
+{
+ "Container": "smartciti-holodeck",
+ "Services": [],
+ "Modules": [
+  {
+   "sUrl": "wasm/map.wasm"
+  }
+ ],
+ "Primary": {
+  "Ambient": {
+   "fBrightness": 0.12,
+   "fColor": "0xFFFFFF"
+  },
+  "Directional": {
+   "fBrightness": 0.6,
+   "fColor": "0xFFF4E0",
+   "Rotation": [
+    0.0,
+    0.5808,
+    0.6663,
+    0.468
+   ]
+  }
+ },
+ "Data": {
+  "Scene": {
+   "Head": {
+    "Self": "P-?"
+   },
+   "Name": "SmartCiti.X Holodeck",
+   "Resource": {
+    "sReference": "holodeck/models/deck.glb"
+   },
+   "Transform": {
+    "Position": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "aChildren": [
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Structural District",
+     "Resource": {
+      "sReference": "assets/Container.glb"
+     },
+     "Transform": {
+      "Position": [
+       407.9,
+       0.0,
+       0.0
+      ]
+     },
+     "aChildren": [
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Ironworkers",
+       "Resource": {
+        "sReference": "holodeck/models/hall-ironworkers.glb"
+       },
+       "Transform": {
+        "Position": [
+         -87.0,
+         58.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Welding Trades",
+       "Resource": {
+        "sReference": "holodeck/models/hall-welders.glb"
+       },
+       "Transform": {
+        "Position": [
+         -29.0,
+         58.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Boilermakers",
+       "Resource": {
+        "sReference": "holodeck/models/hall-boilermakers.glb"
+       },
+       "Transform": {
+        "Position": [
+         29.0,
+         58.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Millwrights",
+       "Resource": {
+        "sReference": "holodeck/models/hall-millwrights.glb"
+       },
+       "Transform": {
+        "Position": [
+         87.0,
+         58.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Riggers & Signalpersons",
+       "Resource": {
+        "sReference": "holodeck/models/hall-riggers.glb"
+       },
+       "Transform": {
+        "Position": [
+         -87.0,
+         0.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Crane Operators",
+       "Resource": {
+        "sReference": "holodeck/models/hall-crane-ops.glb"
+       },
+       "Transform": {
+        "Position": [
+         -29.0,
+         0.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Steel Erectors",
+       "Resource": {
+        "sReference": "holodeck/models/hall-steel-erectors.glb"
+       },
+       "Transform": {
+        "Position": [
+         29.0,
+         0.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Structural Fabricators",
+       "Resource": {
+        "sReference": "holodeck/models/hall-fabricators.glb"
+       },
+       "Transform": {
+        "Position": [
+         87.0,
+         0.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Shipfitters",
+       "Resource": {
+        "sReference": "holodeck/models/hall-shipfitters.glb"
+       },
+       "Transform": {
+        "Position": [
+         -87.0,
+         -58.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Metal Deck Installers",
+       "Resource": {
+        "sReference": "holodeck/models/hall-decking.glb"
+       },
+       "Transform": {
+        "Position": [
+         -29.0,
+         -58.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Precast Erectors",
+       "Resource": {
+        "sReference": "holodeck/models/hall-precast.glb"
+       },
+       "Transform": {
+        "Position": [
+         29.0,
+         -58.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Piling Crews",
+       "Resource": {
+        "sReference": "holodeck/models/hall-piling.glb"
+       },
+       "Transform": {
+        "Position": [
+         87.0,
+         -58.0,
+         0.0
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Envelope & Finish District",
+     "Resource": {
+      "sReference": "assets/Container.glb"
+     },
+     "Transform": {
+      "Position": [
+       288.43,
+       288.43,
+       0.0
+      ]
+     },
+     "aChildren": [
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Carpenters",
+       "Resource": {
+        "sReference": "holodeck/models/hall-carpenters.glb"
+       },
+       "Transform": {
+        "Position": [
+         -116.0,
+         116.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Drywall Finishers",
+       "Resource": {
+        "sReference": "holodeck/models/hall-drywall.glb"
+       },
+       "Transform": {
+        "Position": [
+         -58.0,
+         116.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Glaziers",
+       "Resource": {
+        "sReference": "holodeck/models/hall-glaziers.glb"
+       },
+       "Transform": {
+        "Position": [
+         0.0,
+         116.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Roofers & Waterproofers",
+       "Resource": {
+        "sReference": "holodeck/models/hall-roofers.glb"
+       },
+       "Transform": {
+        "Position": [
+         58.0,
+         116.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Bricklayers & Allied Craft",
+       "Resource": {
+        "sReference": "holodeck/models/hall-bricklayers.glb"
+       },
+       "Transform": {
+        "Position": [
+         116.0,
+         116.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Cement Masons",
+       "Resource": {
+        "sReference": "holodeck/models/hall-cement-masons.glb"
+       },
+       "Transform": {
+        "Position": [
+         -116.0,
+         58.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Floor Coverers",
+       "Resource": {
+        "sReference": "holodeck/models/hall-flooring.glb"
+       },
+       "Transform": {
+        "Position": [
+         -58.0,
+         58.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Painters & Allied Trades",
+       "Resource": {
+        "sReference": "holodeck/models/hall-painters.glb"
+       },
+       "Transform": {
+        "Position": [
+         0.0,
+         58.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Heat & Frost Insulators",
+       "Resource": {
+        "sReference": "holodeck/models/hall-insulators.glb"
+       },
+       "Transform": {
+        "Position": [
+         58.0,
+         58.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Plasterers",
+       "Resource": {
+        "sReference": "holodeck/models/hall-plasterers.glb"
+       },
+       "Transform": {
+        "Position": [
+         116.0,
+         58.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Terrazzo Workers",
+       "Resource": {
+        "sReference": "holodeck/models/hall-terrazzo.glb"
+       },
+       "Transform": {
+        "Position": [
+         -116.0,
+         0.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Tile Setters",
+       "Resource": {
+        "sReference": "holodeck/models/hall-tilesetters.glb"
+       },
+       "Transform": {
+        "Position": [
+         -58.0,
+         0.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Lathers & Metal Framers",
+       "Resource": {
+        "sReference": "holodeck/models/hall-lathers.glb"
+       },
+       "Transform": {
+        "Position": [
+         0.0,
+         0.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Curtain Wall Erectors",
+       "Resource": {
+        "sReference": "holodeck/models/hall-curtainwall.glb"
+       },
+       "Transform": {
+        "Position": [
+         58.0,
+         0.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Below-Grade Waterproofers",
+       "Resource": {
+        "sReference": "holodeck/models/hall-waterproofers.glb"
+       },
+       "Transform": {
+        "Position": [
+         116.0,
+         0.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Firestop Installers",
+       "Resource": {
+        "sReference": "holodeck/models/hall-firestop.glb"
+       },
+       "Transform": {
+        "Position": [
+         -116.0,
+         -58.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Acoustic Specialists",
+       "Resource": {
+        "sReference": "holodeck/models/hall-acoustic.glb"
+       },
+       "Transform": {
+        "Position": [
+         -58.0,
+         -58.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Rainscreen Cladding Fitters",
+       "Resource": {
+        "sReference": "holodeck/models/hall-cladding.glb"
+       },
+       "Transform": {
+        "Position": [
+         0.0,
+         -58.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Masonry Restoration",
+       "Resource": {
+        "sReference": "holodeck/models/hall-masonry-restore.glb"
+       },
+       "Transform": {
+        "Position": [
+         58.0,
+         -58.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Stone Carvers",
+       "Resource": {
+        "sReference": "holodeck/models/hall-stone-carvers.glb"
+       },
+       "Transform": {
+        "Position": [
+         116.0,
+         -58.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Architectural Glaziers",
+       "Resource": {
+        "sReference": "holodeck/models/hall-window-glazing.glb"
+       },
+       "Transform": {
+        "Position": [
+         -116.0,
+         -116.0,
+         0.0
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Building Systems District",
+     "Resource": {
+      "sReference": "assets/Container.glb"
+     },
+     "Transform": {
+      "Position": [
+       0.0,
+       407.9,
+       0.0
+      ]
+     },
+     "aChildren": [
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Electrical Workers",
+       "Resource": {
+        "sReference": "holodeck/models/hall-electricians.glb"
+       },
+       "Transform": {
+        "Position": [
+         -116.0,
+         87.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Plumbers & Pipefitters",
+       "Resource": {
+        "sReference": "holodeck/models/hall-pipefitters.glb"
+       },
+       "Transform": {
+        "Position": [
+         -58.0,
+         87.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "HVAC/R Technicians",
+       "Resource": {
+        "sReference": "holodeck/models/hall-hvacr.glb"
+       },
+       "Transform": {
+        "Position": [
+         0.0,
+         87.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Sheet Metal Workers",
+       "Resource": {
+        "sReference": "holodeck/models/hall-sheetmetal.glb"
+       },
+       "Transform": {
+        "Position": [
+         58.0,
+         87.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Fire Sprinkler Fitters",
+       "Resource": {
+        "sReference": "holodeck/models/hall-fire-sprinkler.glb"
+       },
+       "Transform": {
+        "Position": [
+         116.0,
+         87.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Elevator Constructors",
+       "Resource": {
+        "sReference": "holodeck/models/hall-elevator.glb"
+       },
+       "Transform": {
+        "Position": [
+         -116.0,
+         29.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Building Automation Techs",
+       "Resource": {
+        "sReference": "holodeck/models/hall-bas-controls.glb"
+       },
+       "Transform": {
+        "Position": [
+         -58.0,
+         29.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Fire Alarm Technicians",
+       "Resource": {
+        "sReference": "holodeck/models/hall-fire-alarm.glb"
+       },
+       "Transform": {
+        "Position": [
+         0.0,
+         29.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Security Systems Installers",
+       "Resource": {
+        "sReference": "holodeck/models/hall-security-sys.glb"
+       },
+       "Transform": {
+        "Position": [
+         58.0,
+         29.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Structured Cabling Techs",
+       "Resource": {
+        "sReference": "holodeck/models/hall-network-cabling.glb"
+       },
+       "Transform": {
+        "Position": [
+         116.0,
+         29.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Fiber Splicers",
+       "Resource": {
+        "sReference": "holodeck/models/hall-fiber-splicers.glb"
+       },
+       "Transform": {
+        "Position": [
+         -116.0,
+         -29.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Data Centre Technicians",
+       "Resource": {
+        "sReference": "holodeck/models/hall-data-center.glb"
+       },
+       "Transform": {
+        "Position": [
+         -58.0,
+         -29.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Instrumentation Technicians",
+       "Resource": {
+        "sReference": "holodeck/models/hall-instrumentation.glb"
+       },
+       "Transform": {
+        "Position": [
+         0.0,
+         -29.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "PLC & Controls Technicians",
+       "Resource": {
+        "sReference": "holodeck/models/hall-plc-techs.glb"
+       },
+       "Transform": {
+        "Position": [
+         58.0,
+         -29.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Industrial Robotics Techs",
+       "Resource": {
+        "sReference": "holodeck/models/hall-robotics.glb"
+       },
+       "Transform": {
+        "Position": [
+         116.0,
+         -29.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Automation Integrators",
+       "Resource": {
+        "sReference": "holodeck/models/hall-automation-int.glb"
+       },
+       "Transform": {
+        "Position": [
+         -116.0,
+         -87.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Cleanroom Trades",
+       "Resource": {
+        "sReference": "holodeck/models/hall-cleanroom.glb"
+       },
+       "Transform": {
+        "Position": [
+         -58.0,
+         -87.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Medical Gas Installers",
+       "Resource": {
+        "sReference": "holodeck/models/hall-medical-gas.glb"
+       },
+       "Transform": {
+        "Position": [
+         0.0,
+         -87.0,
+         0.0
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Energy & Utilities District",
+     "Resource": {
+      "sReference": "assets/Container.glb"
+     },
+     "Transform": {
+      "Position": [
+       -288.43,
+       288.43,
+       0.0
+      ]
+     },
+     "aChildren": [
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Utility Line Workers",
+       "Resource": {
+        "sReference": "holodeck/models/hall-line-workers.glb"
+       },
+       "Transform": {
+        "Position": [
+         -116.0,
+         87.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Solar Installers",
+       "Resource": {
+        "sReference": "holodeck/models/hall-solar.glb"
+       },
+       "Transform": {
+        "Position": [
+         -58.0,
+         87.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Wind Turbine Technicians",
+       "Resource": {
+        "sReference": "holodeck/models/hall-wind.glb"
+       },
+       "Transform": {
+        "Position": [
+         0.0,
+         87.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Substation Technicians",
+       "Resource": {
+        "sReference": "holodeck/models/hall-substation.glb"
+       },
+       "Transform": {
+        "Position": [
+         58.0,
+         87.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Cable Splicers",
+       "Resource": {
+        "sReference": "holodeck/models/hall-cable-splicers.glb"
+       },
+       "Transform": {
+        "Position": [
+         116.0,
+         87.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Meter Technicians",
+       "Resource": {
+        "sReference": "holodeck/models/hall-meter-techs.glb"
+       },
+       "Transform": {
+        "Position": [
+         -116.0,
+         29.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Gas Distribution Fitters",
+       "Resource": {
+        "sReference": "holodeck/models/hall-gas-distrib.glb"
+       },
+       "Transform": {
+        "Position": [
+         -58.0,
+         29.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Water Distribution Fitters",
+       "Resource": {
+        "sReference": "holodeck/models/hall-water-distrib.glb"
+       },
+       "Transform": {
+        "Position": [
+         0.0,
+         29.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Wastewater Operators",
+       "Resource": {
+        "sReference": "holodeck/models/hall-wastewater.glb"
+       },
+       "Transform": {
+        "Position": [
+         58.0,
+         29.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Nuclear Plant Trades",
+       "Resource": {
+        "sReference": "holodeck/models/hall-nuclear.glb"
+       },
+       "Transform": {
+        "Position": [
+         116.0,
+         29.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Hydro Plant Trades",
+       "Resource": {
+        "sReference": "holodeck/models/hall-hydro.glb"
+       },
+       "Transform": {
+        "Position": [
+         -116.0,
+         -29.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Geothermal Technicians",
+       "Resource": {
+        "sReference": "holodeck/models/hall-geothermal.glb"
+       },
+       "Transform": {
+        "Position": [
+         -58.0,
+         -29.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Battery Storage Technicians",
+       "Resource": {
+        "sReference": "holodeck/models/hall-battery-storage.glb"
+       },
+       "Transform": {
+        "Position": [
+         0.0,
+         -29.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "EV Charging Installers",
+       "Resource": {
+        "sReference": "holodeck/models/hall-ev-charging.glb"
+       },
+       "Transform": {
+        "Position": [
+         58.0,
+         -29.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Hydrogen Systems Trades",
+       "Resource": {
+        "sReference": "holodeck/models/hall-hydrogen.glb"
+       },
+       "Transform": {
+        "Position": [
+         116.0,
+         -29.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Transmission Linemen",
+       "Resource": {
+        "sReference": "holodeck/models/hall-transmission.glb"
+       },
+       "Transform": {
+        "Position": [
+         -116.0,
+         -87.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "District Energy Operators",
+       "Resource": {
+        "sReference": "holodeck/models/hall-district-energy.glb"
+       },
+       "Transform": {
+        "Position": [
+         -58.0,
+         -87.0,
+         0.0
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Earthworks & Plant District",
+     "Resource": {
+      "sReference": "assets/Container.glb"
+     },
+     "Transform": {
+      "Position": [
+       -407.9,
+       0.0,
+       0.0
+      ]
+     },
+     "aChildren": [
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Operating Engineers",
+       "Resource": {
+        "sReference": "holodeck/models/hall-operating-eng.glb"
+       },
+       "Transform": {
+        "Position": [
+         -87.0,
+         58.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Heavy Equipment Technicians",
+       "Resource": {
+        "sReference": "holodeck/models/hall-heavy-equip.glb"
+       },
+       "Transform": {
+        "Position": [
+         -29.0,
+         58.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Laborers",
+       "Resource": {
+        "sReference": "holodeck/models/hall-laborers.glb"
+       },
+       "Transform": {
+        "Position": [
+         29.0,
+         58.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Demolition Workers",
+       "Resource": {
+        "sReference": "holodeck/models/hall-demolition.glb"
+       },
+       "Transform": {
+        "Position": [
+         87.0,
+         58.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Teamsters",
+       "Resource": {
+        "sReference": "holodeck/models/hall-teamsters.glb"
+       },
+       "Transform": {
+        "Position": [
+         -87.0,
+         0.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Scaffold Erectors",
+       "Resource": {
+        "sReference": "holodeck/models/hall-scaffold.glb"
+       },
+       "Transform": {
+        "Position": [
+         -29.0,
+         0.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Grounds & Landscape",
+       "Resource": {
+        "sReference": "holodeck/models/hall-grounds.glb"
+       },
+       "Transform": {
+        "Position": [
+         29.0,
+         0.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Shoring & Underpinning",
+       "Resource": {
+        "sReference": "holodeck/models/hall-shoring.glb"
+       },
+       "Transform": {
+        "Position": [
+         87.0,
+         0.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Concrete Pump Operators",
+       "Resource": {
+        "sReference": "holodeck/models/hall-concrete-pump.glb"
+       },
+       "Transform": {
+        "Position": [
+         -87.0,
+         -58.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Post-Tension Technicians",
+       "Resource": {
+        "sReference": "holodeck/models/hall-post-tension.glb"
+       },
+       "Transform": {
+        "Position": [
+         -29.0,
+         -58.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Drillers & Blasters",
+       "Resource": {
+        "sReference": "holodeck/models/hall-blasters.glb"
+       },
+       "Transform": {
+        "Position": [
+         29.0,
+         -58.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Underground Miners",
+       "Resource": {
+        "sReference": "holodeck/models/hall-miners.glb"
+       },
+       "Transform": {
+        "Position": [
+         87.0,
+         -58.0,
+         0.0
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Heavy Industry District",
+     "Resource": {
+      "sReference": "assets/Container.glb"
+     },
+     "Transform": {
+      "Position": [
+       -288.43,
+       -288.43,
+       0.0
+      ]
+     },
+     "aChildren": [
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Refractory Masons",
+       "Resource": {
+        "sReference": "holodeck/models/hall-refractory.glb"
+       },
+       "Transform": {
+        "Position": [
+         -87.0,
+         58.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Pipeline Trades",
+       "Resource": {
+        "sReference": "holodeck/models/hall-pipeline.glb"
+       },
+       "Transform": {
+        "Position": [
+         -29.0,
+         58.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Tank Erectors",
+       "Resource": {
+        "sReference": "holodeck/models/hall-tank-erectors.glb"
+       },
+       "Transform": {
+        "Position": [
+         29.0,
+         58.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Marine Pipefitters",
+       "Resource": {
+        "sReference": "holodeck/models/hall-marine-pipe.glb"
+       },
+       "Transform": {
+        "Position": [
+         87.0,
+         58.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Commercial Divers",
+       "Resource": {
+        "sReference": "holodeck/models/hall-divers.glb"
+       },
+       "Transform": {
+        "Position": [
+         -87.0,
+         0.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Smelter Operators",
+       "Resource": {
+        "sReference": "holodeck/models/hall-smelter.glb"
+       },
+       "Transform": {
+        "Position": [
+         -29.0,
+         0.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Foundry Workers",
+       "Resource": {
+        "sReference": "holodeck/models/hall-foundry.glb"
+       },
+       "Transform": {
+        "Position": [
+         29.0,
+         0.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Machinists",
+       "Resource": {
+        "sReference": "holodeck/models/hall-machinists.glb"
+       },
+       "Transform": {
+        "Position": [
+         87.0,
+         0.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Tool & Die Makers",
+       "Resource": {
+        "sReference": "holodeck/models/hall-toolmakers.glb"
+       },
+       "Transform": {
+        "Position": [
+         -87.0,
+         -58.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Platers & Coaters",
+       "Resource": {
+        "sReference": "holodeck/models/hall-platers.glb"
+       },
+       "Transform": {
+        "Position": [
+         -29.0,
+         -58.0,
+         0.0
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Transport & Mobility District",
+     "Resource": {
+      "sReference": "assets/Container.glb"
+     },
+     "Transform": {
+      "Position": [
+       -0.0,
+       -407.9,
+       0.0
+      ]
+     },
+     "aChildren": [
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Rail Track Workers",
+       "Resource": {
+        "sReference": "holodeck/models/hall-rail-track.glb"
+       },
+       "Transform": {
+        "Position": [
+         -87.0,
+         58.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Rail Signal Technicians",
+       "Resource": {
+        "sReference": "holodeck/models/hall-rail-signals.glb"
+       },
+       "Transform": {
+        "Position": [
+         -29.0,
+         58.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Overhead Catenary Linemen",
+       "Resource": {
+        "sReference": "holodeck/models/hall-catenary.glb"
+       },
+       "Transform": {
+        "Position": [
+         29.0,
+         58.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Transit Vehicle Technicians",
+       "Resource": {
+        "sReference": "holodeck/models/hall-transit-vehicle.glb"
+       },
+       "Transform": {
+        "Position": [
+         87.0,
+         58.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Aviation Ground Support",
+       "Resource": {
+        "sReference": "holodeck/models/hall-aviation-ground.glb"
+       },
+       "Transform": {
+        "Position": [
+         -87.0,
+         0.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Airfield Trades",
+       "Resource": {
+        "sReference": "holodeck/models/hall-airfield.glb"
+       },
+       "Transform": {
+        "Position": [
+         -29.0,
+         0.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Port Crane Technicians",
+       "Resource": {
+        "sReference": "holodeck/models/hall-port-crane.glb"
+       },
+       "Transform": {
+        "Position": [
+         29.0,
+         0.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Marine Terminal Operators",
+       "Resource": {
+        "sReference": "holodeck/models/hall-marine-terminal.glb"
+       },
+       "Transform": {
+        "Position": [
+         87.0,
+         0.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Fleet Diesel Technicians",
+       "Resource": {
+        "sReference": "holodeck/models/hall-fleet-diesel.glb"
+       },
+       "Transform": {
+        "Position": [
+         -87.0,
+         -58.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Bridge Inspection Crews",
+       "Resource": {
+        "sReference": "holodeck/models/hall-bridge-inspect.glb"
+       },
+       "Transform": {
+        "Position": [
+         -29.0,
+         -58.0,
+         0.0
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Survey, Safety & Environment District",
+     "Resource": {
+      "sReference": "assets/Container.glb"
+     },
+     "Transform": {
+      "Position": [
+       288.43,
+       -288.43,
+       0.0
+      ]
+     },
+     "aChildren": [
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Construction Surveyors",
+       "Resource": {
+        "sReference": "holodeck/models/hall-surveyors.glb"
+       },
+       "Transform": {
+        "Position": [
+         -87.0,
+         58.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Hazmat & Environmental",
+       "Resource": {
+        "sReference": "holodeck/models/hall-hazmat.glb"
+       },
+       "Transform": {
+        "Position": [
+         -29.0,
+         58.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Asbestos Abatement Workers",
+       "Resource": {
+        "sReference": "holodeck/models/hall-asbestos.glb"
+       },
+       "Transform": {
+        "Position": [
+         29.0,
+         58.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Lead Abatement Workers",
+       "Resource": {
+        "sReference": "holodeck/models/hall-lead-abatement.glb"
+       },
+       "Transform": {
+        "Position": [
+         87.0,
+         58.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Mould Remediation Techs",
+       "Resource": {
+        "sReference": "holodeck/models/hall-mold-remediation.glb"
+       },
+       "Transform": {
+        "Position": [
+         -87.0,
+         0.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Spill Response Technicians",
+       "Resource": {
+        "sReference": "holodeck/models/hall-spill-response.glb"
+       },
+       "Transform": {
+        "Position": [
+         -29.0,
+         0.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Confined Space Rescue",
+       "Resource": {
+        "sReference": "holodeck/models/hall-confined-space.glb"
+       },
+       "Transform": {
+        "Position": [
+         29.0,
+         0.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "High-Angle Rescue",
+       "Resource": {
+        "sReference": "holodeck/models/hall-high-angle.glb"
+       },
+       "Transform": {
+        "Position": [
+         87.0,
+         0.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Site Safety Coordinators",
+       "Resource": {
+        "sReference": "holodeck/models/hall-site-safety.glb"
+       },
+       "Transform": {
+        "Position": [
+         -87.0,
+         -58.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Industrial Cleaning Crews",
+       "Resource": {
+        "sReference": "holodeck/models/hall-industrial-clean.glb"
+       },
+       "Transform": {
+        "Position": [
+         -29.0,
+         -58.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Aerial Survey Operators",
+       "Resource": {
+        "sReference": "holodeck/models/hall-survey-drone.glb"
+       },
+       "Transform": {
+        "Position": [
+         29.0,
+         -58.0,
+         0.0
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Sim \u00b7 Tower Crane Lift",
+     "Resource": {
+      "sReference": "holodeck/sims/sim-crane-lift.glb"
+     },
+     "Transform": {
+      "Position": [
+       80.53,
+       0.0,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Sim \u00b7 Excavator Trench Cut",
+     "Resource": {
+      "sReference": "holodeck/sims/sim-excavator-trench.glb"
+     },
+     "Transform": {
+      "Position": [
+       67.75,
+       43.54,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Sim \u00b7 Forklift Yard Run",
+     "Resource": {
+      "sReference": "holodeck/sims/sim-forklift-run.glb"
+     },
+     "Transform": {
+      "Position": [
+       33.45,
+       73.25,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Sim \u00b7 Weld Bead Run",
+     "Resource": {
+      "sReference": "holodeck/sims/sim-weld-bead.glb"
+     },
+     "Transform": {
+      "Position": [
+       -11.46,
+       79.71,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Sim \u00b7 Scaffold Bay Build",
+     "Resource": {
+      "sReference": "holodeck/sims/sim-scaffold-bay.glb"
+     },
+     "Transform": {
+      "Position": [
+       -52.74,
+       60.86,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Sim \u00b7 Rigging Signal Call",
+     "Resource": {
+      "sReference": "holodeck/sims/sim-rigging-signals.glb"
+     },
+     "Transform": {
+      "Position": [
+       -77.27,
+       22.69,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Sim \u00b7 Load Chart Judgment",
+     "Resource": {
+      "sReference": "holodeck/sims/sim-load-chart.glb"
+     },
+     "Transform": {
+      "Position": [
+       -77.27,
+       -22.69,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Sim \u00b7 Pressure Washer Surface Clean",
+     "Resource": {
+      "sReference": "holodeck/sims/sim-pressure-washer.glb"
+     },
+     "Transform": {
+      "Position": [
+       -52.74,
+       -60.86,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Sim \u00b7 Airless Paint Sprayer Finish",
+     "Resource": {
+      "sReference": "holodeck/sims/sim-airless-sprayer.glb"
+     },
+     "Transform": {
+      "Position": [
+       -11.46,
+       -79.71,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Sim \u00b7 Boom Lift Basket Work",
+     "Resource": {
+      "sReference": "holodeck/sims/sim-boom-lift.glb"
+     },
+     "Transform": {
+      "Position": [
+       33.45,
+       -73.25,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Sim \u00b7 Overhead Crane Shop Move",
+     "Resource": {
+      "sReference": "holodeck/sims/sim-overhead-crane.glb"
+     },
+     "Transform": {
+      "Position": [
+       67.75,
+       -43.54,
+       0.0
+      ]
+     }
+    }
+   ]
+  }
+ }
+}

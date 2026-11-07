@@ -1,0 +1,541 @@
+{
+ "Container": "agi-corp-diagnostic-x",
+ "Services": [],
+ "Modules": [
+  {
+   "sUrl": "../../wasm/map.wasm"
+  }
+ ],
+ "Primary": {
+  "Ambient": {
+   "fBrightness": 0.12,
+   "fColor": "0xFFFFFF"
+  },
+  "Directional": {
+   "fBrightness": 0.6,
+   "fColor": "0xFFF4E0",
+   "Rotation": [
+    0.0,
+    0.5808,
+    0.6663,
+    0.468
+   ]
+  }
+ },
+ "Data": {
+  "Scene": {
+   "Head": {
+    "Self": "P-?"
+   },
+   "Name": "Diagnostic.X \u00b7 coming soon \u00b7 Powered by AGI Corp",
+   "Resource": {
+    "sReference": "../models/world-diagnostic-x.glb"
+   },
+   "Transform": {
+    "Position": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "aChildren": [
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Zone \u00b7 Medical Kiosk",
+     "Resource": {
+      "sReference": "../models/zone-marker.glb"
+     },
+     "Transform": {
+      "Position": [
+       0.0,
+       -16.0,
+       0.0
+      ]
+     },
+     "aChildren": [
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Agent \u00b7 Medical AI Avatar",
+       "Resource": {
+        "sReference": "../models/agent.glb"
+       },
+       "Transform": {
+        "Position": [
+         0.0,
+         0.0,
+         0.3
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Zone \u00b7 4D Imaging Room",
+     "Resource": {
+      "sReference": "../models/zone-marker.glb"
+     },
+     "Transform": {
+      "Position": [
+       -15.22,
+       -4.94,
+       0.0
+      ]
+     },
+     "aChildren": [
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Agent \u00b7 Imaging AI",
+       "Resource": {
+        "sReference": "../models/agent.glb"
+       },
+       "Transform": {
+        "Position": [
+         0.0,
+         0.0,
+         0.3
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Zone \u00b7 Virtual Molecular Lab",
+     "Resource": {
+      "sReference": "../models/zone-marker.glb"
+     },
+     "Transform": {
+      "Position": [
+       -9.4,
+       12.94,
+       0.0
+      ]
+     },
+     "aChildren": [
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Agent \u00b7 Scientist Assistant Avatar",
+       "Resource": {
+        "sReference": "../models/agent.glb"
+       },
+       "Transform": {
+        "Position": [
+         0.0,
+         0.0,
+         0.3
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Zone \u00b7 Metaverse Medical Office",
+     "Resource": {
+      "sReference": "../models/zone-marker.glb"
+     },
+     "Transform": {
+      "Position": [
+       9.4,
+       12.94,
+       0.0
+      ]
+     },
+     "aChildren": [
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Agent \u00b7 Office AI Avatar",
+       "Resource": {
+        "sReference": "../models/agent.glb"
+       },
+       "Transform": {
+        "Position": [
+         0.0,
+         0.0,
+         0.3
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Zone \u00b7 Steward Council",
+     "Resource": {
+      "sReference": "../models/zone-marker.glb"
+     },
+     "Transform": {
+      "Position": [
+       15.22,
+       -4.94,
+       0.0
+      ]
+     },
+     "aChildren": [
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Steward seat 1 \u00b7 human",
+       "Resource": {
+        "sReference": "../models/steward.glb"
+       },
+       "Transform": {
+        "Position": [
+         -1.6,
+         0.0,
+         0.3
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Steward seat 2 \u00b7 human",
+       "Resource": {
+        "sReference": "../models/steward.glb"
+       },
+       "Transform": {
+        "Position": [
+         0.0,
+         0.0,
+         0.3
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Steward seat 3 \u00b7 human",
+       "Resource": {
+        "sReference": "../models/steward.glb"
+       },
+       "Transform": {
+        "Position": [
+         1.6,
+         0.0,
+         0.3
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Swarm coordinator \u00b7 Diagnostic.X",
+     "Resource": {
+      "sReference": "../models/coordinator.glb"
+     },
+     "Transform": {
+      "Position": [
+       0.0,
+       -5.5,
+       0.0
+      ]
+     },
+     "aChildren": [
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Swarm \u00b7 Office AI Avatar",
+       "Resource": {
+        "sReference": "../models/agent.glb"
+       },
+       "Transform": {
+        "Position": [
+         4.5,
+         -5.5,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Swarm \u00b7 Scientist Assistant Avatar",
+       "Resource": {
+        "sReference": "../models/agent.glb"
+       },
+       "Transform": {
+        "Position": [
+         0.0,
+         -1.0,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Swarm \u00b7 Imaging AI",
+       "Resource": {
+        "sReference": "../models/agent.glb"
+       },
+       "Transform": {
+        "Position": [
+         -4.5,
+         -5.5,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Swarm \u00b7 Medical AI Avatar",
+       "Resource": {
+        "sReference": "../models/agent.glb"
+       },
+       "Transform": {
+        "Position": [
+         -0.0,
+         -10.0,
+         0.0
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "PBC \u00b7 Alignment Evaluation Gate",
+     "Resource": {
+      "sReference": "../models/gate.glb"
+     },
+     "Transform": {
+      "Position": [
+       0.0,
+       -24.0,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "L-?"
+     },
+     "Name": "Light \u00b7 Medical Kiosk",
+     "Type": {
+      "bType": 1
+     },
+     "Transform": {
+      "Position": [
+       0.0,
+       -16.0,
+       5.0
+      ]
+     },
+     "Properties": {
+      "fBrightness": 0.5,
+      "fColor": "0xD65F5B"
+     }
+    },
+    {
+     "Head": {
+      "Self": "L-?"
+     },
+     "Name": "Light \u00b7 4D Imaging Room",
+     "Type": {
+      "bType": 1
+     },
+     "Transform": {
+      "Position": [
+       -15.22,
+       -4.94,
+       5.0
+      ]
+     },
+     "Properties": {
+      "fBrightness": 0.5,
+      "fColor": "0xD6B15B"
+     }
+    },
+    {
+     "Head": {
+      "Self": "L-?"
+     },
+     "Name": "Light \u00b7 Virtual Molecular Lab",
+     "Type": {
+      "bType": 1
+     },
+     "Transform": {
+      "Position": [
+       -9.4,
+       12.94,
+       5.0
+      ]
+     },
+     "Properties": {
+      "fBrightness": 0.5,
+      "fColor": "0xA9D65B"
+     }
+    },
+    {
+     "Head": {
+      "Self": "L-?"
+     },
+     "Name": "Light \u00b7 Metaverse Medical Office",
+     "Type": {
+      "bType": 1
+     },
+     "Transform": {
+      "Position": [
+       9.4,
+       12.94,
+       5.0
+      ]
+     },
+     "Properties": {
+      "fBrightness": 0.5,
+      "fColor": "0x5BD65F"
+     }
+    },
+    {
+     "Head": {
+      "Self": "L-?"
+     },
+     "Name": "Light \u00b7 Steward Council",
+     "Type": {
+      "bType": 1
+     },
+     "Transform": {
+      "Position": [
+       15.22,
+       -4.94,
+       5.0
+      ]
+     },
+     "Properties": {
+      "fBrightness": 0.5,
+      "fColor": "0x5BD6B1"
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Advisor \u00b7 Host Advisor",
+     "Resource": {
+      "sReference": "../models/advisor-host.glb"
+     },
+     "Transform": {
+      "Position": [
+       4.5,
+       -22.0,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Advisor \u00b7 Steward Liaison",
+     "Resource": {
+      "sReference": "../models/advisor-steward.glb"
+     },
+     "Transform": {
+      "Position": [
+       18.02,
+       -4.94,
+       0.3
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Advisor \u00b7 Alignment Advisor",
+     "Resource": {
+      "sReference": "../models/advisor-alignment.glb"
+     },
+     "Transform": {
+      "Position": [
+       -4.5,
+       -22.0,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Sky",
+     "Resource": {
+      "sReference": "../models/env-sky.glb"
+     },
+     "Transform": {
+      "Position": [
+       0.0,
+       0.0,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Terrain",
+     "Resource": {
+      "sReference": "../models/env-terrain.glb"
+     },
+     "Transform": {
+      "Position": [
+       0.0,
+       0.0,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Sign \u00b7 Diagnostic.X \u00b7 Powered by AGI Corp",
+     "Resource": {
+      "sReference": "../models/sign-diagnostic-x.glb"
+     },
+     "Transform": {
+      "Position": [
+       0.0,
+       -31.0,
+       0.0
+      ]
+     }
+    }
+   ]
+  }
+ }
+}

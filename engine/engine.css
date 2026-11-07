@@ -1,0 +1,73 @@
+/* worlds-3d engine HUD — responsive, readable on mobile. */
+.w3d-container { position: relative; width: 100%; height: 100vh; min-height: 480px; overflow: hidden; background: #0a0f1c; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color: #fff; }
+.w3d-canvas { display: block; width: 100%; height: 100%; touch-action: none; }
+.w3d-hud { position: absolute; inset: 0; pointer-events: none; z-index: 5; }
+.w3d-hud button, .w3d-hud input { pointer-events: auto; }
+
+/* top bar */
+.w3d-topbar { position: absolute; top: 0; left: 0; right: 0; display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 10px 12px; background: linear-gradient(rgba(5,10,25,.85), rgba(5,10,25,0)); }
+.w3d-title { display: flex; align-items: center; gap: 8px; font-size: 18px; }
+.w3d-badge { font-size: 11px; font-weight: 700; letter-spacing: .08em; padding: 3px 8px; border-radius: 999px; background: #2f6fd0; }
+.w3d-badge-demo { background: #8a6d00; }
+.w3d-badge-live { background: #1e7a34; }
+.w3d-label { font-size: 12px; opacity: .85; background: rgba(0,0,0,.45); padding: 4px 8px; border-radius: 6px; }
+
+/* quest tracker */
+.w3d-quest { position: absolute; top: 56px; left: 12px; width: 240px; max-width: 72vw; background: rgba(8,14,30,.82); border: 1px solid rgba(255,255,255,.18); border-radius: 10px; padding: 10px 12px; font-size: 14px; }
+.w3d-quest h3, .w3d-info h3 { margin: 0 0 6px; font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: #ffd23f; }
+.w3d-quest-row { margin-bottom: 6px; line-height: 1.35; }
+.w3d-quest-prog { color: #9fc8e8; font-size: 12px; }
+.w3d-quest-done { color: #7be495; }
+
+/* counters + compass */
+.w3d-counters { position: absolute; top: 56px; right: 12px; display: flex; flex-direction: column; align-items: flex-end; gap: 6px; font-size: 14px; }
+.w3d-collect, .w3d-compass { background: rgba(8,14,30,.82); border: 1px solid rgba(255,255,255,.18); border-radius: 8px; padding: 6px 10px; }
+.w3d-compass { font-family: ui-monospace, monospace; letter-spacing: .1em; }
+
+/* bottom controls: weather + time */
+.w3d-controls { position: absolute; left: 50%; bottom: 12px; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 6px; width: min(480px, 94vw); }
+.w3d-weather { display: flex; gap: 6px; flex-wrap: wrap; justify-content: center; }
+.w3d-weather button { background: rgba(8,14,30,.85); color: #fff; border: 1px solid rgba(255,255,255,.25); border-radius: 999px; padding: 8px 14px; font-size: 14px; cursor: pointer; }
+.w3d-weather button.active { background: #ffd23f; color: #111; border-color: #ffd23f; font-weight: 700; }
+.w3d-time { display: flex; align-items: center; gap: 8px; background: rgba(8,14,30,.85); border: 1px solid rgba(255,255,255,.18); border-radius: 999px; padding: 6px 12px; font-size: 14px; }
+.w3d-time input { width: 160px; accent-color: #ffd23f; }
+.w3d-clock { font-family: ui-monospace, monospace; }
+
+/* info panel */
+.w3d-info { position: absolute; left: 12px; bottom: 12px; width: 240px; max-width: 60vw; background: rgba(8,14,30,.82); border: 1px solid rgba(255,255,255,.18); border-radius: 10px; padding: 10px 12px; font-size: 13px; line-height: 1.4; }
+.w3d-district-row { margin-bottom: 4px; }
+.w3d-district-row em { color: #ffb36b; }
+.w3d-sources { opacity: .7; font-size: 12px; }
+
+/* dialogue */
+.w3d-dialog { position: absolute; left: 50%; bottom: 120px; transform: translateX(-50%); width: min(460px, 92vw); background: rgba(8,14,30,.94); border: 1px solid #ffd23f; border-radius: 12px; padding: 14px 16px; font-size: 15px; line-height: 1.45; }
+.w3d-dialog h3 { margin: 0 0 6px; color: #ffd23f; font-size: 15px; }
+.w3d-dialog p { margin: 0 0 10px; }
+.w3d-dialog-btns { display: flex; gap: 8px; flex-wrap: wrap; }
+.w3d-dialog-btns button { background: #2f6fd0; color: #fff; border: none; border-radius: 8px; padding: 8px 14px; font-size: 14px; cursor: pointer; }
+.w3d-dialog-quest { background: #1e7a34 !important; }
+
+/* toast */
+.w3d-toast { position: absolute; left: 50%; top: 64px; transform: translateX(-50%); background: rgba(8,14,30,.94); border: 1px solid rgba(255,255,255,.3); border-radius: 999px; padding: 8px 16px; font-size: 14px; max-width: 92vw; text-align: center; }
+
+/* touch controls */
+.w3d-touch { position: absolute; inset: auto 0 0 0; display: none; }
+.w3d-joy { position: absolute; left: 16px; bottom: 96px; width: 110px; height: 110px; border-radius: 50%; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.35); pointer-events: auto; touch-action: none; }
+.w3d-joy-knob { position: absolute; left: 50%; top: 50%; width: 48px; height: 48px; border-radius: 50%; background: rgba(255,255,255,.55); transform: translate(-50%,-50%); }
+.w3d-touch-btns { position: absolute; right: 16px; bottom: 96px; display: flex; flex-direction: column; gap: 10px; }
+.w3d-touch-btns button { width: 76px; height: 76px; border-radius: 50%; border: 1px solid rgba(255,255,255,.4); background: rgba(8,14,30,.8); color: #fff; font-size: 14px; font-weight: 700; pointer-events: auto; }
+@media (pointer: coarse) { .w3d-touch { display: block; } .w3d-info { display: none; } .w3d-quest { width: 190px; } }
+
+/* no-WebGL fallback */
+.w3d-fallback { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; background: #0a0f1c; text-align: center; padding: 24px; pointer-events: auto; }
+.w3d-fallback p { font-size: 18px; margin: 0; max-width: 520px; }
+.w3d-fallback-sub { font-size: 14px !important; opacity: .8; }
+
+@media (max-width: 640px) {
+  .w3d-title { font-size: 15px; }
+  .w3d-label { display: none; }
+  .w3d-quest { top: 48px; font-size: 13px; }
+  .w3d-counters { top: 48px; font-size: 13px; }
+  .w3d-controls { bottom: 8px; }
+  .w3d-dialog { bottom: 210px; }
+}

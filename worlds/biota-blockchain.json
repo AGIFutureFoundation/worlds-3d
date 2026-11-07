@@ -1,0 +1,706 @@
+{
+  "id": "biota-blockchain",
+  "name": "Biota.blockchain",
+  "series": "Biota · BioDAO",
+  "status": "anchored",
+  "rp1": null,
+  "coordinates": {
+    "lat": -38.71260348427612,
+    "lon": -27.248278366617797
+  },
+  "fabric_url": "https://agifuturefoundation.github.io/WorldForge-Browser/my-fabric/worlds/biota-blockchain/world.json",
+  "biome": "forest",
+  "spawn": [
+    0,
+    0,
+    22
+  ],
+  "terrain": {
+    "size": 120,
+    "height": 5,
+    "seed": 130,
+    "water": false
+  },
+  "weather": {
+    "preset": "mist",
+    "dayCycle": true
+  },
+  "fabric_transform": {
+    "scale": 1.5,
+    "offset": [
+      0,
+      0,
+      0
+    ],
+    "mapping": "engine_x = fabric_x * scale + offset_x; engine_y = fabric_z * scale (fabric z is height, 0 for plan nodes); engine_z = fabric_y * scale + offset_z"
+  },
+  "fabric_nodes_total": 36,
+  "fabric_nodes_used": "All 6 Zone nodes as districts and buildings, plus the PBC Alignment Evaluation Gate and the world Sign as buildings",
+  "districts": [
+    {
+      "id": "zone-personalized-therapy-lab",
+      "name": "Zone · Personalized Therapy Lab",
+      "position": [
+        0.0,
+        0.0,
+        -24.0
+      ],
+      "color": "#2471a3",
+      "model_ref": "../models/zone-marker.glb",
+      "model_status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "id": "zone-dao-governance-hall",
+      "name": "Zone · DAO Governance Hall",
+      "position": [
+        -20.79,
+        0.0,
+        -12.0
+      ],
+      "color": "#1e8449",
+      "model_ref": "../models/zone-marker.glb",
+      "model_status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "id": "zone-multi-blockchain-ledger",
+      "name": "Zone · Multi-Blockchain Ledger",
+      "position": [
+        -20.79,
+        0.0,
+        12.0
+      ],
+      "color": "#b7950b",
+      "model_ref": "../models/zone-marker.glb",
+      "model_status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "id": "zone-healthcare-data-exchange",
+      "name": "Zone · Healthcare Data Exchange",
+      "position": [
+        0.0,
+        0.0,
+        24.0
+      ],
+      "color": "#6c3483",
+      "model_ref": "../models/zone-marker.glb",
+      "model_status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "id": "zone-biopharma-agi-agents-hub",
+      "name": "Zone · Biopharma AGI Agents Hub",
+      "position": [
+        20.79,
+        0.0,
+        12.0
+      ],
+      "color": "#117a65",
+      "model_ref": "../models/zone-marker.glb",
+      "model_status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "id": "zone-steward-council",
+      "name": "Zone · Steward Council",
+      "position": [
+        20.79,
+        0.0,
+        -12.0
+      ],
+      "color": "#7e5109",
+      "model_ref": "../models/zone-marker.glb",
+      "model_status": "not hosted — procedural placeholder shown"
+    }
+  ],
+  "buildings": [
+    {
+      "id": "zone-personalized-therapy-lab",
+      "name": "Zone · Personalized Therapy Lab",
+      "position": [
+        0.0,
+        0.0,
+        -24.0
+      ],
+      "size": [
+        12,
+        7,
+        12
+      ],
+      "color": "#2471a3",
+      "interior": {
+        "name": "Zone · Personalized Therapy Lab Interior",
+        "rooms": [
+          {
+            "name": "Main Hall",
+            "size": [
+              10,
+              5,
+              10
+            ],
+            "props": []
+          },
+          {
+            "name": "Side Room",
+            "size": [
+              5,
+              4,
+              5
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "zone-dao-governance-hall",
+      "name": "Zone · DAO Governance Hall",
+      "position": [
+        -20.79,
+        0.0,
+        -12.0
+      ],
+      "size": [
+        12,
+        7,
+        12
+      ],
+      "color": "#1e8449",
+      "interior": {
+        "name": "Zone · DAO Governance Hall Interior",
+        "rooms": [
+          {
+            "name": "Main Hall",
+            "size": [
+              10,
+              5,
+              10
+            ],
+            "props": []
+          },
+          {
+            "name": "Side Room",
+            "size": [
+              5,
+              4,
+              5
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "zone-multi-blockchain-ledger",
+      "name": "Zone · Multi-Blockchain Ledger",
+      "position": [
+        -20.79,
+        0.0,
+        12.0
+      ],
+      "size": [
+        12,
+        7,
+        12
+      ],
+      "color": "#b7950b",
+      "interior": {
+        "name": "Zone · Multi-Blockchain Ledger Interior",
+        "rooms": [
+          {
+            "name": "Main Hall",
+            "size": [
+              10,
+              5,
+              10
+            ],
+            "props": []
+          },
+          {
+            "name": "Side Room",
+            "size": [
+              5,
+              4,
+              5
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "zone-healthcare-data-exchange",
+      "name": "Zone · Healthcare Data Exchange",
+      "position": [
+        0.0,
+        0.0,
+        24.0
+      ],
+      "size": [
+        12,
+        7,
+        12
+      ],
+      "color": "#6c3483",
+      "interior": {
+        "name": "Zone · Healthcare Data Exchange Interior",
+        "rooms": [
+          {
+            "name": "Main Hall",
+            "size": [
+              10,
+              5,
+              10
+            ],
+            "props": []
+          },
+          {
+            "name": "Side Room",
+            "size": [
+              5,
+              4,
+              5
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "zone-biopharma-agi-agents-hub",
+      "name": "Zone · Biopharma AGI Agents Hub",
+      "position": [
+        20.79,
+        0.0,
+        12.0
+      ],
+      "size": [
+        12,
+        7,
+        12
+      ],
+      "color": "#117a65",
+      "interior": {
+        "name": "Zone · Biopharma AGI Agents Hub Interior",
+        "rooms": [
+          {
+            "name": "Main Hall",
+            "size": [
+              10,
+              5,
+              10
+            ],
+            "props": []
+          },
+          {
+            "name": "Side Room",
+            "size": [
+              5,
+              4,
+              5
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "zone-steward-council",
+      "name": "Zone · Steward Council",
+      "position": [
+        20.79,
+        0.0,
+        -12.0
+      ],
+      "size": [
+        12,
+        7,
+        12
+      ],
+      "color": "#7e5109",
+      "interior": {
+        "name": "Zone · Steward Council Interior",
+        "rooms": [
+          {
+            "name": "Main Hall",
+            "size": [
+              10,
+              5,
+              10
+            ],
+            "props": []
+          },
+          {
+            "name": "Side Room",
+            "size": [
+              5,
+              4,
+              5
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "pbc-alignment-evaluation-gate",
+      "name": "PBC · Alignment Evaluation Gate",
+      "position": [
+        0.0,
+        0.0,
+        -36.0
+      ],
+      "size": [
+        10,
+        6,
+        4
+      ],
+      "color": "#6c3483",
+      "interior": {
+        "name": "PBC · Alignment Evaluation Gate Interior",
+        "rooms": [
+          {
+            "name": "Gate Hall",
+            "size": [
+              8,
+              4,
+              3
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "sign-biota-blockchain-powered-by-agi-corp",
+      "name": "Sign · Biota.blockchain · Powered by AGI Corp",
+      "position": [
+        0.0,
+        0.0,
+        -46.5
+      ],
+      "size": [
+        10,
+        5,
+        2
+      ],
+      "color": "#b7950b",
+      "interior": {
+        "name": "Sign · Biota.blockchain · Powered by AGI Corp Interior",
+        "rooms": [
+          {
+            "name": "Sign Plaza",
+            "size": [
+              8,
+              4,
+              3
+            ],
+            "props": []
+          }
+        ]
+      }
+    }
+  ],
+  "npcs": [
+    {
+      "id": "rnd-agent",
+      "name": "Research & Development Agent",
+      "role": "Biopharma AGI Agents Hub R&D agent",
+      "position": [
+        0.0,
+        0.45,
+        -24.0
+      ],
+      "dialogue": [
+        "The lab never sleeps — it just waits for a better question.",
+        "Every compound here has a paper trail. Ask and I will show it."
+      ],
+      "quest": "q-lab-tour"
+    },
+    {
+      "id": "compliance-agent",
+      "name": "Compliance Agent",
+      "role": "Biopharma AGI Agents Hub compliance agent",
+      "position": [
+        -23.49,
+        0.45,
+        -12.0
+      ],
+      "dialogue": [
+        "Rules first, then research. That order keeps the lab open.",
+        "If it is not documented, it did not happen. Bring the record."
+      ],
+      "quest": "q-governance-vote"
+    },
+    {
+      "id": "health-agent",
+      "name": "Health Agent",
+      "role": "Biopharma AGI Agents Hub health agent",
+      "position": [
+        0.0,
+        0.45,
+        24.0
+      ],
+      "dialogue": [
+        "Health data belongs to the person it came from. Full stop.",
+        "I translate between the lab and the person — both directions."
+      ],
+      "quest": "q-lab-tour"
+    },
+    {
+      "id": "security-agent",
+      "name": "Security Agent",
+      "role": "Biopharma AGI Agents Hub security agent",
+      "position": [
+        -20.79,
+        0.45,
+        12.0
+      ],
+      "dialogue": [
+        "The ledger is only as strong as its weakest key. Guard yours.",
+        "I watch the gates so the researchers can watch the science."
+      ],
+      "quest": "q-ledger-check"
+    },
+    {
+      "id": "finance-agent",
+      "name": "Finance Agent",
+      "role": "Biopharma AGI Agents Hub finance agent",
+      "position": [
+        -20.79,
+        0.45,
+        -12.0
+      ],
+      "dialogue": [
+        "Every credit on the ledger answers to a steward vote.",
+        "The DAO funds what the community can defend in public."
+      ],
+      "quest": "q-ledger-check"
+    }
+  ],
+  "quests": [
+    {
+      "id": "q-lab-tour",
+      "title": "Lab Tour",
+      "description": "Tour the Personalized Therapy Lab with the R&D agent.",
+      "steps": [
+        {
+          "text": "Talk to the R&D Agent",
+          "target": "rnd-agent",
+          "kind": "npc"
+        },
+        {
+          "text": "Collect the genome data at the Therapy Lab",
+          "target": "data-genome",
+          "kind": "collectible"
+        },
+        {
+          "text": "Visit the Personalized Therapy Lab",
+          "target": "Zone · Personalized Therapy Lab",
+          "kind": "place"
+        }
+      ],
+      "reward": "Lab Tour Badge"
+    },
+    {
+      "id": "q-governance-vote",
+      "title": "Governance Vote",
+      "description": "Sit in on DAO governance and file your vote.",
+      "steps": [
+        {
+          "text": "Talk to the Compliance Agent",
+          "target": "compliance-agent",
+          "kind": "npc"
+        },
+        {
+          "text": "Collect the vote spark at the Governance Hall",
+          "target": "spark-vote",
+          "kind": "collectible"
+        },
+        {
+          "text": "Visit the DAO Governance Hall",
+          "target": "Zone · DAO Governance Hall",
+          "kind": "place"
+        }
+      ],
+      "reward": "Governance Token (game item)"
+    },
+    {
+      "id": "q-ledger-check",
+      "title": "Ledger Check",
+      "description": "Verify a ledger entry at the Multi-Blockchain Ledger.",
+      "steps": [
+        {
+          "text": "Talk to the Finance Agent",
+          "target": "finance-agent",
+          "kind": "npc"
+        },
+        {
+          "text": "Collect the ledger relic",
+          "target": "relic-ledger",
+          "kind": "collectible"
+        },
+        {
+          "text": "Visit the Multi-Blockchain Ledger",
+          "target": "Zone · Multi-Blockchain Ledger",
+          "kind": "place"
+        }
+      ],
+      "reward": "Ledger Check Badge"
+    }
+  ],
+  "collectibles": [
+    {
+      "id": "data-genome",
+      "name": "Genome Data",
+      "position": [
+        3.0,
+        1.0,
+        -24.0
+      ],
+      "kind": "data"
+    },
+    {
+      "id": "spark-vote",
+      "name": "Vote Spark",
+      "position": [
+        -17.79,
+        1.0,
+        -12.0
+      ],
+      "kind": "spark"
+    },
+    {
+      "id": "relic-ledger",
+      "name": "Ledger Relic",
+      "position": [
+        -17.79,
+        1.0,
+        12.0
+      ],
+      "kind": "relic"
+    },
+    {
+      "id": "data-exchange",
+      "name": "Exchange Data",
+      "position": [
+        3.0,
+        1.0,
+        24.0
+      ],
+      "kind": "data"
+    },
+    {
+      "id": "spark-hub",
+      "name": "Agents Hub Spark",
+      "position": [
+        23.79,
+        1.0,
+        12.0
+      ],
+      "kind": "spark"
+    },
+    {
+      "id": "relic-steward",
+      "name": "Steward Relic",
+      "position": [
+        23.79,
+        1.0,
+        -12.0
+      ],
+      "kind": "relic"
+    },
+    {
+      "id": "spark-therapy",
+      "name": "Therapy Spark",
+      "position": [
+        -3.0,
+        1.0,
+        -24.0
+      ],
+      "kind": "spark"
+    },
+    {
+      "id": "data-finance",
+      "name": "Finance Data",
+      "position": [
+        17.79,
+        1.0,
+        12.0
+      ],
+      "kind": "data"
+    }
+  ],
+  "agent_companions": [
+    {
+      "id": "als",
+      "name": "ALS Researcher",
+      "role": "Compound-library research agent (Virtuals ACP). Real job: compound_library_snapshot, $10 / 24h. Game companion only — live instance offline.",
+      "color": "#8ecae6"
+    },
+    {
+      "id": "cmmc",
+      "name": "CMMC",
+      "role": "Compliance-readiness agent (Virtuals ACP). Real job: readiness_check. Game companion only — live instance offline.",
+      "color": "#f4a261"
+    }
+  ],
+  "missing_models": [
+    {
+      "ref": "../models/advisor-alignment.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "../models/advisor-host.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "../models/advisor-steward.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "../models/agent.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "../models/coordinator.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "../models/env-sky.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "../models/env-terrain.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "../models/gate.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "../models/sign-biota-blockchain.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "../models/steward.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "../models/world-biota-blockchain.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "../models/zone-marker.glb",
+      "status": "not hosted — procedural placeholder shown"
+    }
+  ],
+  "sources": [
+    "Fabric: rp1-review/push-6-fabrics/site/my-fabric/worlds/biota/world.json (local copy in data/fabrics/)",
+    "Fabric live URL: https://agifuturefoundation.github.io/WorldForge-Browser/my-fabric/worlds/biota-blockchain/world.json",
+    "Anchor: lat -38.71260348427612, lon -27.248278366617797. Status anchored = real-world anchor coordinate exists; rp1 null, NOT live on RP1.",
+    "Fabric: 36 nodes total (scene root + 20 top-level + nested Agent/Swarm children); 12 distinct GLB refs, all unhosted — see missing_models.",
+    "Districts/buildings = the real 'Zone · ...' nodes. NPCs = the real 'Agent · ...' nodes (nested under their zones; NPC position = zone position + the agent node's local offset) plus the real 'Advisor · Host Advisor' node. All NPC dialogue is original game dialogue, never attributed to a real person.",
+    "Biome 'forest' is a design choice for this interpretation.",
+    "Agent companions are game characters representing the real Virtuals agents (agents.json); their live instances are offline — not live connections.",
+    "Zones (6): Personalized Therapy Lab, DAO Governance Hall, Multi-Blockchain Ledger, Healthcare Data Exchange, Biopharma AGI Agents Hub, Steward Council. The fabric also has an 'Agent · Communication Agent' node under the Agents Hub — not built as an NPC in this pass.",
+    "Note: the W3 April 2026 internal series list has no Biota series number — Biota is anchored here by its fabric, not by a series slot."
+  ]
+}

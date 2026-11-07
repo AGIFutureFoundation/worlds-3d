@@ -1,0 +1,681 @@
+{
+ "Container": "agi-corp-locator-x",
+ "Services": [],
+ "Modules": [
+  {
+   "sUrl": "../../wasm/map.wasm"
+  }
+ ],
+ "Primary": {
+  "Ambient": {
+   "fBrightness": 0.12,
+   "fColor": "0xFFFFFF"
+  },
+  "Directional": {
+   "fBrightness": 0.6,
+   "fColor": "0xFFF4E0",
+   "Rotation": [
+    0.0,
+    0.5808,
+    0.6663,
+    0.468
+   ]
+  }
+ },
+ "Data": {
+  "Scene": {
+   "Head": {
+    "Self": "P-?"
+   },
+   "Name": "Locator.X \u00b7 coming soon \u00b7 Powered by AGI Corp",
+   "Resource": {
+    "sReference": "../models/world-locator-x.glb"
+   },
+   "Transform": {
+    "Position": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "aChildren": [
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Zone \u00b7 Master Dashboard",
+     "Resource": {
+      "sReference": "../models/zone-marker.glb"
+     },
+     "Transform": {
+      "Position": [
+       0.0,
+       -16.0,
+       0.0
+      ]
+     },
+     "aChildren": [
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Agent \u00b7 Guide",
+       "Resource": {
+        "sReference": "../models/agent.glb"
+       },
+       "Transform": {
+        "Position": [
+         0.0,
+         0.0,
+         0.3
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Zone \u00b7 Underwriting Desk",
+     "Resource": {
+      "sReference": "../models/zone-marker.glb"
+     },
+     "Transform": {
+      "Position": [
+       -12.51,
+       -9.98,
+       0.0
+      ]
+     },
+     "aChildren": [
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Agent \u00b7 Forecast Agent",
+       "Resource": {
+        "sReference": "../models/agent.glb"
+       },
+       "Transform": {
+        "Position": [
+         0.0,
+         0.0,
+         0.3
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Zone \u00b7 Evidence Layer",
+     "Resource": {
+      "sReference": "../models/zone-marker.glb"
+     },
+     "Transform": {
+      "Position": [
+       -15.6,
+       3.56,
+       0.0
+      ]
+     },
+     "aChildren": [
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Agent \u00b7 Review Agent",
+       "Resource": {
+        "sReference": "../models/agent.glb"
+       },
+       "Transform": {
+        "Position": [
+         0.0,
+         0.0,
+         0.3
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Zone \u00b7 The Academy",
+     "Resource": {
+      "sReference": "../models/zone-marker.glb"
+     },
+     "Transform": {
+      "Position": [
+       -6.94,
+       14.42,
+       0.0
+      ]
+     },
+     "aChildren": [
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Agent \u00b7 Level Gates",
+       "Resource": {
+        "sReference": "../models/agent.glb"
+       },
+       "Transform": {
+        "Position": [
+         0.0,
+         0.0,
+         0.3
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Zone \u00b7 Market Editions",
+     "Resource": {
+      "sReference": "../models/zone-marker.glb"
+     },
+     "Transform": {
+      "Position": [
+       6.94,
+       14.42,
+       0.0
+      ]
+     },
+     "aChildren": [
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Agent \u00b7 Scout Agent",
+       "Resource": {
+        "sReference": "../models/agent.glb"
+       },
+       "Transform": {
+        "Position": [
+         0.0,
+         0.0,
+         0.3
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Zone \u00b7 Louisiana Developer Desk",
+     "Resource": {
+      "sReference": "../models/zone-marker.glb"
+     },
+     "Transform": {
+      "Position": [
+       15.6,
+       3.56,
+       0.0
+      ]
+     },
+     "aChildren": [
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Agent \u00b7 Developer Brief Desk",
+       "Resource": {
+        "sReference": "../models/agent.glb"
+       },
+       "Transform": {
+        "Position": [
+         0.0,
+         0.0,
+         0.3
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Zone \u00b7 Steward Council",
+     "Resource": {
+      "sReference": "../models/zone-marker.glb"
+     },
+     "Transform": {
+      "Position": [
+       12.51,
+       -9.98,
+       0.0
+      ]
+     },
+     "aChildren": [
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Steward seat 1 \u00b7 human",
+       "Resource": {
+        "sReference": "../models/steward.glb"
+       },
+       "Transform": {
+        "Position": [
+         -1.6,
+         0.0,
+         0.3
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Steward seat 2 \u00b7 human",
+       "Resource": {
+        "sReference": "../models/steward.glb"
+       },
+       "Transform": {
+        "Position": [
+         0.0,
+         0.0,
+         0.3
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Steward seat 3 \u00b7 human",
+       "Resource": {
+        "sReference": "../models/steward.glb"
+       },
+       "Transform": {
+        "Position": [
+         1.6,
+         0.0,
+         0.3
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Swarm coordinator \u00b7 Locator.X",
+     "Resource": {
+      "sReference": "../models/coordinator.glb"
+     },
+     "Transform": {
+      "Position": [
+       0.0,
+       -5.5,
+       0.0
+      ]
+     },
+     "aChildren": [
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Swarm \u00b7 Guide",
+       "Resource": {
+        "sReference": "../models/agent.glb"
+       },
+       "Transform": {
+        "Position": [
+         4.5,
+         -5.5,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Swarm \u00b7 Forecast Agent",
+       "Resource": {
+        "sReference": "../models/agent.glb"
+       },
+       "Transform": {
+        "Position": [
+         2.25,
+         -1.6,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Swarm \u00b7 Scout Agent",
+       "Resource": {
+        "sReference": "../models/agent.glb"
+       },
+       "Transform": {
+        "Position": [
+         -2.25,
+         -1.6,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Swarm \u00b7 Review Agent",
+       "Resource": {
+        "sReference": "../models/agent.glb"
+       },
+       "Transform": {
+        "Position": [
+         -4.5,
+         -5.5,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Swarm \u00b7 Level Gates",
+       "Resource": {
+        "sReference": "../models/agent.glb"
+       },
+       "Transform": {
+        "Position": [
+         -2.25,
+         -9.4,
+         0.0
+        ]
+       }
+      },
+      {
+       "Head": {
+        "Self": "P-?"
+       },
+       "Name": "Swarm \u00b7 Developer Brief Desk",
+       "Resource": {
+        "sReference": "../models/agent.glb"
+       },
+       "Transform": {
+        "Position": [
+         2.25,
+         -9.4,
+         0.0
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "PBC \u00b7 Alignment Evaluation Gate",
+     "Resource": {
+      "sReference": "../models/gate.glb"
+     },
+     "Transform": {
+      "Position": [
+       0.0,
+       -24.0,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "L-?"
+     },
+     "Name": "Light \u00b7 Master Dashboard",
+     "Type": {
+      "bType": 1
+     },
+     "Transform": {
+      "Position": [
+       0.0,
+       -16.0,
+       5.0
+      ]
+     },
+     "Properties": {
+      "fBrightness": 0.5,
+      "fColor": "0x5B61D6"
+     }
+    },
+    {
+     "Head": {
+      "Self": "L-?"
+     },
+     "Name": "Light \u00b7 Underwriting Desk",
+     "Type": {
+      "bType": 1
+     },
+     "Transform": {
+      "Position": [
+       -12.51,
+       -9.98,
+       5.0
+      ]
+     },
+     "Properties": {
+      "fBrightness": 0.5,
+      "fColor": "0xA75BD6"
+     }
+    },
+    {
+     "Head": {
+      "Self": "L-?"
+     },
+     "Name": "Light \u00b7 Evidence Layer",
+     "Type": {
+      "bType": 1
+     },
+     "Transform": {
+      "Position": [
+       -15.6,
+       3.56,
+       5.0
+      ]
+     },
+     "Properties": {
+      "fBrightness": 0.5,
+      "fColor": "0xD65BB3"
+     }
+    },
+    {
+     "Head": {
+      "Self": "L-?"
+     },
+     "Name": "Light \u00b7 The Academy",
+     "Type": {
+      "bType": 1
+     },
+     "Transform": {
+      "Position": [
+       -6.94,
+       14.42,
+       5.0
+      ]
+     },
+     "Properties": {
+      "fBrightness": 0.5,
+      "fColor": "0xD65B61"
+     }
+    },
+    {
+     "Head": {
+      "Self": "L-?"
+     },
+     "Name": "Light \u00b7 Market Editions",
+     "Type": {
+      "bType": 1
+     },
+     "Transform": {
+      "Position": [
+       6.94,
+       14.42,
+       5.0
+      ]
+     },
+     "Properties": {
+      "fBrightness": 0.5,
+      "fColor": "0xD6A75B"
+     }
+    },
+    {
+     "Head": {
+      "Self": "L-?"
+     },
+     "Name": "Light \u00b7 Louisiana Developer Desk",
+     "Type": {
+      "bType": 1
+     },
+     "Transform": {
+      "Position": [
+       15.6,
+       3.56,
+       5.0
+      ]
+     },
+     "Properties": {
+      "fBrightness": 0.5,
+      "fColor": "0xB3D65B"
+     }
+    },
+    {
+     "Head": {
+      "Self": "L-?"
+     },
+     "Name": "Light \u00b7 Steward Council",
+     "Type": {
+      "bType": 1
+     },
+     "Transform": {
+      "Position": [
+       12.51,
+       -9.98,
+       5.0
+      ]
+     },
+     "Properties": {
+      "fBrightness": 0.5,
+      "fColor": "0x61D65B"
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Advisor \u00b7 Host Advisor",
+     "Resource": {
+      "sReference": "../models/advisor-host.glb"
+     },
+     "Transform": {
+      "Position": [
+       4.5,
+       -22.0,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Advisor \u00b7 Steward Liaison",
+     "Resource": {
+      "sReference": "../models/advisor-steward.glb"
+     },
+     "Transform": {
+      "Position": [
+       15.31,
+       -9.98,
+       0.3
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Advisor \u00b7 Alignment Advisor",
+     "Resource": {
+      "sReference": "../models/advisor-alignment.glb"
+     },
+     "Transform": {
+      "Position": [
+       -4.5,
+       -22.0,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Sky",
+     "Resource": {
+      "sReference": "../models/env-sky.glb"
+     },
+     "Transform": {
+      "Position": [
+       0.0,
+       0.0,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Terrain",
+     "Resource": {
+      "sReference": "../models/env-terrain.glb"
+     },
+     "Transform": {
+      "Position": [
+       0.0,
+       0.0,
+       0.0
+      ]
+     }
+    },
+    {
+     "Head": {
+      "Self": "P-?"
+     },
+     "Name": "Sign \u00b7 Locator.X \u00b7 Powered by AGI Corp",
+     "Resource": {
+      "sReference": "../models/sign-locator-x.glb"
+     },
+     "Transform": {
+      "Position": [
+       0.0,
+       -31.0,
+       0.0
+      ]
+     }
+    }
+   ]
+  }
+ }
+}

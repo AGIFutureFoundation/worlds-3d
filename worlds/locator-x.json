@@ -1,0 +1,745 @@
+{
+  "id": "locator-x",
+  "name": "Locator.X",
+  "series": "Series 8 · Locator.X",
+  "status": "anchored",
+  "rp1": null,
+  "coordinates": {
+    "lat": 21.09705311564314,
+    "lon": 142.69254864512746
+  },
+  "fabric_url": "https://agifuturefoundation.github.io/WorldForge-Browser/my-fabric/worlds/locator-x/world.json",
+  "biome": "coastal",
+  "spawn": [
+    0,
+    0,
+    22
+  ],
+  "terrain": {
+    "size": 120,
+    "height": 5,
+    "seed": 108,
+    "water": true
+  },
+  "weather": {
+    "preset": "breeze",
+    "dayCycle": true
+  },
+  "fabric_transform": {
+    "scale": 1.5,
+    "offset": [
+      0,
+      0,
+      0
+    ],
+    "mapping": "engine_x = fabric_x * scale + offset_x; engine_y = fabric_z * scale (fabric z is height, 0 for plan nodes); engine_z = fabric_y * scale + offset_z"
+  },
+  "fabric_nodes_total": 38,
+  "fabric_nodes_used": "All 7 Zone nodes as districts and buildings, plus the PBC Alignment Evaluation Gate and the world Sign as buildings",
+  "districts": [
+    {
+      "id": "zone-master-dashboard",
+      "name": "Zone · Master Dashboard",
+      "position": [
+        0.0,
+        0.0,
+        -24.0
+      ],
+      "color": "#2471a3",
+      "model_ref": "../models/zone-marker.glb",
+      "model_status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "id": "zone-underwriting-desk",
+      "name": "Zone · Underwriting Desk",
+      "position": [
+        -18.77,
+        0.0,
+        -14.97
+      ],
+      "color": "#1e8449",
+      "model_ref": "../models/zone-marker.glb",
+      "model_status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "id": "zone-evidence-layer",
+      "name": "Zone · Evidence Layer",
+      "position": [
+        -23.4,
+        0.0,
+        5.34
+      ],
+      "color": "#b7950b",
+      "model_ref": "../models/zone-marker.glb",
+      "model_status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "id": "zone-the-academy",
+      "name": "Zone · The Academy",
+      "position": [
+        -10.41,
+        0.0,
+        21.63
+      ],
+      "color": "#6c3483",
+      "model_ref": "../models/zone-marker.glb",
+      "model_status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "id": "zone-market-editions",
+      "name": "Zone · Market Editions",
+      "position": [
+        10.41,
+        0.0,
+        21.63
+      ],
+      "color": "#117a65",
+      "model_ref": "../models/zone-marker.glb",
+      "model_status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "id": "zone-louisiana-developer-desk",
+      "name": "Zone · Louisiana Developer Desk",
+      "position": [
+        23.4,
+        0.0,
+        5.34
+      ],
+      "color": "#7e5109",
+      "model_ref": "../models/zone-marker.glb",
+      "model_status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "id": "zone-steward-council",
+      "name": "Zone · Steward Council",
+      "position": [
+        18.77,
+        0.0,
+        -14.97
+      ],
+      "color": "#c0392b",
+      "model_ref": "../models/zone-marker.glb",
+      "model_status": "not hosted — procedural placeholder shown"
+    }
+  ],
+  "buildings": [
+    {
+      "id": "zone-master-dashboard",
+      "name": "Zone · Master Dashboard",
+      "position": [
+        0.0,
+        0.0,
+        -24.0
+      ],
+      "size": [
+        12,
+        7,
+        12
+      ],
+      "color": "#2471a3",
+      "interior": {
+        "name": "Zone · Master Dashboard Interior",
+        "rooms": [
+          {
+            "name": "Main Hall",
+            "size": [
+              10,
+              5,
+              10
+            ],
+            "props": []
+          },
+          {
+            "name": "Side Room",
+            "size": [
+              5,
+              4,
+              5
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "zone-underwriting-desk",
+      "name": "Zone · Underwriting Desk",
+      "position": [
+        -18.77,
+        0.0,
+        -14.97
+      ],
+      "size": [
+        12,
+        7,
+        12
+      ],
+      "color": "#1e8449",
+      "interior": {
+        "name": "Zone · Underwriting Desk Interior",
+        "rooms": [
+          {
+            "name": "Main Hall",
+            "size": [
+              10,
+              5,
+              10
+            ],
+            "props": []
+          },
+          {
+            "name": "Side Room",
+            "size": [
+              5,
+              4,
+              5
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "zone-evidence-layer",
+      "name": "Zone · Evidence Layer",
+      "position": [
+        -23.4,
+        0.0,
+        5.34
+      ],
+      "size": [
+        12,
+        7,
+        12
+      ],
+      "color": "#b7950b",
+      "interior": {
+        "name": "Zone · Evidence Layer Interior",
+        "rooms": [
+          {
+            "name": "Main Hall",
+            "size": [
+              10,
+              5,
+              10
+            ],
+            "props": []
+          },
+          {
+            "name": "Side Room",
+            "size": [
+              5,
+              4,
+              5
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "zone-the-academy",
+      "name": "Zone · The Academy",
+      "position": [
+        -10.41,
+        0.0,
+        21.63
+      ],
+      "size": [
+        12,
+        7,
+        12
+      ],
+      "color": "#6c3483",
+      "interior": {
+        "name": "Zone · The Academy Interior",
+        "rooms": [
+          {
+            "name": "Main Hall",
+            "size": [
+              10,
+              5,
+              10
+            ],
+            "props": []
+          },
+          {
+            "name": "Side Room",
+            "size": [
+              5,
+              4,
+              5
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "zone-market-editions",
+      "name": "Zone · Market Editions",
+      "position": [
+        10.41,
+        0.0,
+        21.63
+      ],
+      "size": [
+        12,
+        7,
+        12
+      ],
+      "color": "#117a65",
+      "interior": {
+        "name": "Zone · Market Editions Interior",
+        "rooms": [
+          {
+            "name": "Main Hall",
+            "size": [
+              10,
+              5,
+              10
+            ],
+            "props": []
+          },
+          {
+            "name": "Side Room",
+            "size": [
+              5,
+              4,
+              5
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "zone-louisiana-developer-desk",
+      "name": "Zone · Louisiana Developer Desk",
+      "position": [
+        23.4,
+        0.0,
+        5.34
+      ],
+      "size": [
+        12,
+        7,
+        12
+      ],
+      "color": "#7e5109",
+      "interior": {
+        "name": "Zone · Louisiana Developer Desk Interior",
+        "rooms": [
+          {
+            "name": "Main Hall",
+            "size": [
+              10,
+              5,
+              10
+            ],
+            "props": []
+          },
+          {
+            "name": "Side Room",
+            "size": [
+              5,
+              4,
+              5
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "zone-steward-council",
+      "name": "Zone · Steward Council",
+      "position": [
+        18.77,
+        0.0,
+        -14.97
+      ],
+      "size": [
+        12,
+        7,
+        12
+      ],
+      "color": "#c0392b",
+      "interior": {
+        "name": "Zone · Steward Council Interior",
+        "rooms": [
+          {
+            "name": "Main Hall",
+            "size": [
+              10,
+              5,
+              10
+            ],
+            "props": []
+          },
+          {
+            "name": "Side Room",
+            "size": [
+              5,
+              4,
+              5
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "pbc-alignment-evaluation-gate",
+      "name": "PBC · Alignment Evaluation Gate",
+      "position": [
+        0.0,
+        0.0,
+        -36.0
+      ],
+      "size": [
+        10,
+        6,
+        4
+      ],
+      "color": "#6c3483",
+      "interior": {
+        "name": "PBC · Alignment Evaluation Gate Interior",
+        "rooms": [
+          {
+            "name": "Gate Hall",
+            "size": [
+              8,
+              4,
+              3
+            ],
+            "props": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "sign-locator-x-powered-by-agi-corp",
+      "name": "Sign · Locator.X · Powered by AGI Corp",
+      "position": [
+        0.0,
+        0.0,
+        -46.5
+      ],
+      "size": [
+        10,
+        5,
+        2
+      ],
+      "color": "#b7950b",
+      "interior": {
+        "name": "Sign · Locator.X · Powered by AGI Corp Interior",
+        "rooms": [
+          {
+            "name": "Sign Plaza",
+            "size": [
+              8,
+              4,
+              3
+            ],
+            "props": []
+          }
+        ]
+      }
+    }
+  ],
+  "npcs": [
+    {
+      "id": "guide",
+      "name": "Guide",
+      "role": "Master Dashboard guide",
+      "position": [
+        0.0,
+        0.45,
+        -24.0
+      ],
+      "dialogue": [
+        "Every good site starts with a question. What are you looking for?",
+        "Check the dashboard, then the evidence. The order matters."
+      ],
+      "quest": "q-first-brief"
+    },
+    {
+      "id": "forecast-agent",
+      "name": "Forecast Agent",
+      "role": "Market Editions forecast agent",
+      "position": [
+        -18.77,
+        0.45,
+        -14.97
+      ],
+      "dialogue": [
+        "Forecasts are bets with receipts. I show the receipts.",
+        "The market moves — the evidence layer is where you check why."
+      ],
+      "quest": "q-forecast-check"
+    },
+    {
+      "id": "review-agent",
+      "name": "Review Agent",
+      "role": "Evidence Layer review agent",
+      "position": [
+        -23.4,
+        0.45,
+        5.34
+      ],
+      "dialogue": [
+        "Bring me the claim and I will bring you the source.",
+        "A review is only as good as the evidence it stands on."
+      ],
+      "quest": "q-evidence-review"
+    },
+    {
+      "id": "scout-agent",
+      "name": "Scout Agent",
+      "role": "Market Editions scout agent",
+      "position": [
+        10.41,
+        0.45,
+        21.63
+      ],
+      "dialogue": [
+        "I walk the editions so you do not have to. Found three leads today.",
+        "Scout first, commit later. That is the whole job."
+      ],
+      "quest": "q-forecast-check"
+    },
+    {
+      "id": "level-gates",
+      "name": "Level Gates",
+      "role": "The Academy level-gates agent",
+      "position": [
+        -10.41,
+        0.45,
+        21.63
+      ],
+      "dialogue": [
+        "Levels are earned, not bought. Pass the gate and the next door opens.",
+        "The Academy keeps the bar where the stewards set it — high and visible."
+      ],
+      "quest": "q-first-brief"
+    }
+  ],
+  "quests": [
+    {
+      "id": "q-first-brief",
+      "title": "First Brief",
+      "description": "Get oriented at the Master Dashboard and brief the Louisiana desk.",
+      "steps": [
+        {
+          "text": "Talk to the Guide",
+          "target": "guide",
+          "kind": "npc"
+        },
+        {
+          "text": "Collect the brief data at the Master Dashboard",
+          "target": "data-brief",
+          "kind": "collectible"
+        },
+        {
+          "text": "Visit the Louisiana Developer Desk",
+          "target": "Zone · Louisiana Developer Desk",
+          "kind": "place"
+        }
+      ],
+      "reward": "Scout's Brief"
+    },
+    {
+      "id": "q-forecast-check",
+      "title": "Forecast Check",
+      "description": "Check a market forecast against the evidence layer.",
+      "steps": [
+        {
+          "text": "Talk to the Forecast Agent",
+          "target": "forecast-agent",
+          "kind": "npc"
+        },
+        {
+          "text": "Collect the forecast spark at Market Editions",
+          "target": "spark-forecast",
+          "kind": "collectible"
+        },
+        {
+          "text": "Visit the Evidence Layer",
+          "target": "Zone · Evidence Layer",
+          "kind": "place"
+        }
+      ],
+      "reward": "Forecast Check Badge"
+    },
+    {
+      "id": "q-evidence-review",
+      "title": "Evidence Review",
+      "description": "Put a claim through review and file the result.",
+      "steps": [
+        {
+          "text": "Talk to the Review Agent",
+          "target": "review-agent",
+          "kind": "npc"
+        },
+        {
+          "text": "Collect the evidence relic",
+          "target": "relic-evidence",
+          "kind": "collectible"
+        },
+        {
+          "text": "Visit the Underwriting Desk",
+          "target": "Zone · Underwriting Desk",
+          "kind": "place"
+        }
+      ],
+      "reward": "Reviewer's Mark"
+    }
+  ],
+  "collectibles": [
+    {
+      "id": "data-brief",
+      "name": "Brief Data",
+      "position": [
+        3.0,
+        1.0,
+        -24.0
+      ],
+      "kind": "data"
+    },
+    {
+      "id": "spark-forecast",
+      "name": "Forecast Spark",
+      "position": [
+        13.41,
+        1.0,
+        21.63
+      ],
+      "kind": "spark"
+    },
+    {
+      "id": "relic-evidence",
+      "name": "Evidence Relic",
+      "position": [
+        -20.4,
+        1.0,
+        5.34
+      ],
+      "kind": "relic"
+    },
+    {
+      "id": "spark-underwriting",
+      "name": "Underwriting Spark",
+      "position": [
+        -21.77,
+        1.0,
+        -14.97
+      ],
+      "kind": "spark"
+    },
+    {
+      "id": "data-academy",
+      "name": "Academy Data",
+      "position": [
+        -7.41,
+        1.0,
+        21.63
+      ],
+      "kind": "data"
+    },
+    {
+      "id": "spark-louisiana",
+      "name": "Louisiana Spark",
+      "position": [
+        26.4,
+        1.0,
+        5.34
+      ],
+      "kind": "spark"
+    },
+    {
+      "id": "relic-steward",
+      "name": "Steward Relic",
+      "position": [
+        21.77,
+        1.0,
+        -14.97
+      ],
+      "kind": "relic"
+    }
+  ],
+  "agent_companions": [
+    {
+      "id": "omega",
+      "name": "Omega",
+      "role": "Hive coordination agent (Virtuals ACP). Real job: hive_coordination_brief, $10 / 24h. Game companion only — live instance offline.",
+      "color": "#e2b55c"
+    },
+    {
+      "id": "cmmc",
+      "name": "CMMC",
+      "role": "Compliance-readiness agent (Virtuals ACP). Real job: readiness_check. Game companion only — live instance offline.",
+      "color": "#f4a261"
+    }
+  ],
+  "missing_models": [
+    {
+      "ref": "../models/advisor-alignment.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "../models/advisor-host.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "../models/advisor-steward.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "../models/agent.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "../models/coordinator.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "../models/env-sky.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "../models/env-terrain.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "../models/gate.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "../models/sign-locator-x.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "../models/steward.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "../models/world-locator-x.glb",
+      "status": "not hosted — procedural placeholder shown"
+    },
+    {
+      "ref": "../models/zone-marker.glb",
+      "status": "not hosted — procedural placeholder shown"
+    }
+  ],
+  "sources": [
+    "Fabric: rp1-review/push-6-fabrics/site/my-fabric/worlds/locator/world.json (local copy in data/fabrics/)",
+    "Fabric live URL: https://agifuturefoundation.github.io/WorldForge-Browser/my-fabric/worlds/locator-x/world.json",
+    "Anchor: lat 21.09705311564314, lon 142.69254864512746. Status anchored = real-world anchor coordinate exists; rp1 null, NOT live on RP1.",
+    "Fabric: 38 nodes total (scene root + 22 top-level + nested Agent/Swarm children); 12 distinct GLB refs, all unhosted — see missing_models.",
+    "Districts/buildings = the real 'Zone · ...' nodes. NPCs = the real 'Agent · ...' nodes (nested under their zones; NPC position = zone position + the agent node's local offset) plus the real 'Advisor · Host Advisor' node. All NPC dialogue is original game dialogue, never attributed to a real person.",
+    "Biome 'coastal' is a design choice for this interpretation.",
+    "Agent companions are game characters representing the real Virtuals agents (agents.json); their live instances are offline — not live connections.",
+    "Zones (7): Master Dashboard, Underwriting Desk, Evidence Layer, The Academy, Market Editions, Louisiana Developer Desk, Steward Council. The fabric also has an 'Agent · Developer Brief Desk' node under the Louisiana Developer Desk — not built as an NPC in this pass."
+  ]
+}
