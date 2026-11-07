@@ -190,3 +190,15 @@ Only the Hub world references these; all other worlds' interiors have no props.
 9. **WebGL render still unverified** (cloud browser has none, VM has no browser
    binary) — needs a real browser with hardware acceleration; see the Phase 2
    report §5.5 for the playtest checklist.
+10. **Depth pass (2026-11-06, 8-hour program):** every NPC 2 → 5 dialogue
+    lines and every quest 3 → 5 steps (44 NPCs / 220 lines / 34 quests /
+    170 steps), all targets resolving to real fabric nodes; engine quest
+    bug fixed (`npc`/`place` steps never advanced, so no quest could
+    complete); weather cross-fades + all 8 presets on the HUD + horizon
+    glow / second star layer / avatar-following rain; perf measured in
+    jsdom (0.5 s tick 0.005 ms at Holodeck scale, lazy scan early-out,
+    building/label texture caches); lobby flagship cards show weather +
+    first quest + companions, windowed pagination; 390px static audit
+    24/24 with one real fix (`#info-toggle` no longer absolute). Details
+    in ENGINE-NOTE.md §14; suites in `/tmp/w3d-smoke/` (test 26/26,
+    fixture 8/8, depth 26/26, mobile-audit 24/24).

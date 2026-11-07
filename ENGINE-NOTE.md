@@ -86,3 +86,95 @@ Why this shape: a world carries at most ~8 districts (landmarks, few) but up to 
 - District/building hosted models load via the queue in §13: districts eagerly at mount, buildings lazily within 120 units. Watch `state.modelLoads` in devtools (`window.__world.state.modelLoads`) to see requested/loaded/failed counts.
 - Interiors reference GLB props as paths relative to the **page** (e.g. `assets/glb/Crate.glb` from a page at the build root); put real GLBs under `assets/glb/`.
 - The test page exposes `window.__world` (controller) and `window.__worldDef` for devtools probing.
+
+## 14. Depth pass (2026-11-06, 8-hour program)
+
+Data + engine + lobby, verified by the jsdom suites in `/tmp/w3d-smoke/`
+(`test.mjs` 26/26, `test-fixture.mjs` 8/8, `test-depth.mjs` 26/26,
+`mobile-audit.mjs` 24/24, `perf.mjs` measurements below). No WebGL pixels —
+same caveat as §13: rendering still needs a real browser check.
+
+### 14.1 NPC dialogue + quests (data only)
+- Every NPC: 2 → 5 dialogue lines (44 NPCs, 220 lines). New lines use only
+  real fabric nodes: the NPC's own zone/hall, sibling Agent/Advisor nodes,
+  the Steward Council (human seats), the PBC Alignment Evaluation Gate, the
+  Swarm coordinator, the sign node. Original game dialogue, never attributed
+  to a real person; no invented people/places/statistics.
+- Every quest: 3 → 5 steps (34 quests, 170 steps). Pattern: talk giver →
+  collect → visit place → talk a second NPC → report back to the giver.
+  Every step target resolves (validated programmatically): npc ids,
+  collectible ids, and place names that exist in the same world.
+- `worlds/*.json` was rewritten by `/tmp/w3d-depth/deepen.py` with sorted
+  keys + 1-space indent (formatting normalisation; content is the only
+  change). `data.js` regenerated with `tools/gen_data_js.py` (267,087 B).
+
+### 14.2 Quest bug fixed (engine): npc/place steps never advanced
+- `advanceQuestStep()` was only ever called for `'collectible'` and
+  `'position'` steps. Every quest's first step is "talk to X" (and several
+  have "visit Y" steps), so NO quest could ever complete.
+- Fixed: talking to an NPC now advances accepted `'npc'` steps for that NPC
+  (in `openDialogue` and on quest accept, where the first step is usually
+  "talk to this NPC"); `'place'` steps advance on proximity, checked in the
+  0.5 s tick against `placeTargets` (building centre + half-diagonal, min
+  6 u; district plate radius 18 u; buildings win on a name clash).
+- Proved end-to-end in `test-depth.mjs`: fixture quest (talk → collect →
+  complete) and an inline 3-step quest (talk → visit district → report
+  back → complete).
+
+### 14.3 Weather / skybox polish (engine)
+- All 8 presets are now real HUD buttons (indoor/mist/golden-hour/breeze
+  were previously only reachable via `setWeather()`).
+- Presets are a `WEATHER_PRESETS` table; switching cross-fades fog colour/
+  near/far, light factor, ambient, cloud/rain opacity, wind and indoor
+  blend over ~1 s (`updateWeather`, exponential approach) instead of
+  snapping. One persistent `THREE.Fog` instance (clear = far 1200/near 400,
+  effectively no fog) instead of toggling `scene.fog`.
+- Light-persistence bug fixed: `applyTimeOfDay` (every frame) now applies
+  the lerped weather light factor and indoor blend itself. Previously
+  `applyWeather` multiplied `sunLight.intensity` once and the next frame's
+  day-cycle write overwrote it — rain/clouds/mist never dimmed the light
+  and indoor reverted after one frame. Proved in `test-depth.mjs`: indoor
+  holds sun-hidden / stars-0 / ambient 0.55 / sun ~1.5 for 2.5 s of frames.
+- Skybox: horizon-glow band in the dome shader (warm at dusk, deep blue at
+  night), second dimmer star layer (450 points, size 1.2) + ±12% twinkle,
+  moon halo disc. Rain now wraps in a 120×120×60 box centred on the avatar
+  (never rains at the origin after the player walks away) with wind slant
+  (preset wind × 14 u/s) and opacity tied to the cross-fade.
+
+### 14.4 Performance (measured, jsdom — JS cost only, no GPU/canvas)
+- Mount (all 7 real flagships): 39–656 ms first run, 86–581 ms second run
+  (range is jsdom rAF/JIT noise; Holodeck, the largest world at 1,741 scene
+  objects / 947 meshes / 381 sprites, mounts in 139–581 ms). Frame
+  throughput in jsdom: 122–184 frames/3 s (~16–25 ms/frame) — jsdom-bound,
+  not a browser number; do not quote as real frame rate.
+- 0.5 s tick cost at Holodeck scale (130 place/lazy targets): 0.005–0.008 ms
+  per scan — no reason to change the interval. The lazy scan now stops
+  entirely once every lazy model has started (`lazyScanDone`); all 7 real
+  worlds have 0 lazy models (no hosted buildings), so the scan is already a
+  no-op there. `MAX_CONCURRENT_LOADS = 2` and `LAZY_LOAD_RADIUS = 120`
+  unchanged — no measurement supported changing them, and the first frame
+  is untouched (districts eager, buildings lazy, as before).
+- Two analytic wins (canvas counts measured in jsdom, time win is
+  real-browser-only since jsdom stubs canvas 2d): `buildingTexture` cached
+  by colour (Holodeck: 122 builds → 8) and label sprites cached by
+  text/style (Holodeck: 390 → 269 canvases at mount, saving the 121
+  identical "EXIT → outside" labels). Output identical in both cases.
+- `applyTimeOfDay` no longer allocates 8 `THREE.Color`s per frame (sky
+  colours hoisted to module scope). Known remaining cost, unchanged
+  deliberately: 381 label sprites in the Holodeck = 381 draw calls;
+  distance-culled labels would be a future visual change, not a silent one.
+
+### 14.5 Lobby + mobile
+- Flagship cards now show weather preset (+ day cycle / fixed time), the
+  first quest ("Start with: … — 5 steps") and companion names.
+- Pagination is windowed page numbers (1 … p-1 p p+1 … last) with
+  `aria-current="page"`; the result count echoes the active search/biome/
+  group filters. Honesty banner and "does not resolve yet" subdomain labels
+  unchanged.
+- Mobile (390px) static audit (`mobile-audit.mjs`, 24/24): no unguarded
+  fixed width over the 354px content column in either stylesheet; grid min
+  280px, search basis 220px, dialog/controls/toast/panel all vw-guarded.
+  One real fix: `#info-toggle` was `position:absolute` against the viewport
+  and could overlay the world title at 390px — now an in-flow flex item in
+  the player bar (wraps with it). Still unverified in a real browser: actual
+  390px rendering, overflow, overlap and tap targets need a layout engine.
