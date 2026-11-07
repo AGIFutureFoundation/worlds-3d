@@ -18,6 +18,19 @@ const COLLECTIBLE_STYLE = {
   data:  { color: 0x35d0ff, geo: 'box' },
 };
 
+// --- hosted-model status rules (single source of truth for Task 1/2) ---
+// A district/building model is HOSTED iff it has a model_ref AND its status is
+// exactly 'hosted'. Anything else with a model_ref is a PLACEHOLDER: the
+// canonical data writes the placeholder status as
+// "not hosted — procedural placeholder shown" (tools/rewire_models.py
+// PLACEHOLDER_STATUS); older fixtures use 'not-hosted'. Checking for
+// `!== 'hosted'` instead of matching one placeholder spelling keeps the
+// plaque and the info panel correct for both spellings and for any future
+// non-hosted wording. A district with no model_ref at all (e.g. the Hub
+// lobby, a design choice) is neither hosted nor a placeholder.
+function isHostedModel(item) { return !!item && !!item.model_ref && item.model_status === 'hosted'; }
+function isPlaceholderModel(item) { return !!item && !!item.model_ref && item.model_status !== 'hosted'; }
+
 // --- deterministic noise (seeded, shared by mesh + walk height) ---
 function mulberry32(seed) {
   let a = seed >>> 0;
@@ -114,6 +127,7 @@ export function mountWorld(container, worldDef, options = {}) {
     collected: [], questsAccepted: {}, questProgress: {}, questsComplete: {},
     position: def.spawn ? def.spawn.slice() : [0, 2, 24],
     nearNPC: null, nearBuilding: null, insideBuilding: null, companionGreeted: false,
+    modelLoads: { requested: 0, loaded: 0, failed: 0 }, // hosted-GLB load counts
   };
 
   // ---------- HUD (built first so the no-WebGL fallback can reuse it) ----------
@@ -149,9 +163,17 @@ export function mountWorld(container, worldDef, options = {}) {
   const infoBody = $('.w3d-info-body');
   const missing = def.missing_models || [];
   infoBody.innerHTML = (def.districts || []).map((d) => {
-    const hosted = d.model_status !== 'not-hosted';
+    if (isHostedModel(d)) {
+      return `<div class="w3d-district-row"><strong>${escapeHtml(d.name)}</strong> — ` +
+        `model: ${escapeHtml(d.model_ref)}</div>`;
+    }
+    if (isPlaceholderModel(d)) {
+      return `<div class="w3d-district-row"><strong>${escapeHtml(d.name)}</strong> — ` +
+        `<em>model not hosted — placeholder</em></div>`;
+    }
+    // No model_ref at all (e.g. the Hub lobby): neither hosted nor placeholder.
     return `<div class="w3d-district-row"><strong>${escapeHtml(d.name)}</strong> — ` +
-      (hosted ? `model: ${escapeHtml(d.model_ref || '—')}` : `<em>model not hosted — placeholder</em>`) + `</div>`;
+      (d.model_status ? escapeHtml(d.model_status) : 'model: —') + `</div>`;
   }).join('') || '<div>No districts in this world.</div>';
   if (missing.length) infoBody.innerHTML += missing.map((m) =>
     `<div class="w3d-district-row">⚠ ${escapeHtml(m.ref)} — ${escapeHtml(m.status)}</div>`).join('');
@@ -191,6 +213,71 @@ export function mountWorld(container, worldDef, options = {}) {
   const camera = new THREE.PerspectiveCamera(62, 1, 0.1, 1200);
   const clock = new THREE.Clock();
   const loader = new GLTFLoader();
+
+  // ---------- Hosted GLB loading (districts + buildings) ----------
+  // Strategy (see ENGINE-NOTE.md §13): districts load EAGERLY at mount —
+  // there are few per world and they are the landmarks — while buildings
+  // load LAZILY, only once the avatar comes within LAZY_LOAD_RADIUS, because
+  // a world can carry dozens of buildings that may never be approached.
+  // All loads go through one queue capped at MAX_CONCURRENT_LOADS in flight,
+  // so a world with many hosted models cannot stall the first frame or
+  // saturate the network. A failed load keeps the procedural form in place
+  // (never a blank hole) and is counted in state.modelLoads.failed.
+  const MAX_CONCURRENT_LOADS = 2;
+  const LAZY_LOAD_RADIUS = 120;
+  let activeLoads = 0;
+  const loadQueue = []; // {url, onLoad, onError}
+  const lazyModels = []; // {url, pos:[x,z], groundY, group, hide:[meshes], targetWidth, started, done}
+  function pumpLoadQueue() {
+    while (activeLoads < MAX_CONCURRENT_LOADS && loadQueue.length) {
+      const job = loadQueue.shift();
+      activeLoads++;
+      loader.load(job.url, (gltf) => {
+        activeLoads--; state.modelLoads.loaded++;
+        job.onLoad(gltf); pumpLoadQueue();
+      }, undefined, (err) => {
+        activeLoads--; state.modelLoads.failed++;
+        job.onError(err); pumpLoadQueue();
+      });
+    }
+  }
+  function enqueueModelLoad(url, onLoad, onError) {
+    state.modelLoads.requested++;
+    loadQueue.push({ url, onLoad, onError });
+    pumpLoadQueue();
+  }
+  // Fit an unknown-size GLB to a district plate / building footprint: scale
+  // the widest horizontal extent to targetWidth, centre it on the holder,
+  // and rest its base on the ground (the holder sits at terrain height).
+  function placeModelInHolder(gltfScene, holder, targetWidth) {
+    const box = new THREE.Box3().setFromObject(gltfScene);
+    const size = new THREE.Vector3(); box.getSize(size);
+    const s = targetWidth / Math.max(size.x, size.z, 0.001);
+    gltfScene.scale.setScalar(s);
+    const box2 = new THREE.Box3().setFromObject(gltfScene);
+    const c = new THREE.Vector3(); box2.getCenter(c);
+    gltfScene.position.set(-c.x, -box2.min.y, -c.z);
+    gltfScene.traverse((o) => { if (o.isMesh) { o.castShadow = true; o.receiveShadow = true; } });
+    holder.add(gltfScene);
+  }
+  function checkLazyModels() {
+    for (const entry of lazyModels) {
+      if (entry.started) continue;
+      if (Math.hypot(entry.pos[0] - avatarPos.x, entry.pos[1] - avatarPos.z) >= LAZY_LOAD_RADIUS) continue;
+      entry.started = true;
+      const holder = new THREE.Group();
+      holder.position.set(entry.pos[0], entry.groundY, entry.pos[1]);
+      buildingGroup.add(holder);
+      enqueueModelLoad(entry.url, (gltf) => {
+        entry.done = true;
+        entry.hide.forEach((m) => { m.visible = false; });
+        placeModelInHolder(gltf.scene, holder, entry.targetWidth);
+      }, (err) => {
+        entry.done = true; // procedural building stays; failure is logged, not hidden
+        console.warn(`[worlds-3d] building model failed to load, keeping procedural building: ${entry.url}`, err);
+      });
+    }
+  }
 
   // ---------- Sky: gradient dome + sun + moon + stars, driven by hour ----------
   const skyUniforms = {
@@ -397,7 +484,22 @@ export function mountWorld(container, worldDef, options = {}) {
     ph.position.set(dx, dy, dz - 8); ph.traverse((o) => { if (o.isMesh) o.castShadow = true; });
     districtGroup.add(ph);
     const label = makeLabelSprite(d.name); label.position.set(dx, dy + 13, dz); districtGroup.add(label);
-    if (d.model_status === 'not-hosted') {
+    if (isHostedModel(d)) {
+      // Hosted model replaces the procedural placeholder in-scene. Eager
+      // load (districts are few and are the landmarks) through the shared
+      // queue; on failure the procedural arch/plinth stays and the failure
+      // is logged, never a blank hole.
+      const holder = new THREE.Group();
+      holder.position.set(dx, dy, dz);
+      districtGroup.add(holder);
+      enqueueModelLoad(d.model_ref, (gltf) => {
+        districtGroup.remove(ph);
+        placeModelInHolder(gltf.scene, holder, 18);
+      }, (err) => {
+        console.warn(`[worlds-3d] district model failed to load, keeping procedural placeholder: ${d.model_ref}`, err);
+      });
+    }
+    if (isPlaceholderModel(d)) {
       const plaque = makeLabelSprite('model not hosted — placeholder', { font: 30, bg: 'rgba(120,40,20,0.88)' });
       plaque.position.set(dx, dy + 10, dz); plaque.scale.set(13, 2.2, 1); districtGroup.add(plaque);
     }
@@ -425,6 +527,20 @@ export function mountWorld(container, worldDef, options = {}) {
       new THREE.MeshStandardMaterial({ color: 0x3a2a18, roughness: 1 }));
     door.position.set(0, 1.6, bd / 2 + 0.15); g.add(door);
     buildingGroup.add(g);
+    if (isHostedModel(b)) {
+      // Hosted building model, loaded LAZILY (see checkLazyModels): the load
+      // only starts when the avatar comes within LAZY_LOAD_RADIUS. On
+      // success the procedural body/roof/door hide and the GLB takes their
+      // place; the name label stays, and collision keeps using the
+      // procedural AABB in buildingBounds. No current world ships a building
+      // model_ref (186 buildings, all procedural) — this path is ready for
+      // when one is added.
+      lazyModels.push({
+        url: b.model_ref, pos: [bx, bz], groundY: by,
+        hide: [body, roof, door], targetWidth: Math.max(bw, bd),
+        started: false, done: false,
+      });
+    }
     buildingBounds.push({ minX: bx - bw / 2, maxX: bx + bw / 2, minZ: bz - bd / 2, maxZ: bz + bd / 2, def: b, door: [bx, bz + bd / 2 + 1.5] });
     // interior room (game space), built far below the terrain so it never overlaps the exterior
     if (b.interior && b.interior.rooms && b.interior.rooms.length) {
@@ -695,6 +811,7 @@ export function mountWorld(container, worldDef, options = {}) {
 
   // ---------- Main loop ----------
   let raf = 0; state.running = true;
+  let lazyTimer = 0; // throttle for the lazy building-model scan
   const clockEl = $('.w3d-clock');
   function animate() {
     if (!state.running) return;
@@ -811,6 +928,10 @@ export function mountWorld(container, worldDef, options = {}) {
         if (Math.hypot(step.target[0] - avatarPos.x, step.target[2] - avatarPos.z) < 4) advanceQuestStep('position', step.target);
       }
     }
+
+    // lazy GLB loading for hosted buildings (throttled: one scan per 0.5 s)
+    lazyTimer += dt;
+    if (lazyTimer >= 0.5) { lazyTimer = 0; checkLazyModels(); }
 
     updateCamera(dt);
     renderer.render(scene, camera);
