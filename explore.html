@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Explore — stations &amp; simulations — worlds-3d</title>
+<meta name="description" content="Stations and simulations inside the playable WorldForge flagship worlds: detailed workbenches, desks and training bays, plus step-by-step practice simulations. Web 3D interpretation — not RP1, not certification.">
+<link rel="stylesheet" href="engine/engine.css">
+<link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="explore.css">
+<link rel="stylesheet" href="tour-ui/tour-ui.css">
+<script type="importmap">
+{ "imports": { "three": "./engine/three.module.min.js" } }
+</script>
+<script src="data.js"></script>
+<!-- STAGED WIRING (M2): the M1 registry as a classic script (same pattern
+     as data.js) — explore.js resolves deep links against it. -->
+<script src="registry-data.js"></script>
+<script type="module" src="explore.js"></script>
+</head>
+<body class="player explore">
+<header class="player-bar">
+  <a href="index.html">← Lobby</a>
+  <h1 id="explore-title">Explore — stations &amp; simulations</h1>
+  <span class="tag">Web 3D interpretation — not on RP1</span>
+  <button id="explore-toggle" type="button">ⓘ Stations &amp; simulations</button>
+</header>
+<p class="error" id="data-error" hidden style="margin:12px"><strong>World data failed to load.</strong> This page needs <code>data.js</code> next to it. Make sure <code>data.js</code>, <code>explore.js</code> and the <code>engine/</code> folder are in place.</p>
+<div class="player-main">
+  <div id="app"></div>
+  <aside id="explore-panel" aria-label="Stations and simulations"></aside>
+</div>
+<div id="directory" hidden></div>
+<div id="unknown" hidden></div>
+</body>
+</html>

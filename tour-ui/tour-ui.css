@@ -1,0 +1,119 @@
+/* tour-ui.css — guided-tour panel (STAGED).
+   Dark theme, same tokens as worlds-3d site.css so the panel reads as
+   part of the player: navy #0b1e3a, gold #c9a227 / gold-bright #e2b55c,
+   teal #0e7c7b / teal-bright #6fd3c1, bg #0a0f1c, panel #111821,
+   ink #e8e4d8, ink-2 #9aa9b4, line #243140. Uses the page's CSS
+   variables where they exist, with the same values as fallbacks. */
+
+.tour-ui {
+  background: var(--panel, #111821);
+  border: 1px solid var(--line, #243140);
+  border-radius: 12px;
+  padding: 14px 16px;
+  color: var(--ink, #e8e4d8);
+  font-size: .95rem;
+}
+
+.tour-ui-back {
+  background: none;
+  border: 1px solid var(--line, #243140);
+  color: var(--link, #6fd3c1);
+  border-radius: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: .9rem;
+}
+
+.tour-ui-back:hover { border-color: var(--gold-bright, #e2b55c); color: #fff; }
+
+.tour-ui-title {
+  color: var(--gold-bright, #e2b55c);
+  margin: 12px 0 4px;
+  font-size: 1.25rem;
+}
+
+.tour-ui-kind { color: var(--ink-2, #9aa9b4); margin: 0 0 10px; }
+
+.tour-ui-reward { color: var(--gold-bright, #e2b55c); }
+
+.tour-ui-steps {
+  list-style: none;
+  margin: 12px 0;
+  padding: 0;
+}
+
+.tour-ui-steps li {
+  padding: 8px 10px;
+  border: 1px solid var(--line, #243140);
+  border-radius: 8px;
+  margin-bottom: 6px;
+  cursor: pointer;
+}
+
+.tour-ui-steps li:hover { border-color: var(--gold-bright, #e2b55c); }
+
+.tour-ui-current {
+  border-color: var(--gold-bright, #e2b55c);
+  background: #1c1607;
+}
+
+.tour-ui-seen { opacity: .75; }
+
+.tour-ui-step-num {
+  display: inline-block;
+  min-width: 1.5em;
+  text-align: center;
+  background: var(--navy, #0b1e3a);
+  border: 1px solid var(--line, #243140);
+  border-radius: 999px;
+  padding: 1px 6px;
+  margin-right: 6px;
+  font-weight: 700;
+}
+
+.tour-ui-current .tour-ui-step-num {
+  background: var(--gold-bright, #e2b55c);
+  color: #241a05;
+  border-color: var(--gold-bright, #e2b55c);
+}
+
+.tour-ui-step-verb { color: var(--ink-2, #9aa9b4); }
+
+.tour-ui-step-text { color: var(--ink-2, #9aa9b4); font-size: .9rem; }
+
+.tour-ui-now {
+  border-top: 1px solid var(--line, #243140);
+  padding-top: 10px;
+}
+
+.tour-ui-progress { color: var(--ink-2, #9aa9b4); font-size: .88rem; }
+
+.tour-ui-btns { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+
+.tour-ui-btns button {
+  background: var(--gold-bright, #e2b55c);
+  color: #241a05;
+  font-weight: 700;
+  border: 1px solid var(--gold-bright, #e2b55c);
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  min-height: 40px;
+}
+
+.tour-ui-btns button:hover { background: #f0cd7e; }
+
+.tour-ui-btns button:disabled {
+  background: var(--panel-2, #16202b);
+  color: var(--ink-3, #6b7c88);
+  border-color: var(--line, #243140);
+  cursor: default;
+}
+
+.tour-ui-note {
+  font-size: .88rem;
+  color: var(--ink-2, #9aa9b4);
+  border-top: 1px solid var(--line, #243140);
+  padding-top: 10px;
+  margin-bottom: 0;
+}

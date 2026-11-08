@@ -1,7 +1,18 @@
 /* worlds-3d player — loads one flagship world definition from window.WORLDS_DATA
    (data.js, generated — no fetch) and mounts the engine. Unknown ?world= ids
-   show a friendly error listing the playable worlds; never a blank page. */
+   show a friendly error listing the playable worlds; never a blank page.
+   STAGED WIRING (M2): the query string is resolved through the deep-link
+   reader (resolvePlayerTarget, contract v1) against window.WORLDS_REGISTRY
+   (registry-data.js, generated from the M1 registry). A station link
+   teleports to the station door and shows the station; a simulation link
+   shows the sim and points at the Explore runner; a tour link opens the
+   tour UI. A failed station/sim/tour in a valid world falls back to the
+   world view with a notice; an unknown world shows the unknown page.
+   When the registry did not load, the player falls back to the legacy
+   ?world= behaviour exactly as before. */
 import { mountWorld } from './engine/engine.js';
+import { resolvePlayerTarget } from './shared/deep-link-target.js';
+import { createTourUI } from './tour-ui/tour-ui.js';
 
 var FLAGSHIP_ORDER = [
   'agi-corp-hub',
@@ -20,6 +31,118 @@ function esc(s) {
 }
 
 function el(id) { return document.getElementById(id); }
+
+/* ---- deep-link target views (M2 wiring) ---- */
+// A building's door, in world xz (same rule as explore.js): the front
+// face centre, 3 u out. The engine's controller.teleport takes [x, y, z].
+function buildingById(world, id) {
+  return (world.buildings || []).find(function (b) { return b.id === id; }) || null;
+}
+function buildingDoor(b) {
+  var pos = b.position || [0, 0, 0];
+  var size = b.size || [10, 6, 10];
+  return [pos[0], 2, pos[2] + size[2] / 2 + 3];
+}
+function exploreUrl(worldId, extra) {
+  var q = 'explore.html?world=' + encodeURIComponent(worldId);
+  if (extra) q += '&' + extra;
+  return q;
+}
+function openInfoPanel() {
+  var panel = el('info-panel');
+  var toggle = el('info-toggle');
+  if (panel) panel.classList.add('open');
+  if (toggle) toggle.textContent = '✕ Close info';
+}
+// A short notice at the top of the info panel (world-view fallback and
+// the retired ?sim= spelling). Plain text, escaped.
+function showLinkNotice(msg) {
+  var host = el('info-body');
+  if (!host || !msg) return;
+  var div = document.createElement('p');
+  div.className = 'link-notice';
+  div.textContent = msg;
+  host.insertBefore(div, host.firstChild);
+}
+function bindBackToWorld(host, world) {
+  var btn = host.querySelector('[data-back-world]');
+  if (btn) btn.addEventListener('click', function () { fillInfo(world); });
+}
+function stationToolsHtml(st) {
+  if (!st.tools || !st.tools.length) return '';
+  return '<h4>What is in the room</h4><ul>'
+    + st.tools.map(function (t) { return '<li>' + esc(t) + '</li>'; }).join('') + '</ul>';
+}
+function sourcesHtml(list) {
+  if (!list || !list.length) return '';
+  return '<p class="note">Sources: ' + list.map(esc).join(' · ') + '</p>';
+}
+// Station view: the station's own fields (from the registry target),
+// its building, tools, and linked simulation. The visitor was already
+// teleported to the station door by the dispatch in init().
+function fillStation(world, st) {
+  var host = el('info-body');
+  if (!host) return;
+  var b = st.building ? buildingById(world, st.building) : null;
+  var sim = st.simulation
+    ? (world.simulations || []).find(function (s) { return s.id === st.simulation; })
+    : null;
+  host.innerHTML = '<button type="button" class="btn" data-back-world="1">← Back to world info</button>'
+    + '<h2>' + esc(st.name) + '</h2>'
+    + '<p class="series">' + esc(st.kind || '') + ' · ' + esc(st.district || '')
+    + (b ? ' · in ' + esc(b.name) : '') + '</p>'
+    + '<p>' + esc(st.description || '') + '</p>'
+    + '<p class="note">You are at this station’s door in the 3D world.</p>'
+    + (st.content || []).map(function (c) {
+      return '<h4>' + esc(c.heading) + '</h4><p>' + esc(c.text) + '</p>';
+    }).join('')
+    + stationToolsHtml(st)
+    + (sim ? '<h3>Linked simulation</h3><p><span class="badge">SIMULATION</span> '
+      + '<a href="' + esc(exploreUrl(world.id, 'simulation=' + encodeURIComponent(sim.id))) + '">'
+      + esc(sim.title) + '</a> — run it in Explore for the step-by-step runner.</p>' : '')
+    + sourcesHtml(st.sources)
+    + '<p class="note">Deep link: <a href="' + esc(exploreUrl(world.id, 'station=' + encodeURIComponent(st.id))) + '">'
+    + esc(exploreUrl(world.id, 'station=' + encodeURIComponent(st.id))) + '</a></p>';
+  bindBackToWorld(host, world);
+  openInfoPanel();
+}
+// Simulation view: the sim's own fields (from the registry target) and a
+// link to the Explore runner, which is where the step-by-step run lives.
+// This player has no sim runner; it never pretends to run one here.
+function fillSimulation(world, sim) {
+  var host = el('info-body');
+  if (!host) return;
+  var b = sim.building ? buildingById(world, sim.building) : null;
+  host.innerHTML = '<button type="button" class="btn" data-back-world="1">← Back to world info</button>'
+    + '<h2>' + esc(sim.title) + '</h2>'
+    + '<p><span class="badge">SIMULATION</span></p>'
+    + '<p>' + esc(sim.description || '') + '</p>'
+    + '<p class="series">Roles: ' + esc((sim.roles || []).join(' · ')) + '</p>'
+    + (b ? '<p class="note">You are at the simulation space — in ' + esc(b.name) + '.</p>' : '')
+    + '<h3>Steps (' + (sim.steps || []).length + ')</h3><ol>'
+    + (sim.steps || []).map(function (s) {
+      return '<li><strong>' + esc(s.title) + '</strong><br>' + esc(s.instruction)
+        + '<br><em>Check: ' + esc(s.check) + '</em></li>';
+    }).join('') + '</ol>'
+    + '<p><strong>Success looks like:</strong> ' + esc(sim.success || '') + '</p>'
+    + '<p class="note">' + esc(sim.safety_note || '') + '</p>'
+    + '<p><a class="btn" href="' + esc(exploreUrl(world.id, 'simulation=' + encodeURIComponent(sim.id))) + '">▶ Run this simulation in Explore</a></p>'
+    + '<p class="note">The step-by-step runner lives in Explore — it enforces step order and keeps progress in your browser only. Simulations never certify, diagnose, treat, or qualify anyone.</p>'
+    + sourcesHtml(sim.sources);
+  bindBackToWorld(host, world);
+  openInfoPanel();
+}
+// Tour view: the tour UI panel (tour-ui.js) in the info panel, fed the
+// resolved quest. Ending the tour restores the world info.
+function openTour(world, quest) {
+  var host = el('info-body');
+  if (!host) return;
+  host.innerHTML = '';
+  createTourUI(host, quest, world, {
+    onEnd: function () { fillInfo(world); },
+  });
+  openInfoPanel();
+}
 
 function showUnknown(data, requested) {
   var host = el('unknown');
@@ -86,12 +209,35 @@ function init() {
     if (err) err.hidden = false;
     return;
   }
-  var params = new URLSearchParams(window.location.search);
-  var id = params.get('world');
-  var world = id ? data.flagships[id] : null;
-  if (!world) {
-    showUnknown(data, id);
+  // Deep-link wiring (M2): resolve the full query against the registry.
+  // The reader decides WHAT to open; this function mounts the world and
+  // navigates to the target afterwards (see the dispatch at the end of
+  // init). The registry is window.WORLDS_REGISTRY (registry-data.js,
+  // generated from the M1 registry); when it did not load, the player
+  // falls back to the legacy ?world= path exactly as before.
+  var registry = (typeof window !== 'undefined') ? window.WORLDS_REGISTRY || null : null;
+  var link = resolvePlayerTarget(window.location.search, registry);
+  var world = null;
+  if (link.action === 'legacy') {
+    var params = new URLSearchParams(window.location.search);
+    var id = params.get('world');
+    world = id ? data.flagships[id] : null;
+    if (!world) {
+      showUnknown(data, id);
+      return;
+    }
+  } else if (link.action === 'no-world') {
+    showUnknown(data, null);
     return;
+  } else if (link.action === 'unknown-world') {
+    showUnknown(data, link.requested);
+    return;
+  } else {
+    world = data.flagships[link.world.id] || null;
+    if (!world) {
+      showUnknown(data, link.world.id);
+      return;
+    }
   }
   document.title = world.name + ' — worlds-3d';
   var title = el('world-title');
@@ -170,6 +316,34 @@ function init() {
       toggle.textContent = '✕ Close info';
     }
   }
+
+  // Deep-link target (M2): after the world mounts, navigate to the
+  // resolved target. A station link teleports to the station door and
+  // shows the station; a simulation link teleports to the sim space and
+  // shows the sim (the runner lives in Explore); a tour link opens the
+  // tour UI. A world-only link shows the world info as before. A failed
+  // station/sim/tour in a valid world already fell back to the world
+  // view (link.action 'world' with link.notice) — show the notice.
+  if (link.action === 'station' && link.target) {
+    var st = link.target;
+    var stb = st.building ? buildingById(world, st.building) : null;
+    if (stb && controller && typeof controller.teleport === 'function') {
+      controller.teleport(buildingDoor(stb));
+    }
+    fillStation(world, st);
+  } else if (link.action === 'simulation' && link.target) {
+    var sim = link.target;
+    var simb = sim.building ? buildingById(world, sim.building) : null;
+    if (simb && controller && typeof controller.teleport === 'function') {
+      controller.teleport(buildingDoor(simb));
+    }
+    fillSimulation(world, sim);
+  } else if (link.action === 'tour' && link.target) {
+    openTour(world, link.target);
+  } else if (link.notice) {
+    showLinkNotice(link.notice);
+  }
+  if (link.retiredNotice) showLinkNotice(link.retiredNotice);
 }
 
 init();

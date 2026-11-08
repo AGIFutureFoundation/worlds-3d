@@ -7,10 +7,14 @@
 <meta name="description" content="Play one WorldForge flagship world in the browser: third-person avatar, NPCs, quests, weather and day cycles. Web 3D interpretation — not RP1.">
 <link rel="stylesheet" href="engine/engine.css">
 <link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="tour-ui/tour-ui.css">
 <script type="importmap">
 { "imports": { "three": "./engine/three.module.min.js" } }
 </script>
 <script src="data.js"></script>
+<!-- STAGED WIRING (M2): the M1 registry as a classic script (same pattern
+     as data.js) — player.js resolves deep links against it. -->
+<script src="registry-data.js"></script>
 <script type="module" src="player.js"></script>
 </head>
 <body class="player">
