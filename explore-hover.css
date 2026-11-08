@@ -1,0 +1,73 @@
+/* explore-hover.css — STAGED hover styles for the static explore/player pages
+   (next-wiring/f-hover/, 2026-11-07). Staged implementation of
+   phase-e/hover-a1/HOVER_SPEC.md + hover-prototype.css; the rules below are
+   the prototype's rules verbatim, re-labelled for the staged file. STAGED
+   ONLY: do not link from explore.html / player.html without Mike's decision
+   on hover A-1 (HOVER_SPEC.md §9).
+   Palette hexes are the sourced affordance colours (HOVER_SPEC.md §5):
+   purple quest NPCs #7a5fd0, teal advisors #2f9a8a, cyan SIM SEAT plates #19b8c4,
+   amber hall strips #d98a1f. Tooltip background rgba(10,60,70,0.9) is the SIM SEAT
+   label sprite background from environment.js. No other hover colour is defined:
+   the blue EXIT pad has no hex in source, so it gets brightness only.
+   The 350 ms tooltip dwell lives in explore-hover.js, not here. */
+
+/* Palette — exact values from the files read. Do not add colours. */
+:root {
+  --w3d-purple: #7a5fd0; /* quest NPC capsule */
+  --w3d-teal: #2f9a8a;   /* advisor tint */
+  --w3d-cyan: #19b8c4;   /* SIM SEAT plate */
+  --w3d-amber: #d98a1f;  /* hall draft strip */
+  --w3d-tip-bg: rgba(10, 60, 70, 0.9); /* SIM SEAT label sprite background */
+  --w3d-tip-text: #ffffff; /* neutral tooltip text, not a palette colour */
+}
+
+/* Generic hover lift: brighten the existing marker. Outline only — never a
+   border, margin, or size change, so hover never shifts layout. */
+.w3d-hover {
+  filter: brightness(1.25);
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+/* Per-kind outline colour = the object's existing marker colour, where one is
+   defined in source (NPC / advisor / sim-seat / hall only). The other six kinds
+   have no palette colour in any file read, so they get the brightness lift only
+   and no invented outline colour. */
+.w3d-hover--npc-quest { outline-color: #7a5fd0; }
+.w3d-hover--advisor { outline-color: #2f9a8a; }
+.w3d-hover--sim-seat { outline-color: #19b8c4; }
+.w3d-hover--hall { outline-color: #d98a1f; }
+.w3d-hover--vehicle { outline-color: transparent; } /* no sourced colour: brightness only */
+.w3d-hover--collectible { outline-color: transparent; } /* no sourced colour: brightness only */
+.w3d-hover--station { outline-color: transparent; } /* no sourced colour: brightness only */
+.w3d-hover--door { outline-color: transparent; } /* no sourced colour: brightness only */
+.w3d-hover--exit-pad { outline-color: transparent; } /* blue pad: no hex in source, brightness only */
+.w3d-hover--prop-info { outline-color: transparent; } /* no sourced colour: brightness only */
+
+/* Shared tooltip: the object's existing label, verbatim. */
+#w3d-hover-tip {
+  position: fixed;
+  z-index: 1000;
+  max-width: 320px;
+  padding: 6px 10px;
+  background: rgba(10, 60, 70, 0.9);
+  color: #ffffff;
+  font: 14px/1.4 system-ui, sans-serif;
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+#w3d-hover-tip.w3d-tip--hidden {
+  display: none;
+}
+
+/* Hover fade, capped at 150 ms, off entirely under reduced motion (spec §4.3). */
+.w3d-hover {
+  transition: filter 150ms ease, outline-color 150ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .w3d-hover {
+    transition: none;
+  }
+}
