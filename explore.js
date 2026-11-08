@@ -39,10 +39,40 @@ function el(id) { return document.getElementById(id); }
 function params() { return new URLSearchParams(window.location.search); }
 
 function stationById(world, id) {
-  return (world.stations || []).find(function (s) { return s.id === id; }) || null;
+  return stationsOf(world).find(function (s) { return s.id === id; }) || null;
 }
 function simulationById(world, id) {
-  return (world.simulations || []).find(function (s) { return s.id === id; }) || null;
+  return simulationsOf(world).find(function (s) { return s.id === id; }) || null;
+}
+// D1 (deep-debug 2026-11-07): the M1 registry is the source of truth for
+// stations / simulations (contract v1, same as the player). data.js
+// flagships may not embed them — the live data.js shipped 2026-11-07
+// 23:27 PST has stations: 0 / simulations: 0 in all 7 flagships, which
+// made this page render "0 stations · 0 simulations" and silently drop
+// registry-resolved ?station= / ?simulation= deep links (the dispatch
+// re-validated the registry target against the empty data.js arrays).
+// Registry-first, data.js as fallback: when the registry has entries
+// for the world they win; otherwise the embedded arrays are used, so
+// the page works from file:// with an old data.js too.
+function registryStations(worldId) {
+  var reg = (typeof window !== 'undefined') ? window.WORLDS_REGISTRY || null : null;
+  if (!reg || !Array.isArray(reg.stations)) return [];
+  return reg.stations.filter(function (s) { return s.world_id === worldId; });
+}
+function registrySimulations(worldId) {
+  var reg = (typeof window !== 'undefined') ? window.WORLDS_REGISTRY || null : null;
+  if (!reg || !Array.isArray(reg.simulations)) return [];
+  return reg.simulations.filter(function (s) { return s.world_id === worldId; });
+}
+function stationsOf(world) {
+  var fromReg = world && world.id ? registryStations(world.id) : [];
+  if (fromReg.length) return fromReg;
+  return (world && world.stations) || [];
+}
+function simulationsOf(world) {
+  var fromReg = world && world.id ? registrySimulations(world.id) : [];
+  if (fromReg.length) return fromReg;
+  return (world && world.simulations) || [];
 }
 function buildingById(world, id) {
   return (world.buildings || []).find(function (b) { return b.id === id; }) || null;
@@ -66,6 +96,167 @@ function simSetDone(worldId, simId, done) {
   try { localStorage.setItem(simKey(worldId, simId), JSON.stringify(done)); } catch (e) {}
 }
 
+/* RE-BASED (Batch D fix worker, 2026-11-07): the Phase E-A assessment
+   wiring above, re-based onto the POST-C-sync wired explore.js (M2 deep-link
+   reader, head 44c06e25). Same __ASSESSMENT__ helpers and integration points
+   as the pre-wiring staged copy; the wiring code is untouched. Also folded
+   in below: D1 registry-first stations/sims (workaround only — the M1 live
+   run is the root fix) and H2 legacy ?simulation=/?station= fallback. */
+/* __ASSESSMENT_BEGIN__ — Phase 4 assessment wiring (STAGED, Phase E-A).
+   Writes one localStorage record per attempt, key w3d-assess-<worldId>-<simId>-<attemptId>,
+   per phase4-training-sims/ASSESSMENT.md + assessment-schema.json (schema
+   "phase4-assessment-attempt/1"). localStorage only; never a server; learner_id is an
+   opaque local pseudonym, never a name or email. Evidence is ALWAYS 'attested': the
+   runner cannot verify a step's check; marking a step done is self-attestation. No
+   grader exists; none is invented here. A 'passed' record means "the learner marked
+   every step done, in order" — it is NOT a verified result and must never be presented
+   as one. An 'incomplete' record names the next undone step as a 'skipped' entry so
+   the step the attempt stopped at is identified by step_id in the record. */
+var ASSESS_SCHEMA = 'phase4-assessment-attempt/1';
+var ASSESS_INDEX_KEY = 'w3d-assess-index';
+var ASSESS_LEARNER_KEY = 'w3d-assess-learner';
+
+function assessStore() {
+  try { return (typeof localStorage !== 'undefined') ? localStorage : null; } catch (e) { return null; }
+}
+function assessNowIso() { return new Date().toISOString(); }
+function assessRandomId(prefix) {
+  var rnd = '';
+  try { rnd = Math.random().toString(16).slice(2, 8); } catch (e) { rnd = '000000'; }
+  return prefix + Date.now().toString(36) + '-' + rnd;
+}
+function assessKey(worldId, simId, attemptId) { return 'w3d-assess-' + worldId + '-' + simId + '-' + attemptId; }
+function assessActiveKey(worldId, simId) { return 'w3d-assess-active-' + worldId + '-' + simId; }
+function assessLearnerId() {
+  var store = assessStore();
+  if (!store) return 'learner-anonymous';
+  var id = null;
+  try { id = store.getItem(ASSESS_LEARNER_KEY); } catch (e) {}
+  if (!id) {
+    id = assessRandomId('learner-');
+    try { store.setItem(ASSESS_LEARNER_KEY, id); } catch (e) {}
+  }
+  return id;
+}
+var assessSessionId = assessRandomId('session-');
+var assessLastKey = {}; /* 'worldId:simId' -> last record key written this page session */
+function assessBegin(worldId, sim) {
+  var store = assessStore();
+  if (!store || !sim) return null;
+  var done = simDone(worldId, sim.id);
+  var steps = sim.steps || [];
+  if (done.length >= steps.length) return null; /* already complete: no new attempt */
+  var active = null;
+  try { active = JSON.parse(store.getItem(assessActiveKey(worldId, sim.id)) || 'null'); } catch (e) { active = null; }
+  if (active && active.attempt_id) return active;
+  active = { attempt_id: assessRandomId('att-'), started_at: assessNowIso() };
+  try { store.setItem(assessActiveKey(worldId, sim.id), JSON.stringify(active)); } catch (e) {}
+  return active;
+}
+function assessActive(worldId, simId) {
+  var store = assessStore();
+  if (!store) return null;
+  try { return JSON.parse(store.getItem(assessActiveKey(worldId, simId)) || 'null'); } catch (e) { return null; }
+}
+function assessEndAttempt(worldId, simId) {
+  var store = assessStore();
+  if (!store) return;
+  try { store.removeItem(assessActiveKey(worldId, simId)); } catch (e) {}
+}
+function assessOrderCorrect(sim, done) {
+  var steps = sim.steps || [];
+  if (done.length > steps.length) return false;
+  for (var i = 0; i < done.length; i++) { if (done[i] !== steps[i].id) return false; }
+  return true;
+}
+function assessWriteRecord(worldId, sim, record) {
+  var store = assessStore();
+  if (!store) return null;
+  var key = assessKey(worldId, sim.id, record.attempt_id);
+  try {
+    if (store.getItem(key)) return null; /* duplicate attempt_id: never overwrite */
+    store.setItem(key, JSON.stringify(record));
+    var index = [];
+    try { index = JSON.parse(store.getItem(ASSESS_INDEX_KEY) || '[]'); } catch (e) { index = []; }
+    if (index.indexOf(record.attempt_id) === -1) index.push(record.attempt_id);
+    store.setItem(ASSESS_INDEX_KEY, JSON.stringify(index));
+  } catch (e) { return null; }
+  assessLastKey[worldId + ':' + sim.id] = key;
+  return key;
+}
+function assessBuildRecord(worldId, sim, active, outcome) {
+  var steps = sim.steps || [];
+  var done = simDone(worldId, sim.id);
+  var completedAt = assessNowIso();
+  var startedMs = Date.parse(active.started_at);
+  var duration = isNaN(startedMs) ? 0 : Math.max(0, Math.floor((Date.parse(completedAt) - startedMs) / 1000));
+  var attempted = done.map(function (stepId, i) {
+    /* 'correct' here means self-marked done; the record's evidence field ('attested')
+       is what says so. No reason text is collected by the runner, so note stays ''. */
+    return { step_id: stepId, position: i + 1, result: 'correct', note: '' };
+  });
+  if (outcome === 'incomplete') {
+    var next = steps[done.length] || null;
+    if (next) attempted.push({ step_id: next.id, position: done.length + 1, result: 'skipped', note: 'Attempt ended here — next undone step.' });
+  }
+  return {
+    schema: ASSESS_SCHEMA,
+    attempt_id: active.attempt_id,
+    learner_id: assessLearnerId(),
+    cohort_id: '',
+    world_id: worldId,
+    sim_id: sim.id,
+    scenario_id: '',
+    started_at: active.started_at,
+    completed_at: completedAt,
+    duration_seconds: duration,
+    steps_attempted: attempted,
+    order_correct: assessOrderCorrect(sim, done),
+    outcome: outcome,
+    evidence: 'attested',
+    hints_used: 0,
+    source: 'web',
+    session_id: assessSessionId
+  };
+}
+function assessFinishIfComplete(worldId, sim) {
+  var steps = sim.steps || [];
+  var done = simDone(worldId, sim.id);
+  if (!steps.length || done.length !== steps.length) return null;
+  var active = assessActive(worldId, sim.id);
+  if (!active) return null; /* no open attempt (e.g. re-opened completed sim): write nothing */
+  var key = assessWriteRecord(worldId, sim, assessBuildRecord(worldId, sim, active, 'passed'));
+  if (key) assessEndAttempt(worldId, sim.id);
+  return key;
+}
+function assessSaveIncomplete(worldId, sim) {
+  if (!sim) return null;
+  var steps = sim.steps || [];
+  var done = simDone(worldId, sim.id);
+  if (!done.length || done.length >= steps.length) return null; /* nothing attempted, or complete */
+  var active = assessActive(worldId, sim.id);
+  if (!active) return null;
+  var key = assessWriteRecord(worldId, sim, assessBuildRecord(worldId, sim, active, 'incomplete'));
+  if (key) assessEndAttempt(worldId, sim.id);
+  return key;
+}
+function assessRecordNote(worldId, simId) {
+  var key = assessLastKey[worldId + ':' + simId];
+  if (!key) return '';
+  return ' <span class="xpl-note">Assessment record written (attested — self-marked, not verified): <code>' + esc(key) + '</code></span>';
+}
+if (typeof window !== 'undefined') {
+  window.W3D_ASSESSMENT = {
+    assessBegin: assessBegin,
+    assessFinishIfComplete: assessFinishIfComplete,
+    assessSaveIncomplete: assessSaveIncomplete,
+    assessKey: assessKey,
+    assessLearnerId: assessLearnerId,
+    schema: ASSESS_SCHEMA
+  };
+}
+/* __ASSESSMENT_END__ */
+
 /* ---------------- directory (no ?world=) ---------------- */
 function renderDirectory(data) {
   var app = el('app');
@@ -83,8 +274,8 @@ function renderDirectory(data) {
   FLAGSHIP_ORDER.forEach(function (id) {
     var w = data.flagships[id];
     if (!w) return;
-    totalStations += (w.stations || []).length;
-    totalSims += (w.simulations || []).length;
+    totalStations += stationsOf(w).length;
+    totalSims += simulationsOf(w).length;
   });
   var html = '<h2>Stations &amp; simulations in the 7 playable worlds</h2>'
     + '<p>' + totalStations + ' stations · ' + totalSims + ' simulations · '
@@ -98,15 +289,15 @@ function renderDirectory(data) {
     if (!w) return;
     html += '<section class="xpl-world"><h3>' + esc(w.name) + '</h3>'
       + '<p class="xpl-counts">' + esc(w.series || '') + ' · '
-      + (w.stations || []).length + ' stations · '
-      + (w.simulations || []).length + ' simulations · '
+      + stationsOf(w).length + ' stations · '
+      + simulationsOf(w).length + ' simulations · '
       + '<a href="' + esc(playerUrl(w.id)) + '">▶ Play in 3D</a> · '
       + '<a href="' + esc(exploreUrl(w.id)) + '">Explore here</a></p><ul>';
-    (w.stations || []).forEach(function (s) {
+    stationsOf(w).forEach(function (s) {
       html += '<li><a href="' + esc(exploreUrl(w.id, 'station=' + encodeURIComponent(s.id))) + '">'
         + esc(s.name) + '</a> — ' + esc(s.kind) + '</li>';
     });
-    (w.simulations || []).forEach(function (s) {
+    simulationsOf(w).forEach(function (s) {
       html += '<li><span class="xpl-sim-tag">SIMULATION</span> <a href="'
         + esc(exploreUrl(w.id, 'simulation=' + encodeURIComponent(s.id))) + '">'
         + esc(s.title) + '</a></li>';
@@ -182,9 +373,12 @@ function worldPanel(world, controller, link) {
   }
 
   function renderList() {
+    /* STAGED PATCH: leaving a sim mid-attempt writes its 'incomplete' record first. */
+    var leavingSim = view.simulation ? simulationById(world, view.simulation) : null;
+    if (leavingSim) assessSaveIncomplete(worldId, leavingSim);
     view.station = null; view.simulation = null;
-    var stations = world.stations || [];
-    var sims = world.simulations || [];
+    var stations = stationsOf(world);
+    var sims = simulationsOf(world);
     var html = '<h2>' + esc(world.name) + '</h2>'
       + '<p class="xpl-kind">' + esc(world.series || '') + ' · ' + esc(world.biome || '') + '</p>'
       + '<p><a href="' + esc(playerUrl(worldId)) + '">Open in the plain player</a> · '
@@ -278,6 +472,9 @@ function worldPanel(world, controller, link) {
     var steps = sim.steps || [];
     var nextIdx = steps.findIndex(function (s) { return done.indexOf(s.id) === -1; });
     var complete = nextIdx === -1 && steps.length > 0;
+    /* STAGED PATCH: begin an attempt on open; write the 'passed' record on completion. */
+    assessBegin(worldId, sim);
+    if (complete) assessFinishIfComplete(worldId, sim);
     var html = '<button type="button" class="xpl-back" data-back="1">← All simulations</button>'
       + '<h2>' + esc(sim.title) + '</h2>'
       + '<p><span class="xpl-sim-tag">SIMULATION</span></p>'
@@ -296,7 +493,7 @@ function worldPanel(world, controller, link) {
           + (isDone ? '✓ Done' : (isNext ? 'Mark this step done' : 'Complete earlier steps first')) + '</button></li>';
       }).join('') + '</ol>'
       + (complete
-        ? '<div class="xpl-complete"><strong>Simulation complete.</strong> ' + esc(sim.success || '') + '</div>'
+        ? '<div class="xpl-complete"><strong>Simulation complete.</strong> ' + esc(sim.success || '') + assessRecordNote(worldId, sim.id) + '</div>'
         : '')
       + '<p><strong>Success looks like:</strong> ' + esc(sim.success || '') + '</p>'
       + '<p class="xpl-note">' + esc(sim.safety_note || '') + '</p>'
@@ -362,6 +559,8 @@ function worldPanel(world, controller, link) {
       btn.addEventListener('click', function () {
         var sim = simulationById(world, btn.getAttribute('data-reset-sim'));
         if (!sim) return;
+        /* STAGED PATCH: resetting mid-attempt writes its 'incomplete' record first. */
+        assessSaveIncomplete(worldId, sim);
         simSetDone(worldId, sim.id, []);
         renderSimulation(sim);
       });
@@ -414,6 +613,19 @@ function init() {
     if (!world) {
       showUnknown(data, id);
       return;
+    }
+    // Legacy deep links (pre-wiring behaviour): open ?simulation= /
+    // ?station= directly from data.js when the registry did not load.
+    // Without this, a missing registry-data.js silently degrades sim /
+    // station deep links to the world list (the wired explore.js only
+    // opens them via the registry-resolved link). Pre-wiring explore.js
+    // parsed these params directly; this restores that fallback.
+    var legSim = p.get('simulation');
+    var legSt = p.get('station');
+    if (legSim && simulationById(world, legSim)) {
+      link = { action: 'simulation', target: { id: legSim } };
+    } else if (legSt && stationById(world, legSt)) {
+      link = { action: 'station', target: { id: legSt } };
     }
   } else if (link.action === 'no-world') {
     renderDirectory(data);
