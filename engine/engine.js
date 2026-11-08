@@ -1056,10 +1056,18 @@ export function mountWorld(container, worldDef, options = {}) {
     if (near && interiors.has(near.def.id)) { enterInterior(near.def.id); return; }
     if (near) toast(`${near.def.name} — interior not defined for this building.`);
   }
+  // Per-room visibility (next-repairs): every room group sits at the
+  // same (0,-120,0) spot, so showing the shared root showed ALL rooms
+  // at once, co-located. Only the entered room's group is visible now;
+  // null hides every room (exit / teleport out).
+  function showOnlyInterior(id) {
+    interiors.forEach((room, roomId) => { room.group.visible = roomId === id; });
+    interiorGroup.visible = id !== null;
+  }
   function enterInterior(id) {
     const it = interiors.get(id); if (!it) return;
     state.insideBuilding = id;
-    interiorGroup.visible = true;
+    showOnlyInterior(id);
     avatarPos.set(0, -120, it.roomSize[2] / 2 - 3);
     avatar.position.copy(avatarPos);
     toast(`${(def.buildings.find((b) => b.id === id) || {}).name || id} interior — game space. Press Interact on the blue EXIT pad to leave.`);
@@ -1067,7 +1075,7 @@ export function mountWorld(container, worldDef, options = {}) {
   function exitInterior() {
     const it = interiors.get(state.insideBuilding); if (!it) return;
     state.insideBuilding = null;
-    interiorGroup.visible = false;
+    showOnlyInterior(null);
     avatarPos.set(it.exitWorld[0], it.exitWorld[1] + 0.5, it.exitWorld[2]);
     avatar.position.copy(avatarPos); velY = 0; grounded = true;
     toast('Back outside.');
@@ -1380,7 +1388,7 @@ export function mountWorld(container, worldDef, options = {}) {
     setPanel, getPanelStates() { return Object.assign({}, panelState); },
     teleport(pos) {
       if (!Array.isArray(pos) || pos.length < 3) return;
-      if (state.insideBuilding) { state.insideBuilding = null; interiorGroup.visible = false; }
+      if (state.insideBuilding) { state.insideBuilding = null; showOnlyInterior(null); }
       avatarPos.set(pos[0], pos[1], pos[2]); avatar.position.copy(avatarPos); velY = 0;
     },
     state,
