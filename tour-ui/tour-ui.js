@@ -1,4 +1,13 @@
-// tour-ui.js — guided-tour panel component (STAGED).
+// tour-ui.js — guided-tour panel component (STAGED FIX, next-repairs BUG-3b).
+// Based on deep-interop-build/next-debug/fixes/BUG-3-tour-ui.js (the BUG-3
+// fix: setStep() returns early after destroy()). This file adds the same
+// guard to the four button handlers in bind() (Start / Previous / Next /
+// step-click), which also call saveStep() before render(). After destroy()
+// the panel element is detached, so a user cannot click those buttons —
+// but a stale reference can still dispatch a click on the detached
+// element, and the old handlers wrote localStorage before render()'s
+// guard ran. With these guards no post-destroy path writes storage.
+// Everything else is identical to the BUG-3 staged fix.
 // A panel that shows a tour's name, its steps in order, the current
 // step, and Start / Previous / Next / End controls.
 //
@@ -119,6 +128,7 @@ export function createTourUI(host, quest, world, opts) {
     if (back) back.addEventListener('click', function () { end(); });
     const start = q('[data-tour-ui="start"]');
     if (start) start.addEventListener('click', function () {
+      if (destroyed) return;
       started = true;
       current = 0;
       saveStep(worldId, quest.id, current);
@@ -126,16 +136,19 @@ export function createTourUI(host, quest, world, opts) {
     });
     const prev = q('[data-tour-ui="prev"]');
     if (prev) prev.addEventListener('click', function () {
+      if (destroyed) return;
       if (current > 0) { current--; saveStep(worldId, quest.id, current); render(); }
     });
     const next = q('[data-tour-ui="next"]');
     if (next) next.addEventListener('click', function () {
+      if (destroyed) return;
       if (current < steps.length - 1) { current++; saveStep(worldId, quest.id, current); render(); }
     });
     const endBtn = q('[data-tour-ui="end"]');
     if (endBtn) endBtn.addEventListener('click', function () { end(); });
     el.querySelectorAll('[data-tour-ui-step]').forEach(function (li) {
       li.addEventListener('click', function () {
+        if (destroyed) return;
         const i = parseInt(li.getAttribute('data-tour-ui-step'), 10);
         if (Number.isFinite(i) && i >= 0 && i < steps.length) {
           current = i;
@@ -161,6 +174,7 @@ export function createTourUI(host, quest, world, opts) {
     get current() { return current; },
     get total() { return steps.length; },
     setStep(i) {
+      if (destroyed) return;
       if (Number.isFinite(i) && i >= 0 && i < steps.length) {
         current = i;
         saveStep(worldId, quest.id, current);
